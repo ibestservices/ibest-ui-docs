@@ -32,7 +32,7 @@ struct AppPage {
 ## IbestUIBaseStyleType 类型说明
 
 ::: tip
-该类型即为`setIBestUIBaseStyle`的参数类型，均为非必填类型，传入值会覆盖默认值，暂时支持这么多主题预设，随着组件丰富逐步完善！
+该类型即为`setIBestUIBaseStyle`的参数类型，均为非必填类型，传入值会覆盖默认值，暂时支持这么多预设样式，随着组件丰富逐步完善！
 :::
 
 | 参数              | 说明                                              | 类型   | 默认值                                                                                                       |
