@@ -160,6 +160,8 @@ IBestButton({
 ::: details 点我查看代码
 
 ```ts
+import { IBestButton } from "@ibestservices/ibest-ui";
+
 @Builder function Arrow(color = '#fff'){
   Image($r('app.media.title_back'))
     .width('40lpx')
