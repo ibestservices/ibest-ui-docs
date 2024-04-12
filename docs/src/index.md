@@ -5,21 +5,20 @@ layout: home
 hero:
   name: "IBest-UI"
   text: "一个简单易用的鸿蒙开源UI库"
-  tagline: My great project tagline
+  tagline: 基于鸿蒙API9
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 指南
+      link: /guide/home/
+    # - theme: alt
+    #   text: API Examples
+    #   link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 更快地开发
+    details: balabala...
+  - title: 更少的代码
+    details: balabala...
+  - title: 更丰富的功能
+    details: balabala...
 ---
-

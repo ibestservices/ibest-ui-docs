@@ -143,3 +143,11 @@
 body {
   font-size: 14px;
 }
+
+.VPDoc .main .vp-doc img {
+  border-radius: 8px;
+}
+
+.VPDoc .main .vp-doc em {
+  color: #693dd6;
+}

@@ -12,6 +12,11 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "指南", link: "/guide/home/", activeMatch: "/guide/" },
+      {
+        text: "组件",
+        link: "/components/button/",
+        activeMatch: "/components/",
+      },
     ],
 
     sidebar: [
@@ -28,11 +33,8 @@ export default defineConfig({
         ],
       },
       {
-        text: "Examples",
-        items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
-        ],
+        text: "基础组件",
+        items: [{ text: "Button 按钮", link: "/components/button/" }],
       },
     ],
 
@@ -46,6 +48,7 @@ export default defineConfig({
     },
     outline: {
       label: "页面导航",
+      level: [2, 4],
     },
   },
 });
