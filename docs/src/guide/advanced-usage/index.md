@@ -27,7 +27,7 @@ export struct ButtonPage {
 ## 组件实例用法
 
 ```ts
-import { IBestButton } from "@ibestservices/ibest-ui";
+import { IBestButton, IBestCheckboxGroup } from "@ibestservices/ibest-ui";
 
 @Builder function Arrow(color = '#fff'){
   Image($r('app.media.title_back'))

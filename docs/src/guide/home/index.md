@@ -4,8 +4,6 @@ title: "IBset-UI"
 
 # {{ $frontmatter.title }}
 
-轻量，可定制化主题的鸿蒙 UI 库
-
 ## 介绍
 
 {{ $frontmatter.title }} 是一套轻量，可定制化主题的鸿蒙 UI 库。
