@@ -343,3 +343,48 @@ struct CellPage {
 ```
 
 :::
+
+## API
+
+### CellGroup @Props
+
+| 参数   | 说明                   | 类型      | 默认值  |
+| ------ | ---------------------- | --------- | ------- |
+| title  | 分组标题               | _string_  |         |
+| inset  | 是否展示为圆角卡片风格 | _boolean_ | `false` |
+| border | 是否显示外边框         | _boolean_ | `true`  |
+
+### Cell @Props
+
+| 参数           | 说明                              | 类型                 | 默认值                                                                                            |
+| -------------- | --------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------- |
+| title          | 左侧标题                          | _number_ \| _string_ |                                                                                                   |
+| titleColor     | 左侧标题文字颜色                  | _string_             | <div style="padding: 2px 4px; background: #323233; color: #fff; border-radius: 4px">#323233</div> |
+| value          | 右侧内容                          | _number_ \| _string_ |                                                                                                   |
+| valueColor     | 右侧内容文字颜色                  | _string_             | <div style="padding: 2px 4px; background: #969799; color: #fff; border-radius: 4px">#969799</div> |
+| label          | 标题下方的描述信息                | _number_ \| _string_ |                                                                                                   |
+| labelColor     | 标题下方的描述信息文字颜色        | _string_             | <div style="padding: 2px 4px; background: #969799; color: #fff; border-radius: 4px">#969799</div> |
+| cellSize       | 单元格大小，可选值为 large normal | _string_             |                                                                                                   |
+| hasBorder      | 是否显示内边框                    | _boolean_            | `true`                                                                                            |
+| replace        | 是否在跳转时替换当前页面历史      | _boolean_            | `false`                                                                                           |
+| clickable      | 是否开启点击反馈                  | _boolean_            | `false`                                                                                           |
+| is-link        | 是否展示右侧箭头并开启点击反馈    | _boolean_            | `false`                                                                                           |
+| required       | 是否显示表单必填星号              | _boolean_            | `false`                                                                                           |
+| center         | 是否使内容垂直居中                | _boolean_            | `false`                                                                                           |
+| arrowDirection | 箭头方向，可选值为 left up down   | _string_             | `right`                                                                                           |
+
+### Events
+
+| 事件名      | 说明                 | 事件类型                         |
+| ----------- | -------------------- | -------------------------------- |
+| onClickCell | 点击单元格的回调事件 | (event?: _ClickEvent_) => _void_ |
+
+### @BuilderParam 插槽
+
+| 插槽名           | 说明                                                              | 类型                      |
+| ---------------- | ----------------------------------------------------------------- | ------------------------- |
+| titleBuilder     | `title` 的插槽 优先级大于 `@Prop title`                           | _CustomBuilder_ \| _null_ |
+| valueBuilder     | `value` 的插槽 优先级大于 `@Prop value`                           | _CustomBuilder_ \| _null_ |
+| labelBuilder     | `label` 的插槽 优先级大于 `@Prop label`                           | _CustomBuilder_ \| _null_ |
+| iconBuilder      | 自定义`title`左侧`icon`的插槽, 使用`titleBuilder`时，该插槽不生效 | _CustomBuilder_ \| _null_ |
+| rightIconBuilder | 自定义`value`右侧`icon`的插槽, 使用`valueBuilder`时，该插槽不生效 | _CustomBuilder_ \| _null_ |
