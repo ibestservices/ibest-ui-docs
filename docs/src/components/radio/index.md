@@ -16,8 +16,8 @@ import { IBestRadio, IBestRadioGroup } from "@ibestservices/ibest-ui";
 
 - 通过 `IBestRadioGroup` 的 `onChange` 事件获取当前选中的 `radio` 的 `name` 。
 - 通过 `group` 属性将 `IBestRadioGroup` 与 `IBestRadio` 组件关联起来， `group` 的值具有**全局唯一性**或已入栈的页面**唯一性**。
-- 通过 `IBestRadio` 组件的 `value` 来设置默认选中。
-- `IBestRadio` 组件的 name 值需具备**唯一性**。
+- 通过 `IBestRadio` 组件的 `value` 来设置默认选中，与 `IBestCheckbox` 组件的 `group` 值不冲突。
+- `IBestRadio` 组件的 `name` 值在同一 `group` 中需具备**唯一性**。
 
 :::
 
@@ -365,15 +365,18 @@ struct CheckboxPage {
 
 ### Radio @Props
 
-| 参数          | 说明                                                                     | 类型                 | 默认值  |
-| ------------- | ------------------------------------------------------------------------ | -------------------- | ------- |
-| name          | 标识符，通常为一个唯一的字符串或数字，同一 `group` 的 `name` 不可重复    | _string_ \| _number_ |         |
-| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性` | _string_             |         |
-| shape         | 形状，可选值为 `square` `dot`                                            | _string_             | `round` |
-| disabled      | 是否为禁用状态                                                           | _boolean_            | `false` |
-| labelDisabled | 是否禁用文本内容点击                                                     | _boolean_            | `false` |
-| labelPosition | 文本位置，可选值为 `left`                                                | _string_             | `right` |
-| checkedColor  | 选中状态颜色                                                             | _string_             |         |
+| 参数          | 说明                                                                      | 类型                 | 默认值  |
+| ------------- | ------------------------------------------------------------------------- | -------------------- | ------- |
+| name          | 标识符，通常为一个唯一的字符串或数字，同一 `group` 的 `name` 不可重复     | _string_ \| _number_ |         |
+| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`  | _string_             |         |
+| label         | 显示的文本                                                                | _string_             |         |
+| value         | 默认是否选中 非双向绑定，如果要更改数据请从 `onChange` 回调中获取最新的值 | _string_             |         |
+| iconSize      | 图标大小，单位 `lpx`， `label` 文字会跟着等比例缩放                       | _number_             |
+| shape         | 形状，可选值为 `square` `dot`                                             | _string_             | `round` |
+| disabled      | 是否为禁用状态                                                            | _boolean_            | `false` |
+| labelDisabled | 是否禁用文本内容点击                                                      | _boolean_            | `false` |
+| labelPosition | 文本位置，可选值为 `left`                                                 | _string_             | `right` |
+| checkedColor  | 选中状态颜色                                                              | _string_             |         |
 
 ### RadioGroup @Props
 
@@ -397,5 +400,5 @@ struct CheckboxPage {
 
 | 插槽名         | 说明                                                     | 类型                                                         |
 | -------------- | -------------------------------------------------------- | ------------------------------------------------------------ |
-| defaultBuilder | `label` 的插槽                                           | (data: { checked: _boolean_, disabled: _boolean_ }) => _any_ |
+| defaultBuilder | `label` 的插槽，优先级大于 `label` 属性                  | (data: { checked: _boolean_, disabled: _boolean_ }) => _any_ |
 | iconBuilder    | 自定义图标插槽，需要自己调整选中与未选中展示的 `UI` 内容 | (data: { checked: _boolean_, disabled: _boolean_ }) => _any_ |

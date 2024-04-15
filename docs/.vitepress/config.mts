@@ -41,7 +41,10 @@ export default defineConfig({
       },
       {
         text: "表单组件",
-        items: [{ text: "Radio 单选框", link: "/components/radio/" }],
+        items: [
+          { text: "Checkbox 复选框", link: "/components/checkbox/" },
+          { text: "Radio 单选框", link: "/components/radio/" },
+        ],
       },
     ],
 
