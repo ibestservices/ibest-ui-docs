@@ -39,6 +39,10 @@ export default defineConfig({
           { text: "Cell 单元格", link: "/components/cell/" },
         ],
       },
+      {
+        text: "表单组件",
+        items: [{ text: "Radio 单选框", link: "/components/radio/" }],
+      },
     ],
 
     socialLinks: [
