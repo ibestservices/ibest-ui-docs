@@ -37,7 +37,7 @@ struct AppPage {
 
 | 参数              | 说明                                              | 类型   | 默认值                                                                                                       |
 | ----------------- | ------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------ |
-| primary           | primary 主题色，组件默认色就是这个                | string | <div style="padding: 2px 4px; background: #3D8AF2; color: #fff; border-radius: 4px">#3D8AF2</div>            |
+| primary           | primary 反馈色                                    | string | <div style="padding: 2px 4px; background: #3D8AF2; color: #fff; border-radius: 4px">#3D8AF2</div>            |
 | success           | success 反馈色                                    | string | <div style="padding: 2px 4px; background: #58DB6B; color: #fff; border-radius: 4px">#58DB6B</div>            |
 | warning           | warning 反馈色                                    | string | <div style="padding: 2px 4px; background: #F29C73; color: #fff; border-radius: 4px">#F29C73</div>            |
 | danger            | danger 反馈色                                     | string | <div style="padding: 2px 4px; background: #DB3131; color: #fff; border-radius: 4px">#DB3131</div>            |
