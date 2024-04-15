@@ -15,7 +15,7 @@ import { IBestRadio, IBestRadioGroup } from "@ibestservices/ibest-ui";
 ::: tip
 
 - 通过 `IBestRadioGroup` 的 `onChange` 事件获取当前选中的 `radio` 的 `name` 。
-- 通过 `group` 属性将 `IBestRadioGroup` 与 `IBestRadio` 组件关联起来， `group` 的值页面中具有**唯一性**。
+- 通过 `group` 属性将 `IBestRadioGroup` 与 `IBestRadio` 组件关联起来， `group` 的值具有**全局唯一性**或已入栈的页面**唯一性**。
 - 通过 `IBestRadio` 组件的 `value` 来设置默认选中。
 - `IBestRadio` 组件的 name 值需具备**唯一性**。
 
@@ -360,3 +360,42 @@ struct CheckboxPage {
 ```
 
 :::
+
+## API
+
+### Radio @Props
+
+| 参数          | 说明                                                                     | 类型                 | 默认值  |
+| ------------- | ------------------------------------------------------------------------ | -------------------- | ------- |
+| name          | 标识符，通常为一个唯一的字符串或数字，同一 `group` 的 `name` 不可重复    | _string_ \| _number_ |         |
+| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性` | _string_             |         |
+| shape         | 形状，可选值为 `square` `dot`                                            | _string_             | `round` |
+| disabled      | 是否为禁用状态                                                           | _boolean_            | `false` |
+| labelDisabled | 是否禁用文本内容点击                                                     | _boolean_            | `false` |
+| labelPosition | 文本位置，可选值为 `left`                                                | _string_             | `right` |
+| checkedColor  | 选中状态颜色                                                             | _string_             |         |
+
+### RadioGroup @Props
+
+| 参数  | 说明                                                                     | 类型     | 默认值 |
+| ----- | ------------------------------------------------------------------------ | -------- | ------ |
+| group | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性` | _string_ |        |
+
+### Radio Events
+
+| 事件名   | 说明                   | 事件类型                       |
+| -------- | ---------------------- | ------------------------------ |
+| onChange | 选中状态改变的回调事件 | (checked: _boolean_) => _void_ |
+
+### RadioGroup Events
+
+| 事件名   | 说明                                                        | 事件类型                        |
+| -------- | ----------------------------------------------------------- | ------------------------------- |
+| onChange | 选中状态改变的回调事件，回调参数是 `radio` 组件的 `name` 值 | (radioName: _string_) => _void_ |
+
+### Radio @BuilderParam 插槽
+
+| 插槽名         | 说明                                                     | 类型                                                         |
+| -------------- | -------------------------------------------------------- | ------------------------------------------------------------ |
+| defaultBuilder | `label` 的插槽                                           | (data: { checked: _boolean_, disabled: _boolean_ }) => _any_ |
+| iconBuilder    | 自定义图标插槽，需要自己调整选中与未选中展示的 `UI` 内容 | (data: { checked: _boolean_, disabled: _boolean_ }) => _any_ |
