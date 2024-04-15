@@ -44,6 +44,7 @@ export default defineConfig({
         items: [
           { text: "Checkbox 复选框", link: "/components/checkbox/" },
           { text: "Radio 单选框", link: "/components/radio/" },
+          { text: "Switch 开关", link: "/components/switch/" },
         ],
       },
     ],
