@@ -365,18 +365,18 @@ struct CheckboxPage {
 
 ### Radio @Props
 
-| 参数          | 说明                                                                      | 类型                 | 默认值  |
-| ------------- | ------------------------------------------------------------------------- | -------------------- | ------- |
-| name          | 标识符，通常为一个唯一的字符串或数字，同一 `group` 的 `name` 不可重复     | _string_ \| _number_ |         |
-| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`  | _string_             |         |
-| label         | 显示的文本                                                                | _string_             |         |
-| value         | 默认是否选中 非双向绑定，如果要更改数据请从 `onChange` 回调中获取最新的值 | _string_             |         |
-| iconSize      | 图标大小，单位 `lpx`， `label` 文字会跟着等比例缩放                       | _number_             |
-| shape         | 形状，可选值为 `square` `dot`                                             | _string_             | `round` |
-| disabled      | 是否为禁用状态                                                            | _boolean_            | `false` |
-| labelDisabled | 是否禁用文本内容点击                                                      | _boolean_            | `false` |
-| labelPosition | 文本位置，可选值为 `left`                                                 | _string_             | `right` |
-| checkedColor  | 选中状态颜色                                                              | _string_             |         |
+| 参数          | 说明                                                                              | 类型                 | 默认值  |
+| ------------- | --------------------------------------------------------------------------------- | -------------------- | ------- |
+| name          | 标识符，通常为一个唯一的字符串或数字，同一 `group` 的 `name` 不可重复             | _string_ \| _number_ |         |
+| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`          | _string_             |         |
+| label         | 显示的文本                                                                        | _string_             |         |
+| value         | 默认是否选中 非双向绑定，非双向绑定，如果要获取最新的值请从 `onChange` 回调中获取 | _string_             |         |
+| iconSize      | 图标大小，单位 `lpx`， `label` 文字会跟着等比例缩放                               | _number_             |
+| shape         | 形状，可选值为 `square` `dot`                                                     | _string_             | `round` |
+| disabled      | 是否为禁用状态                                                                    | _boolean_            | `false` |
+| labelDisabled | 是否禁用文本内容点击                                                              | _boolean_            | `false` |
+| labelPosition | 文本位置，可选值为 `left`                                                         | _string_             | `right` |
+| checkedColor  | 选中状态颜色                                                                      | _string_             |         |
 
 ### RadioGroup @Props
 

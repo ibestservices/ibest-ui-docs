@@ -197,3 +197,32 @@ IBestSwitch({
 ```
 
 :::
+
+## API
+
+### @Props
+
+| 参数                 | 说明                                                                  | 类型                 | 默认值                                                                                                                                |
+| -------------------- | --------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| value                | 默认是否选中 非双向绑定，如果要获取最新的值请从 `onChange` 回调中获取 | _string_ \| _number_ |                                                                                                                                       |
+| disabled             | 是否禁用按钮                                                          | _boolean_            | `false`                                                                                                                               |
+| loading              | 是否显示为加载状态                                                    | _boolean_            | `false`                                                                                                                               |
+| switchSize           | 大小尺寸，单位 `lpx`，                                                | _number_             | 52                                                                                                                                    |
+| activeColor          | 打开时的背景色                                                        | _string_             | <div style="padding: 2px 4px; background: #1989fa; color: #fff; border-radius: 4px">#1989fa</div>                                     |
+| inactiveColor        | 关闭时的背景色                                                        | _string_             | <div style="padding: 2px 4px; background: rgba(120, 120, 128, 0.16); color: #fff; border-radius: 4px">rgba(120, 120, 128, 0.16)</div> |
+| loadingActiveColor   | 打开时的 loading 颜色，默认跟随 `activeColor`                         | _string_             |                                                                                                                                       |
+| loadingInactiveColor | 关闭时的 loading 颜色，默认跟随 `activeColor`                         | _string_             |                                                                                                                                       |
+
+### Events
+
+| 事件名         | 说明                                                                                                                                                          | 事件类型                               |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| onChange       | 开关状态改变的回调事件                                                                                                                                        | (value: _boolean_) => _void_           |
+| onBeforeChange | 开关状态改变前的回调事件，接收一个 `Promise` 对象，如果 `Promise` 状态为 `resolve` ，则按钮状态变化将继续进行；如果状态为 `reject` ，则将阻止按钮状态的变化。 | (value: _boolean_) => _Promise\<any\>_ |
+| onClickSwitch  | 点击开关的回调事件                                                                                                                                            | (event: _ClickEvent_)_ => \_void_      |
+
+### @BuilderParam 插槽
+
+| 插槽名      | 说明             | 类型                      |
+| ----------- | ---------------- | ------------------------- |
+| nodeBuilder | 自定义按钮的内容 | _CustomBuilder_ \| _null_ |
