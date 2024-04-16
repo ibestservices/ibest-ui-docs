@@ -4,7 +4,7 @@
 
 感谢你使用 IBest-UI。
 
-以下是关于向 IBest-UI 提交反馈或代码的指南。在向 IBest-UI 提交 issue 或者 PR 之前，请先花几分钟时间阅读以下内容。
+以下是关于向 IBest-UI 提交反馈或代码的指南。在向 IBest-UI 提交 [issue](https://gitee.com/ibestservices/ibest-ui/issues) 或者 [PR](https://gitee.com/ibestservices/ibest-ui/pulls) 之前，请先花几分钟时间阅读以下内容。
 
 ## Issue 规范
 
@@ -13,13 +13,95 @@
 
 ## 参与开发
 
-待补充...
+在进行本地开发前，请先确保你的开发环境中 `DevEco-Studio` 能够正常运行，相关配置正确。
+按照下面的步骤操作，即可在本地开发 Vant 组件。
+
+1. 克隆仓库
+
+```shell
+# 克隆仓库
+git clone git@gitee.com:ibestservices/ibest-ui.git
+```
+
+2. 构建本地 `library`
+   ![构建library](./images/build.png)
+3. 在 `components` 目录下开发组件、修复 BUG 或做你想做的事情
+   ![components](./images/components.png)
+
+## 全局样式
+
+### 开发组件时如何使用全局样式
+
+```ts
+import { IBEST_UI_NAMESPACE } from '../../theme-chalk/src';
+
+
+@Component
+export struct IBest组件名称 {
+  /**
+   * 全局公共样式
+   */
+  @StorageLink(IBEST_UI_NAMESPACE) private baseStyle: IbestUIBaseStyleType = {};
+
+  build(){
+    Columon(){
+
+    }.animation({ duration: this.baseStyle.animationDuration})
+  }
+}
+```
+
+### 如何扩展全局样式
+
+将样式赋值在 `defaultBaseStyle` 对象中即可全局暴露。
+
+![样式](./images/styles.png)
+
+## 目录结构
+
+> [ArkTS 工程目录结构（Stage 模型)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V2/start-with-ets-stage-0000001477980905-V2#ZH-CN_TOPIC_0000001523985912__arkts%E5%B7%A5%E7%A8%8B%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84stage%E6%A8%A1%E5%9E%8B)
+
+::: details 查看目录结构
+
+```shell
+├── entry # 例子hap包
+│   └── src
+│   ├── main
+│   │   ├── ets
+│   │   │   ├── assets
+│   │   │   │   └── styles # 例子页面样式
+│   │   │   ├── components # 例子组件
+│   │   │   ├── entryability
+│   │   │   └── pages # 例子页面
+│   │   └── resources
+│   │   ├── base
+# ...
+├── hvigor
+├── library  # 组件库
+│   └── src
+│   └── main
+│   ├── ets
+│   │   ├── assets
+│   │   │   └── ets # 工具方法
+│   │   ├── components # 组件目录
+│   │   │   ├── button
+│   │   │   ├── cell
+│   │   │   └── ...
+│   │   └── theme-chalk # 样式变量
+│   │   └── src
+│   └── resources # 组件库资源
+│   ├── base
+# ...
+
+```
+
+:::
 
 ## 代码规范
 
 在编写代码时，请注意：
 
-- 确保代码可以通过的 鸿蒙编辑器及仓库的 TSLint 校验。
+- 确保代码可以通过的 鸿蒙编辑器及仓库的 ESLint 校验。
 - 确保代码格式是规范的，使用 鸿蒙编辑器 进行代码格式化。
 
 ## 提交 Pull Request
@@ -45,7 +127,7 @@
 - 基于 fork 后仓库的 main 分支新建一个分支，比如 feature/button_color。
 - 在新分支上进行开发，开发完成后，提 Pull Request 到主仓库的 main 分支。
 - Pull Request 会在 Review 通过后被合并到主仓库。
-- 等待 IBEST-UI 发布新版本。
+- 等待 IBest-UI 发布新版本。
 
 ### Pull Request 标题格式
 
@@ -84,14 +166,14 @@ type(ComponentName?)：commit message
 
 ```shell
 # 添加主仓库到 remote
-git remote add
+git remote add upstream git@gitee.com:ibestservices/ibest-ui.git
 
 # 拉取主仓库最新代码
-git fetch
+git fetch upstream
 
-# 切换至 main 分支
-git checkout main
+# 切换至 master 分支
+git checkout master
 
 # 合并主仓库代码
-git merge
+git merge upstream/master
 ```
