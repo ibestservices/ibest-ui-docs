@@ -103,3 +103,97 @@ IBestSwitch({
 ```
 
 :::
+
+### 自定义按钮
+
+![自定义按钮](./images/node-switch.png)
+::: tip
+
+通过 `nodeBuilder` 插槽自定义按钮的内容。
+
+:::
+
+::: details 点我查看代码
+
+```ts
+import { IBestSwitch } from '@ibestservices/ibset-ui'
+
+@Entry
+@Component
+struct SwitchPage {
+  @State arrowDirection: 'left' | 'right' = 'left';
+
+  @Builder Arrow(){
+    Row(){
+      Image($r('app.media.arrow'))
+        .width('30lpx')
+        .fillColor(this.arrowDirection === 'left' ? '#db3131' : '#e2e3e7')
+        .rotate({
+          angle: this.arrowDirection === 'left' ? 0 : -180
+        }).animation({
+        duration: 200,
+      })
+    }
+  }
+
+  build(){
+    IBestSwitch({
+      value: true,
+      activeColor: '#db3131',
+      nodeBuilder: () => this.Arrow(),
+      onChange: (value) => {
+        this.arrowDirection = value ? 'left' : 'right';
+      }
+    })
+  }
+}
+
+```
+
+:::
+
+### 异步控制
+
+![异步控制](./images/async-switch.png)
+::: tip
+
+当需要异步控制开关状态时，可以在 `onBeforeChange` 事件的回调函数中返回一个 `Promise` 。如果 `Promise` 状态为 `resolve` ，则按钮状态变化将继续进行；如果状态为 `reject` ，则将阻止按钮状态的变化。
+
+:::
+
+::: details 点我查看代码
+
+```ts
+IBestSwitch({
+  value: true,
+  onBeforeChange: () => {
+    return new Promise((resolve, reject) => {
+      AlertDialog.show({
+        title: "提示",
+        message: "确定更改状态吗",
+        autoCancel: true,
+        alignment: DialogAlignment.Bottom,
+        offset: { dx: 0, dy: -20 },
+        gridCount: 3,
+        primaryButton: {
+          value: "取消",
+          action: () => {
+            reject("");
+          },
+        },
+        secondaryButton: {
+          value: "确认",
+          action: () => {
+            resolve("");
+          },
+        },
+        cancel: () => {
+          reject("");
+        },
+      });
+    });
+  },
+});
+```
+
+:::
