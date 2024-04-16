@@ -26,3 +26,4 @@ dist-ssr
 *.sw?
 dist.zip
 docs/.vitepress/cache
+docs/.vitepress/dist
