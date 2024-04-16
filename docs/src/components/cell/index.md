@@ -7,7 +7,7 @@
 ## 引入
 
 ```ts
-import { IBestCell, IBestCellGroup } from "@ibestservices/ibest-ui";
+import { IBestCell, IBestCellGroup } from "ibest-ui";
 ```
 
 ## 代码演示
@@ -135,7 +135,7 @@ IBestCell({
 ::: details 点我查看代码
 
 ```ts
-import { IBestCell } from "@ibestservices/ibest-ui";
+import { IBestCell } from "ibest-ui";
 
 @Entry
 @Component
@@ -210,7 +210,7 @@ IBestCell({
 ::: details 点我查看代码
 
 ```ts
-import { IBestCell } from "@ibestservices/ibest-ui";
+import { IBestCell } from "ibest-ui";
 
 @Entry
 @Component
@@ -244,7 +244,7 @@ struct CellPage {
 ::: details 点我查看代码
 
 ```ts
-import { IBestCell } from "@ibestservices/ibest-ui";
+import { IBestCell } from "ibest-ui";
 
 @Entry
 @Component
@@ -255,6 +255,8 @@ struct CellPage {
   }
 
   build(){
+    // ...
+
     IBestCell({
       title: '居中',
       label: '描述内容',
@@ -271,6 +273,8 @@ struct CellPage {
       iconBuilder: this.StarIcon('32lpx'),
       isLink: true
     })
+
+    // ...
   }
 }
 ```
@@ -287,7 +291,7 @@ struct CellPage {
 ::: details 点我查看代码
 
 ```ts
-import { IBestCell, IBestTag } from "@ibestservices/ibest-ui";
+import { IBestCell, IBestTag } from "ibest-ui";
 
 @Entry
 @Component
@@ -316,6 +320,8 @@ struct CellPage {
   }
 
   build(){
+    // ...
+
     IBestCell({
       title: '标题',
       value: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
@@ -338,6 +344,8 @@ struct CellPage {
       rightIconBuilder: this.Arrow,
       clickable: true
     })
+
+    // ...
   }
 }
 ```

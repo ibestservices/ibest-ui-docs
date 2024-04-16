@@ -7,7 +7,7 @@
 ## 引入
 
 ```ts
-import { IBestSwitch } from "@ibestservices/ibest-ui";
+import { IBestSwitch } from "ibest-ui";
 ```
 
 ## 代码演示

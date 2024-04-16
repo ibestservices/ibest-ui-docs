@@ -7,7 +7,7 @@
 ## 引入
 
 ```ts
-import { IBestButton } from "@ibestservices/ibest-ui";
+import { IBestButton } from "ibest-ui";
 ```
 
 ## 代码演示
@@ -160,7 +160,7 @@ IBestButton({
 ::: details 点我查看代码
 
 ```ts
-import { IBestButton } from "@ibestservices/ibest-ui";
+import { IBestButton } from "ibest-ui";
 
 @Builder function Arrow(color = '#fff'){
   Image($r('app.media.title_back'))
@@ -173,6 +173,8 @@ import { IBestButton } from "@ibestservices/ibest-ui";
 @Component
 struct ButtonPage {
   build(){
+    // ...
+
     IBestButton({
       type: 'primary',
       iconBuilder: Arrow
@@ -190,6 +192,8 @@ struct ButtonPage {
       type: 'default',
       iconBuilder: Arrow.bind(this, '#4B72EF')
     })
+
+    // ...
   }
 }
 

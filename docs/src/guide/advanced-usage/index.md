@@ -5,7 +5,7 @@
 ## 组件插槽用法
 
 ```ts
-import { IBestButton } from "@ibestservices/ibest-ui";
+import { IBestButton } from "ibest-ui";
 
 @Builder function Arrow(color = '#fff'){
   Image($r('app.media.title_back'))
@@ -27,7 +27,7 @@ export struct ButtonPage {
 ## 组件实例用法
 
 ```ts
-import { IBestButton, IBestCheckboxGroup } from "@ibestservices/ibest-ui";
+import { IBestButton, IBestCheckboxGroup } from "ibest-ui";
 
 @Builder function Arrow(color = '#fff'){
   Image($r('app.media.title_back'))
@@ -44,19 +44,22 @@ export struct ButtonPage {
 
   build(){
     // ...
+
     IBestCheckboxGroup({
       group: 'group5',
       onReady: (checkboxGroupContext)=>{
         this.componentContext = checkboxGroupContext
       }
     })
-    // ...
+
     IBestButton({
       text: '全选',
       onClickBtn: () => {
         this.componentContext?.toggleAll(true)
       }
     })
+
+    // ...
   }
 }
 ```

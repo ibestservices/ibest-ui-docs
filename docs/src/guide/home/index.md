@@ -11,3 +11,15 @@ title: "IBset-UI"
 ## 快速上手
 
 请阅读[快速上手](../quickstart/index)章节，通过该章节你可以了解到 {{ $frontmatter.title }} 的安装方法和基本使用姿势。
+
+## 贡献指南
+
+贡献代码请阅读我们的[贡献指南](../contribution/)。
+
+使用过程中发现任何问题都可以提 Issue 给我们，当然，我们也非常欢迎你给我们发 PR。
+
+## 开源协议
+
+## 特别感谢
+
+[vant](https://vant-contrib.gitee.io/vant/#/zh-CN/home)

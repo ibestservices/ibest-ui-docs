@@ -7,20 +7,20 @@
 ## 安装
 
 ```shell
-ohpm install @ibestservices/ibest-ui
+ohpm install ibest-ui
 
 ```
 
 ## 引入组件
 
 ```ts
-import { IBestButton } from "@ibestservices/ibest-ui";
+import { IBestButton } from "ibest-ui";
 ```
 
 ## 使用组件
 
 ```ts
-import { IBestButton } from "@ibestservices/ibest-ui";
+import { IBestButton } from "ibest-ui";
 
 @Component
 export struct ButtonPage {

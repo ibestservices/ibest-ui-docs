@@ -47,6 +47,10 @@ export default defineConfig({
           { text: "Switch 开关", link: "/components/switch/" },
         ],
       },
+      {
+        text: "展示组件",
+        items: [{ text: "Tag 标签", link: "/components/tag/" }],
+      },
     ],
 
     socialLinks: [

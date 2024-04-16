@@ -7,7 +7,7 @@
 ## 引入
 
 ```ts
-import { IBestRadio, IBestRadioGroup } from "@ibestservices/ibest-ui";
+import { IBestRadio, IBestRadioGroup } from "ibest-ui";
 ```
 
 ## 代码演示
@@ -335,6 +335,8 @@ struct CheckboxPage {
   }
 
   build(){
+    // ...
+
     IBestRadioGroup({ group: 'group12' })
 
     IBestCell({
@@ -355,6 +357,8 @@ struct CheckboxPage {
         this.slectedRadioName = 'radio2'
       }
     })
+
+    // ...
   }
 }
 ```

@@ -7,7 +7,7 @@
 ## 引入
 
 ```ts
-import { IBestCheckbox, IBestCheckboxGroup } from "@ibestservices/ibest-ui";
+import { IBestCheckbox, IBestCheckboxGroup } from "ibest-ui";
 ```
 
 ## 代码演示
@@ -426,6 +426,8 @@ struct CheckboxPage {
   checkboxGroupIndeterminateContext: CheckboxGroupContext | null = null;
 
   build(){
+    // ...
+
     Column() {
       IBestCheckbox({
         value: this.isIndeterminateCheckAll,
@@ -463,6 +465,7 @@ struct CheckboxPage {
       name: 'checkbox11',
     })
 
+    // ...
   }
 }
 ```
