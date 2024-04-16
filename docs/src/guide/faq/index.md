@@ -8,6 +8,6 @@
 可查阅鸿蒙[像素单位](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V2/ts-pixel-units-0000001478341189-V2)文档
 :::
 
-## 为什么使用 `size` 作为 UI 库的尺寸控制属性？
+## 为什么不使用 `size` 作为 UI 库的尺寸控制属性？
 
 `size` 是保留字。

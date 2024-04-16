@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "IBest-UI"
   text: "一个简单易用的鸿蒙开源UI库"
-  tagline: 基于鸿蒙API9+
+  tagline: 尽量抹平 Web 与 鸿蒙 的差异
   actions:
     - theme: brand
       text: 指南
