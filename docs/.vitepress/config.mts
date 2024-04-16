@@ -7,7 +7,20 @@ export default defineConfig({
   title: "IBest-UI",
   description: "一个简单易用的鸿蒙开源UI库",
   srcDir: "./src",
-  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+  head: [
+    ["link", { rel: "icon", href: "/favicon.ico" }],
+    [
+      "script",
+      {},
+      `var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6013715d6ae931dec1cdef49a5790231";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();`,
+    ],
+  ],
   themeConfig: {
     logo: "/favicon.ico",
     // https://vitepress.dev/reference/default-theme-config
