@@ -6,7 +6,7 @@ title: "IBset-UI"
 
 ## 介绍
 
-{{ $frontmatter.title }} 是一套轻量，可定制化主题的基于鸿蒙 `API9+` 的参照 `vant` 设计的 `UI` 库。
+{{ $frontmatter.title }} 是一套轻量，可定制化主题的基于鸿蒙 `API9+` 的参照 `vant` 设计的 `UI` 库，目前处于起步阶段，希望得到业界的帮助。
 
 ## 快速上手
 
