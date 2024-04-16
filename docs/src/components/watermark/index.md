@@ -7,7 +7,7 @@
 ## 引入
 
 ```ts
-import { IBestWatermark } from "ibest-ui";
+import { IBestWatermark } from "@ibestservices/ibest-ui";
 ```
 
 ### 文字水印

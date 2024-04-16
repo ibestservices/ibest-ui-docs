@@ -9,7 +9,7 @@
 在项目的启动页面中，通过调用 `setIBestUIBaseStyle` 方法，设置主题。
 
 ```ts
-import { setIBestUIBaseStyle } from "ibest-ui";
+import { setIBestUIBaseStyle } from "@ibestservices/ibest-ui";
 
 @Entry
 @Component

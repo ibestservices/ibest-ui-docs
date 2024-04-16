@@ -7,7 +7,7 @@
 ## 引入
 
 ```ts
-import { IBestRadio, IBestRadioGroup } from "ibest-ui";
+import { IBestRadio, IBestRadioGroup } from "@ibestservices/ibest-ui";
 ```
 
 ## 代码演示

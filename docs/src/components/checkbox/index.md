@@ -7,7 +7,7 @@
 ## 引入
 
 ```ts
-import { IBestCheckbox, IBestCheckboxGroup } from "ibest-ui";
+import { IBestCheckbox, IBestCheckboxGroup } from "@ibestservices/ibest-ui";
 ```
 
 ## 代码演示

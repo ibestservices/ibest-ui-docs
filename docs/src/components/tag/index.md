@@ -7,7 +7,7 @@
 ## 引入
 
 ```ts
-import { IBestTag } from "ibest-ui";
+import { IBestTag } from "@ibestservices/ibest-ui";
 ```
 
 ## 代码演示

@@ -7,7 +7,7 @@
 ## 引入
 
 ```ts
-import { IBestCell, IBestCellGroup } from "ibest-ui";
+import { IBestCell, IBestCellGroup } from "@ibestservices/ibest-ui";
 ```
 
 ## 代码演示
@@ -135,7 +135,7 @@ IBestCell({
 ::: details 点我查看代码
 
 ```ts
-import { IBestCell } from "ibest-ui";
+import { IBestCell } from "@ibestservices/ibest-ui";
 
 @Entry
 @Component
@@ -210,7 +210,7 @@ IBestCell({
 ::: details 点我查看代码
 
 ```ts
-import { IBestCell } from "ibest-ui";
+import { IBestCell } from "@ibestservices/ibest-ui";
 
 @Entry
 @Component
@@ -244,7 +244,7 @@ struct CellPage {
 ::: details 点我查看代码
 
 ```ts
-import { IBestCell } from "ibest-ui";
+import { IBestCell } from "@ibestservices/ibest-ui";
 
 @Entry
 @Component
@@ -291,7 +291,7 @@ struct CellPage {
 ::: details 点我查看代码
 
 ```ts
-import { IBestCell, IBestTag } from "ibest-ui";
+import { IBestCell, IBestTag } from "@ibestservices/ibest-ui";
 
 @Entry
 @Component

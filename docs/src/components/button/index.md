@@ -7,7 +7,7 @@
 ## 引入
 
 ```ts
-import { IBestButton } from "ibest-ui";
+import { IBestButton } from "@ibestservices/ibest-ui";
 ```
 
 ## 代码演示
@@ -160,7 +160,7 @@ IBestButton({
 ::: details 点我查看代码
 
 ```ts
-import { IBestButton } from "ibest-ui";
+import { IBestButton } from "@ibestservices/ibest-ui";
 
 @Builder function Arrow(color = '#fff'){
   Image($r('app.media.title_back'))
