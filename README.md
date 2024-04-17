@@ -7,7 +7,3 @@
 ## 打包
 
 `pnpm run docs:build`
-
-## home 目录
-
-暂时作为对外展示目录
