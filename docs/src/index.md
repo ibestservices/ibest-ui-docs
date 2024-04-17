@@ -14,8 +14,8 @@ hero:
       text: 组件
       link: /components/button/
     - theme: alt
-      text: 在Gitee上查看
-      link: https://gitee.com/ibestservices/ibest-ui
+      text: 在Github上查看
+      link: https://github.com/ibestservices/ibest-ui
 
 features:
   - title: 更快地开发
