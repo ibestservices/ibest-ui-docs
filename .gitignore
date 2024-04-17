@@ -8,8 +8,6 @@ pnpm-debug.log*
 lerna-debug.log*
 /dist/
 node_modules
-incubation-company-web
-dist-ssr
 *.local
 * copy*
 # Editor directories and files
