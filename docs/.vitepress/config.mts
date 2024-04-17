@@ -13,7 +13,7 @@ export default defineConfig({
       `var _hmt = _hmt || [];
       (function() {
         var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?6013715d6ae931dec1cdef49a5790231";
+        hm.src = "https://hm.baidu.com/hm.js?c4e91fc52653a1baa04e20de1c288145";
         hm.async = true;
         document.head.appendChild(hm);
       })();`,
