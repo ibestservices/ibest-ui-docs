@@ -4,7 +4,7 @@
 
 感谢你使用 IBest-UI。
 
-以下是关于向 IBest-UI 提交反馈或代码的指南。在向 IBest-UI 提交 [issue](https://gitee.com/ibestservices/ibest-ui/issues) 或者 [PR](https://gitee.com/ibestservices/ibest-ui/pulls) 之前，请先花几分钟时间阅读以下内容。
+以下是关于向 IBest-UI 提交反馈或代码的指南。在向 IBest-UI 提交 [issue](https://github.com/ibestservices/ibest-ui/issues) 或者 [PR](https://github.com/ibestservices/ibest-ui/pulls) 之前，请先花几分钟时间阅读以下内容。
 
 ## Issue 规范
 
