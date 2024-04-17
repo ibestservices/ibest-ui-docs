@@ -1,5 +1,5 @@
 ---
-title: "IBset-UI"
+title: "iBest-UI"
 ---
 
 # {{ $frontmatter.title }}

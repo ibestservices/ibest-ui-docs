@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "IBest-UI",
+  title: "iBest-UI@HarmonyOS",
   description: "一个简单易用的鸿蒙开源UI库",
   srcDir: "./src",
   head: [

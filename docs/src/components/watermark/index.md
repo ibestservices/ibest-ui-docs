@@ -23,7 +23,7 @@ import { IBestWatermark } from "@ibestservices/ibest-ui";
 
 ```ts
 IBestWatermark({
-  text: 'IBest-UI',
+  text: 'iBest-UI',
   fontSize: 14,
   gapX: 40,
   gapY: 40
@@ -73,7 +73,7 @@ IBestWatermark({
 
 ```ts
 IBestWatermark({
-  text: 'IBest-UI',
+  text: 'iBest-UI',
   fontSize: 14,
   gapX: 80,
   gapY: 80
@@ -97,7 +97,7 @@ IBestWatermark({
 
 ```ts
 IBestWatermark({
-  text: 'IBest-UI',
+  text: 'iBest-UI',
   fontSize: 14,
   gapX: 20,
   gapY: 20,
