@@ -163,7 +163,7 @@ struct CellPage {
 
 ![展示箭头](./images/arrow-cell.png)
 ::: tip
-设置 `is-link` 属性后会在单元格右侧显示箭头，并且可以通过 `arrow-direction` 属性控制箭头方向。
+设置 `isLink` 属性后会在单元格右侧显示箭头，并且可以通过 `arrowDirection` 属性控制箭头方向。
 :::
 
 ::: details 点我查看代码
@@ -376,7 +376,7 @@ struct CellPage {
 | hasBorder      | 是否显示内边框                    | _boolean_            | `true`                                                                                            |
 | replace        | 是否在跳转时替换当前页面历史      | _boolean_            | `false`                                                                                           |
 | clickable      | 是否开启点击反馈                  | _boolean_            | `false`                                                                                           |
-| is-link        | 是否展示右侧箭头并开启点击反馈    | _boolean_            | `false`                                                                                           |
+| isLink         | 是否展示右侧箭头并开启点击反馈    | _boolean_            | `false`                                                                                           |
 | required       | 是否显示表单必填星号              | _boolean_            | `false`                                                                                           |
 | center         | 是否使内容垂直居中                | _boolean_            | `false`                                                                                           |
 | arrowDirection | 箭头方向，可选值为 left up down   | _string_             | `right`                                                                                           |

@@ -104,7 +104,7 @@ IBestButton({
 
 ![加载状态](./images/loading-btn.png)
 ::: tip
-通过 `loading` 属性设置按钮为加载状态，加载状态下默认会隐藏按钮文字，可以通过 `loading-text` 设置加载状态下的文字。
+通过 `loading` 属性设置按钮为加载状态，加载状态下默认会隐藏按钮文字，可以通过 `loadingText` 设置加载状态下的文字。
 :::
 
 ::: details 点我查看代码
@@ -267,21 +267,21 @@ IBestButton({
 
 ### @Props
 
-| 参数          | 说明                                                     | 类型      | 默认值    |
-| ------------- | -------------------------------------------------------- | --------- | --------- |
-| type          | 类型，可选值为 `primary` `success` `warning` `danger`    | _string_  | `default` |
-| buttonSize    | 尺寸，可选值为 `large` `small` `mini`                    | _string_  | `normal`  |
-| text          | 按钮文字                                                 | _string_  |           |
-| color         | 按钮颜色                                                 | _string_  |           |
-| icon-position | 图标展示位置，可选值为 right                             | _string_  | `left`    |
-| plain         | 是否为朴素按钮                                           | _boolean_ | `false`   |
-| square        | 是否为方形按钮                                           | _boolean_ | `false`   |
-| round         | 是否为圆形按钮                                           | _boolean_ | `false`   |
-| disabled      | 是否禁用按钮                                             | _boolean_ | `false`   |
-| hairline      | 是否使用 1lpx 边框                                       | _boolean_ | `false`   |
-| loading       | 是否显示为加载状态                                       | _boolean_ | `false`   |
-| loading-text  | 加载状态提示文字                                         | _string_  |           |
-| loading-size  | 加载图标大小，默认单位为 lpx， 如果为-1 默认跟随字体大小 | _number_  | `-1`      |
+| 参数         | 说明                                                     | 类型      | 默认值    |
+| ------------ | -------------------------------------------------------- | --------- | --------- |
+| type         | 类型，可选值为 `primary` `success` `warning` `danger`    | _string_  | `default` |
+| buttonSize   | 尺寸，可选值为 `large` `small` `mini`                    | _string_  | `normal`  |
+| text         | 按钮文字                                                 | _string_  |           |
+| color        | 按钮颜色                                                 | _string_  |           |
+| iconPosition | 图标展示位置，可选值为 right                             | _string_  | `left`    |
+| plain        | 是否为朴素按钮                                           | _boolean_ | `false`   |
+| square       | 是否为方形按钮                                           | _boolean_ | `false`   |
+| round        | 是否为圆形按钮                                           | _boolean_ | `false`   |
+| disabled     | 是否禁用按钮                                             | _boolean_ | `false`   |
+| hairline     | 是否使用 1lpx 边框                                       | _boolean_ | `false`   |
+| loading      | 是否显示为加载状态                                       | _boolean_ | `false`   |
+| loadingText  | 加载状态提示文字                                         | _string_  |           |
+| loadingSize  | 加载图标大小，默认单位为 lpx， 如果为-1 默认跟随字体大小 | _number_  | `-1`      |
 
 ### Events
 
