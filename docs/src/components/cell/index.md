@@ -364,21 +364,21 @@ struct CellPage {
 
 ### Cell @Props
 
-| 参数           | 说明                              | 类型                 | 默认值                                                                                            |
-| -------------- | --------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------- |
-| title          | 左侧标题                          | _number_ \| _string_ |                                                                                                   |
-| titleColor     | 左侧标题文字颜色                  | _string_             | <div style="padding: 2px 4px; background: #323233; color: #fff; border-radius: 4px">#323233</div> |
-| value          | 右侧内容                          | _number_ \| _string_ |                                                                                                   |
-| valueColor     | 右侧内容文字颜色                  | _string_             | <div style="padding: 2px 4px; background: #969799; color: #fff; border-radius: 4px">#969799</div> |
-| label          | 标题下方的描述信息                | _number_ \| _string_ |                                                                                                   |
-| labelColor     | 标题下方的描述信息文字颜色        | _string_             | <div style="padding: 2px 4px; background: #969799; color: #fff; border-radius: 4px">#969799</div> |
-| cellSize       | 单元格大小，可选值为 large normal | _string_             |                                                                                                   |
-| hasBorder      | 是否显示内边框                    | _boolean_            | `true`                                                                                            |
-| clickable      | 是否开启点击反馈                  | _boolean_            | `false`                                                                                           |
-| isLink         | 是否展示右侧箭头并开启点击反馈    | _boolean_            | `false`                                                                                           |
-| required       | 是否显示表单必填星号              | _boolean_            | `false`                                                                                           |
-| center         | 是否使内容垂直居中                | _boolean_            | `false`                                                                                           |
-| arrowDirection | 箭头方向，可选值为 left up down   | _string_             | `right`                                                                                           |
+| 参数           | 说明                                  | 类型                 | 默认值                                                                                            |
+| -------------- | ------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------- |
+| title          | 左侧标题                              | _number_ \| _string_ |                                                                                                   |
+| titleColor     | 左侧标题文字颜色                      | _string_             | <div style="padding: 2px 4px; background: #323233; color: #fff; border-radius: 4px">#323233</div> |
+| value          | 右侧内容                              | _number_ \| _string_ |                                                                                                   |
+| valueColor     | 右侧内容文字颜色                      | _string_             | <div style="padding: 2px 4px; background: #969799; color: #fff; border-radius: 4px">#969799</div> |
+| label          | 标题下方的描述信息                    | _number_ \| _string_ |                                                                                                   |
+| labelColor     | 标题下方的描述信息文字颜色            | _string_             | <div style="padding: 2px 4px; background: #969799; color: #fff; border-radius: 4px">#969799</div> |
+| cellSize       | 单元格大小，可选值为 `large` `normal` | _string_             |                                                                                                   |
+| hasBorder      | 是否显示内边框                        | _boolean_            | `true`                                                                                            |
+| clickable      | 是否开启点击反馈                      | _boolean_            | `false`                                                                                           |
+| isLink         | 是否展示右侧箭头并开启点击反馈        | _boolean_            | `false`                                                                                           |
+| required       | 是否显示表单必填星号                  | _boolean_            | `false`                                                                                           |
+| center         | 是否使内容垂直居中                    | _boolean_            | `false`                                                                                           |
+| arrowDirection | 箭头方向，可选值为 left up down       | _string_             | `right`                                                                                           |
 
 ### Events
 
