@@ -374,7 +374,6 @@ struct CellPage {
 | labelColor     | 标题下方的描述信息文字颜色        | _string_             | <div style="padding: 2px 4px; background: #969799; color: #fff; border-radius: 4px">#969799</div> |
 | cellSize       | 单元格大小，可选值为 large normal | _string_             |                                                                                                   |
 | hasBorder      | 是否显示内边框                    | _boolean_            | `true`                                                                                            |
-| replace        | 是否在跳转时替换当前页面历史      | _boolean_            | `false`                                                                                           |
 | clickable      | 是否开启点击反馈                  | _boolean_            | `false`                                                                                           |
 | isLink         | 是否展示右侧箭头并开启点击反馈    | _boolean_            | `false`                                                                                           |
 | required       | 是否显示表单必填星号              | _boolean_            | `false`                                                                                           |
