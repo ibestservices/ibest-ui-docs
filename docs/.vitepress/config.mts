@@ -42,6 +42,7 @@ export default defineConfig({
           { text: "常见问题", link: "/guide/faq/" },
           { text: "更新日志", link: "/guide/changelog/" },
           { text: "贡献指南", link: "/guide/contribution/" },
+          { text: "迭代计划", link: "/guide/interation-plan/" },
         ],
       },
       {
