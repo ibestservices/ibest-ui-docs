@@ -25,3 +25,9 @@ title: "iBest-UI"
 ## 特别感谢
 
 [vant](https://vant-contrib.gitee.io/vant/#/zh-CN/home)
+
+## QQ 群
+
+群号： 953492584
+
+![QQ群:953492584](./qq.jpg)
