@@ -80,6 +80,15 @@ export default defineConfig({
           { text: "Watermark 水印", link: "/components/watermark/" },
         ],
       },
+      {
+        text: "反馈组件",
+        items: [
+          {
+            text: `Dialog 弹出框 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.2.0</span>`,
+            link: "/components/dialog/",
+          },
+        ],
+      },
     ],
     socialLinks: [
       {
