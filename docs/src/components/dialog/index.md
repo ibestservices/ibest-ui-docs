@@ -307,46 +307,48 @@ struct DialogPage {
 
 ### @Props
 
-| 参数                  | 说明                                                  | 类型                          | 默认值                                                                                            |
-| --------------------- | ----------------------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------- |
-| dialogWidth           | 弹窗的宽度                                            | _string_                      | `640lpx`                                                                                          |
-| dialogBorderRadius    | 弹窗的圆角                                            | _string_                      | `32lpx`                                                                                           |
-| title                 | 弹窗的标题                                            | _string_                      |                                                                                                   |
-| titleColor            | 弹窗的标题文字颜色                                    | _string_                      | <div style="padding: 2px 4px; background: #323233; color: #fff; border-radius: 4px">#323233</div> |
-| titlePaddingTop       | 弹窗的标题的 `padding-top` 值                         | _string_                      | `52lpx`                                                                                           |
-| titlePaddingX         | 标题的 `padding-left` 与 `padding-right` 值           | _string_                      | `48lpx`                                                                                           |
-| titleLienHeight       | 标题的 `line-height` 值                               | _string_                      | `48lpx`                                                                                           |
-| titleFontSize         | 标题的 `font-size` 值                                 | _string_                      | `32lpx`                                                                                           |
-| titleTextAlign        | 标题的对齐方式                                        | _left_ \| _center_ \| _right_ | `center`                                                                                          |
-| message               | 弹窗的内容区域文本                                    | _string_                      |                                                                                                   |
-| messagePaddingTop     | 弹窗的内容区域的 `padding-top` 值                     | _string_                      | `16lpx`                                                                                           |
-| messagePaddingX       | 弹窗的内容区域的 `padding-left` 与 `padding-right` 值 | _string_                      | `48lpx`                                                                                           |
-| messagePaddingXBottom | 弹窗的内容区域的 `padding-bottom` 值                  | _string_                      | `52lpx`                                                                                           |
-| messageFontColor      | 弹窗的内容区域的 `padding-bottom` 值                  | _string_                      | `52lpx`                                                                                           |
-| messageFontSize       | 弹窗的内容区域的 `font-size` 值                       | _string_                      | `28lpx`                                                                                           |
-| messageLineHeight     | 弹窗的内容区域的 `line-height` 值                     | _string_                      | `40lpx`                                                                                           |
-| messageTextAlign      | 弹窗的内容区域的文字对齐方式                          | _left_ \| _center_ \| _right_ | `center`                                                                                          |
-| messageMaxHeight      | 弹窗的内容区域的滚动区域最大高度                      | _string_                      | `60%`                                                                                             |
-| showConfirmButton     | 是否展示确认按钮                                      | _boolean_                     | `true`                                                                                            |
-| showCancelButton      | 是否展示取消按钮                                      | _boolean_                     | `false`                                                                                           |
-| confirmButtonText     | 确认按钮文案                                          | _string_                      | `确认`                                                                                            |
-| cancelButtonText      | 取消按钮的文案                                        | _string_                      | `取消`                                                                                            |
-| confirmButtonColor    | 确认按钮的颜色                                        | _string_                      | <div style="padding: 2px 4px; background: #3D8AF2; color: #fff; border-radius: 4px">#3D8AF2</div> |
-| cancelButtonColor     | 取消按钮的颜色                                        | _string_                      | <div style="padding: 2px 4px; background: #646566; color: #fff; border-radius: 4px">#646566</div> |
-| confirmButtonDisabled | 是否禁用确认按钮                                      | _boolean_                     | `false`                                                                                           |
-| cancelButtonDisabled  | 是否禁用取消按钮                                      | _boolean_                     | `false`                                                                                           |
-| buttonFontSize        | 确认和取消按钮的文字大小                              | _string_                      | `32lpx`                                                                                           |
+| 参数                  | 说明                                                           | 类型                          | 默认值                                                                                                          |
+| --------------------- | -------------------------------------------------------------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| dialogWidth           | 弹窗的宽度                                                     | _string_                      | `640lpx`                                                                                                        |
+| dialogBorderRadius    | 弹窗的圆角                                                     | _string_                      | `32lpx`                                                                                                         |
+| title                 | 弹窗的标题                                                     | _string_                      |                                                                                                                 |
+| titleColor            | 弹窗的标题文字颜色                                             | _string_                      | <div style="padding: 2px 4px; background: #323233; color: #fff; border-radius: 4px">#323233</div>               |
+| titlePaddingTop       | 弹窗的标题的 `padding-top` 值                                  | _string_                      | `52lpx`                                                                                                         |
+| titlePaddingX         | 标题的 `padding-left` 与 `padding-right` 值                    | _string_                      | `48lpx`                                                                                                         |
+| titleLienHeight       | 标题的 `line-height` 值                                        | _string_                      | `48lpx`                                                                                                         |
+| titleFontSize         | 标题的 `font-size` 值                                          | _string_                      | `32lpx`                                                                                                         |
+| titleTextAlign        | 标题的对齐方式                                                 | _left_ \| _center_ \| _right_ | `center`                                                                                                        |
+| message               | 弹窗的内容区域文本                                             | _string_                      |                                                                                                                 |
+| messagePaddingTop     | 弹窗的内容区域的 `padding-top` 值                              | _string_                      | `16lpx`                                                                                                         |
+| messagePaddingX       | 弹窗的内容区域的 `padding-left` 与 `padding-right` 值          | _string_                      | `48lpx`                                                                                                         |
+| messagePaddingXBottom | 弹窗的内容区域的 `padding-bottom` 值                           | _string_                      | `52lpx`                                                                                                         |
+| messageFontColor      | 弹窗的内容区域的 `padding-bottom` 值                           | _string_                      | `52lpx`                                                                                                         |
+| messageFontSize       | 弹窗的内容区域的 `font-size` 值                                | _string_                      | `28lpx`                                                                                                         |
+| messageLineHeight     | 弹窗的内容区域的 `line-height` 值                              | _string_                      | `40lpx`                                                                                                         |
+| messageTextAlign      | 弹窗的内容区域的文字对齐方式                                   | _left_ \| _center_ \| _right_ | `center`                                                                                                        |
+| messageMaxHeight      | 弹窗的内容区域的滚动区域最大高度                               | _string_                      | `60%`                                                                                                           |
+| showConfirmButton     | 是否展示确认按钮                                               | _boolean_                     | `true`                                                                                                          |
+| showCancelButton      | 是否展示取消按钮                                               | _boolean_                     | `false`                                                                                                         |
+| confirmButtonText     | 确认按钮文案                                                   | _string_                      | `确认`                                                                                                          |
+| cancelButtonText      | 取消按钮的文案                                                 | _string_                      | `取消`                                                                                                          |
+| confirmButtonColor    | 确认按钮的颜色                                                 | _string_                      | <div style="padding: 2px 4px; background: #3D8AF2; color: #fff; border-radius: 4px">#3D8AF2</div>               |
+| cancelButtonColor     | 取消按钮的颜色                                                 | _string_                      | <div style="padding: 2px 4px; background: #646566; color: #fff; border-radius: 4px">#646566</div>               |
+| confirmButtonDisabled | 是否禁用确认按钮                                               | _boolean_                     | `false`                                                                                                         |
+| cancelButtonDisabled  | 是否禁用取消按钮                                               | _boolean_                     | `false`                                                                                                         |
+| showOverlay           | 是否展示遮罩层，不展示的话则没有遮罩层 `API 10+`               | _boolean_                     | `true`                                                                                                          |
+| overlayColor          | 遮罩层颜色 `API 10+`                                           | _string_                      | <div style="padding: 2px 4px; background: rgba(0, 0, 0, 0.2); color: #fff; border-radius: 4px">0x33000000</div> |
+| showInSubWindow       | 某弹框需要显示在主窗口之外时，是否在子窗口显示此弹窗 `API 10+` | _boolean_                     | `false`                                                                                                         |
 
-### Checkbox Events
+### Events
 
 | 事件名      | 说明                                                          | 事件类型                                               |
 | ----------- | ------------------------------------------------------------- | ------------------------------------------------------ |
 | onReady     | 弹窗初始化的回调                                              | (dialogController: _CustomDialogController_) => _void_ |
-| onConfirm   | 点击确认按钮的回调，支持返回 `Promise`                        | (event?: _ClickEvent_) => _void_ \| _Promise\<void\>_  |
+| onConfirm   | 点击确认按钮的回调                                            | (event?: _ClickEvent_) => _void_                       |
 | onCancel    | 点击取消按钮的回调                                            | (event?: _ClickEvent_) => _void_                       |
 | beforeClose | 关闭前的回调函数，返回 `false` 可阻止关闭，支持返回 `Promise` | (event?: _ClickEvent_) => _void_                       |
 
-### Checkbox @BuilderParam 插槽
+### @BuilderParam 插槽
 
 | 插槽名         | 说明                                                                           | 类型                      |
 | -------------- | ------------------------------------------------------------------------------ | ------------------------- |

@@ -11,6 +11,16 @@ ohpm install @ibestservices/ibest-ui
 
 ```
 
+::: tip
+如若您使用的 `API` 版本为 `API9` 或更低版本，请安装 `1.2.0` 版本。
+
+```shell
+ohpm install @ibestservices/ibest-ui@1.2.0
+
+```
+
+:::
+
 ## 引入组件
 
 ```ts
