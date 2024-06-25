@@ -66,6 +66,10 @@ export default defineConfig({
         items: [
           { text: "Checkbox 复选框", link: "/components/checkbox/" },
           { text: "Radio 单选框", link: "/components/radio/" },
+          {
+            text: `Stepper 步进器 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.4.0</span>`,
+            link: "/components/stepper/",
+          },
           { text: "Switch 开关", link: "/components/switch/" },
         ],
       },
