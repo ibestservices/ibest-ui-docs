@@ -19,8 +19,12 @@
 1. 克隆仓库
 
 ```shell
-# 克隆仓库
+# 克隆gitalb仓库
+git clone git@github.com:ibestservices/ibest-ui.git
+
+# 或者克隆gitee仓库
 git clone git@gitee.com:ibestservices/ibest-ui.git
+
 ```
 
 2. 构建本地 `library`
