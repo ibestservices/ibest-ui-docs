@@ -26,6 +26,14 @@ title: "iBest-UI"
 
 [vant](https://vant-contrib.gitee.io/vant/#/zh-CN/home)
 
+## 贡献者
+
+感谢以下同学对 `iBest-UI` 做的贡献:
+
+<a target="_blank" href="https://github.com/ibestservices/ibest-ui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ibestservices/ibest-ui" />
+</a>
+
 ## QQ 群
 
 群号： 953492584

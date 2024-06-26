@@ -12,6 +12,20 @@ iBest-UI 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范�
 
 ## 更新内容
 
+### v1.4.0
+
+#### 新功能 🎉
+
+1. feat(Stepper): 步进器组件
+
+#### 其他变更
+
+暂无
+
+#### 新贡献者
+
+[damengbuxing](https://github.com/damengbuxing)
+
 ### v1.3.0
 
 #### 新功能 🎉
