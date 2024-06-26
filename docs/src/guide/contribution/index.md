@@ -33,7 +33,8 @@ git clone git@gitee.com:ibestservices/ibest-ui.git
 ### 开发组件时如何使用全局样式
 
 ```ts
-import { IBEST_UI_NAMESPACE } from '../../theme-chalk/src';
+import { getDefaultBaseStyle, IBEST_UI_NAMESPACE } from '../../theme-chalk/src'
+import { IbestUIBaseStyleObjType } from '../../theme-chalk/src/index.type'
 
 
 @Component
@@ -41,25 +42,25 @@ export struct IBest组件名称 {
   /**
    * 全局公共样式
    */
-  @StorageLink(IBEST_UI_NAMESPACE) private baseStyle: IbestUIBaseStyleType = {};
+  @StorageLink(IBEST_UI_NAMESPACE) private baseStyle: IbestUIBaseStyleObjType = getDefaultBaseStyle()
 
   build(){
     Columon(){
 
-    }.animation({ duration: this.baseStyle.animationDuration})
+    }.animation({ duration: this.baseStyle.animationDuration as number})
   }
 }
 ```
 
 ### 如何扩展全局样式
 
-将样式赋值在 `defaultBaseStyle` 对象中即可全局暴露。
+将样式赋值在 `library/src/theme-chalk/src/index.ts` 中对外暴露的对象即可。
 
 ![样式](./images/styles.png)
 
 ## 目录结构
 
-> [ArkTS 工程目录结构（Stage 模型)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V2/start-with-ets-stage-0000001477980905-V2#ZH-CN_TOPIC_0000001523985912__arkts%E5%B7%A5%E7%A8%8B%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84stage%E6%A8%A1%E5%9E%8B)
+> [ArkTS 工程目录结构（Stage 模型)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/start-with-ets-stage-V5#arkts%E5%B7%A5%E7%A8%8B%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84stage%E6%A8%A1%E5%9E%8B)
 
 ::: details 查看目录结构
 
