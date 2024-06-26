@@ -2,7 +2,7 @@
 
 ## 介绍
 
-感谢你使用 IBest-UI。
+感谢你使用 iBest-UI。
 
 以下是关于向 iBest-UI 提交反馈或代码的指南。在向 iBest-UI 提交 [issue](https://github.com/ibestservices/ibest-ui/issues) 或者 [PR](https://github.com/ibestservices/ibest-ui/pulls) 之前，请先花几分钟时间阅读以下内容。
 
