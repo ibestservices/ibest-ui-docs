@@ -64,7 +64,10 @@ export default defineConfig({
       {
         text: "表单组件",
         items: [
-          { text: "Calendar 日历", link: "/components/calendar/" },
+          {
+            text: `Calendar 日历 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.5.0</span>`,
+            link: "/components/calendar/",
+          },
           { text: "Checkbox 复选框", link: "/components/checkbox/" },
           { text: "Radio 单选框", link: "/components/radio/" },
           {
