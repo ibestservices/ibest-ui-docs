@@ -59,6 +59,7 @@ export default defineConfig({
         items: [
           { text: "Button 按钮", link: "/components/button/" },
           { text: "Cell 单元格", link: "/components/cell/" },
+          { text: "Toast 轻提示", link: "/components/toast/" },
         ],
       },
       {
