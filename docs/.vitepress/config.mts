@@ -59,7 +59,10 @@ export default defineConfig({
         items: [
           { text: "Button 按钮", link: "/components/button/" },
           { text: "Cell 单元格", link: "/components/cell/" },
-          { text: "Toast 轻提示", link: "/components/toast/" },
+          {
+            text: `Toast 轻提示 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.6.0</span>`,
+            link: "/components/toast/",
+          },
         ],
       },
       {
