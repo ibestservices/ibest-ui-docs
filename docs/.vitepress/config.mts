@@ -1,5 +1,4 @@
 import { defineConfig } from "vitepress";
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "iBest-UI@HarmonyOS",
@@ -11,7 +10,9 @@ export default defineConfig({
     [
       "script",
       {},
-      `var _hmt = _hmt || [];
+      process.env.NODE_ENV === "development"
+        ? ""
+        : `var _hmt = _hmt || [];
       (function() {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?c4e91fc52653a1baa04e20de1c288145";
