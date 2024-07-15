@@ -100,6 +100,10 @@ export default defineConfig({
             text: `Dialog 弹出框 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.2.0</span>`,
             link: "/components/dialog/",
           },
+          {
+            text: `Loading 加载 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.7.0</span>`,
+            link: "/components/loading/",
+          },
         ],
       },
     ],
