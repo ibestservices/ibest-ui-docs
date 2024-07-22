@@ -96,7 +96,10 @@ export default defineConfig({
       {
         text: "导航组件",
         items: [
-          { text: "Tab 标签页", link: "/components/tab/" },
+          {
+            text: `Tab 标签页 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.8.0</span>`,
+            link: "/components/tab/",
+          },
         ],
       },
       {
