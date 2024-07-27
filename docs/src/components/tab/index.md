@@ -500,17 +500,17 @@ struct DemoPage {
 
 | 参数 | 说明 | 类型 | 默认值 |
 | ------------ | --------------------------------------------------------| --------- | ---------- |
-| label   | tab文字内容 | _string_ | `""` |
-| name    | tab匹配的标识符 | _string_ | `""` |
+| label   | tab文字内容(必填) | _string_ | `''` |
+| name    | tab匹配的标识符(必填) | _string_ | `''` |
 | number  | 自定义显示数量 | _number_ |  |
-| icon    | 自定义显示图片 | _string \| Resource_ | `""` |
+| icon    | 自定义显示图片 | _string \| Resource_ | `''` |
 | isDisable | 控制是否禁用 | _boolean_ | `false` |
 
 ### Events
 
 | 事件名    | 说明                      | 回调参数                |
 | --------- | ------------------------- | ---------------------- |
-| onChange | 点击tab后的回调 | (name: _string_) => _void_ |
+| onChange | 点击tab后的回调 | `name: string` |
 
 ### Tab 方法
 ::: tip
@@ -518,5 +518,5 @@ struct DemoPage {
 :::
 
 | 方法名    | 说明                      | 参数                |
-| --------- | ------------------------- | ---------------------- |
-| changeTab | 切换到name对应的tab       | name: _string_ |
+| --------- | -------------------------| ---------------------- |
+| changeTab | 切换到name对应的tab       | `name: string` |

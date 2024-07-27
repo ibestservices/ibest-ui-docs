@@ -1,0 +1,400 @@
+# Popup 弹出层
+
+## 介绍
+
+弹出层容器，用于展示弹窗、信息提示等内容，支持多个弹出层叠加展示。
+ 
+## 引入
+
+```ts
+import { IBestPopup } from "@ibestservices/ibest-ui";
+```
+
+## 代码演示
+
+### 基础用法
+
+![展示弹出层](./images/popup-base.png)
+::: tip
+通过 `visible` 属性可控制弹出层是否显示。
+:::
+
+::: details 点我查看代码
+```ts
+import { IBestCell } from "@ibestservices/ibest-ui"
+@Entry
+@Component
+struct DemoPage {
+  @State visible: boolean = false
+  @Builder centerBuilder() {
+    Row() {
+      Text("内容")
+    }
+    .width("100%")
+    .aspectRatio(1)
+    .justifyContent(FlexAlign.Center)
+  }
+  build() {
+    Column(){
+      IBestCell({
+        title: '展示弹出层',
+        isLink: true,
+        hasBorder: false,
+        onClickCell: () => {
+          this.visible = true
+        }
+      })
+      IBestPopup({
+        visible: $visible,
+        popupWidth: 500,
+        contentBuilder: this.centerBuilder
+      })
+    }
+  }
+}
+```
+:::
+
+### 弹出位置
+
+![弹出位置](./images/popup-align.gif)
+::: tip
+通过 `popupAlign` 属性可设置弹出位置，支持 `top`、`bottom`、`left`、`right` 四种弹出位置，默认为 `center`。  
+
+• 当弹窗从顶部或底部弹出时，默认宽度与屏幕宽度保持一致，弹窗高度默认40%。  
+• 当弹窗从左侧或右侧弹出时，默认高度与屏幕高度保持一致，弹窗宽度默认60%。  
+• 当弹窗从中间弹出时，默认不设置宽高，弹窗的宽高取决于内容的宽高。
+:::
+
+::: details 点我查看代码
+```ts
+import { IBestCellGroup } from "@ibestservices/ibest-ui"
+
+@Extend(Column) function positionColStyle(bd: boolean = false){
+  .layoutWeight(1)
+  .height("150lpx")
+  .justifyContent(FlexAlign.Center)
+  .border({width:{left: bd ? 1 : 0}, color: "#ebedf0"})
+}
+
+@Entry
+@Component
+struct DemoPage {
+  @State upVisible: boolean = false
+  @State downVisible: boolean = false
+  @State leftVisible: boolean = false
+  @State rightVisible: boolean = false
+  build() {
+    Column(){
+      IBestCellGroup({ inset: true }) {
+        Row(){
+          Column(){
+            Text("顶部弹出")
+              .fontSize("28lpx")
+          }
+          .positionColStyle()
+          .onClick(() => {
+            this.upVisible = true
+          })
+          Column(){
+            Text("底部弹出")
+              .fontSize("28lpx")
+          }
+          .positionColStyle(true)
+          .onClick(() => {
+            this.downVisible = true
+          })
+          Column(){
+            Text("左侧弹出")
+              .fontSize("28lpx")
+          }
+          .positionColStyle(true)
+          .onClick(() => {
+            this.leftVisible = true
+          })
+          Column(){
+            Text("右侧弹出")
+              .fontSize("28lpx")
+          }
+          .positionColStyle(true)
+          .onClick(() => {
+            this.rightVisible = true
+          })
+        }
+        .width(CONTAINER_SIZE.FULL)
+        .backgroundColor("#fff")
+      }
+      IBestPopup({
+        visible: $upVisible,
+        popupAlign: "top"
+      })
+      IBestPopup({
+        visible: $downVisible,
+        popupAlign: "bottom"
+      })
+      IBestPopup({
+        visible: $leftVisible,
+        popupAlign: "left"
+      })
+      IBestPopup({
+        visible: $rightVisible,
+        popupAlign: "right"
+      })
+    }
+  }
+}
+```
+:::
+
+### 显示标题
+
+![显示标题](./images/popup-title.png)
+::: tip
+通过 `isShowHeader` 属性可控制标题显示，`title` 属性可设置标题内容，`closeIcon` 属性可自定义关闭图标。
+:::
+
+::: details 点我查看代码
+```ts
+import { IBestCellGroup, IBestCell } from "@ibestservices/ibest-ui"
+@Entry
+@Component
+struct DemoPage {
+  @State visible1: boolean = false
+  @State visible2: boolean = false
+  @Builder centerBuilder() {
+    Row() {
+      Text("内容")
+    }
+    .width("100%")
+    .aspectRatio(1)
+    .justifyContent(FlexAlign.Center)
+  }
+  build() {
+    Column(){
+      IBestCellGroup({ inset: true }) {
+        Column() {
+          IBestCell({
+            title: '显示标题',
+            isLink: true,
+            onClickCell: () => {
+              this.visible1 = true
+            }
+          })
+          IBestCell({
+            title: '自定义关闭图标',
+            isLink: true,
+            hasBorder: false,
+            onClickCell: () => {
+              this.visible2 = true
+            }
+          })
+        }
+      }
+      IBestPopup({
+        visible: $visible1,
+				popupWidth: 500,
+				cornerRadius: 20,
+				isShowHeader: true,
+				title: "标题",
+				contentBuilder: this.centerBuilder
+      })
+      IBestPopup({
+        visible: $visible2,
+        popupAlign: "bottom",
+        isShowHeader: true,
+        title: "标题",
+        closeIcon: "https://ibestui.ibestservices.com/favicon.ico"
+      })
+    }
+  }
+}
+```
+:::
+
+### 圆角弹窗
+
+![圆角弹窗](./images/popup-corner-radius.png)
+
+::: tip
+通过 `cornerRadius` 属性可设置弹窗圆角。
+:::
+
+::: details 点我查看代码
+```ts
+import { IBestCellGroup, IBestCell } from "@ibestservices/ibest-ui"
+@Entry
+@Component
+struct DemoPage {
+  @State visible1: boolean = false
+  @State visible2: boolean = false
+  @Builder centerBuilder() {
+    Row() {
+      Text("内容")
+    }
+    .width("300lpx")
+    .aspectRatio(1)
+    .justifyContent(FlexAlign.Center)
+  }
+  build() {
+    Column(){
+      IBestCellGroup({ inset: true }) {
+        Column() {
+          IBestCell({
+            title: '圆角弹窗(居中)',
+            isLink: true,
+            onClickCell: () => {
+              this.visible1 = true
+            }
+          })
+          IBestCell({
+            title: '圆角弹窗(底部)',
+            isLink: true,
+            hasBorder: false,
+            onClickCell: () => {
+              this.visible2 = true
+            }
+          })
+        }
+      }
+      IBestPopup({
+        visible: $visible1,
+        popupWidth: 500,
+        cornerRadius: 10,
+        contentBuilder: this.centerBuilder
+      })
+      IBestPopup({
+        visible: $visible2,
+        popupAlign: "bottom",
+        cornerRadius: 30
+      })
+    }
+  }
+}
+```
+:::
+
+### 事件监听
+
+![事件监听](./images/popup-event.gif)
+::: tip
+支持以下事件:  
+
+• `onOpen` 弹窗打开时触发。  
+• `onClose` 弹窗关闭时触发。
+:::
+
+::: details 点我查看代码
+
+```ts
+import { IBestCell, IBestToast } from "@ibestservices/ibest-ui"
+@Entry
+@Component
+struct DemoPage {
+  @State visible: boolean = false
+  build() {
+    Column(){
+      IBestCell({
+        title: '监听显示事件',
+        isLink: true,
+        hasBorder: false,
+        onClickCell: () => {
+          this.visible = true
+        }
+      })
+      IBestPopup({
+        visible: $visible,
+        popupAlign: "bottom",
+        onOpen: () => {
+          IBestToast.show("open")
+        },
+        onClose: () => {
+          IBestToast.show("close")
+        }
+      })
+    }
+  }
+}
+```
+
+:::
+
+### 安全区域适配
+
+![安全区域适配](./images/popup-safe.png)
+::: tip
+通过 `safeAreaInsetTop` 属性可设置顶部安全距离适配，`safeAreaInsetBottom` 属性可设置底部安全距离适配。
+:::
+
+::: details 点我查看代码
+
+```ts
+import { IBestCell } from "@ibestservices/ibest-ui"
+@Entry
+@Component
+struct DemoPage {
+  @State visible: boolean = false
+  @Builder safeBuilder() {
+		Column(){
+			Text("内容")
+			Text("内容")
+		}
+		.width("100%")
+		.height("100%")
+		.justifyContent(FlexAlign.SpaceBetween)
+		.alignItems(HorizontalAlign.Center)
+	}
+  build() {
+    Column(){
+      IBestCell({
+        title: '安全区域适配',
+        isLink: true,
+        hasBorder: false,
+        onClickCell: () => {
+          this.visible = true
+        }
+      })
+      IBestPopup({
+        visible: $visible,
+				popupAlign: "left",
+				contentBuilder: this.safeBuilder,
+				safeAreaInsetTop: true,
+				safeAreaInsetBottom: true
+      })
+    }
+  }
+}
+```
+:::
+
+## API
+
+### @Props
+
+| 参数         | 说明                                                     | 类型      | 默认值     |
+| ------------| --------------------------------------------------------| --------- | ---------- |
+| visible     | 控制弹出层显示与隐藏                                        | _boolean_  | `false` |
+| popupAlign  | 弹出层位置,可选值为 `left` `right` `top` `bottom` `center` | _string_  | `center` |
+| popupWidth  | 弹出层宽度,单位lpx,默认值请参考弹出位置事例                    | _string \| number_  | `-`|
+| popupHeight | 弹出层高度,单位lpx,默认值请参考弹出位置事例                    | _string \| number_  | `-`|
+| isShowHeader| 是否展示头部                                              | _boolean_  | `false` |
+| title       | 标题内容                                                  | _string_ | `''`|
+| isShowClose  | 是否显示关闭图标                                           | _boolean_  | `true` |
+| closeIcon   | 自定义关闭图标                                            | _string \| Resource_ | `''`|
+| offsetY     | 弹出层底部偏移量                                           | _number_ |  `0`  |
+| cornerRadius| 弹出层圆角值                                              | _number_ | `0`   |
+| closeOnClickOverlay | 是否允许点击遮罩关闭                                | _boolean_ |  `true`  |
+| closeOnBackPress | 是否允许返回键关闭                                     | _boolean_ |  `false`  |
+| safeAreaInsetTop| 是否开启顶部安全区适配                                   | _boolean_ | `false` |
+| safeAreaInsetBottom | 是否开启底部安全区适配                               | _boolean_ | `false` |
+
+### Events
+
+| 事件名     | 说明                                  | 回调参数                         |
+| ----------| ------------------------------------ | -------------------------------- |
+| onOpen    | 弹出层打开时触发 | `-` |
+| onClose   | 弹出层关闭时触发 | `-` |
+
+### 插槽
+|插槽名         | 说明                         | 类型                      |
+| ------------ | -------------------------- | ------------------------- |
+|contentBuilder| 弹出层自定义内容 |  _CustomBuilder_  |
