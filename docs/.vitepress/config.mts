@@ -82,8 +82,14 @@ export default defineConfig({
             link: "/components/cascader/",
           },
           { text: "Checkbox 复选框", link: "/components/checkbox/" },
-          { text: "Field 输入框", link: "/components/field/" },
-          { text: "Form 表单", link: "/components/form/" },
+          {
+            text: `Field 输入框 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.10.0</span>`,
+            link: "/components/field/",
+          },
+          {
+            text: `Form 表单 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.10.0</span>`,
+            link: "/components/form/",
+          },
           { text: "Radio 单选框", link: "/components/radio/" },
           {
             text: `Stepper 步进器 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.4.0</span>`,
