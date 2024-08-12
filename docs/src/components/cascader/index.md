@@ -23,7 +23,8 @@ import { IBestCell } from "@ibestservices/ibest-ui";
 @Component
 struct DemoPage {
   @State visible: boolean = false
-  @State value: string = "请选择地区"
+  @State fieldValue: string = '请选择地区'
+	@State selectValue: string[] = []
   @State data: IBestCascaderOption[] = [
     {
       text: "江苏省",
@@ -107,9 +108,10 @@ struct DemoPage {
       IBestCascader({
         visible: $visible,
         options: this.data,
+        value: $selectValue,
         itemHeight: 100,
         onConfirm: (value: IBestCascaderOption[]) => {
-          this.value = value.map(item => item.text).join(',')
+          this.fieldValue = value.map(item => item.text).join(',')
         }
       })
     }
@@ -129,7 +131,8 @@ import { IBestCell } from "@ibestservices/ibest-ui";
 @Component
 struct DemoPage {
   @State visible: boolean = false
-  @State value: string = "请选择地区"
+  @State fieldValue: string = '江苏省,南京市,雨花台区'
+	@State selectValue: string[] = ["320000", "320100", "320114"]
   @State data: IBestCascaderOption[] = [
     {
       text: "江苏省",
@@ -214,9 +217,10 @@ struct DemoPage {
       IBestCascader({
         visible: $visible,
         options: this.data,
+        value: $selectValue,
         activeColor: '#ee0a24',
         onConfirm: (value: IBestCascaderOption[]) => {
-          this.value = value.map(item => item.text).join(',')
+          this.fieldValue = value.map(item => item.text).join(',')
         }
       })
     }
@@ -241,7 +245,8 @@ struct DemoPage {
 @Component
 struct DemoPage {
   @State visible: boolean = false
-  @State value: string = '请选择地区'
+  @State fieldValue: string = '请选择地区'
+	@State selectValue: string[] = []
   @State data: IBestCascaderOption[] = [
     {
       text: "江苏省",
@@ -297,10 +302,11 @@ struct DemoPage {
       IBestCascader({
         visible: $visible,
         options: this.data,
+        value: $selectValue,
         lazy: true,
         lazyLoad: this.lazyLoad,
         onConfirm: (value: IBestCascaderOption[]) => {
-          this.value = value.map(item => item.text).join(',')
+          this.fieldValue = value.map(item => item.text).join(',')
         }
       })
     }
@@ -322,7 +328,8 @@ struct DemoPage {
 @Component
 struct DemoPage {
   @State visible: boolean = false
-  @State value: string = '请选择地区'
+  @State fieldValue: string = '请选择地区'
+  @State selectValue: string[] = []
   @State data: IBestCascaderOption[] = [
 		{
 			text: "江苏省",
@@ -408,8 +415,9 @@ struct DemoPage {
       IBestCascader({
         visible: $visible,
         options: this.data,
+        value: $selectValue,
         onConfirm: (value: IBestCascaderOption[]) => {
-          this.value = value.map(item => item.text).join(',')
+          this.fieldValue = value.map(item => item.text).join(',')
         }
       })
     }
@@ -425,6 +433,7 @@ struct DemoPage {
 | 参数         | 说明                                                     | 类型      | 默认值     |
 | ------------ | --------------------------------------------------------| --------- | ---------- |
 | visible      | 控制弹出层显隐显隐                                        | _boolean_  | `false` |
+| value        | 选中选项值, 支持双向绑定                                   | _Array[string \| number]_ | `[]` |
 | title         | 弹出层标题                                              | _string_  | `请选择` |
 | options       | 可选项数据源                                            | _Array[IBestCascaderOption]_ |`[]`|
 | activeColor  | 选中项颜色                                              | _string_ | `#3D8AF2`  |
