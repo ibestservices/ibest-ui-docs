@@ -10,6 +10,21 @@ iBest-UI 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范�
 - 次版本号：通常每隔 ~~1 ~ 2 月~~发布，包含新组件或较大的功能更新，向下兼容。
 - 主版本号：无固定的发布时间，包含不兼容更新和重大功能更新。
 
+### v1.11.0
+
+1. 增加:Picker、DatePicker、TimePicker、PickerGroup 组件
+2. Cascader 组件支持双向绑定;
+3. Tab 组件支持双向绑定, 优化参数声明。
+
+#### 新功能 🎉
+
+1. feat(Form): Form 组件
+2. feat(Field): Field 组件
+
+#### 其他变更
+
+#### 新贡献者
+
 ### v1.10.0
 
 #### 新功能 🎉
