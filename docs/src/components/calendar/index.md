@@ -437,6 +437,6 @@ CalendarDialog包含Calendar除 `isShowConfirmBtn` 以外所有属性，Calendar
 
 ### Events
 
-| 事件名     | 说明                                             | 事件类型                         |
+| 事件名     | 说明                                             | 回调参数                         |
 | ----------| ------------------------------------------------ | -------------------------------- |
-| onConfirm | 选择日期后的回调，`selectType` 为 `multiple` 时需点击按钮触发 | (value: _Array[CalendarConfirmResultType]_) => _void_ |
+| onConfirm | 选择日期后的回调，`selectType` 为 `multiple` 时需点击按钮触发 | `value: Array[CalendarConfirmResultType]` |

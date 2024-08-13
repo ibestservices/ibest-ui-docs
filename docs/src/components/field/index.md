@@ -551,7 +551,7 @@ struct DemoPage {
 
 | 参数         | 说明                                                     | 类型      | 默认值     |
 | ------------ | --------------------------------------------------------| --------- | ---------- |
-| value       | 当前输入的值   | _string \| number \| boolean \| Array\[string \| number\]_ | `''`  |
+| value       | 当前输入的值, 支持双向绑定   | _string \| number \| boolean \| Array\[string \| number\]_ | `''`  |
 | formId      | 唯一id, 当组件用于验证时必传                             | _string_  | `''` |
 | prop        | 绑定value的属性名, 当组件用于验证时必传                     | _string_  | `''` |
 | rules       | 验证规则列表, 可由form统一配置                            | _Array[IBestFormRuleItem]_ |`[]`|

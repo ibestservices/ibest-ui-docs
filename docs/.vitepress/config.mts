@@ -82,6 +82,7 @@ export default defineConfig({
             link: "/components/cascader/",
           },
           { text: "Checkbox 复选框", link: "/components/checkbox/" },
+          { text: `DatePicker 日期选择 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.11.0</span>`, link: "/components/datepicker/" },
           {
             text: `Field 输入框 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.10.0</span>`,
             link: "/components/field/",
@@ -90,12 +91,15 @@ export default defineConfig({
             text: `Form 表单 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.10.0</span>`,
             link: "/components/form/",
           },
+          { text: `Picker 选择器 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.11.0</span>`, link: "/components/picker/" },
+          { text: `PickerGroup 选择器组 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.11.0</span>`, link: "/components/pickergroup/" },
           { text: "Radio 单选框", link: "/components/radio/" },
           {
             text: `Stepper 步进器 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.4.0</span>`,
             link: "/components/stepper/",
           },
           { text: "Switch 开关", link: "/components/switch/" },
+          { text: `TimePicker 时间选择 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.11.0</span>`, link: "/components/timepicker/" }
         ],
       },
       {
