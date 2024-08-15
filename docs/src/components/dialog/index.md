@@ -14,8 +14,7 @@ import { IBestDialog } from "@ibestservices/ibest-ui";
 
 ::: tip
 
-- 受鸿蒙限制，暂未找到函数调用的解决方案
-- 本组件基于[自定义弹窗](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V2/ts-methods-custom-dialog-box-0000001477981237-V2)进行的封装，受 `API` 限制，对遮罩层显隐、样式均无法控制
+- 本组件基于[自定义弹窗](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V2/ts-methods-custom-dialog-box-0000001477981237-V2)进行的封装，受鸿蒙限制，暂未找到函数调用的解决方案
 
 :::
 
