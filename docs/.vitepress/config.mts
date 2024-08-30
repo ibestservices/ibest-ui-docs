@@ -91,6 +91,14 @@ export default defineConfig({
             text: `Form 表单 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.10.0</span>`,
             link: "/components/form/",
           },
+          {
+            text: `NumberKeyboard 数字键盘 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.12.0</span>`,
+            link: "/components/numberkeyboard/",
+          },
+          {
+            text: `PasswordInput 密码输入框 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.12.0</span>`,
+            link: "/components/passwordInput/",
+          },
           { text: `Picker 选择器 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.11.0</span>`, link: "/components/picker/" },
           { text: `PickerGroup 选择器组 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.11.0</span>`, link: "/components/pickergroup/" },
           { text: "Radio 单选框", link: "/components/radio/" },
