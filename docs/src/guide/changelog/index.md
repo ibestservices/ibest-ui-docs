@@ -10,6 +10,20 @@ iBest-UI 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范�
 - 次版本号：通常每隔 ~~1 ~ 2 月~~发布，包含新组件或较大的功能更新，向下兼容。
 - 主版本号：无固定的发布时间，包含不兼容更新和重大功能更新。
 
+### v1.12.0 & v1.12.1
+
+1. 新增 numberKeyboard、passwordInput 组件 ;
+2. popup 新增 maskColor 属性 ;
+3. 新增全局初始化方法 IBestInit ;
+4. 一些样式优化和 bug 修复。
+
+#### 新功能 🎉
+
+1. feat(Form): Form 组件
+2. feat(Field): Field 组件
+
+#### 其他变更
+
 ### v1.11.0
 
 1. 增加:Picker、DatePicker、TimePicker、PickerGroup 组件
