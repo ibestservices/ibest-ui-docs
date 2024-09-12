@@ -155,7 +155,7 @@ struct DemoPage {
       IBestCalendarDialog({
         visible: $visible,
         type: "danger",
-        selectedColor: "#58DB6B",
+        selectedColor: "#58db6b",
         onConfirm: (value: Array<CalendarConfirmResultType>): void => this.onDialogConfirm(value)
       })
     }
