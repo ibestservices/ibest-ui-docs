@@ -22,3 +22,5 @@
 | TimePicker 时间选择      | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>            | 1.11.0   |      |
 | NumberKeyboard 数字键盘  | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>            | 1.12.0   |      |
 | PasswordInput 密码输入框 | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>            | 1.12.0   |      |
+| Search 搜索              | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>            | 1.13.0   |      |
+| Rate 评分                | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>            | 1.13.0   |      |
