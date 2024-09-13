@@ -102,6 +102,8 @@ export default defineConfig({
           { text: `Picker 选择器 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.11.0</span>`, link: "/components/picker/" },
           { text: `PickerGroup 选择器组 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.11.0</span>`, link: "/components/pickergroup/" },
           { text: "Radio 单选框", link: "/components/radio/" },
+          { text: `Rate 评分 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.13.0</span>`, link: "/components/rate/" },
+          { text: `Search 搜索 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.13.0</span>`, link: "/components/search/" },
           {
             text: `Stepper 步进器 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.4.0</span>`,
             link: "/components/stepper/",
