@@ -10,6 +10,18 @@ iBest-UI 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范�
 - 次版本号：通常每隔 ~~1 ~ 2 月~~发布，包含新组件或较大的功能更新，向下兼容。
 - 主版本号：无固定的发布时间，包含不兼容更新和重大功能更新。
 
+### 1.14.0
+
+#### 新功能 🎉
+
+1. 增加 IBestActionSheet API
+2. 增加 IBestSignature 组件
+
+#### 其他变更
+
+1. 组件库初始化变更
+2. Search 组件增加 customRightButton 属性
+
 ### 1.13.0
 
 #### 新功能 🎉
