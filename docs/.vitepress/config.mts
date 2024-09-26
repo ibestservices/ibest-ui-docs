@@ -104,6 +104,7 @@ export default defineConfig({
           { text: "Radio 单选框", link: "/components/radio/" },
           { text: `Rate 评分 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.13.0</span>`, link: "/components/rate/" },
           { text: `Search 搜索 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.13.0</span>`, link: "/components/search/" },
+          { text: `Signature 签名 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.14.0</span>`, link: "/components/signature/" },
           {
             text: `Stepper 步进器 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.4.0</span>`,
             link: "/components/stepper/",
@@ -135,6 +136,8 @@ export default defineConfig({
       {
         text: "反馈组件",
         items: [
+          { text: `ActionSheet 动作面板 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.14.0</span>`,
+            link: "/components/actionsheet/", },
           {
             text: `Dialog 弹出框 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.2.0</span>`,
             link: "/components/dialog/",

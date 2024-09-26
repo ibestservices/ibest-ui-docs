@@ -237,8 +237,6 @@ IBestButton({
 
 :::
 
-:::
-
 ### 自定义颜色
 
 ![自定义颜色](./images/color-btn.png)
@@ -258,6 +256,26 @@ IBestButton({
   text: "自定义颜色按钮",
   plain: true,
   color: "#7232dd",
+});
+```
+
+:::
+
+### 自定义大小
+
+![自定义大小](./images/custom-size.png)
+::: tip
+通过 `btnWidth` `btnHeight` 属性可以自定义按钮的大小, `btnFontSize` 属性可设置按钮文字大小。
+:::
+
+::: details 点我查看代码
+
+```ts
+IBestButton({
+  text: "自定义大小按钮",
+  btnWidth: 300,
+  btnHeight: 80,
+  btnFontSize: 32,
 });
 ```
 

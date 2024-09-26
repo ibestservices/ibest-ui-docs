@@ -24,17 +24,17 @@ ohpm install @ibestservices/ibest-ui@1.2.0
 ## 初始化
 
 :::tip
-从 `v1.12.0` 版本开始，建议先在 `EntryAbility` 入口文件中调用 `IBestInit` 方法，初始化组件库。
+从 `v1.12.0` 版本开始，建议先在 `EntryAbility` 入口文件中调用 `IBestInit` 方法，初始化组件库，否则会影响部分组件使用。
 :::
 
 ```ts
 import { IBestInit } from "@ibestservices/ibest-ui"
 
 onWindowStageCreate(windowStage: window.WindowStage): void {
-  // 组件库初始化
-  IBestInit(windowStage)
-  // ...
-  windowStage.loadContent...
+  windowStage.loadContent('pages/Index', (err, data) => {
+    // 在此处初始化组件库!!!
+    IBestInit(windowStage, this.context)
+  })
 }
 ```
 
