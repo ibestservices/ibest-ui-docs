@@ -39,3 +39,9 @@ title: "iBest-UI"
 群号： 953492584
 
 ![QQ群:953492584](./qq.jpg)
+
+## 微信群
+
+> 微信群失效了可以加我微信 lqk2qmy 联系我 备注 ibest-ui
+
+![微信群](./wechat.png)
