@@ -234,10 +234,8 @@ IBestButton({
   buttonSize: "mini",
 });
 ```
-
 :::
 
-:::
 
 ### 自定义颜色
 
@@ -260,7 +258,25 @@ IBestButton({
   color: "#7232dd",
 });
 ```
+:::
 
+### 自定义大小
+
+![自定义大小](./images/custom-size.png)
+::: tip
+通过 `btnWidth` `btnHeight` 属性可以自定义按钮的大小, `btnFontSize` 属性可设置按钮文字大小。
+:::
+
+::: details 点我查看代码
+
+```ts
+IBestButton({
+  text: '自定义大小按钮',
+  btnWidth: 300,
+  btnHeight: 80,
+  btnFontSize: 32
+})
+```
 :::
 
 ## API
@@ -281,7 +297,10 @@ IBestButton({
 | hairline     | 是否使用 1lpx 边框                                       | _boolean_ | `false`   |
 | loading      | 是否显示为加载状态                                       | _boolean_ | `false`   |
 | loadingText  | 加载状态提示文字                                         | _string_  |           |
-| loadingSize  | 加载图标大小，默认单位为 lpx， 如果为-1 默认跟随字体大小 | _number_  | `-1`      |
+| loadingSize  | 加载图标大小，默认单位为 lpx， 如果为-1 默认跟随字体大小       | _number_  | `-1`      |
+| btnWidth <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.13.0</span> | 按钮宽度，单位为 lpx  | _string \| number_  | `-` |
+| btnHeight <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.13.0</span>| 按钮高度，单位为 lpx | _string \| number_  | `-` |
+| btnFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.13.0</span>| 按钮文字大小，单位为 lpx | _string \| number_  | `-` |
 
 ### Events
 

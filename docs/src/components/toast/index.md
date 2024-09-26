@@ -65,7 +65,7 @@ IBestToast.show({
 
 ```ts
 IBestToast.show({
-    type: "warning",
+    type: "fail",
     message: "提示内容"
 })
     

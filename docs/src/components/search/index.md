@@ -146,7 +146,7 @@ struct DemoPage {
 
 ![自定义按钮](./images/cus-btn.png)
 :::tip
-通过 `label` 属性可设置左侧文本, 通过 `rightButtonText` 属性可设置右侧按钮文本。
+通过 `label` 属性可设置左侧文本, 通过 `rightButtonText` 属性可设置右侧按钮文本, 通过 `customRightButton` 属性可自定义右侧按钮。
 :::
 
 ::: details 点我查看代码
@@ -155,13 +155,24 @@ struct DemoPage {
 @Component
 struct DemoPage {
   @State value: string = ""
+  @Builder customBtn(){
+    Text("自定义按钮")
+      .height("100%")
+      .padding({ left: 10, right: 10 })
+      .backgroundColor("#eee")
+  }
   build() {
-    Column(){
+    Column({ space: 20 }){
       IBestSearch({
         value: $value,
         label: "地址",
         showRightButton: true,
         rightButtonText: "搜索"
+      })
+      IBestSearch({
+        value: $value,
+        label: "地址",
+        customRightButton: (): void => this.customBtn()
       })
     }
   }
@@ -197,6 +208,7 @@ struct DemoPage {
 | disabled     | 是否禁用                                         | _boolean_ |  `false`  |
 | readOnly     | 是否只读                                         | _boolean_ |  `false`  |
 | enterKeyType | 输入法回车键类型, 详见<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-types-V5#enterkeytype%E6%9E%9A%E4%B8%BE%E8%AF%B4%E6%98%8E" target="__blank">EnterKeyType枚举说明</a> | _EnterKeyType_ |  `Search`  |
+| customRightButton <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.14.0</span> | 自定义右侧按钮 | _CustomBuilder_ | `-` |
 
 
 ### Events
