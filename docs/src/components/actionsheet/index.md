@@ -348,8 +348,9 @@ struct DemoPage {
 ```
 :::
 
+## API
 
-### IBestActionSheet 参数
+### @Props
 :::tip
 部分原生属性会有版本兼容问题,详情可点 <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-universal-attributes-sheet-transition-V5#sheetoptions" target="__blank">这里</a> 查阅官方文档。
 :::

@@ -12,7 +12,7 @@ import { IBestToast } from "@ibestservices/ibest-ui";
 ```
 ## 代码演示
 
-## 文字提示
+### 文字提示
 
 ![文字提示](./images/message-tip.png)
 
@@ -25,7 +25,7 @@ IBestToast.show("提示内容")
 
 :::
 
-## 成功提示
+### 成功提示
 
 ![成功提示](./images/success-tip.png)
 
@@ -41,7 +41,7 @@ IBestToast.show({
 
 :::
 
-## 警告提示
+### 警告提示
 
 ![警告提示](./images/warning-tip.png)
 
@@ -57,7 +57,7 @@ IBestToast.show({
 
 :::
 
-## 失败提示
+### 失败提示
 
 ![失败提示](./images/fail-tip.png)
 
@@ -73,7 +73,7 @@ IBestToast.show({
 
 :::
 
-## 加载提示
+### 加载提示
 
 ![加载提示](./images/loading-tip.png)
 
@@ -89,7 +89,7 @@ IBestToast.show({
 
 :::
 
-## 自定义图标
+### 自定义图标
 
 ![自定义图标](./images/custom-icon-tip.png)
 
@@ -105,7 +105,7 @@ IBestToast.show({
 
 :::
 
-## 自定义图片
+### 自定义图片
 
 ![自定义图片](./images/custom-img-tip.png)
 
@@ -121,7 +121,7 @@ IBestToast.show({
 
 :::
 
-## 自定义加载图标类型
+### 自定义加载图标类型
 
 ![自定义加载图标类型](./images/custom-loadingtype-tip.png)
 
@@ -146,7 +146,7 @@ setTimeout(() => {
 
 :::
 
-## 自定义位置
+### 自定义位置
 
 ![自定义位置](./images/top-tip.png)
 ::: tip
@@ -165,7 +165,7 @@ IBestToast.show({
 ```
 :::
 
-## 文字换行方式
+### 文字换行方式
 
 ![文字换行方式](./images/break-all-tip.png)
 ::: tip
@@ -183,7 +183,7 @@ IBestToast.show({
 ```
 :::
 
-## 动态更新提示
+### 动态更新提示
 
 ![动态更新提示](./images/dynamic-updates-tip.gif)
 
@@ -218,7 +218,7 @@ async showCountDownLoading(){
 | show       |  展示提示                  | _string_ \| _ToastParams_  | toast 实例        |
 | hide       |  隐藏提示                  | -                          | -                |
 
-## ToastParams 数据结构
+### ToastParams 数据结构
 
 调用 `show` 方法时，支持传入以下选项：
 

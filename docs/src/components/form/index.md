@@ -210,7 +210,9 @@ import {
   IBestRadioGroup,
   IBestStepper,
   IBestSwitch,
-  IBestToast
+  IBestToast,
+  IBestUploaderFile,
+  IBestUploader
 } from "@ibestservices/ibest-ui"
 @Entry
 @Component
@@ -225,6 +227,7 @@ struct DemoPage {
   @State value7: string = ''
   @State visible: boolean = false
   @State visible1: boolean = false
+  @State value8: IBestUploaderFile[] = []
   private formId: string = 'form'
   private rules: IBestFormRule = {
     "value3": [
@@ -238,7 +241,10 @@ struct DemoPage {
     ],
     "value7": [
       { required: true, message: "请选择日期" }
-    ]
+    ],
+		"value12": [
+			{ required: true, message: "请上传图片" }
+		]
   }
   private controller: IBestFormController = new IBestFormController()
   @State options: IBestCascaderOption[] = [
@@ -385,6 +391,12 @@ struct DemoPage {
       }
     })
   }
+  @Builder uploadImg(){
+		IBestUploader({
+			fileList: $value12,
+			max: 2
+		})
+	}
   build() {
     Column(){
       IBestForm({
@@ -450,6 +462,14 @@ struct DemoPage {
               this.visible1 = true
             }
           })
+          IBestField({
+            formId: this.formId,
+            prop: 'value8',
+            value: $value8,
+            label: "上传图片",
+            hasBorder: false,
+            customRightContent: (): void => this.uploadImg()
+          })
           IBestButton({
             text: "提交",
             type: 'primary',
@@ -505,6 +525,24 @@ struct DemoPage {
 | showMessage | 是否显示验证信息                                          | _boolean_ | `true` |
 | disabled    | 是否禁用                                                | _boolean_ | `false` |
 
+### 插槽
+|插槽名         | 说明                        | 类型                      |
+| ------------ | -------------------------- | ------------------------- |
+|defaultBuilder| 表单子项                     |  _CustomBuilder_  |
+
+### API
+::: tip
+通过传入 `controller` 属性可调用组件实例方法
+:::
+
+| 方法名     |       说明                 | 参数                | 返回值   |
+| --------- | ------------------------- | ---------------------- |-------|
+| validate | 验证整个表单                 | `callback?: (valid: boolean, field: FieldValidateResult[]) => void` | `void` |
+| validateField | 验证指定表单            | `prop: string, callBack?: (valid: boolean, field?: FieldValidateResult) => void` | `void` |
+| resetValidation | 重置整个/指定表单验证信息| `prop?: string \| string[]` | `void` |
+| getValues `deprecated` | 获取表单所有表单项的值, `1.15.0` 及以后版本推荐使用 `getFormValues` | `-` | `Promise<Record<string, IBestFieldValueType>>` |
+| getFormValues <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.15.0</span>  | 获取表单所有表单项的值        | `-` | `Record<string, IBestFieldValueType>` |
+
 ### IBestFormRuleItem  数据结构
 
 | 参数 | 说明 | 类型 |
@@ -516,20 +554,3 @@ struct DemoPage {
 | trigger | 验证触发时机, 默认都会触发 | _'blur' \| 'change'_ |
 | min | 字符最小长度 | _number_ |
 | max | 字符最大长度 | _number_ |
-
-### 插槽
-|插槽名         | 说明                         | 类型                      |
-| ------------ | -------------------------- | ------------------------- |
-|defaultBuilder| 表单子项 |  _CustomBuilder_  |
-
-### 方法
-::: tip
-通过传入 `controller` 属性可调用组件实例方法
-:::
-
-| 方法名     |       说明                      | 参数                | 返回值   |
-| --------- | ------------------------- | ---------------------- |-------|
-| validate | 验证整个表单                 | `callback?: (valid: boolean, field: FieldValidateResult[]) => void` | `void` |
-| validateField | 验证指定表单            | `prop: string, callBack?: (valid: boolean, field?: FieldValidateResult) => void` | `void` |
-| resetValidation | 重置整个/指定表单验证信息 | `prop?: string \| string[]` | `void` |
-| getValues | 获取表单所有表单项的值        | `-` | `Promise<Record<string, IBestFieldValueType>>` |
