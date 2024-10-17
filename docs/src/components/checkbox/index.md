@@ -492,7 +492,7 @@ struct CheckboxPage {
    /**
    * 搭配单元格组件选中的name
    */
-  @State cellCehckedNames: string[] = [];
+  @State cellCheckedNames: string[] = [];
 
   /**
    * 最大可选数量
@@ -503,16 +503,16 @@ struct CheckboxPage {
     IBestCheckbox({
       name,
       group,
-      value: this.cellCehckedNames.includes(name)
+      value: this.cellCheckedNames.includes(name)
     })
   }
 
    handleClickCell(name){
-    const index = this.cellCehckedNames.indexOf(name)
+    const index = this.cellCheckedNames.indexOf(name)
     if(index > -1){
-      this.cellCehckedNames.splice(index ,1)
+      this.cellCheckedNames.splice(index ,1)
     }else{
-      (this.cellCheckedMaxNum > this.cellCehckedNames.length) && this.cellCehckedNames.push(name)
+      (this.cellCheckedMaxNum > this.cellCheckedNames.length) && this.cellCheckedNames.push(name)
     }
   }
 
