@@ -154,11 +154,11 @@ struct EmptyPage {
 | ------------------- | ----------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------- |
 | emptyImage          | 类型，可选值为 `error` `network` `search` | _string_             | `default`                                                                                         |
 | imageSize           | 图片大小                                  | _string_ \| _number_ | `320lpx`                                                                                          |
-| description         | 图片下方的描述文字                        | _string_             |                                                                                                   |
-| descriptionFontSize | 图片下方的描述文字的大小                  | _string_             | `28lpx`                                                                                           |
-| descriptionColor    | 图片下方的描述文字的颜色                  | _string_             | <div style="padding: 2px 4px; background: #969799; color: #fff; border-radius: 4px">#969799</div> |
+| description         | 图片下方的描述文字                        | _string_ |                                                                                                   |
+| descriptionFontSize | 图片下方的描述文字的大小                  | _string_ | `28lpx`                                                                                           |
+| descriptionColor    | 图片下方的描述文字的颜色                  | _ResourceColor_ | <div style="padding: 2px 4px; background: #969799; color: #fff; border-radius: 4px">#969799</div> |
 
-### @BuilderParam 插槽
+### 插槽
 
 | 插槽名             | 说明           | 类型                      |
 | ------------------ | -------------- | ------------------------- |

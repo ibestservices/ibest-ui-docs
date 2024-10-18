@@ -433,10 +433,10 @@ struct DemoPage {
 | 参数         | 说明                                                     | 类型      | 默认值     |
 | ------------ | --------------------------------------------------------| --------- | ---------- |
 | visible      | 控制弹出层显隐显隐                                        | _boolean_  | `false` |
-| value        | 选中选项值, 支持双向绑定                                   | _Array[string \| number]_ | `[]` |
+| value        | 选中选项值, 支持双向绑定                                   | _(string \| number)[]_ | `[]` |
 | title         | 弹出层标题                                              | _string_  | `请选择` |
-| options       | 可选项数据源                                            | _Array[IBestCascaderOption]_ |`[]`|
-| activeColor  | 选中项颜色                                              | _string_ | `#3D8AF2`  |
+| options       | 可选项数据源                                            | _IBestCascaderOption[]_ |`[]`|
+| activeColor  | 选中项颜色                                              | _ResourceColor_ | `#3D8AF2`  |
 | itemHeight   | 单个选项高度,单位lpx                                     | _number_ | `80`|
 | lazy         | 是否开启动态加载                                         | _boolean_ | `false` |
 | lazyLoad      | 异步加载函数,`value` 为当前点击的选项值, `level` 为下一个选项的层级, 默认从0开始, `cb` 为接收结果的回调函数 | _(value: string \| number, level: number, cb: (arr: IBestCascaderOption[]) => void) => void_|`null`|
@@ -449,7 +449,7 @@ struct DemoPage {
 | value       | 选项对应的值(必填)                  | _string \| number_ | `''`  |
 | isEnd       | 是否是结束选项                      | _boolean_ | `false`  |
 | disabled    | 是否禁用单项                        | _boolean_ | `false`  |
-| children    | 子选项列表                          | _Array[IBestCascaderOption]_ | `[]`  |
+| children    | 子选项列表                          | _IBestCascaderOption[]_ | `[]`  |
 
 ### Events
 

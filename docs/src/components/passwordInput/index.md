@@ -155,7 +155,7 @@ struct DemoPage {
 | space        | 格子间距,单位lpx                               | _number_ | `0` |
 | radius       | 格子圆角,当 `space` 不为0时有效,单位lpx          | _number_ | `10` |
 | isHighlightCurrent | 是否高亮当前正在输入的格子,当 `space` 不为0时有效| _boolean_ | `true` |
-| highlightColor | 格子高亮颜色,当 `space` 不为0时有效            | _string_ | `#3D8AF2` |
+| highlightColor | 格子高亮颜色,当 `space` 不为0时有效            | _ResourceColor_ | `#3D8AF2` |
 | isHidden     | 是否隐藏内容                                   | _boolean_ | `true` |
 | tip          | 提示space文字                                   | _string_ |  `''`  |
 | errorTip     | 错误提示文字                                   | _string_ |  `''`  |

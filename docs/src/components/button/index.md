@@ -287,22 +287,22 @@ IBestButton({
 
 | 参数         | 说明                                                                       | 类型                                | 默认值      |
 | ------------ | -------------------------------------------------------------------------- | ----------------------------------- | ----------- |
-| type         | 类型，可选值为 `primary` `success` `warning` `danger`                      | _string_                            | `default`   |
-| buttonSize   | 尺寸，可选值为 `large` `small` `mini`                                      | _string_                            | `normal`    |
-| btnWidth     | 按钮宽度，从 `1.13.0` 版本起开始支持，不写的话则使用 `buttonSize` 尺寸     | _string_ \| _number_ \| _undefined_ | `undefined` |
-| btnHeight    | 按钮高度，从 `1.13.0` 版本起开始支持，不写的话则使用 `buttonSize` 尺寸     | _string_ \| _number_ \| _undefined_ | `undefined` |
-| btnFontSize  | 按钮文字大小，从 `1.13.0` 版本起开始支持，不写的话则使用 `buttonSize` 尺寸 | _string_ \| _number_ \| _undefined_ | `undefined` |
-| text         | 按钮文字                                                                   | _string_                            |             |
-| color        | 按钮颜色                                                                   | _string_                            |             |
-| iconPosition | 图标展示位置，可选值为 right                                               | _string_                            | `left`      |
-| plain        | 是否为朴素按钮                                                             | _boolean_                           | `false`     |
-| square       | 是否为方形按钮                                                             | _boolean_                           | `false`     |
-| round        | 是否为圆形按钮                                                             | _boolean_                           | `false`     |
-| disabled     | 是否禁用按钮                                                               | _boolean_                           | `false`     |
-| hairline     | 是否使用 1lpx 边框                                                         | _boolean_                           | `false`     |
-| loading      | 是否显示为加载状态                                                         | _boolean_                           | `false`     |
-| loadingText  | 加载状态提示文字                                                           | _string_                            |             |
-| loadingSize  | 加载图标大小，默认单位为 lpx， 如果为-1 默认跟随字体大小                   | _number_                            | `-1`        |
+| type         | 类型，可选值为 `primary` `success` `warning` `danger`                      | _string_  | `default`   |
+| buttonSize   | 尺寸，可选值为 `large` `small` `mini`                                      | _string_   | `normal`    |
+| btnWidth     | 按钮宽度，从 `1.13.0` 版本起开始支持，不写的话则使用 `buttonSize` 尺寸           | _string_ \| _number_ \| _undefined_ | `undefined` |
+| btnHeight    | 按钮高度，从 `1.13.0` 版本起开始支持，不写的话则使用 `buttonSize` 尺寸           | _string_ \| _number_ \| _undefined_ | `undefined` |
+| btnFontSize  | 按钮文字大小，从 `1.13.0` 版本起开始支持，不写的话则使用 `buttonSize` 尺寸       | _string_ \| _number_ \| _undefined_ | `undefined` |
+| text         | 按钮文字                                                                  | _string_   |             |
+| color        | 按钮颜色                                                                  | _ResourceColor_  |             |
+| iconPosition | 图标展示位置，可选值为 right                                                | _string_  | `left`      |
+| plain        | 是否为朴素按钮                                                             | _boolean_  | `false`     |
+| square       | 是否为方形按钮                                                             | _boolean_ | `false`     |
+| round        | 是否为圆形按钮                                                             | _boolean_ | `false`     |
+| disabled     | 是否禁用按钮                                                               | _boolean_ | `false`     |
+| hairline     | 是否使用 1lpx 边框                                                         | _boolean_ | `false`     |
+| loading      | 是否显示为加载状态                                                          | _boolean_   | `false`     |
+| loadingText  | 加载状态提示文字                                                            |_string_ |             |
+| loadingSize  | 加载图标大小，默认单位为 lpx， 如果为-1 默认跟随字体大小                         | _number_  | `-1`        |
 
 ### Events
 
@@ -310,7 +310,7 @@ IBestButton({
 | ---------- | ------------------------------------------------ | -------------------------------- |
 | onClickBtn | 点击按钮的回调事件，按钮状态不为加载或禁用时触发 | (event?: _ClickEvent_) => _void_ |
 
-### @BuilderParam 插槽
+### 插槽
 
 | 插槽名             | 说明                                                           | 类型                      |
 | ------------------ | -------------------------------------------------------------- | ------------------------- |

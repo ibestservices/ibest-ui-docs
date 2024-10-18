@@ -293,8 +293,8 @@ struct DemoPage {
 
 | 参数         | 说明                                          | 类型      | 默认值     |
 | ------------ | ---------------------------------------------| --------- | ---------- |
-| value        | 当前选中的日期, 支持双向绑定                      | _Array[string]_  | `[]` | 
-| options      | 选项         | _Array[IBestPickerOption \| IBestPickerOption[]]_  | `[]` |
+| value        | 当前选中的日期, 支持双向绑定                      | _string[]_  | `[]` | 
+| options      | 选项         | _(IBestPickerOption \| IBestPickerOption[])[]_  | `[]` |
 | title        |  标题                                         | _string_ |  `''`  |
 | itemHeight   | 单项高度,单位lpx                                | _number_ | `88`   |
 | visibleItemCount | 可见选项数量                                | _number_ | `6`   |
@@ -307,8 +307,8 @@ struct DemoPage {
 
 | 事件名     | 说明         | 回调参数             |
 | ----------| ------------------------------ | -------------------------------- |
-| onChange | 某一列选项变更后触发 | `selectedValues: Array<string>, selectTexts: Array<string>, columnIndex: number` |
-| onConfirm | 点击确定按钮时触发 | `selectedValues: Array<string>, selectTexts: Array<string>` |
+| onChange | 某一列选项变更后触发 | `selectedValues: string[], selectTexts: string[], columnIndex: number` |
+| onConfirm | 点击确定按钮时触发 | `selectedValues: string[], selectTexts: string[]` |
 | onCancel |  点击取消按钮时触发 | `-` |
 
 ### IBestPickerOption 数据结构
@@ -316,4 +316,4 @@ struct DemoPage {
 | ------------ | ---------------------------------------------| --------- |
 | text         | 选项文字, 必传                               	| _string_  |
 | value        | 选项值, 必传                                   | _string_  |
-| children     | 下级选项, 可选                                 | _Array[IBestPickerOption]_  |
+| children     | 下级选项, 可选                                 | _IBestPickerOption[]_  |

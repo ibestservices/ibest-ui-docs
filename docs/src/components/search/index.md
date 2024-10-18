@@ -191,14 +191,14 @@ struct DemoPage {
 | value        | 当前输入的值, 支持双向绑定                       | _string_  | `''` |
 | label        | 输入框左侧文本                                  | _string_  | `''` |
 | placeholder  | 占位文字                                       | _string_  | `请输入搜索关键词` |
-| placeholderColor  | 占位文字颜色                               | _string_  | `#c8c9cc` |
+| placeholderColor  | 占位文字颜色                               | _ResourceColor_  | `#c8c9cc` |
 | contentHeight| 搜索框高度,单位lpx                              | _number_ | `108` |
-| outBgColor   | 外侧背景色                                     | _string_ | `#fff` |
-| innerBgColor | 内侧背景色                                     | _string_ | `#f7f8fa` |
+| outBgColor   | 外侧背景色                                     | _ResourceColor_ | `#fff` |
+| innerBgColor | 内侧背景色                                     | _ResourceColor_ | `#f7f8fa` |
 | isRound      | 是否为胶囊搜索框                                | _boolean_ |  `false`  |
 | radius       | 圆角大小, 优先级大于isRound, 单位lpx             | _number_ | `0` |
 | leftIcon     | 左侧图标                                       | _string \| Resource_ | `-` |
-| leftIconColor| 左侧图标颜色                                    | _string_ |  `#969799`  |
+| leftIconColor| 左侧图标颜色                                    | _ResourceColor_ |  `#969799`  |
 | clearable    | 是否可清空                                      | _boolean_ |  `true`  |
 | clearIcon    | 清除图标                                        | _string \| Resource_ |  `-`  |
 | clearTrigger | 清除图标显示时机, 可选值 `always` `focus`          | _string_ |  `focus`  |

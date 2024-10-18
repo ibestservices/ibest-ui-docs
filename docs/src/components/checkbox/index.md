@@ -492,7 +492,7 @@ struct CheckboxPage {
    /**
    * 搭配单元格组件选中的name
    */
-  @State cellCehckedNames: string[] = [];
+  @State cellCheckedNames: string[] = [];
 
   /**
    * 最大可选数量
@@ -503,16 +503,16 @@ struct CheckboxPage {
     IBestCheckbox({
       name,
       group,
-      value: this.cellCehckedNames.includes(name)
+      value: this.cellCheckedNames.includes(name)
     })
   }
 
    handleClickCell(name){
-    const index = this.cellCehckedNames.indexOf(name)
+    const index = this.cellCheckedNames.indexOf(name)
     if(index > -1){
-      this.cellCehckedNames.splice(index ,1)
+      this.cellCheckedNames.splice(index ,1)
     }else{
-      (this.cellCheckedMaxNum > this.cellCehckedNames.length) && this.cellCehckedNames.push(name)
+      (this.cellCheckedMaxNum > this.cellCheckedNames.length) && this.cellCheckedNames.push(name)
     }
   }
 
@@ -560,17 +560,17 @@ struct CheckboxPage {
 
 | 参数          | 说明                                                                     | 类型                 | 默认值  |
 | ------------- | ------------------------------------------------------------------------ | -------------------- | ------- |
-| name          | 标识符，通常为一个唯一的字符串或数字，同一 `group` 的 `name` 不可重复    | _string_ \| _number_ |         |
-| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性` | _string_             |         |
-| label         | 显示的文本                                                               | _string_             |         |
-| value         | 默认是否选中 非双向绑定，如果要获取最新的值请从 `onChange` 回调中获取    | _string_             |         |
-| iconSize      | 图标大小，单位 `lpx`， `label` 文字会跟着等比例缩放                      | _number_             | `40`    |
-| shape         | 形状，可选值为 `square` `dot`                                            | _string_             | `round` |
-| disabled      | 是否为禁用状态                                                           | _boolean_            | `false` |
-| labelDisabled | 是否禁用文本内容点击                                                     | _boolean_            | `false` |
-| labelPosition | 文本位置，可选值为 `left`                                                | _string_             | `right` |
-| checkedColor  | 选中状态颜色                                                             | _string_             |         |
-| indeterminate | 是否为不确定状态                                                         | _boolean_            | `false` |
+| name          | 标识符，通常为一个唯一的字符串或数字，同一 `group` 的 `name` 不可重复       | _string_ \| _number_ |         |
+| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`       | _string_        |         |
+| label         | 显示的文本                                                           | _string_        |         |
+| value         | 默认是否选中 非双向绑定，如果要获取最新的值请从 `onChange` 回调中获取        | _string_        |         |
+| iconSize      | 图标大小，单位 `lpx`， `label` 文字会跟着等比例缩放                       | _number_        | `40`    |
+| shape         | 形状，可选值为 `square` `dot`                                         | _string_        | `round` |
+| disabled      | 是否为禁用状态                                                        | _boolean_       | `false` |
+| labelDisabled | 是否禁用文本内容点击                                                   | _boolean_       | `false` |
+| labelPosition | 文本位置，可选值为 `left`                                              | _string_        | `right` |
+| checkedColor  | 选中状态颜色                                                          | _ResourceColor_ |         |
+| indeterminate | 是否为不确定状态                                                       | _boolean_     | `false` |
 
 ### CheckboxGroup @Props
 

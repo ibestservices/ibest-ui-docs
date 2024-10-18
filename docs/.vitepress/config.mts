@@ -104,33 +104,15 @@ export default defineConfig({
           { text: "Radio 单选框", link: "/components/radio/" },
           { text: `Rate 评分 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.13.0</span>`, link: "/components/rate/" },
           { text: `Search 搜索 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.13.0</span>`, link: "/components/search/" },
+          { text: `Slider 滑块 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.15.0</span>`, link: "/components/slider/" },
           { text: `Signature 签名 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.14.0</span>`, link: "/components/signature/" },
           {
             text: `Stepper 步进器 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.4.0</span>`,
             link: "/components/stepper/",
           },
           { text: "Switch 开关", link: "/components/switch/" },
-          { text: `TimePicker 时间选择 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.11.0</span>`, link: "/components/timepicker/" }
-        ],
-      },
-      {
-        text: "展示组件",
-        items: [
-          {
-            text: `Empty 空状态 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.1.0</span>`,
-            link: "/components/empty/",
-          },
-          { text: "Tag 标签", link: "/components/tag/" },
-          { text: "Watermark 水印", link: "/components/watermark/" },
-        ],
-      },
-      {
-        text: "导航组件",
-        items: [
-          {
-            text: `Tab 标签页 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.8.0</span>`,
-            link: "/components/tab/",
-          },
+          { text: `TimePicker 时间选择 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.11.0</span>`, link: "/components/timepicker/" },
+          { text: `Uploader 文件上传 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.15.0</span>`, link: "/components/uploader/" }
         ],
       },
       {
@@ -148,6 +130,28 @@ export default defineConfig({
           },
         ],
       },
+      {
+        text: "展示组件",
+        items: [
+          {
+            text: `Empty 空状态 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.1.0</span>`,
+            link: "/components/empty/",
+          },
+          { text: `ImagePreview 图片预览 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.15.0</span>`, link: "/components/imagepreview/" },
+          { text: "Tag 标签", link: "/components/tag/" },
+          { text: "Watermark 水印", link: "/components/watermark/" },
+        ],
+      },
+      {
+        text: "导航组件",
+        items: [
+          {
+            text: `Tab 标签页 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.8.0</span>`,
+            link: "/components/tab/",
+          },
+        ],
+      },
+      
     ],
     socialLinks: [
       {

@@ -410,19 +410,19 @@ struct DemoPage {
 | 参数         | 说明                                                     | 类型      | 默认值     |
 | ------------ | --------------------------------------------------------| --------- | ---------- |
 | type         | 主题类型，可选值为 `primary` `success` `warning` `danger` | _string_  | `primary` |
-| defaultSelectedDate   | 默认选中日期                                    | _Array[string]_  | `[]` |
+| defaultSelectedDate   | 默认选中日期                                    | _string[]_  | `[]` |
 | weekFirstDay | 周起始日期                                               | _string_  |    `一`     |
 | isShowLunar  | 是否显示农历                                             | _boolean_ | `false`  |
 | selectType   | 选择类型，可选值为 `single` `multiple` `range`            | _string_ | `single`|
 | selectedStyleType | 选中样式，可选值为 `normal` `circle`                 | _string_ | `normal`|
-| selectedColor| 自定义选中颜色                                           | _string_ |    |
+| selectedColor| 自定义选中颜色                                           | _ResourceColor_ |    |
 | maxRange     | `selectType` 为 `range` 时，最多可选天数，-1为无限制       | _number_ | `-1`   |
 | minDate      | 最小可选日期                                             | _Date_ |    |
 | maxDate      | 最大可选日期                                             | _Date_ |    |
 | isShowMark   | 是否显示月份背景水印                                      | _boolean_ | `false` |
 | isShowHeader | 是否显示头部                                              | _boolean_ | `true` |
 | isShowConfirmBtn | 是否显示底部确定按钮                                   | _boolean_ | `false` |
-| confirmBtnColor  | 确认按钮颜色                                          | _string_  | `type主题色` |
+| confirmBtnColor  | 确认按钮颜色                                          | _ResourceColor_  | `#3D8AF2` |
 | confirmBtnText   | 确认按钮文案                                          | _string_  | `确认` |
 
 ### CalendarDialog @Props
@@ -439,4 +439,4 @@ CalendarDialog包含Calendar除 `isShowConfirmBtn` 以外所有属性，Calendar
 
 | 事件名     | 说明                                             | 回调参数                         |
 | ----------| ------------------------------------------------ | -------------------------------- |
-| onConfirm | 选择日期后的回调，`selectType` 为 `multiple` 时需点击按钮触发 | `value: Array[CalendarConfirmResultType]` |
+| onConfirm | 选择日期后的回调，`selectType` 为 `multiple` 时需点击按钮触发 | `value: CalendarConfirmResultType[]` |

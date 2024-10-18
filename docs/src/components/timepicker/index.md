@@ -184,10 +184,10 @@ struct DemoPage {
 
 | 参数         | 说明                                          | 类型      | 默认值     |
 | ------------ | ---------------------------------------------| --------- | ---------- |
-| value        | 当前选中的日期, 支持双向绑定                      | _Array[string]_  | `[]` | 
+| value        | 当前选中的日期, 支持双向绑定                      | _string[]_  | `[]` | 
 | minTime      | 最小可选时间                                   | _string_  | `00:00:00`  |
 | maxTime      | 最大可选时间                                   | _string_ | `23:59:59`  |
-| listType | 列表类型    | _Array[hour \| minute \| second]_ | `["hour", "minute", "second"]`|
+| listType     | 列表类型    | _('hour' \| 'minute' \| 'second')[]_ | `["hour", "minute", "second"]`|
 | showUnit     | 是否显示单位                                   | _boolean_ | `false` |
 | title        |  标题                                         | _string_ |  `''`  |
 | itemHeight   | 单项高度,单位lpx                                | _number_ | `88`   |

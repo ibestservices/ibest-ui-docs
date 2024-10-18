@@ -479,22 +479,23 @@ struct DemoPage {
 
 ### Tab @Props
 
-| 参数                | 说明                                                      | 类型            | 默认值       |
-| ------------------- | --------------------------------------------------------- | --------------- | ------------ |
+| 参数                | 说明                                                     | 类型            | 默认值       |
+| ------------------- | -------------------------------------------------------| --------------- | ------------ |
 | type                | 样式类型，可选值为 `line` `card`                          | _string_        | `line`    |
-| tabHeight           | 默认高度                                                 | _number_        | `70`         |
+| tabHeight           | 默认高度, 单位lpx                                         | _number_        | `70`         |
 | tabWidthType        | tab宽度类型，可选值为 `auto` `flex`                        | _string_        | `flex`       |
-| tabsList            | 展示的tab列表                                             | _Array[IBestTabItem \| IBestTabItemType]_|`[]` |
+| tabsList            | 展示的tab列表                                             | _IBestTabItem[]_|`[]` |
 | tabPadding          | 单个tab内边距，单位lpx                                     | _number_        | `10`     |
 | currentName         | 当前选中标签的标识符, 支持双向绑定                            | _string_        |  `''`    |
 | isTabLineWidthFixed | 标记线宽度是否固定                                          | _boolean_      |  `false` |
-| tabLineWidth        | 标记线宽度，单位lpx，默认为tab内容宽度                        | _number_        |          |
-| tabLineHeight       | 标记线高度，单位lpx                                        | _number_       |    `4`   |
-| inactiveTextColor   | 未激活的tab文字颜色                                        | _string_       |  `#666`  |
-| activeTextColor     | 激活的tab文字颜色                                         | _string_       | `#333`      |
-| tabLineColor        | 标记线颜色                                                | _string_       | `#3D8AF2`      |
-| lineOffsetY         | 标记线Y方向偏移量                                          | _number_        | `0` |
-| tabBgColor          | tab区域背景颜色                                            | _string_        | `#fff`       |
+| tabLineWidth        | 标记线宽度，单位lpx，默认为tab内容宽度                        | _number_        |  `80` |
+| tabLineHeight       | 标记线高度，单位lpx                                        | _number_        |    `4`   |
+| inactiveTextColor   | 未激活的tab文字颜色                                        | _ResourceColor_ |  `#666`  |
+| activeTextColor     | 激活的tab文字颜色                                          | _ResourceColor_ | `#333`      |
+| tabLineColor        | 标记线颜色                                                | _ResourceColor_  |  `#3D8AF2` |
+| lineOffsetY         | 标记线Y方向偏移量                                          | _number_         | `0` |
+| tabBgColor          | tab区域背景颜色                                            | _ResourceColor_ | `#fff`       |
+| fontSize  <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.15.0</span>           | tab文字大小，单位lpx              | _number_ | `28` |
 
 ### IBestTabItem IBestTabItemType  数据结构
 
@@ -512,7 +513,7 @@ struct DemoPage {
 | --------- | ------------------------- | ---------------------- |
 | onChange | 点击tab后的回调            | `name: string` |
 
-### Tab 方法
+### 实例方法
 ::: tip
 通过传入 `tabController` 属性可调用组件实例方法
 :::

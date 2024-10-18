@@ -176,15 +176,15 @@ IBestTag({
 
 ## API
 
-### Radio @Props
+### @Props
 
 | 参数      | 说明                                                  | 类型      | 默认值    |
 | --------- | ----------------------------------------------------- | --------- | --------- |
 | type      | 类型，可选值为 `primary` `success` `warning` `danger` | _string_  | `default` |
 | tagSize   | 尺寸，可选值为 `large` `medium` `small`               | _string_  | `normal`  |
-| text      | 标签内容                                              | _string_  |           |
-| color     | 标签颜色                                              | _string_  |           |
-| textColor | 文本颜色，优先级高于 `color`                          | _string_  |           |
+| text      | 标签内容                                             | _string_  |           |
+| color     | 标签颜色                                             | _ResourceColor_  |     |
+| textColor | 文本颜色，优先级高于 `color`                           | _ResourceColor_  |     |
 | show      | 是否展示标签                                          | _boolean_ | `true`    |
 | plain     | 是否为空心样式                                        | _boolean_ | `false`   |
 | mark      | 是否为标记样式                                        | _boolean_ | `false`   |

@@ -248,8 +248,6 @@ struct DemoPage {
 ```
 :::
 
-
-
 ## API
 
 ### @Props
@@ -262,11 +260,11 @@ struct DemoPage {
 | space        | 图标间距,单位lpx                               | _number_ | `8` |
 | activeIcon   | 选中时图标                                     | _Resource_ | `实心五角星` |
 | inactiveIcon | 未选中图标                                     | _Resource_ | `空心五角星` |
-| activeColor  | 选中颜色                                       | _string_ | `#db3131` |
-| inactiveColor| 未选中颜色                                     | _string_ | `#c8c9cc` |
+| activeColor  | 选中颜色                                       | _ResourceColor_ | `#db3131` |
+| inactiveColor| 未选中颜色                                     | _ResourceColor_ | `#c8c9cc` |
 | allowHalf    | 是否允许半选, 为false时小数会被自动向上取整         | _boolean_ |  `false`  |
 | disabled     | 禁用                                           | _boolean_ |  `false`  |
-| disabledColor| 禁用颜色                                        | _string_ |  `#c8c9cc`  |
+| disabledColor| 禁用颜色                                        | _ResourceColor_ |  `#c8c9cc`  |
 | readOnly     | 只读                                           | _boolean_ |  `false`  |
 | clearable    | 是否可清空                                      | _boolean_ |  `false`  |
 | isTouchable  | 是否可通过滑动手势选择评分                         | _boolean_ |  `true`  |

@@ -311,7 +311,7 @@ struct DialogPage {
 | dialogWidth           | 弹窗的宽度                                                     | _string_                      | `640lpx`                                                                                                        |
 | dialogBorderRadius    | 弹窗的圆角                                                     | _string_                      | `32lpx`                                                                                                         |
 | title                 | 弹窗的标题                                                     | _string_                      |                                                                                                                 |
-| titleColor            | 弹窗的标题文字颜色                                             | _string_                      | <div style="padding: 2px 4px; background: #323233; color: #fff; border-radius: 4px">#323233</div>               |
+| titleColor            | 弹窗的标题文字颜色                                             | _ResourceColor_ | <div style="padding: 2px 4px; background: #323233; color: #fff; border-radius: 4px">#323233</div>               |
 | titlePaddingTop       | 弹窗的标题的 `padding-top` 值                                  | _string_                      | `52lpx`                                                                                                         |
 | titlePaddingX         | 标题的 `padding-left` 与 `padding-right` 值                    | _string_                      | `48lpx`                                                                                                         |
 | titleLienHeight       | 标题的 `line-height` 值                                        | _string_                      | `48lpx`                                                                                                         |
@@ -330,12 +330,12 @@ struct DialogPage {
 | showCancelButton      | 是否展示取消按钮                                               | _boolean_                     | `false`                                                                                                         |
 | confirmButtonText     | 确认按钮文案                                                   | _string_                      | `确认`                                                                                                          |
 | cancelButtonText      | 取消按钮的文案                                                 | _string_                      | `取消`                                                                                                          |
-| confirmButtonColor    | 确认按钮的颜色                                                 | _string_                      | <div style="padding: 2px 4px; background: #3D8AF2; color: #fff; border-radius: 4px">#3D8AF2</div>               |
-| cancelButtonColor     | 取消按钮的颜色                                                 | _string_                      | <div style="padding: 2px 4px; background: #646566; color: #fff; border-radius: 4px">#646566</div>               |
+| confirmButtonColor    | 确认按钮的颜色                                                 | _ResourceColor_ | <div style="padding: 2px 4px; background: #3D8AF2; color: #fff; border-radius: 4px">#3D8AF2</div>               |
+| cancelButtonColor     | 取消按钮的颜色                                                 | _ResourceColor_         | <div style="padding: 2px 4px; background: #646566; color: #fff; border-radius: 4px">#646566</div>               |
 | confirmButtonDisabled | 是否禁用确认按钮                                               | _boolean_                     | `false`                                                                                                         |
 | cancelButtonDisabled  | 是否禁用取消按钮                                               | _boolean_                     | `false`                                                                                                         |
 | showOverlay           | 是否展示遮罩层，不展示的话则没有遮罩层 `API 10+`               | _boolean_                     | `true`                                                                                                          |
-| overlayColor          | 遮罩层颜色 `API 10+`                                           | _string_                      | <div style="padding: 2px 4px; background: rgba(0, 0, 0, 0.2); color: #fff; border-radius: 4px">0x33000000</div> |
+| overlayColor          | 遮罩层颜色 `API 10+`                                           | _ResourceColor_ | <div style="padding: 2px 4px; background: rgba(0, 0, 0, 0.2); color: #fff; border-radius: 4px">0x33000000</div> |
 | showInSubWindow       | 某弹框需要显示在主窗口之外时，是否在子窗口显示此弹窗 `API 10+` | _boolean_                     | `false`                                                                                                         |
 
 ### Events
@@ -347,7 +347,7 @@ struct DialogPage {
 | onCancel    | 点击取消按钮的回调                                            | (event?: _ClickEvent_) => _void_                       |
 | beforeClose | 关闭前的回调函数，返回 `false` 可阻止关闭，支持返回 `Promise` | (event?: _ClickEvent_) => _void_                       |
 
-### @BuilderParam 插槽
+### 插槽
 
 | 插槽名         | 说明                                                                           | 类型                      |
 | -------------- | ------------------------------------------------------------------------------ | ------------------------- |

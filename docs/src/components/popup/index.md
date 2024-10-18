@@ -386,7 +386,7 @@ struct DemoPage {
 | closeOnBackPress | 是否允许返回键关闭                                     | _boolean_ |  `false`  |
 | safeAreaInsetTop| 是否开启顶部安全区适配                                   | _boolean_ | `false` |
 | safeAreaInsetBottom | 是否开启底部安全区适配                               | _boolean_ | `false` |
-| maskColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.12.0</span>  | 蒙层颜色                       | _string_ | `0x33000000` |
+| maskColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.12.0</span>  | 蒙层颜色      | _ResourceColor_ | `0x33000000` |
 
 ### Events
 
