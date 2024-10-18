@@ -10,6 +10,26 @@ iBest-UI 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范�
 - 次版本号：通常每隔 ~~1 ~ 2 月~~发布，包含新组件或较大的功能更新，向下兼容。
 - 主版本号：无固定的发布时间，包含不兼容更新和重大功能更新。
 
+### 1.15.0
+
+#### 新功能 🎉
+
+1. 增加 IBestActionSheet API
+2. 增加 IBestSignature 组件
+
+#### 其他变更
+
+1. 增加 slider 滑块组件;
+2. 增加 Uploader 文件上传组件;
+3. 增加图片预览 api IBestImagePreview;
+4. tab 组件新增 fontSize 属性;
+5. form 组件新增 getFormValues 方法, 同步获取表单数据。
+
+兼容变更:
+
+1. 所有组件(Watermark、Signature 除外)颜色相关属性类型改为 RescourseColor 。
+2. 修复 Checkbox 与 Radio 默认插槽不可用 bug
+
 ### 1.14.0
 
 #### 新功能 🎉
