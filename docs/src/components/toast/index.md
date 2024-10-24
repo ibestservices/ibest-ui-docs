@@ -80,10 +80,10 @@ IBestToast.show({
 ::: details 点我查看代码
 
 ```ts
-IBestToast.show({
-    type: "loading",
-    message: "提示内容"
-})
+IBestToast.showLoading()
+setTimeout(() => {
+    IBestToast.hide()
+}, 1500)
     
 ```
 
@@ -132,7 +132,7 @@ IBestToast.show({
     type: "loading",
     loadingType: "spinner",
     message: "加载中...",
-        onOpened: () => {
+    onOpened: () => {
         // 可在此延时关闭toast
         console.log("toast打开成功")
     }
@@ -190,9 +190,9 @@ IBestToast.show({
 ::: details 点我查看代码
 
 ```ts
-async showCountDownLoading(){
+showCountDownLoading(){
     let count = 3
-    let toast = await IBestToast.show({
+    let toast = IBestToast.show({
         type: "loading",
         message: `倒计时 ${count} 秒`,
         duration: 0
@@ -213,24 +213,29 @@ async showCountDownLoading(){
 
 ## API
 
+### 方法
+
 | 方法名     | 说明                       | 参数                       |  返回值          |
 | ----------| -------------------------- |--------------------------- |------------------|
 | show       |  展示提示                  | _string_ \| _ToastParams_  | toast 实例        |
 | hide       |  隐藏提示                  | -                          | -                |
+| showLoading <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span> |  展示loading     |  _LoadingOption_ |  -  |
 
-### ToastParams 数据结构
+### LoadingOption 数据结构
+| 参数         | 说明                                                     | 类型      | 默认值     |
+| ------------ | --------------------------------------------------------| --------- | ---------|
+| message      | 展示文本内容                                              | _string_  | "" |
+| duration     | 展示时长(ms)，值为 0 或 type为 `loading` 时toast 不会自动消失 | _number_   | 1500  |
+| loadingType  | 加载图标类型，可选值为 `circular`、`spinner`，type为 `loading` 时有效 | _boolean_   | `circular` |
 
-调用 `show` 方法时，支持传入以下选项：
+### ToastParams 数据结构, 继承至LoadingOption
 
 | 参数         | 说明                                                     | 类型      | 默认值     |
 | ------------ | --------------------------------------------------------| --------- | ---------- |
-| type         | 展示类型，可选值为 `success`、`warning`、`fail`、`loading` | _string_  | "" |
-| message      | 展示文本内容                                              | _string_  | "" |
-| duration     | 展示时长(ms)，值为 0 或 type为 `loading` 时toast 不会自动消失 | _number_   | 1500  |
+| type         | 展示类型，可选值为 `success`、`warning`、`fail`、`loading`  | _string_  | "" |
 | wordBreak    | 文本换行方式，可选值为 `normal`、`break-all` 、`break-word` | _string_   | `normal` |
-| icon         | 自定义图标，支持网络图片和本地图片，优先级大于type            | _string_ \| _Resource_   | "" |
-| isShowMask   | 是否显示遮罩                                               | _boolean_   | `false` |
-| loadingType  | 加载图标类型，可选值为 `circular`、`spinner`，type为 `loading` 时有效| _boolean_   | `circular` |
+| icon         | 自定义图标，支持网络图片和本地图片，优先级大于type              | _string_ \| _Resource_   | "" |
+| isShowMask   | 是否显示遮罩                                              | _boolean_   | `false` |
 | position     | 位置，可选值为 `top` 、`center`、`bottom`                  | _string_   | `center` |
-| offsetY      | 偏移量                                                    | _string_ \| _number_   | `0` |
-| onOpened     | 完全展示后的回调函数                                        | _Function_ | `-` |
+| offsetY      | 偏移量                                                   | _string_ \| _number_   | `0` |
+| onOpened     | 完全展示后的回调函数                                        | _() => void_ | `-` |

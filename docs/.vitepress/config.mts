@@ -1,9 +1,9 @@
 import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "iBest-UI@HarmonyOS",
+  title: "IBest-UI@HarmonyOS",
   description:
-    "iBest-UI是一个简单易用的鸿蒙开源UI库，基于鸿蒙API9，参照vant进行组件封装设计，方便，快捷，高效",
+    "IBest-UI是一个简单易用的鸿蒙开源UI库，基于鸿蒙API12，参照vant进行组件封装设计，方便，快捷，高效",
   srcDir: "./src",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
@@ -25,7 +25,7 @@ export default defineConfig({
       {
         name: "keywords",
         content:
-          "iBest-UI,鸿蒙,鸿蒙UI,鸿蒙UI库,鸿蒙UI框架,鸿蒙UI框架,鸿蒙UI组件,鸿蒙UI组件库,鸿蒙UI组件框架,百得思维,安徽百得思维,合肥百德思维",
+          "IBest-UI,鸿蒙,鸿蒙UI,鸿蒙UI库,鸿蒙UI框架,鸿蒙UI框架,鸿蒙UI组件,鸿蒙UI组件库,鸿蒙UI组件框架,百得思维,安徽百得思维,合肥百德思维",
       },
     ],
   ],
@@ -144,6 +144,10 @@ export default defineConfig({
           {
             text: `Loading 加载`,
             link: "/components/loading/",
+          },
+          {
+            text: `Notify 消息通知`,
+            link: "/components/notify/",
           },
         ],
       },
