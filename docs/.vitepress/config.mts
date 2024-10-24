@@ -103,11 +103,11 @@ export default defineConfig({
           { text: `PickerGroup 选择器组`, link: "/components/pickergroup/" },
           { text: "Radio 单选框", link: "/components/radio/" },
           {
-            text: `Rate 评分 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.13.0</span>`,
+            text: `Rate 评分`,
             link: "/components/rate/",
           },
           {
-            text: `Search 搜索 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.13.0</span>`,
+            text: `Search 搜索`,
             link: "/components/search/",
           },
           {

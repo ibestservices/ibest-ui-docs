@@ -10,6 +10,20 @@ IBest-UI 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范�
 - 次版本号：通常每隔 ~~1 ~ 2 月~~发布，包含新组件或较大的功能更新，向下兼容。
 - 主版本号：无固定的发布时间，包含不兼容更新和重大功能更新。
 
+### 1.16.0
+
+#### 新功能 🎉
+
+1. 增加 IBestDialogUtil 弹框 API
+2. 增加 IBestNotify 消息提示 API
+
+#### 其他变更
+
+1. IBestDialog 增加 visible、theme、buttonSpace、confirmButtonBgColor、cancelButtonBgColor、closeOnBackPress、onOpen、onClose 属性;
+2. IBestToast 增加 showLoading 方法
+3. 优化 IBestLoading 组件动画效果;
+4. 优化 IBestPopup 组件隐藏动画效果
+
 ### 1.15.0
 
 #### 新功能 🎉
