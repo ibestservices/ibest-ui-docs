@@ -146,7 +146,7 @@ export default defineConfig({
             link: "/components/loading/",
           },
           {
-            text: `Notify 消息通知`,
+            text: `Notify 消息通知 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span>`,
             link: "/components/notify/",
           },
         ],
