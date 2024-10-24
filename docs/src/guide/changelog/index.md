@@ -2,7 +2,7 @@
 
 ## 介绍
 
-iBest-UI 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范。
+IBest-UI 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范。
 
 ## 发布节奏
 

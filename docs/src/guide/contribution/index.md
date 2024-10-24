@@ -2,9 +2,9 @@
 
 ## 介绍
 
-感谢你使用 iBest-UI。
+感谢你使用 IBest-UI。
 
-以下是关于向 iBest-UI 提交反馈或代码的指南。在向 iBest-UI 提交 [issue](https://github.com/ibestservices/ibest-ui/issues) 或者 [PR](https://github.com/ibestservices/ibest-ui/pulls) 之前，请先花几分钟时间阅读以下内容。
+以下是关于向 IBest-UI 提交反馈或代码的指南。在向 IBest-UI 提交 [issue](https://github.com/ibestservices/ibest-ui/issues) 或者 [PR](https://github.com/ibestservices/ibest-ui/pulls) 之前，请先花几分钟时间阅读以下内容。
 
 ## Issue 规范
 
@@ -132,7 +132,7 @@ export struct IBest组件名称 {
 - 基于 fork 后仓库的 main 分支新建一个分支，比如 feature/button_color。
 - 在新分支上进行开发，开发完成后，提 Pull Request 到主仓库的 main 分支。
 - Pull Request 会在 Review 通过后被合并到主仓库。
-- 等待 iBest-UI 发布新版本。
+- 等待 IBest-UI 发布新版本。
 
 ### Pull Request 标题格式
 

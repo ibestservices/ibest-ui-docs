@@ -1,5 +1,5 @@
 ---
-title: "iBest-UI"
+title: "IBest-UI"
 ---
 
 # {{ $frontmatter.title }}
@@ -28,7 +28,7 @@ title: "iBest-UI"
 
 ## 贡献者
 
-感谢以下同学对 `iBest-UI` 做的贡献:
+感谢以下同学对 `IBest-UI` 做的贡献:
 
 <a target="_blank" href="https://github.com/ibestservices/ibest-ui/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=ibestservices/ibest-ui" />
