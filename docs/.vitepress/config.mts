@@ -60,7 +60,10 @@ export default defineConfig({
         items: [
           { text: "Button 按钮", link: "/components/button/" },
           { text: "Cell 单元格", link: "/components/cell/" },
-          { text: `Icon 图标 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>`, link: "/components/icon/" },
+          {
+            text: `Icon 图标 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>`,
+            link: "/components/icon/",
+          },
           {
             text: `Popup 弹出层 `,
             link: "/components/popup/",
@@ -116,7 +119,7 @@ export default defineConfig({
             link: "/components/slider/",
           },
           {
-            text: `Signature 签名 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.14.0</span>`,
+            text: `Signature 签名`,
             link: "/components/signature/",
           },
           {
@@ -135,7 +138,7 @@ export default defineConfig({
         text: "反馈组件",
         items: [
           {
-            text: `ActionSheet 动作面板 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.14.0</span>`,
+            text: `ActionSheet 动作面板`,
             link: "/components/actionsheet/",
           },
           {
@@ -153,7 +156,7 @@ export default defineConfig({
           {
             text: `PullRefresh 下拉刷新 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>`,
             link: "/components/pullrefresh/",
-          }
+          },
         ],
       },
       {
