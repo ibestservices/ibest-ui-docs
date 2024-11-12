@@ -25,7 +25,7 @@ export default defineConfig({
       {
         name: "keywords",
         content:
-          "IBest-UI,鸿蒙,鸿蒙UI,鸿蒙UI库,鸿蒙UI框架,鸿蒙UI框架,鸿蒙UI组件,鸿蒙UI组件库,鸿蒙UI组件框架,百得思维,安徽百得思维,合肥百德思维",
+          "IBest-UI,鸿蒙,鸿蒙UI,鸿蒙UI库,鸿蒙UI框架,鸿蒙UI框架,鸿蒙UI组件,鸿蒙UI组件库,鸿蒙UI组件框架,百得思维,安徽百得思维,合肥百德思维,Harmony,OpenHarmony,HarmonyOS,HarmonyOS UI,HarmonyOS Ui,HarmonyOS Ui库,HarmonyOS Ui框架,HarmonyOS Ui组件,HarmonyOS Ui组件库,HarmonyOS Ui组件框架",
       },
     ],
   ],
@@ -60,6 +60,7 @@ export default defineConfig({
         items: [
           { text: "Button 按钮", link: "/components/button/" },
           { text: "Cell 单元格", link: "/components/cell/" },
+          { text: `Icon 图标 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>`, link: "/components/icon/" },
           {
             text: `Popup 弹出层 `,
             link: "/components/popup/",
@@ -149,6 +150,10 @@ export default defineConfig({
             text: `Notify 消息通知 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span>`,
             link: "/components/notify/",
           },
+          {
+            text: `PullRefresh 下拉刷新 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>`,
+            link: "/components/pullrefresh/",
+          }
         ],
       },
       {

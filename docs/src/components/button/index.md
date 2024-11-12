@@ -306,14 +306,14 @@ IBestButton({
 
 ### Events
 
-| 事件名     | 说明                                             | 事件类型                         |
-| ---------- | ------------------------------------------------ | -------------------------------- |
-| onClickBtn | 点击按钮的回调事件，按钮状态不为加载或禁用时触发 | (event?: _ClickEvent_) => _void_ |
+| 事件名     | 说明                                             | 回调参数                         |
+| ---------- | -----------------------------------------------| -------------------------------- |
+| onClickBtn | 点击按钮的回调事件，按钮状态不为加载或禁用时触发        | _event?: ClickEvent_ |
 
 ### 插槽
 
 | 插槽名             | 说明                                                           | 类型                      |
 | ------------------ | -------------------------------------------------------------- | ------------------------- |
-| defaultBuilder     | 按钮内容的插槽，使用该插槽后将完全接管按钮内容，其余插槽均失效 | _CustomBuilder_ \| _null_ |
-| iconBuilder        | 按钮图标的插槽，`loading`为`true`时，将显示`loading`图标       | _CustomBuilder_ \| _null_ |
-| loadingIconBuilder | `loading` 状态的图标，使用该插槽将替换默认的 `loading` 图标    | _CustomBuilder_ \| _null_ |
+| defaultBuilder     | 按钮内容的插槽，使用该插槽后将完全接管按钮内容，其余插槽均失效     | _CustomBuilder_ |
+| iconBuilder        | 按钮图标的插槽，`loading`为`true`时，将显示`loading`图标       | _CustomBuilder_ |
+| loadingIconBuilder | `loading` 状态的图标，使用该插槽将替换默认的 `loading` 图标    | _CustomBuilder_ |

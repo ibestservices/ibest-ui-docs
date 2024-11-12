@@ -426,6 +426,101 @@ struct DemoPage {
 ```
 :::
 
+### 平铺展示 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>
+
+![平铺展示](./images/flat.png)
+
+::: details 点我查看代码
+```ts
+import { IBestCascaderContent } from "@ibestservices/ibest-ui";
+@Entry
+@Component
+struct DemoPage {
+  @State selectValue: string[] = []
+  @State data: IBestCascaderOption[] = [
+		{
+			text: "江苏省",
+			value: "320000",
+			children: [
+				{
+					text: "南京市",
+					value: "320100",
+					children: [
+						{
+							text: "秦淮区",
+							value: "320104"
+						},
+						{
+							text: "雨花台区",
+							value: "320114"
+						}
+					]
+				},
+				{
+					text: "苏州市",
+					value: "320500",
+					disabled: true,
+					children: [
+						{
+							text: "姑苏区",
+							value: "320508"
+						},
+						{
+							text: "昆山市",
+							value: "320583"
+						}
+					]
+				}
+			]
+		},
+		{
+			text: "安徽省",
+			value: "340000",
+			children: [
+				{
+					text: "合肥市",
+					value: "340100",
+					children: [
+						{
+							text: "蜀山区",
+							value: "340104"
+						},
+						{
+							text: "合肥高新技术产业开发区",
+							value: "340171"
+						}
+					]
+				},
+				{
+					text: "黄山市",
+					value: "341000",
+					disabled: true,
+					children: [
+						{
+							text: "屯溪区",
+							value: "341002"
+						},
+						{
+							text: "黄山区",
+							value: "341003"
+						}
+					]
+				}
+			]
+		}
+	]
+  build() {
+    Column(){
+      IBestCascaderContent({
+        value: $selectValue,
+        options: this.data
+      })
+    }
+  }
+}
+```
+:::
+
 ## API
 
 ### @Props

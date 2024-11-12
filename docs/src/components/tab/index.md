@@ -509,9 +509,10 @@ struct DemoPage {
 
 ### Events
 
-| 事件名    | 说明                      | 参数类型                |
-| --------- | ------------------------- | ---------------------- |
-| onChange | 点击tab后的回调            | `name: string` |
+| 事件名     | 说明                      | 参数类型                |
+| --------- | ------------------------ | ---------------------- |
+| onChange  | tab切换后的回调            | `name: string` |
+| onTabClick <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 点击tab后的回调            | `name: string` |
 
 ### 实例方法
 ::: tip
