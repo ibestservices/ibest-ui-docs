@@ -10,6 +10,24 @@ IBest-UI 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范�
 - 次版本号：通常每隔 ~~1 ~ 2 月~~发布，包含新组件或较大的功能更新，向下兼容。
 - 主版本号：无固定的发布时间，包含不兼容更新和重大功能更新。
 
+### 1.17.0
+
+#### 新功能 🎉
+
+1. 增加 IBestIcon 弹框
+2. 增加 IBestPullRefresh
+
+#### 其他变更
+
+1. IBestTab 新增 onTabClick 事件;
+2. 增加导出 IBestCascaderContent 级联组件, 可独立在页面中使用或与其他自定义组件组合使用;
+3. IBestCell 增加 leftIcon leftIconColor leftIconSize rightIcon rightIconColor rightIconSize 属性;
+4. IBestActionSheet 增加 cancelTextColor、beforeClose 属性.
+
+#### 新贡献者
+
+[SunShineGo](https://github.com/sunshinego12138)
+
 ### 1.16.0
 
 #### 新功能 🎉
