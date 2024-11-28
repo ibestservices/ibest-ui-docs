@@ -29,3 +29,5 @@
 | Slider 滑块                | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>            | 1.15.0   |      |
 | Uploader 文件上传          | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>            | 1.15.0   |      |
 | IBestNotify 通知           | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>            | 1.16.0   |      |
+| IBestIcon 图标             | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>            | 1.17.0   |      |
+| IBestPullRefresh 图标      | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>            | 1.17.0   |      |
