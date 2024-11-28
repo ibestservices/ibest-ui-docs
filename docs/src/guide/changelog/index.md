@@ -12,11 +12,24 @@ IBest-UI 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范�
 
 ### 1.18.0
 
-
+#### 新功能 🎉
+1. 新增 IBestBadge 徽标组件;
+2. Search 增加 textColor 属性;
+3. IBestCell 增加 leftContentWidth、leftIconMarginRight、rightIconMarginLeft、leftRightPadding、borderSizeType、borderLeft、bdColor 属性;
+4. IBestToast 增加 iconWidth 属性;
+5. IBestCheckBox IBestRadio 增加 labelFontSize 属性;
+6. IBestEmpty 增加 emptyImgUrl 属性;
+7. IBestPopup 增加 headerBuilder 插槽;
+8. IBestSearch 增加 textColor 属性;
+#### 重要变更:
+组件库全局尺寸单位默认为vp, 可自定义配置, 升级后可能会出现部分组件尺寸偏大情况, 只需将原先传递的尺寸改为原来一半即可.
+#### 修复:
+1. IBestToast 同时打开无法关闭问题;
+2. IBestCascader 异步加载时崩溃问题;
 
 ### 1.17.0
 
-#### 新功能 🎉
+#### 新功能 🎉   
 1. 新增 IBestIcon 组件;
 2. 新增 IBestPullRefresh 下拉刷新组件;
 3. IBestTab 新增 onTabClick 事件;
@@ -25,6 +38,10 @@ IBest-UI 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范�
 6. IBestActionSheet 增加 cancelTextColor、beforeClose 属性.
 
 #### 另: 新发布 @ibestservices/area-data 库, 可用于Cascader相关组件. 
+
+#### 新贡献者
+
+[SunShineGo](https://github.com/sunshinego12138)
 
 ### 1.16.0
 
