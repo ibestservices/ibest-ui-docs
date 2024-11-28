@@ -9,7 +9,7 @@ import { IBestButton } from "@ibestservices/ibest-ui";
 
 @Builder function Arrow(color = '#fff'){
   Image($r('app.media.title_back'))
-    .width('40lpx')
+    .width(20)
     .fillColor(color)
 }
 
@@ -31,7 +31,7 @@ import { IBestButton, IBestCheckboxGroup } from "@ibestservices/ibest-ui";
 
 @Builder function Arrow(color = '#fff'){
   Image($r('app.media.title_back'))
-    .width('40lpx')
+    .width(20)
     .fillColor(color)
 }
 

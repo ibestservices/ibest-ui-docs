@@ -515,7 +515,7 @@ struct DemoPage {
         console.log('group1', val)
       }
     })
-    Flex({ wrap: FlexWrap.Wrap, space: { main: LengthMetrics.lpx(20) } }){
+    Flex({ wrap: FlexWrap.Wrap, space: { main: 10 } }){
       IBestRadio({
         label: '单选框1',
         name: '1',
@@ -550,14 +550,14 @@ struct DemoPage {
 ### @Props
 
 | 参数         | 说明                                                     | 类型      | 默认值     |
-| ------------ | --------------------------------------------------------| --------- | ---------- |
+| ------------| --------------------------------------------------------| --------- | ---------- |
 | value       | 当前输入的值, 支持双向绑定   | _string \| number \| boolean \| (string \| number)[]_ | `''`  |
-| formId      | 唯一id, 当组件用于验证时必传                             | _string_  | `''` |
+| formId      | 唯一id, 当组件用于验证时必传                               | _string_  | `''` |
 | prop        | 绑定value的属性名, 当组件用于验证时必传                     | _string_  | `''` |
-| rules       | 验证规则列表, 可由form统一配置                            | _IBestFormRuleItem[]_ |`[]`|
-| label       | 输入框左侧文本	                                        | _string_ | `''`|
+| rules       | 验证规则列表, 可由form统一配置                             | _IBestFormRuleItem[]_ |`[]`|
+| label       | 输入框左侧文本	                                         | _string_ | `''`|
 | colon       | 是否在label后加冒号, 可由form统一配置                      | _boolean_ | `false` |
-| labelWidth  | 左侧文本宽度，默认单位为 lpx, 可由form统一配置               | _number_ |`160`|
+| labelWidth  | 左侧文本宽度，可由form统一配置                              | _number_ \| _string_ |`80`|
 | labelPosition | 左侧文本位置, 可选值 `left` `top`, 可由form统一配置       | _string_ |`left`|
 | labelAlign  | 左侧文本对齐方式, 可选值 `left` `center` `right`, 可由form统一配置| _string_ |`left`|
 | placeholder | 输入框占位提示文字                                        | _string_ |`''`|
@@ -575,13 +575,13 @@ struct DemoPage {
 | readOnly    | 是否只读                                                  | _boolean_ | `false` |
 | clickable   | 是否开启点击反馈                                            | _boolean_ | `false` |
 | isLink      | 是否展示右侧箭头并开启点击反馈                                | _boolean_ | `false` |
-| leftIcon    | 左侧图标                                                  | _string \| Resource_ | `''` |
+| leftIcon    | 左侧图标                                                  | _ResourceStr_ | `''` |
 | leftIconColor| 左侧图标颜色, 仅svg格式有效                                | _ResourceColor_ | `''` |
-| rightIcon    | 右侧图标                                                 | _string \| Resource_ | `''` |
+| rightIcon    | 右侧图标                                                 | _ResourceStr_ | `''` |
 | rightIconColor| 右侧图标颜色, 仅svg格式有效                                | _ResourceColor_ | `''` |
 | hasBorder   | 是否展示底部线条                                            | _boolean_ | `true` |
 | clearable   | 是否启用清除图标，点击清除图标后会清空输入框                     | _boolean_ | `false` |
-| clearIcon   | 自定义清除图标                                              | _string \| Resource_ | `''` |
+| clearIcon   | 自定义清除图标                                              | _ResourceStr_ | `''` |
 | clearTrigger| 显示清除图标的时机, 可选值 `always` `focus`                   | _string_ | `focus` |
 | showMessage | 是否显示验证信息, 可由form统一配置                            | _boolean_ | `true` |
 | formatter   | 格式化函数                                                  | _(value: string) => string_ | `-` |

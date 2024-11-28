@@ -168,9 +168,9 @@ struct DemoPage {
 | swipeDuration| 切换动画时长                                    | _number_ | `200` |
 | showIndex    | 是否显示页码, 当只有一张图片时默认不显示            | _boolean_ | `true` |
 | indexPosition| 页码位置                                       | _'top' \| 'bottom'_ | `bottom` |
-| indexOffset  | 页码距离顶部或底部距离, 单位lpx                   | _number_ | `104` |
+| indexOffset  | 页码距离顶部或底部距离                           | _number_ | `52` |
 | indexFontColor| 页码字体颜色                                   | _ResourceColor_ | `#fff` |
-| indexFontSize| 页码字体大小, 单位lpx                            | _number_ | `28` |
+| indexFontSize| 页码字体大小                                    | _number_ | `14` |
 | loop         | 是否循环                                        | _boolean_ |  `true`  |
 | doubleScale  | 是否启用双击缩放手势，禁用后，点击时会立即关闭图片预    | _boolean_ |  `true`  |
 | closeOnClickOverlay | 是否在点击遮罩层后关闭图片预览               | _boolean_ |  `true`  |

@@ -72,7 +72,7 @@ import { IBestCellGroup } from "@ibestservices/ibest-ui"
 
 @Extend(Column) function positionColStyle(bd: boolean = false){
   .layoutWeight(1)
-  .height("150lpx")
+  .height(75)
   .justifyContent(FlexAlign.Center)
   .border({width:{left: bd ? 1 : 0}, color: "#ebedf0"})
 }
@@ -90,7 +90,7 @@ struct DemoPage {
         Row(){
           Column(){
             Text("顶部弹出")
-              .fontSize("28lpx")
+              .fontSize(14)
           }
           .positionColStyle()
           .onClick(() => {
@@ -98,7 +98,7 @@ struct DemoPage {
           })
           Column(){
             Text("底部弹出")
-              .fontSize("28lpx")
+              .fontSize(14)
           }
           .positionColStyle(true)
           .onClick(() => {
@@ -106,7 +106,7 @@ struct DemoPage {
           })
           Column(){
             Text("左侧弹出")
-              .fontSize("28lpx")
+              .fontSize(14)
           }
           .positionColStyle(true)
           .onClick(() => {
@@ -114,7 +114,7 @@ struct DemoPage {
           })
           Column(){
             Text("右侧弹出")
-              .fontSize("28lpx")
+              .fontSize(14)
           }
           .positionColStyle(true)
           .onClick(() => {
@@ -231,7 +231,7 @@ struct DemoPage {
     Row() {
       Text("内容")
     }
-    .width("300lpx")
+    .width(150)
     .aspectRatio(1)
     .justifyContent(FlexAlign.Center)
   }
@@ -374,19 +374,20 @@ struct DemoPage {
 | ------------| --------------------------------------------------------| --------- | ---------- |
 | visible     | 控制弹出层显示与隐藏                                        | _boolean_  | `false` |
 | popupAlign  | 弹出层位置,可选值为 `left` `right` `top` `bottom` `center` | _string_  | `center` |
-| popupWidth  | 弹出层宽度,单位lpx,默认值请参考弹出位置事例                    | _string \| number_  | `-`|
-| popupHeight | 弹出层高度,单位lpx,默认值请参考弹出位置事例                    | _string \| number_  | `-`|
+| popupWidth  | 弹出层宽度,默认值请参考弹出位置事例                           | _string \| number_  | `-`|
+| popupHeight | 弹出层高度,默认值请参考弹出位置事例                           | _string \| number_  | `-`|
 | isShowHeader| 是否展示头部                                              | _boolean_  | `false` |
 | title       | 标题内容                                                  | _string_ | `''`|
 | isShowClose  | 是否显示关闭图标                                           | _boolean_  | `true` |
-| closeIcon   | 自定义关闭图标                                            | _string \| Resource_ | `''`|
+| closeIcon   | 自定义关闭图标                                             | _ResourceStr_ | `''`|
 | offsetY     | 弹出层底部偏移量                                           | _number_ |  `0`  |
-| cornerRadius| 弹出层圆角值                                              | _number_ | `0`   |
+| cornerRadius| 弹出层圆角值                                               | _string \| number_ | `0`   |
 | closeOnClickOverlay | 是否允许点击遮罩关闭                                | _boolean_ |  `true`  |
 | closeOnBackPress | 是否允许返回键关闭                                     | _boolean_ |  `false`  |
 | safeAreaInsetTop| 是否开启顶部安全区适配                                   | _boolean_ | `false` |
 | safeAreaInsetBottom | 是否开启底部安全区适配                               | _boolean_ | `false` |
-| maskColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.12.0</span>  | 蒙层颜色      | _ResourceColor_ | `0x33000000` |
+| maskColor  | 蒙层颜色      | _ResourceColor_ | `0x33000000` |
+| isModal    | 是否为模态窗口                                               | _boolean_ | `true` |
 
 ### Events
 
@@ -396,6 +397,7 @@ struct DemoPage {
 | onClose   | 弹出层关闭时触发 | `-` |
 
 ### 插槽
-|插槽名         | 说明                         | 类型                      |
+|插槽名         | 说明                        | 类型                      |
 | ------------ | -------------------------- | ------------------------- |
+|headerBuilder | 自定义头部      |  _CustomBuilder_  |
 |contentBuilder| 弹出层自定义内容 |  _CustomBuilder_  |

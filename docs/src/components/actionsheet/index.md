@@ -292,7 +292,7 @@ struct DemoPage {
       }
       .width("100%")
       .alignItems(HorizontalAlign.Center)
-      .padding("16lpx")
+      .padding(8)
     }
     .layoutWeight(1)
   }
@@ -371,7 +371,7 @@ struct DemoPage {
 | titleBgColor | 自定义标题背景色                                 | _ResourceColor_ |  `#fff`  |
 | description  | 描述                                           | _string_ |  `''`  |
 | closeable    | 是否显示自定义关闭图标                            | _boolean_ |  `true`  |
-| closeIcon    | 自定义关闭图标                                   | _string \| Resource_ |  `-`  |
+| closeIcon    | 自定义关闭图标                                   | _ResourceStr_ |  `-`  |
 | cancelText   | 取消按钮文字                                     | _string_ |  `''`  |
 | safeAreaInsetBottom| 是否开启底部安全距离适配                     | _boolean_ |  `true`  |
 | closeOnBackPress   | 是否允许物理关闭                            | _boolean_ |  `true`  |

@@ -243,11 +243,11 @@ struct DemoPage {
 | max          | 最大上传数量                                   | _number_  | `-1` |
 | maxSize      | 单个文件大小最大限制                             | _number_ |  `-1`  |
 | imageFit     | 预览图片裁剪方式                                | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-appendix-enums-V5#imagefit" target="__blank">ImageFit</a>_ |  `Cover` |
-| previewSize  | 预览大小, 单位lpx                               | _number_ | `160` |
+| previewSize  | 预览大小                                       | _number_ \| _string_ | `80` |
 | isPreviewFullImage| 是否在点击预览图后展示全屏图片预览             | _boolean_ | `true` |
-| cornerRadius | 圆角大小, 单位lpx                               | _number_ | `0` |
+| cornerRadius | 圆角大小                                        | _number_ \| _string_ | `0` |
 | uploaderIcon | 自定义触发器图标                                 | _ResourceStr_ | `照相机` |
-| uploaderIconSize| 触发器图标大小, 单位lpx                       | _number_ | `48` |
+| uploaderIconSize| 触发器图标大小                                | _number_ \| _string_ | `24` |
 | uploaderIconColor| 触发器图标颜色                               | _ResourceColor_ | `#dcdee0` |
 | showDelete| 是否显示删除按钮                                    | _boolean_ | `true` |
 | fileSelectOptions| 文件选择配置项, 仅在`selectType`为`file`时有效 | _FileSelectOptions_ | `-` |

@@ -146,11 +146,11 @@ struct DemoPage {
 
 | 参数         | 说明                                          | 类型      | 默认值     |
 | ------------ | ---------------------------------------------| --------- | ---------- |
-| boardWidth   | 画板宽度, 小于0都默认为百分百                    | _number \| string_  | `-1` |
-| boardHeight  | 画板高度,单位lpx                               | _number \| string_ |  `400`  |
+| boardWidth   | 画板宽度, 小于0都默认为百分百                    | _number \| string_  | `100%` |
+| boardHeight  | 画板高度                                      | _number \| string_ |  `200`  |
 | exportImgType| 导出图片类型, 可选值 `png` `jpeg` `webp`        | _string_ | `png` |
 | penColor     | 笔触颜色                                      | _string \| number \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvasgradient-V5" target="__blank">CanvasGradient</a> \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvaspattern-V5#canvaspattern" target="__blank">CanvasPattern</a>_ | `#000` |
-| lineWidth    | 线条宽度, 单位vp                                | _number_ | `3` |
+| lineWidth    | 线条宽度                                       | _number_ | `3` |
 | bgColor      | 背景色                                         | _string \| number \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvasgradient-V5" target="__blank">CanvasGradient</a> \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvaspattern-V5#canvaspattern" target="__blank">CanvasPattern</a>_ | `#fff` |
 | clearText    | 清除按钮文案                                    | _string_ | `清空` |
 | confirmText  | 确认按钮文案                                    | _string_ | `确认` |

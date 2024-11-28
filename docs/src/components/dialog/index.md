@@ -231,8 +231,8 @@ struct DemoPage {
   @Builder formInputContain() {
     Column() {
       TextInput({ 'placeholder': '请输入' })
-        .fontSize('28lpx')
-        .placeholderFont({ size: '28lpx' })
+        .fontSize(14)
+        .placeholderFont({ size: 14 })
         .onChange((value) => {
           this.inputValue = value;
           this.formInputError = false
@@ -246,12 +246,12 @@ struct DemoPage {
             left: SPACE.MINI
           })
           .fontColor(Color.Red)
-          .fontSize('24lpx')
+          .fontSize(12)
           .transition({ type: TransitionType.Insert, opacity: 1 })
           .transition({ type: TransitionType.Delete, opacity: 0 })
       }
 
-    }.width('90%').margin({ top: '30lpx', bottom: '30lpx' })
+    }.width('90%').margin({ top: 15, bottom: 15 })
   }
 
 
@@ -289,43 +289,43 @@ struct DemoPage {
 
 ### IBestDialog @Props
 
-| 参数                   | 说明                                           | 类型      | 默认值  |
-| --------------------- | -----------------------------------------------| ----------| ------ |
-| dialogWidth           | 弹窗的宽度                                       | _string_  | `640lpx`|
-| dialogBorderRadius    | 弹窗的圆角                                       | _string_  | `32lpx` |
-| title                 | 弹窗的标题                                       | _string_  |    ``   |
-| titleColor            | 弹窗的标题文字颜色                                | _ResourceColor_ | `#323233` |
-| titlePaddingTop       | 弹窗的标题的 `padding-top` 值                     | _string_  | `52lpx` |
-| titlePaddingX         | 标题的 `padding-left` 与 `padding-right` 值      | _string_ | `48lpx`  |
-| titleLienHeight       | 标题的 `line-height` 值                          | _string_ | `48lpx` |
-| titleFontSize         | 标题的 `font-size` 值                            | _string_  | `32lpx` |
-| titleTextAlign        | 标题的对齐方式                                    | _'left' \| 'center' \| 'right'_ | `center`|
-| message               | 弹窗的内容区域文本                                 | _string_|   |
-| messagePaddingTop     | 弹窗的内容区域的 `padding-top` 值                  | _string_ | `16lpx` |
-| messagePaddingX       | 弹窗的内容区域的 `padding-left` 与 `padding-right` 值 | _string_ | `48lpx` |
-| messagePaddingXBottom | 弹窗的内容区域的 `padding-bottom` 值                | _string_ | `52lpx`|
-| messageFontColor      | 弹窗的内容区域的 `padding-bottom` 值                | _string_ | `52lpx`|
-| messageFontSize       | 弹窗的内容区域的 `font-size` 值                     | _string_ | `28lpx`|
-| messageLineHeight     | 弹窗的内容区域的 `line-height` 值                   | _string_ | `40lpx`|
-| messageTextAlign      | 弹窗的内容区域的文字对齐方式                          | _left_ \| _center_ \| _right_ | `center`|
-| messageMaxHeight      | 弹窗的内容区域的滚动区域最大高度                       | _string_ | `60%` |
-| showConfirmButton     | 是否展示确认按钮                                    | _boolean_ | `true`|
-| showCancelButton      | 是否展示取消按钮                                    | _boolean_ | `false`|
-| confirmButtonText     | 确认按钮文案                                        | _string_  | `确认` |
-| cancelButtonText      | 取消按钮的文案                                      | _string_  | `取消` |
+| 参数                   | 说明                          | 类型      | 默认值  |
+| --------------------- | -----------------------------| ----------| ------ |
+| dialogWidth           | 弹窗的宽度                     | _number_ \| _string_  | `320`|
+| dialogBorderRadius    | 弹窗的圆角                     | _number_ \| _string_  | `16` |
+| title                 | 弹窗的标题                     | _string_  |    ``   |
+| titleColor            | 弹窗的标题文字颜色              | _ResourceColor_ | `#323233` |
+| titlePaddingTop       | 弹窗的标题的上内边距             | _number_ \| _string_  | `26` |
+| titlePaddingX         | 标题的左右内边距                | _number_ \| _string_ | `24`  |
+| titleLienHeight       | 标题的行高                     | _number_ \| _string_ | `24` |
+| titleFontSize         | 标题的文字大小                  | _number_ \| _string_  | `16` |
+| titleTextAlign        | 标题的对齐方式                  | _'left' \| 'center' \| 'right'_ | `center`|
+| message               | 弹窗的内容区域文本               | _string_|   |
+| messagePaddingTop     | 弹窗的内容区域的上内边距          | _number_ \| _string_| `8` |
+| messagePaddingX       | 弹窗的内容区域的左右内边距        | _number_ \| _string_ | `24` |
+| messagePaddingXBottom | 弹窗的内容区域的下内边距          | _number_ \| _string_ | `26`|
+| messageFontColor      | 弹窗的内容文字颜色               | _ResourceColor_ | `#323233`|
+| messageFontSize       | 弹窗的内容文字大小               | _number_ \| _string_ | `14`|
+| messageLineHeight     | 弹窗的内容区域文字行高            | _number_ \| _string_ | `20`|
+| messageTextAlign      | 弹窗的内容区域的文字对齐方式       | _left_ \| _center_ \| _right_ | `center`|
+| messageMaxHeight      | 弹窗的内容区域的滚动区域最大高度    | _string_ | `60%` |
+| showConfirmButton     | 是否展示确认按钮                 | _boolean_ | `true`|
+| showCancelButton      | 是否展示取消按钮                 | _boolean_ | `false`|
+| confirmButtonText     | 确认按钮文案                     | _string_  | `确认` |
+| cancelButtonText      | 取消按钮的文案                   | _string_  | `取消` |
 | confirmButtonColor    | 确认按钮的文字颜色, 当 `theme` 为 `round-button` 时默认为 `#fff` | _ResourceColor_ | `#3D8AF2` |
-| cancelButtonColor     | 取消按钮的文字颜色                                   | _ResourceColor_| `#646566` |
-| confirmButtonDisabled | 是否禁用确认按钮                                    | _boolean_ | `false` |
-| cancelButtonDisabled  | 是否禁用取消按钮                                    | _boolean_ | `false`|
-| showOverlay           | 是否展示遮罩层，不展示的话则没有遮罩层 `API 10+`        | _boolean_ | `true` |
-| overlayColor          | 遮罩层颜色 `API 10+`                               | _ResourceColor_ | `0x33000000` |
+| cancelButtonColor     | 取消按钮的文字颜色                | _ResourceColor_| `#646566` |
+| confirmButtonDisabled | 是否禁用确认按钮                  | _boolean_ | `false` |
+| cancelButtonDisabled  | 是否禁用取消按钮                  | _boolean_ | `false`|
+| showOverlay           | 是否展示遮罩层，不展示的话则没有遮罩层| _boolean_ | `true` |
+| overlayColor          | 遮罩层颜色 `API 10+`              | _ResourceColor_ | `0x33000000` |
 | showInSubWindow       | 某弹框需要显示在主窗口之外时，是否在子窗口显示此弹窗      | _boolean_  | `false` |
 | visible <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span> | 弹窗是否可见, 支持双向绑定                             | _boolean_ | `false` |
-| theme <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span> | 按钮样式风格，可选值 `default` `round-button`                    | _string_ | `default`|
-| buttonSpace <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span>| 按钮间距, 单位lpx                                     | _number_ | `0`|
+| theme <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span> | 按钮样式风格，可选值 `default` `round-button`          | _string_ | `default`|
+| buttonSpace <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span>| 按钮间距        | _number_ \| _string_ | `0`|
 | confirmButtonBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span> | 确认按钮背景色, 当 `theme` 为 `round-button` 时默认为 `#3D8AF2` | _ResourceColor_  | `#fff` |
-| cancelButtonBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span> | 取消按钮背景色                                  | _ResourceColor_ | `#fff` |
-| closeOnBackPress <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span> | 是否允许返回键关闭                                     | _boolean_ | `false`|
+| cancelButtonBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span> | 取消按钮背景色                                | _ResourceColor_ | `#fff` |
+| closeOnBackPress <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span> | 是否允许返回键关闭                                 | _boolean_ | `false`|
 
 ### Events
 

@@ -123,7 +123,7 @@ IBestWatermark({
 | rotateDeg        | 水印的旋转角度                             | _number_ | `-22`      |
 | imageUrl         | 水印的图片链接                             | _string_ |            |
 | text             | 文字水印的内容（文字水印优先级高于图片水印，如果同时传了`text`和`imageUrl`那么显示的将会是`text`的内容） | _string_ |    |
-| fontSize         | 文字水印的大小                              | _number_ | `30`      |
+| fontSize         | 文字水印的大小                              | _number_ | `14`      |
 | fontFamily       | 文字字体                                   | _string_ | `sans-serif` |
 | fontColor        | 文字颜色                                   | _string \| number \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvasgradient-V5" target="__blank">CanvasGradient</a> \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvaspattern-V5#canvaspattern" target="__blank">CanvasPattern</a>_ | <div style="padding: 2px 4px; background: #000; color: #fff; border-radius: 4px">#000000</div> |
 | waterMarkZIndex  | 水印的 z-index                             | _number_ | `-1`      |

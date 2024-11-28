@@ -126,7 +126,7 @@ struct SwitchPage {
   @Builder Arrow(){
     Row(){
       Image($r('app.media.arrow'))
-        .width('30lpx')
+        .width(15)
         .fillColor(this.arrowDirection === 'left' ? '#db3131' : '#e2e3e7')
         .rotate({
           angle: this.arrowDirection === 'left' ? 0 : -180
@@ -202,14 +202,14 @@ IBestSwitch({
 
 ### @Props
 
-| 参数     | 说明       | 类型      | 默认值              |
+| 参数     | 说明       | 类型      | 默认值        |
 | ------- | ---------- | --------- | ----------- |
-| value   | 默认是否选中 非双向绑定，如果要获取最新的值请从 `onChange` 回调中获取 | _boolean_ | `false`    |
-| disabled | 是否禁用按钮                                | _boolean_ | `false`  |
-| loading  | 是否显示为加载状态                            | _boolean_ | `false`    |
-| switchSize| 大小尺寸，单位 `lpx`，                       | _number_  | 52 |
-| activeColor | 打开时的背景色                             | _ResourceColor_  | <div style="padding: 2px 4px; background: #1989fa; color: #fff; border-radius: 4px">#1989fa</div>  |
-| inactiveColor | 关闭时的背景色                            | _ResourceColor_  | <div style="padding: 2px 4px; background: rgba(120, 120, 128, 0.16); color: #fff; border-radius: 4px">rgba(120, 120, 128, 0.16)</div> |
+| value   | 默认是否选中 非双向绑定，如果要获取最新的值请从 `onChange` 回调中获取 | _boolean_ | `false` |
+| disabled | 是否禁用按钮                          | _boolean_ | `false`  |
+| loading  | 是否显示为加载状态                     | _boolean_ | `false` |
+| switchSize| 大小尺寸                            | _number_  | `26` |
+| activeColor | 打开时的背景色                     | _ResourceColor_  | `#1989fa` |
+| inactiveColor | 关闭时的背景色                   | _ResourceColor_  | `rgba(120, 120, 128, 0.2)` |
 | loadingActiveColor | 打开时的 loading 颜色，默认跟随 `activeColor` | _ResourceColor_  |        |
 | loadingInactiveColor | 关闭时的 loading 颜色，默认跟随 `activeColor`  | _ResourceColor_  |        |
 

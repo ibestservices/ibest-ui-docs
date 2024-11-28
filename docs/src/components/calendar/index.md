@@ -411,6 +411,7 @@ struct DemoPage {
 | ------------ | --------------------------------------------------------| --------- | ---------- |
 | type         | 主题类型，可选值为 `primary` `success` `warning` `danger` | _string_  | `primary` |
 | defaultSelectedDate   | 默认选中日期                                    | _string[]_  | `[]` |
+| itemWidth   | 每一项宽度                                                | _string_ \| _number_  | `50`|
 | weekFirstDay | 周起始日期                                               | _string_  |    `一`     |
 | isShowLunar  | 是否显示农历                                             | _boolean_ | `false`  |
 | selectType   | 选择类型，可选值为 `single` `multiple` `range`            | _string_ | `single`|
@@ -434,6 +435,7 @@ CalendarDialog包含Calendar除 `isShowConfirmBtn` 以外所有属性，Calendar
 | visible      | 弹框展示状态                                             | _boolean_ | `false`  |
 | isModal      | 是否为模态窗口                                            | _boolean_ | `true`  |
 | offsetY      | 弹框底部偏移量                                            | _number_ | `0`  |
+| cornerRadius | 弹框圆角                                                 | _string_ \| _number_  | `10`|
 
 ### Events
 

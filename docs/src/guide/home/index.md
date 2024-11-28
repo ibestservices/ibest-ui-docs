@@ -6,7 +6,9 @@ title: "IBest-UI"
 
 ## 介绍
 
-{{ $frontmatter.title }} 是一套轻量，可定制化主题的基于鸿蒙 `API 12` 的参照 `vant` 设计的 `UI` 库，目前处于**起步阶段**，希望得到业界的帮助以及开源贡献(通过 [PR](https://github.com/ibestservices/ibest-ui/pulls) 贡献代码啦~)。
+{{ $frontmatter.title }} 是一套轻量，可定制化主题的基于鸿蒙 `API 12` 的参照 `vant` 设计开发的UI组件库，希望得到业界的帮助以及开源贡献(通过 [PR](https://github.com/ibestservices/ibest-ui/pulls) 贡献代码啦~)。
+
+![{{ $frontmatter.title }}](IBest-UI.png)
 
 ## 快速上手
 
@@ -42,6 +44,4 @@ title: "IBest-UI"
 
 ## 微信群
 
-> 微信群失效了可以加我微信 lqk2qmy 联系我 备注 ibest-ui
-
-![微信群](./wechat.png)
+先进QQ群, 群里有微信群二维码

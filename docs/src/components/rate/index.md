@@ -255,9 +255,9 @@ struct DemoPage {
 | 参数         | 说明                                          | 类型      | 默认值     |
 | ------------ | ---------------------------------------------| --------- | ---------- |
 | value        | 当前分值, 支持双向绑定                           | _number_  | `0` |
-| count        | 图标总数                                      | _number_ |  `5`  |
-| iconSize     | 图标大小,单位lpx                               | _number_ | `40` |
-| space        | 图标间距,单位lpx                               | _number_ | `8` |
+| count        | 图标总数                                       | _number_ |  `5`  |
+| iconSize     | 图标大小                                       | _number_ \| _string_ | `20` |
+| space        | 图标间距                                       | _number_ \| _string_ | `4` |
 | activeIcon   | 选中时图标                                     | _Resource_ | `实心五角星` |
 | inactiveIcon | 未选中图标                                     | _Resource_ | `空心五角星` |
 | activeColor  | 选中颜色                                       | _ResourceColor_ | `#db3131` |

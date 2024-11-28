@@ -24,7 +24,7 @@ ohpm install @ibestservices/ibest-ui@1.2.0
 ## 初始化
 
 :::tip
-从 `v1.12.0` 版本开始，建议先在 `EntryAbility` 入口文件中调用 `IBestInit` 方法，初始化组件库，否则会影响部分组件使用。
+从 `v1.12.0` 版本开始，请在 `EntryAbility` 入口文件中调用 `IBestInit` 方法，初始化组件库，否则会影响部分组件使用。
 :::
 
 ```ts

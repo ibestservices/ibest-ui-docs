@@ -164,8 +164,8 @@ IBestStepper({
 
 ```ts
 IBestStepper({
-  inputWidth: "80lpx",
-  buttonSize: "64lpx",
+  inputWidth: 40,
+  buttonSize: 32,
 });
 ```
 
@@ -175,28 +175,28 @@ IBestStepper({
 
 ### @Props
 
-| 参数          | 说明                                                                                                                     | 类型                 | 默认值     |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------ | -------------------- | ---------- |
-| min           | 最小值                                                                                                                   | _string_ \| _number_ | `1`        |
-| max           | 最大值                                                                                                                   | _string_ \| _number_ | `Infinity` |
-| autoFixed     | 是否自动校正超出限制范围的数值，设置为 false 后输入超过限制范围的数值将不会自动校正                                      | _boolean_            | `true`     |
-| defaultValue  | 展示的默认值                                                                                                             | _string_ \| _number_ | `1`        |
-| step          | 步长，每次点击时改变的值                                                                                                 | _number_ \| _string_ | `1`        |
-| inputWidth    | 输入框宽度，默认单位为 `lpx`                                                                                             | _number_ \| _string_ | `64lpx`    |
-| buttonSize    | 按钮大小以及输入框高度，默认单位为 `lpx`                                                                                 | _number_ \| _string_ | `54lpx`    |
-| decimalLength | 固定显示的小数位数                                                                                                       | _number_ \| _string_ |
-| integer       | 是否只允许输入整数                                                                                                       | _boolean_            | `false`    |
-| disabled      | 是否禁用步进器                                                                                                           | _boolean_            | `false`    |
-| disablePlus   | 是否禁用增加按钮                                                                                                         | _boolean_            | `false`    |
-| disableMinus  | 是否禁用减少按钮                                                                                                         | _boolean_            | `false`    |
-| disableInput  | 是否禁用输入框                                                                                                           | _boolean_            | `false`    |
-| showPlus      | 是否显示增加按钮                                                                                                         | _boolean_            | `true`     |
-| showMinus     | 是否显示减少按钮                                                                                                         | _boolean_            | `true`     |
-| showInput     | 是否显示输入框                                                                                                           | _boolean_            | `true`     |
-| longPress     | 是否开启长按手势，开启后可以长按增加和减少按钮                                                                           | _boolean_            | `true`     |
-| validateTime  | 多少毫秒触发自动校验修正，为 `0` 时不修正，因为输入框中的 `blur` 触发时机不随着点击失焦，只能采用自动修正方案，单位 `ms` | _number_             | `1000`     |
-| iconSize      | 输入框中图标的宽度，默认单位为 `lpx`                                                                                     | _string_             | `40lpx`    |
-| buttonRadius  | 按钮的圆角，默认单位为 `lpx`                                                                                             | _string_             | `4lpx`     |
+| 参数          | 说明                                        | 类型          | 默认值     |
+| ------------- | -------------------------------------------| ------------- | ---------- |
+| min           | 最小值                                      | _string_ \| _number_ | `1` |
+| max           | 最大值                                      | _string_ \| _number_ | `Infinity` |
+| autoFixed     | 是否自动校正超出限制范围的数值                  | _boolean_            | `true`     |
+| defaultValue  | 展示的默认值                                 | _string_ \| _number_ | `1`        |
+| step          | 步长，每次点击时改变的值                       | _number_ \| _string_ | `1`        |
+| inputWidth    | 输入框宽度                                   | _number_ \| _string_ | `32`    |
+| buttonSize    | 按钮大小以及输入框高度                         | _number_ \| _string_ | `27`    |
+| decimalLength | 固定显示的小数位数                             | _number_ \| _string_ |  `0` |
+| integer       | 是否只允许输入整数                             | _boolean_    | `false`    |
+| disabled      | 是否禁用步进器                                | _boolean_     | `false`    |
+| disablePlus   | 是否禁用增加按                                | _boolean_     | `false`    |
+| disableMinus  | 是否禁用减少按钮                               | _boolean_    | `false`    |
+| disableInput  | 是否禁用输入框                                 | _boolean_    | `false`    |
+| showPlus      | 是否显示增加按钮                               | _boolean_    | `true`     |
+| showMinus     | 是否显示减少按钮                               | _boolean_    | `true`     |
+| showInput     | 是否显示输入框                                 | _boolean_    | `true`     |
+| longPress     | 是否开启长按手势，开启后可以长按增加和减少按钮       | _boolean_   | `true`     |
+| validateTime  | 多少毫秒触发自动校验修正，为 `0` 时不修正，单位 `ms`| _number_    | `1000`     |
+| iconSize      | 输入框中图标的宽度                              | _number_ \| _string_ | `20` |
+| buttonRadius  | 按钮的圆角                                     | _number_ \| _string_ | `2`  |
 
 ### Events
 

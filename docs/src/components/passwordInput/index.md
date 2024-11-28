@@ -150,14 +150,14 @@ struct DemoPage {
 | 参数         | 说明                                          | 类型      | 默认值     |
 | ------------ | ---------------------------------------------| --------- | ---------- |
 | value        | 当前输入框的值, 支持双向绑定                      | _string_  | `''` |
-| inputLength  | 输入框长度                                      | _number_ |  `6`  |
-| inputHeight  | 输入框高度,单位lpx                              | _number_ | `100` |
-| space        | 格子间距,单位lpx                               | _number_ | `0` |
-| radius       | 格子圆角,当 `space` 不为0时有效,单位lpx          | _number_ | `10` |
+| inputLength  | 输入框长度                                     | _number_ |  `6`  |
+| inputHeight  | 输入框高度                                     | _number_ \| _string_ | `50` |
+| space        | 格子间距                                       | _number_ \| _string_ | `0` |
+| radius       | 格子圆角,当 `space` 不为0时有效                  | _number_ \| _string_ | `5` |
 | isHighlightCurrent | 是否高亮当前正在输入的格子,当 `space` 不为0时有效| _boolean_ | `true` |
 | highlightColor | 格子高亮颜色,当 `space` 不为0时有效            | _ResourceColor_ | `#3D8AF2` |
 | isHidden     | 是否隐藏内容                                   | _boolean_ | `true` |
-| tip          | 提示space文字                                   | _string_ |  `''`  |
+| tip          | 提示文字                                       | _string_ |  `''`  |
 | errorTip     | 错误提示文字                                   | _string_ |  `''`  |
 | useSystemKeyboard| 是否使用系统键盘, 默认使用自定义键盘           | _boolean_ |  `false`  |
 | numberKeyboardConfig | 自定义键盘配置项                        | _NumberKeyboardConfig_ |  `-`  |

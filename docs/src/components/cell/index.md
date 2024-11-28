@@ -36,7 +36,27 @@ IBestCellGroup() {
   })
 }
 ```
+:::
 
+### 下边框样式
+
+![下边框样式](./images/border-style.png)
+
+::: details 点我查看代码
+
+```ts
+IBestCellGroup() {
+  IBestCell({ title: 'full', value: '内容', borderSizeType: 'full' })
+  IBestCell({ title: 'center', value: '内容', borderSizeType: 'center' })
+  IBestCell({
+    leftIcon: $r("app.media.icon_like_o"),
+    title: 'right',
+    value: '内容',
+    borderSizeType: 'right'
+  })
+  IBestCell({ title: '占位', value: '内容', hasBorder: false })
+}
+```
 :::
 
 ### 卡片风格
@@ -137,8 +157,8 @@ import { IBestCell } from "@ibestservices/ibest-ui";
 @Component
 struct CellPage {
   @Builder
-  StarIcon(height = '48lpx') {
-    Image($r('app.media.startIcon')).height(height).margin({ right: '20lpx' })
+  StarIcon(height = 24) {
+    Image($r('app.media.startIcon')).height(height).margin({ right: 10 })
   }
 
   build(){
@@ -261,8 +281,8 @@ import { IBestCell } from "@ibestservices/ibest-ui";
 @Component
 struct CellPage {
   @Builder
-  StarIcon(height = '48lpx') {
-    Image($r('app.media.startIcon')).height(height).margin({ right: '20lpx' })
+  StarIcon(height = 24) {
+    Image($r('app.media.startIcon')).height(height).margin({ right: 10 })
   }
 
   build(){
@@ -273,7 +293,7 @@ struct CellPage {
       label: '描述内容',
       value: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
       center: true,
-      iconBuilder: this.StarIcon('32lpx'),
+      iconBuilder: this.StarIcon(16),
       isLink: true
     })
     IBestCell({
@@ -281,7 +301,7 @@ struct CellPage {
       label: '描述内容',
       value: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
       hasBorder: false,
-      iconBuilder: this.StarIcon('32lpx'),
+      iconBuilder: this.StarIcon(16),
       isLink: true
     })
 
@@ -308,24 +328,24 @@ import { IBestCell, IBestTag } from "@ibestservices/ibest-ui";
 @Component
 struct CellPage {
   @Builder
-  StarIcon(height = '48lpx') {
-    Image($r('app.media.startIcon')).height(height).margin({ right: '20lpx' })
+  StarIcon(height = 24) {
+    Image($r('app.media.startIcon')).height(height).margin({ right: 10 })
   }
 
   @Builder
   Arrow() {
     Image($r('app.media.title_back'))
-    .height('24lpx')
+    .height(12)
   }
 
   @Builder
   Title() {
     Row() {
       Text('单元格')
-        .fontSize('28lpx')
+        .fontSize(14)
       IBestTag({ text: '标签' })
         .margin({
-          left: '10lpx'
+          left: 5
         })
     }
   }
@@ -336,7 +356,7 @@ struct CellPage {
     IBestCell({
       title: '标题',
       value: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
-      iconBuilder: this.StarIcon('32lpx'),
+      iconBuilder: this.StarIcon(16),
       rightIconBuilder: this.Arrow,
       clickable: true
     })
@@ -381,7 +401,7 @@ struct CellPage {
 | titleColor     | 左侧标题文字颜色                       | _ResourceColor_       | `#323233` |
 | value          | 右侧内容                              | _number_ \| _string_  |       |
 | valueColor     | 右侧内容文字颜色                       | _ResourceColor_       | `#969799` |
-| label          | 标题下方的描述信息                      | _number_ \| _string_   |          |
+| label          | 标题下方的描述信息                      | _number_ \| _string_  |          |
 | labelColor     | 标题下方的描述信息文字颜色               | _ResourceColor_       | `#969799` |
 | cellSize       | 单元格大小，可选值为 `large` `normal`   | _string_              |          |
 | hasBorder      | 是否显示内边框                         | _boolean_             | `true`   |
@@ -390,12 +410,19 @@ struct CellPage {
 | required       | 是否显示表单必填星号                    | _boolean_             | `false`  |
 | center         | 是否使内容垂直居中                      | _boolean_             | `false`|
 | arrowDirection | 箭头方向，可选值为 left up down         | _string_              | `right`  |
-| leftIcon <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 左侧图标                              | _ResourceStr_         |          |
-| leftIconColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 左侧图标颜色                           | _ResourceStr_         |          |
-| leftIconSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 左侧图标大小                           | _number_              |   `32`  |
-| rightIcon <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 右侧图标                              | _ResourceStr_         |          |
-| rightIconColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 右侧图标颜色                           | _ResourceStr_         |          |
-| rightIconSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 右侧图标大小                           | _number_              |   `32`  |
+| leftIcon <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 左侧图标                          | _ResourceStr_         |          |
+| leftIconColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 左侧图标颜色                 | _ResourceStr_ |          |
+| leftIconSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 左侧图标大小                 | _number_ \| _string_ |   `16`  |
+| rightIcon <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 右侧图标                           | _ResourceStr_|          |
+| rightIconColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 右侧图标颜色                 | _ResourceStr_ |          |
+| rightIconSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 右侧图标大小                 | _number_ \| _string_|   `16`  |
+| leftIconMarginRight <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 左侧图标与title间距                  | _number_ \| _string_ |   `4`  |
+| rightIconMarginLeft <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 右侧图标与内容间距                    | _number_ \| _string_ |   `4`  |
+| leftContentWidth <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 左侧内容宽度                             | _number_ \| _string_ |   ``  |
+| leftRightPadding <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 左右padding                             | _number_ \| _string_ |   `16`  |
+| borderSizeType <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 底部分割线尺寸类型, 可选值 `full` `center` `right` | _string_ | `center` |
+| borderLeft <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 底部分割线left值, `borderSizeType` 为 `right` 时有效| _Dimension_| `16` |
+| bdColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 底部分割线颜色| _ResourceColor_| `#ebedf0` |
 
 
 ### Events

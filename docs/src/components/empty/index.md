@@ -72,7 +72,7 @@ IBestEmpty({
 
 ```ts
 IBestEmpty({
-  imageSize: "200lpx",
+  imageSize: 100,
   description: "描述文字",
 });
 ```
@@ -99,7 +99,7 @@ struct EmptyPage {
   @Builder
   Arrow() {
     Image($r('app.media.title_back'))
-    .height('320lpx')
+    .height(160)
   }
 
   build(){
@@ -150,13 +150,13 @@ struct EmptyPage {
 
 ### @Props
 
-| 参数                | 说明                                      | 类型                 | 默认值                                                                                            |
-| ------------------- | ----------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------- |
-| emptyImage          | 类型，可选值为 `error` `network` `search` | _string_             | `default`                                                                                         |
-| imageSize           | 图片大小                                  | _string_ \| _number_ | `320lpx`                                                                                          |
-| description         | 图片下方的描述文字                        | _string_ |                                                                                                   |
-| descriptionFontSize | 图片下方的描述文字的大小                  | _string_ | `28lpx`                                                                                           |
-| descriptionColor    | 图片下方的描述文字的颜色                  | _ResourceColor_ | <div style="padding: 2px 4px; background: #969799; color: #fff; border-radius: 4px">#969799</div> |
+| 参数                | 说明                                     | 类型          | 默认值  |
+| ------------------- | ----------------------------------------| -------------| ---- |
+| emptyImage          | 类型，可选值为 `error` `network` `search` | _string_      | `default`    |
+| imageSize           | 图片大小                                 | _string_ \| _number_ | `160` |
+| description         | 图片下方的描述文字                         | _string_ |   |
+| descriptionFontSize | 图片下方的描述文字的大小                    | _string_ | `14` |
+| descriptionColor    | 图片下方的描述文字的颜色                    | _ResourceColor_ | `#969799` |
 
 ### 插槽
 
