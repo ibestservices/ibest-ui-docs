@@ -512,18 +512,18 @@ struct DemoPage {
 
 ### @Props
 
-| 参数         | 说明                                                     | 类型      | 默认值     |
-| ------------ | --------------------------------------------------------| --------- | ---------- |
-| formId       | 表单id, 必传                                                 | _string_  | `''` |
-| rules        | 表单验证信息                    | _Record<string, IBestFormRuleItem[]>_  | `{}` |
-| space        | 表单子项间距, 单位lpx                                    | _number_  | `20`  |
-| labelWidth   | 表单项左侧文本区域宽度, 单位lpx                              | _number_ | `160`  |
-| labelPosition | 左侧文本位置, 可选值 `left` `top`                       | _string_ |`left`|
-| labelAlign  | 左侧文本对齐方式, 可选值 `left` `center` `right`            | _string_ |`left`|
-| colon       | 是否在label后加冒号                                     | _boolean_ | `false` |
-| requireAsteriskPosition| 星号的位置, 可选值 `left` `right`              | _string_ | `left` |
-| showMessage | 是否显示验证信息                                          | _boolean_ | `true` |
-| disabled    | 是否禁用                                                | _boolean_ | `false` |
+| 参数         | 说明                                            | 类型      | 默认值     |
+| ------------ | ----------------------------------------------| --------- | ---------- |
+| formId       | 表单id, 必传                                   | _string_  | `''` |
+| rules        | 表单验证信息                                    | _Record<string, IBestFormRuleItem[]>_  | `{}` |
+| space        | 表单子项间距                                    | _number_ \| _string_  | `10`  |
+| labelWidth   | 表单项左侧文本区域宽度                            | _number_ \| _string_ | `80`  |
+| labelPosition | 左侧文本位置, 可选值 `left` `top`               | _string_ |`left`|
+| labelAlign  | 左侧文本对齐方式, 可选值 `left` `center` `right`   | _string_ |`left`|
+| colon       | 是否在label后加冒号                               | _boolean_ | `false` |
+| requireAsteriskPosition| 星号的位置, 可选值 `left` `right`      | _string_ | `left` |
+| showMessage | 是否显示验证信息                                  | _boolean_ | `true` |
+| disabled    | 是否禁用                                         | _boolean_ | `false` |
 
 ### 插槽
 |插槽名         | 说明                        | 类型                      |
@@ -540,8 +540,7 @@ struct DemoPage {
 | validate | 验证整个表单                 | `callback?: (valid: boolean, field: FieldValidateResult[]) => void` | `void` |
 | validateField | 验证指定表单            | `prop: string, callBack?: (valid: boolean, field?: FieldValidateResult) => void` | `void` |
 | resetValidation | 重置整个/指定表单验证信息| `prop?: string \| string[]` | `void` |
-| getValues `deprecated` | 获取表单所有表单项的值, `1.15.0` 及以后版本推荐使用 `getFormValues` | `-` | `Promise<Record<string, IBestFieldValueType>>` |
-| getFormValues <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.15.0</span>  | 获取表单所有表单项的值        | `-` | `Record<string, IBestFieldValueType>` |
+| getFormValues | 获取表单所有表单项的值    | `-` | `Record<string, IBestFieldValueType>` |
 
 ### IBestFormRuleItem  数据结构
 

@@ -99,7 +99,7 @@ struct DemoPage {
     Column(){
       IBestCell({
         title: '地区',
-        value: this.value,
+        value: this.fieldValue,
         isLink: true,
         onClickCell: () => {
           this.visible = true
@@ -207,7 +207,7 @@ struct DemoPage {
     Column(){
       IBestCell({
         title: '地区',
-        value: this.value,
+        value: this.fieldValue,
         isLink: true,
         hasBorder: false,
         onClickCell: () => {
@@ -293,7 +293,7 @@ struct DemoPage {
     Column(){
       IBestCell({
         title: '地区',
-        value: this.value,
+        value: this.fieldValue,
         isLink: true,
         onClickCell: () => {
           this.visible = true
@@ -406,7 +406,7 @@ struct DemoPage {
     Column(){
       IBestCell({
         title: '地区',
-        value: this.value,
+        value: this.fieldValue,
         isLink: true,
         onClickCell: () => {
           this.visible = true
@@ -529,12 +529,13 @@ struct DemoPage {
 | ------------ | --------------------------------------------------------| --------- | ---------- |
 | visible      | 控制弹出层显隐显隐                                        | _boolean_  | `false` |
 | value        | 选中选项值, 支持双向绑定                                   | _(string \| number)[]_ | `[]` |
-| title         | 弹出层标题                                              | _string_  | `请选择` |
-| options       | 可选项数据源                                            | _IBestCascaderOption[]_ |`[]`|
+| title        | 弹出层标题                                              | _string_  | `请选择` |
+| options      | 可选项数据源                                            | _IBestCascaderOption[]_ |`[]`|
 | activeColor  | 选中项颜色                                              | _ResourceColor_ | `#3D8AF2`  |
-| itemHeight   | 单个选项高度,单位lpx                                     | _number_ | `80`|
+| listHeight   | 滚动区域高度                                             | _number_ \| _string_ | `350`|
+| itemHeight   | 单个选项高度                                             | _number_ \| _string_ | `40`|
 | lazy         | 是否开启动态加载                                         | _boolean_ | `false` |
-| lazyLoad      | 异步加载函数,`value` 为当前点击的选项值, `level` 为下一个选项的层级, 默认从0开始, `cb` 为接收结果的回调函数 | _(value: string \| number, level: number, cb: (arr: IBestCascaderOption[]) => void) => void_|`null`|
+| lazyLoad     | 异步加载函数,`value` 为当前点击的选项值, `level` 为下一个选项的层级, 默认从0开始, `cb` 为接收结果的回调函数 | _(value: string \| number, level: number, cb: (arr: IBestCascaderOption[]) => void) => void_|`null`|
 
 ### IBestCascaderOption 数据结构
 

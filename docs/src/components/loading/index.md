@@ -67,11 +67,11 @@ IBestLoading({
 
 ```ts
 IBestLoading({
-  loadingSize: "80lpx",
+  loadingSize: 40,
 });
 
 IBestLoading({
-  loadingSize: "80lpx",
+  loadingSize: 40,
   loadingIconType: "spinner",
 });
 ```
@@ -175,20 +175,20 @@ struct LoadingPage {
 
 ### @Props
 
-| 参数   | 说明          | 类型                  | 默认值        |
+| 参数   | 说明          | 类型                  | 默认值    |
 | ----- | --------------| -------------------- | -------- |
 | loadingIconType       | 类型，可选值为 `spinner`| _string_   | `circular`   |
-| loadingText           | 加载的文案              | _string_  |   ``   |
-| loadingSize           | 加载图标大小            | _string_   |  `60lpx`    |
+| loadingText           | 加载的文案              | _string_  |   `''`   |
+| loadingSize           | 加载图标大小            | _number_ \| _string_   |  `30`    |
 | loadingColor          | loading 的颜色         | _ResourceColor_ | `#c8c9cc` |
 | loadingTextColor      | loading 的文字颜色      | _ResourceColor_ | `#c8c9cc` |
-| loadingTextFontSize   | loading 的文字内容大小   | _string_    | `28lpx`    |
-| loadingStrokeWidth    | loading 图形的线条宽度   | _string_    | `6lpx`  |
+| loadingTextFontSize   | loading 的文字内容大小   | _number_ \| _string_ | `14`    |
+| loadingStrokeWidth    | loading 图形的线条宽度   | _Length_    | `2`  |
 | loadingMaskColor      | loading 的遮罩颜色      | _ResourceColor_| `transparent`  |
 | loadingIconMarginTop  | loading 的图标距离顶部的 `margin` 因为默认 `loading` 是垂直居中布局的 可通过该属性调整`loading` 图标的上下位置 只有在 `vertical` 为 `true` 即垂直布局时有效 | _string_ \| _number_   | `0`   |
-| loadingTextMarginLeft | `loadingText` 的 `marginLeft` 值 只有在 `vertical` 为 `false` 即水平布局时有效     | _string_ \| _number_   | `16lpx`  |
-| loadingTextMarginTop  | `loadingText` 的 `marginTop` 值 只有在 `vertical` 为 `true` 即垂直布局时有效       | _string_ \| _number_   | `16lpx`  |
-| spinnerStrokeHeight   | `spinner` 图的每条线的长度 | _string_ \| _number_   | `15lpx` |
+| loadingTextMarginLeft | `loadingText` 的 `marginLeft` 值 只有在 `vertical` 为 `false` 即水平布局时有效     | _string_ \| _number_   | `8`  |
+| loadingTextMarginTop  | `loadingText` 的 `marginTop` 值 只有在 `vertical` 为 `true` 即垂直布局时有效       | _string_ \| _number_   | `8`  |
+| spinnerStrokeHeight   | `spinner` 图的每条线的长度 | _string_ \| _number_   | `8` |
 | vertical              | 是否垂直排列图标和文字内容   | _boolean_   | `false` |
 
 ### 插槽

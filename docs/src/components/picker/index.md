@@ -296,7 +296,7 @@ struct DemoPage {
 | value        | 当前选中的日期, 支持双向绑定                      | _string[]_  | `[]` | 
 | options      | 选项         | _(IBestPickerOption \| IBestPickerOption[])[]_  | `[]` |
 | title        |  标题                                         | _string_ |  `''`  |
-| itemHeight   | 单项高度,单位lpx                                | _number_ | `88`   |
+| itemHeight   | 单项高度                                       | _number_ \| _string_ | `44`   |
 | visibleItemCount | 可见选项数量                                | _number_ | `6`   |
 | showToolBar   | 是否显示顶部栏                                 | _boolean_ | `true` |
 | confirmText   | 确认按钮文字                                   | _string_ |  `确定`  |

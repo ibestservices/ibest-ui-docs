@@ -22,9 +22,9 @@ import { IBestIcon } from "@ibestservices/ibest-ui";
 @Component
 struct DemoPage {
   build() {
-  Column(){
-    IBestIcon({ name: 'like' })
-  }
+    Column(){
+      IBestIcon({ name: 'like' })
+    }
   }
 }
 ```
@@ -73,14 +73,14 @@ struct DemoPage {
 
 ### @Props
 
-| 参数         | 说明                                         | 类型      | 默认值     |
-| ------------| ---------------------------------------------| --------- | ---------- |
-| name        | 图标名称或图标地址                              | _ResourceStr_  | `100%` |
-| color       | 图标颜色                                       | _ResourceColor_ |  `''`  |
-| iconSize    | 图标大小                                       | _string_ | - |
+| 参数         | 说明                                 | 类型      | 默认值     |
+| ------------| -------------------------------------| ---------| ---------- |
+| name        | 图标名称或图标地址, 具体名称可参考<a href="https://vant-ui.github.io/vant/#/zh-CN/icon#jie-shao" target="__blank">这里</a>   | _ResourceStr_  | `arrow` |
+| color       | 图标颜色                              | _ResourceColor_ |  `''`  |
+| iconSize    | 图标大小                              | _number_ \| _string_ | `16` |
 
 ### Events
 
-| 事件名     | 说明                                             | 事件类型                         |
-| ---------- | ------------------------------------------------ | -------------------------------- |
-| onIconClick | 点击图标时的回调函数                             | _() => void_ | - |
+| 事件名       | 说明                     | 事件类型                         |
+| ----------  | -------------------------| -------------------------------- |
+| onIconClick | 点击图标时的回调函数        | _() => void_ | - |

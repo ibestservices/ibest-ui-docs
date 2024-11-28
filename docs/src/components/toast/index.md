@@ -239,3 +239,4 @@ showCountDownLoading(){
 | position     | 位置，可选值为 `top` 、`center`、`bottom`                  | _string_   | `center` |
 | offsetY      | 偏移量                                                   | _string_ \| _number_   | `0` |
 | onOpened     | 完全展示后的回调函数                                        | _() => void_ | `-` |
+| iconWidth <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 自定义图标宽度                | _string_ \| _number_   | `36` |

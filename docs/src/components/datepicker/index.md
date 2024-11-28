@@ -158,13 +158,13 @@ struct DemoPage {
 
 | 参数         | 说明                                          | 类型      | 默认值     |
 | ------------ | ---------------------------------------------| --------- | ---------- |
-| value        | 当前选中的日期, 支持双向绑定                      | _string[]_  | `[]` | 
+| value        | 当前选中的日期, 支持双向绑定                     | _string[]_  | `[]` | 
 | minDate      | 最小可选日期                                   | _Date_  |    `十年前`     |
 | maxDate      | 最大可选日期                                   | _Date_ | `十年后`  |
 | isShowDay    | 是否显示日列                                   | _boolean_ | `true`|
 | showUnit     | 是否显示单位                                   | _boolean_ | `false` |
 | title        |  标题                                         | _string_ |  `''`  |
-| itemHeight   | 单项高度,单位lpx                                | _number_ | `88`   |
+| itemHeight   | 单项高度                                       | _number_ \| _string_ | `44` |
 | visibleItemCount | 可见选项数量                                | _number_ | `6`   |
 | showToolBar   | 是否显示顶部栏                                 | _boolean_ | `true` |
 | confirmText   | 确认按钮文字                                   | _string_ |  `确定`  |

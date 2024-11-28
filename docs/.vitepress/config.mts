@@ -25,7 +25,7 @@ export default defineConfig({
       {
         name: "keywords",
         content:
-          "IBest-UI,鸿蒙,鸿蒙UI,鸿蒙UI库,鸿蒙UI框架,鸿蒙UI框架,鸿蒙UI组件,鸿蒙UI组件库,鸿蒙UI组件框架,百得思维,安徽百得思维,合肥百德思维,Harmony,OpenHarmony,HarmonyOS,HarmonyOS UI,HarmonyOS Ui,HarmonyOS Ui库,HarmonyOS Ui框架,HarmonyOS Ui组件,HarmonyOS Ui组件库,HarmonyOS Ui组件框架",
+          "IBest,IBest-UI,鸿蒙,鸿蒙UI,鸿蒙UI库,鸿蒙UI框架,鸿蒙UI框架,鸿蒙UI组件,鸿蒙UI组件库,鸿蒙UI组件框架,百得思维,安徽百得思维,合肥百德思维,Harmony,OpenHarmony,HarmonyOS,HarmonyOS UI,HarmonyOS Ui,HarmonyOS Ui库,HarmonyOS Ui框架,HarmonyOS Ui组件,HarmonyOS Ui组件库,HarmonyOS Ui组件框架"
       },
     ],
   ],
@@ -47,6 +47,7 @@ export default defineConfig({
         items: [
           { text: "介绍", link: "/guide/home/" },
           { text: "快速上手", link: "/guide/quickstart/" },
+          { text: "配置全局尺寸单位", link: "/guide/config-unit/" },
           { text: "自定义主题", link: "/guide/custom-theme/" },
           { text: "进阶用法", link: "/guide/advanced-usage/" },
           { text: "常见问题", link: "/guide/faq/" },
@@ -115,7 +116,7 @@ export default defineConfig({
             link: "/components/search/",
           },
           {
-            text: `Slider 滑块 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.15.0</span>`,
+            text: `Slider 滑块`,
             link: "/components/slider/",
           },
           {
@@ -129,7 +130,7 @@ export default defineConfig({
           { text: "Switch 开关", link: "/components/switch/" },
           { text: `TimePicker 时间选择 `, link: "/components/timepicker/" },
           {
-            text: `Uploader 文件上传 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.15.0</span>`,
+            text: `Uploader 文件上传`,
             link: "/components/uploader/",
           },
         ],
@@ -163,11 +164,15 @@ export default defineConfig({
         text: "展示组件",
         items: [
           {
+            text: `Badge 徽标 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>`,
+            link: "/components/badge/",
+          },
+          {
             text: `Empty 空状态 `,
             link: "/components/empty/",
           },
           {
-            text: `ImagePreview 图片预览 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.15.0</span>`,
+            text: `ImagePreview 图片预览`,
             link: "/components/imagepreview/",
           },
           { text: "Tag 标签", link: "/components/tag/" },

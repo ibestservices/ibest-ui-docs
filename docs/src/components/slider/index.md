@@ -265,18 +265,23 @@ struct DemoPage {
 
 ### @Props
 
-| 参数         | 说明                                          | 类型      | 默认值     |
-| ------------ | ---------------------------------------------| --------- | ---------- |
-| value        | 滑动条当前值，支持双向绑定                       | _number \| [number, number]_ | `-` |
-| max          | 最大值                                        | _number_  | `100` |
-| min          | 最小值                                        | _number_ |  `0`  |
-| step         | 步长                                          | _number_ | `1` |
-| barHeight    | 进度条高度, 单位lpx                             | _number_ | `4` |
-| buttonSize   | 滑块大小, 宽高一致, 单位lpx                      | _number_ | `48` |
-| activeColor  | 进度条激活态颜色                                 | _ResourceColor_ | `#3D8AF2` |
-| barBgColor   | 进度条背景色                                    | _ResourceColor_ | `#ebedf0` |
-| disabled     | 是否禁用                                       | _boolean_ | `false` |
-| vertical     | 是否垂直展示                                    | _boolean_ |  `false`  |
-| reverse      | 是否换向                                       | _boolean_ |  `false`  |
-| customButton | 自定义滑块                                      | _CustomBuilder_ |  `-`|
-| onChange     | 进度变化且拖动结束后触发                           | _(value: IBestSliderValue) => void_ |  `-`  |
+| 参数         | 说明                                   | 类型      | 默认值     |
+| ------------ | -------------------------------------| --------- | ---------- |
+| value        | 滑动条当前值，支持双向绑定               | _number \| [number, number]_ | `-` |
+| max          | 最大值                                | _number_  | `100` |
+| min          | 最小值                                | _number_ |  `0`  |
+| step         | 步长                                  | _number_ | `1` |
+| barHeight    | 进度条高度                             | _number_ \| _string_ | `2` |
+| buttonSize   | 滑块大小, 宽高一致                      | _number_ \| _string_ | `24` |
+| activeColor  | 进度条激活态颜色                        | _ResourceColor_ | `#3D8AF2` |
+| barBgColor   | 进度条背景色                           | _ResourceColor_ | `#ebedf0` |
+| disabled     | 是否禁用                              | _boolean_ | `false` |
+| vertical     | 是否垂直展示                           | _boolean_ |  `false`  |
+| reverse      | 是否换向                              | _boolean_ |  `false`  |
+| customButton | 自定义滑块                             | _CustomBuilder_ |  `-`|
+
+### Events
+
+| 事件名     | 说明                            | 回调参数             |
+| ----------| ------------------------------ | --------------------- |
+| onChange  | 进度变化且拖动结束后触发           | `value: IBestSliderValue` |

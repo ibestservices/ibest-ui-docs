@@ -10,19 +10,34 @@ IBest-UI 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范�
 - 次版本号：通常每隔 ~~1 ~ 2 月~~发布，包含新组件或较大的功能更新，向下兼容。
 - 主版本号：无固定的发布时间，包含不兼容更新和重大功能更新。
 
-### 1.17.0
+### 1.18.0
 
 #### 新功能 🎉
+1. 新增 IBestBadge 徽标组件;
+2. Search 增加 textColor 属性;
+3. IBestCell 增加 leftContentWidth、leftIconMarginRight、rightIconMarginLeft、leftRightPadding、borderSizeType、borderLeft、bdColor 属性;
+4. IBestToast 增加 iconWidth 属性;
+5. IBestCheckBox IBestRadio 增加 labelFontSize 属性;
+6. IBestEmpty 增加 emptyImgUrl 属性;
+7. IBestPopup 增加 headerBuilder 插槽;
+8. IBestSearch 增加 textColor 属性;
+#### 重要变更:
+组件库全局尺寸单位默认为vp, 可自定义配置, 升级后可能会出现部分组件尺寸偏大情况, 只需将原先传递的尺寸改为原来一半即可.
+#### 修复:
+1. IBestToast 同时打开无法关闭问题;
+2. IBestCascader 异步加载时崩溃问题;
 
-1. 增加 IBestIcon 弹框
-2. 增加 IBestPullRefresh
+### 1.17.0
 
-#### 其他变更
+#### 新功能 🎉   
+1. 新增 IBestIcon 组件;
+2. 新增 IBestPullRefresh 下拉刷新组件;
+3. IBestTab 新增 onTabClick 事件;
+4. 增加导出 IBestCascaderContent 级联组件, 可独立在页面中使用或与其他自定义组件组合使用;
+5. IBestCell 增加 leftIcon leftIconColor leftIconSize rightIcon rightIconColor rightIconSize 属性;
+6. IBestActionSheet 增加 cancelTextColor、beforeClose 属性.
 
-1. IBestTab 新增 onTabClick 事件;
-2. 增加导出 IBestCascaderContent 级联组件, 可独立在页面中使用或与其他自定义组件组合使用;
-3. IBestCell 增加 leftIcon leftIconColor leftIconSize rightIcon rightIconColor rightIconSize 属性;
-4. IBestActionSheet 增加 cancelTextColor、beforeClose 属性.
+#### 另: 新发布 @ibestservices/area-data 库, 可用于Cascader相关组件. 
 
 #### 新贡献者
 

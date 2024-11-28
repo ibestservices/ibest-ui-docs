@@ -187,7 +187,7 @@ struct DemoPage {
 | successText  | 刷新成功提示文案                         | _ResourceStr_ | `''` |
 | successDuration | 刷新成功提示展示时长(ms)               | _number_ | `500` |
 | duration     | 动画时长                                | _number_ | `300` |
-| headHeight   | 顶部内容高度                             | _number_ | `100` |
+| headHeight   | 顶部内容高度                             | _number_ \| _string_ | `50` |
 | scroller     | 当自定义内容包含List Grid Scroll组件时必传  | _Scroller_ |  `-`  |
 
 ### Events
