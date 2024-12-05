@@ -112,6 +112,35 @@ struct DemoPage {
 ```
 :::
 
+### 自定义样式
+
+![自定义样式](./images/custom-style.png)
+
+::: details 点我查看代码
+```ts
+@Entry
+@Component
+struct DemoPage {
+  @State value: string = '123'
+  build() {
+    Column({space: 14}){
+      IBestPasswordInput({
+        value: $value,
+        bdColor: '#3d8af2',
+        cellTextColor: '#3d8af2'
+      })
+      IBestPasswordInput({
+        value: $value,
+        space: 12,
+        cellBgColor: "#1c1c1e",
+        cellTextColor: "#fff"
+      })
+    }
+  }
+}
+```
+:::
+
 ### 提示信息
 
 ![提示信息](./images/tip.png)
@@ -161,7 +190,13 @@ struct DemoPage {
 | errorTip     | 错误提示文字                                   | _string_ |  `''`  |
 | useSystemKeyboard| 是否使用系统键盘, 默认使用自定义键盘           | _boolean_ |  `false`  |
 | numberKeyboardConfig | 自定义键盘配置项                        | _NumberKeyboardConfig_ |  `-`  |
- 
+| isShowBorder <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 是否显示边框线                     | _boolean_ |  `true`  |
+| bdColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 边框线颜色                              | _ResourceColor_ |  `#ebedf0`  |
+| cellBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 格子背景色                        | _ResourceColor_ |  `#fff`  |
+| cellTextColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 格子文字颜色                       | _ResourceColor_ |  `#323233`  |
+| dotFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 黑点大小                          | _number_ \| _string_ |  `40`    |
+| textFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 明文展示时文字大小                  | _number_ \| _string_ |  `20`    |
+| tipFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 提示文字大小                        | _number_ \| _string_ |  `16`    |
 
 ### NumberKeyboardConfig 数据结构
 | 参数              | 说明                              | 类型      | 默认值     |

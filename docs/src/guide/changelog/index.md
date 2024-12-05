@@ -1,14 +1,22 @@
 # 更新日志
 
-## 介绍
+## 重要提示
 
-IBest-UI 遵循 [Semver](https://semver.org/lang/zh-CN/) 语义化版本规范。
+#### 从2.0.0版本开始，IBestUI的更新日志将统一发布在<a href="https://ohpm.openharmony.cn/#/cn/detail/@ibestservices%2Fibest-ui" target="__blank">OpenHarmony三方库中心仓的更新日志</a>, 当前页面不再发布.
 
-## 发布节奏
 
-- 修订号：通常每隔 ~~1 ~ 2 周~~发布，包含新特性和问题修复。
-- 次版本号：通常每隔 ~~1 ~ 2 月~~发布，包含新组件或较大的功能更新，向下兼容。
-- 主版本号：无固定的发布时间，包含不兼容更新和重大功能更新。
+### 1.19.0
+#### 新功能 🎉
+1. 增加 IBestNavBar 导航栏组件;
+2. 增加 IBestCircleProgress 环形进度条组件;
+3. 增加 IBestCollapse 折叠面板组件;
+4. 增加 IBestDivider 分割线组件;
+5. IBestIcon 增加 iconRadius 属性;
+6. IBestField 增加 leftIconSize rightIconSize labelFontSize labelColor 属性;
+7. IBestPasswordInput 增加 isShowBorder bdColor cellBgColor cellTextColor dotFontSize textFontSize tipFontSize 属性.
+
+#### bug修复
+1. 修复 IBestCalendar 在设定的跨月时间范围时, 如果翻到下月, 上月日期会被禁用.
 
 ### 1.18.0
 

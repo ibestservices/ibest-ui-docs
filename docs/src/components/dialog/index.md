@@ -320,23 +320,22 @@ struct DemoPage {
 | showOverlay           | 是否展示遮罩层，不展示的话则没有遮罩层| _boolean_ | `true` |
 | overlayColor          | 遮罩层颜色 `API 10+`              | _ResourceColor_ | `0x33000000` |
 | showInSubWindow       | 某弹框需要显示在主窗口之外时，是否在子窗口显示此弹窗      | _boolean_  | `false` |
-| visible <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span> | 弹窗是否可见, 支持双向绑定                             | _boolean_ | `false` |
-| theme <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span> | 按钮样式风格，可选值 `default` `round-button`          | _string_ | `default`|
-| buttonSpace <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span>| 按钮间距        | _number_ \| _string_ | `0`|
-| confirmButtonBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span> | 确认按钮背景色, 当 `theme` 为 `round-button` 时默认为 `#3D8AF2` | _ResourceColor_  | `#fff` |
-| cancelButtonBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span> | 取消按钮背景色                                | _ResourceColor_ | `#fff` |
-| closeOnBackPress <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span> | 是否允许返回键关闭                                 | _boolean_ | `false`|
+| visible | 弹窗是否可见, 支持双向绑定                             | _boolean_ | `false` |
+| theme | 按钮样式风格，可选值 `default` `round-button`          | _string_ | `default`|
+| buttonSpace| 按钮间距        | _number_ \| _string_ | `0`|
+| confirmButtonBgColor | 确认按钮背景色, 当 `theme` 为 `round-button` 时默认为 `#3D8AF2` | _ResourceColor_  | `#fff` |
+| cancelButtonBgColor | 取消按钮背景色                                | _ResourceColor_ | `#fff` |
+| closeOnBackPress| 是否允许返回键关闭                                 | _boolean_ | `false`|
 
 ### Events
 
 | 事件名      | 说明                                     | 参数类型                   |
 | ----------- | --------------------------------------- | ------------------------ |
-| onReady <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0开始废弃,请使用visible属性</span> | 弹窗初始化的回调 | `(dialogController: CustomDialogController) => void` |
 | onConfirm   | 点击确认按钮的回调                         | `(event?: ClickEvent) => void` |
 | onCancel    | 点击取消按钮的回调                         | `(event?: ClickEvent) => void` |
 | beforeClose | 关闭前的回调函数，返回 `false` 可阻止关闭，支持返回 `Promise` | `(action: 'cancel' \| 'confirm') => Promise<boolean> \| boolean` |
-| onOpen <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span>| 打开弹窗的回调                               | `() => void` |
-| onClose <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span>| 关闭弹窗的回调                    | `() => void` |
+| onOpen      | 打开弹窗的回调                            | `() => void` |
+| onClose     | 关闭弹窗的回调                            | `() => void` |
 
 ### 插槽
 
