@@ -47,7 +47,7 @@ export default defineConfig({
         items: [
           { text: "介绍", link: "/guide/home/" },
           { text: "快速上手", link: "/guide/quickstart/" },
-          { text: "配置全局尺寸单位", link: "/guide/config-unit/" },
+          { text: "全局配置", link: "/guide/config-unit/" },
           { text: "自定义主题", link: "/guide/custom-theme/" },
           { text: "进阶用法", link: "/guide/advanced-usage/" },
           { text: "常见问题", link: "/guide/faq/" },
@@ -151,7 +151,7 @@ export default defineConfig({
             link: "/components/loading/",
           },
           {
-            text: `Notify 消息通知 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span>`,
+            text: `Notify 消息通知`,
             link: "/components/notify/",
           },
           {
@@ -168,11 +168,23 @@ export default defineConfig({
             link: "/components/badge/",
           },
           {
-            text: `Empty 空状态 `,
+            text: `CircleProgress 环形进度条 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>`,
+            link: "/components/circleProgress/",
+          },
+          {
+            text: `Collapse 折叠面板 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>`,
+            link: "/components/collapse/",
+          },
+          {
+            text: `Divider 分割线 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>`,
+            link: "/components/divider/",
+          },
+          {
+            text: "Empty 空状态",
             link: "/components/empty/",
           },
           {
-            text: `ImagePreview 图片预览`,
+            text: "ImagePreview 图片预览",
             link: "/components/imagepreview/",
           },
           { text: "Tag 标签", link: "/components/tag/" },
@@ -182,6 +194,10 @@ export default defineConfig({
       {
         text: "导航组件",
         items: [
+          {
+            text: `NavBar <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>`,
+            link: "/components/navBar/",
+          },
           {
             text: `Tab 标签页`,
             link: "/components/tab/",

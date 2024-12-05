@@ -219,7 +219,7 @@ showCountDownLoading(){
 | ----------| -------------------------- |--------------------------- |------------------|
 | show       |  展示提示                  | _string_ \| _ToastParams_  | toast 实例        |
 | hide       |  隐藏提示                  | -                          | -                |
-| showLoading <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.16.0</span> |  展示loading     |  _LoadingOption_ |  -  |
+| showLoading|  展示loading     |  _LoadingOption_ |  -  |
 
 ### LoadingOption 数据结构
 | 参数         | 说明                                                     | 类型      | 默认值     |
