@@ -586,7 +586,10 @@ struct DemoPage {
 | showMessage | 是否显示验证信息, 可由form统一配置                            | _boolean_ | `true` |
 | formatter   | 格式化函数                                                  | _(value: string) => string_ | `-` |
 | formatTrigger   | 执行格式化函数触发时机, 可选值 `onchange` `onblur`        | _string_ | `onchange` |
-
+| labelFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 左侧字体大小                                             | _number_ \| _string_ | `14` |
+| labelColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 左侧字体颜色                                               | _ResourceStr_ | `#323233` |
+| letIconSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 左侧图标大小                                               | _number_ \| _string_ | `14` |
+| rightIconSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 右侧图标大小                                             | _number_ \| _string_ | `14` |
 
 ### Events
 
