@@ -34,3 +34,9 @@
 | IBestCircleProgress 圆形进度条 | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>| 1.19.0 |   |
 | IBestCollapse 折叠面板 | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>| 1.19.0 |   |
 | IBestDivider 分割线 | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>| 1.19.0 |   |
+| IBestNoticeBar 通知栏 | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>| 2.0.0 |   |
+| IBestProgress 进度条 | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>| 2.0.0 |   |
+| IBestPopover 气泡弹出框 | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>| 2.0.0 |   |
+| IBestTextEllipsis 文本省略 | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>| 2.0.0 |   |
+| IBestCountDown 倒计时 | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>| 2.0.0 |   |
+| IBestSideBar 侧边导航 | <div style="padding:2px 4px;background:#58DB6B;color:#fff;border-radius:4px;">已上线</div>| 2.0.0 |   |

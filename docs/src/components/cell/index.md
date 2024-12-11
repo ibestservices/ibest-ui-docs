@@ -410,12 +410,12 @@ struct CellPage {
 | required       | 是否显示表单必填星号                    | _boolean_             | `false`  |
 | center         | 是否使内容垂直居中                      | _boolean_             | `false`|
 | arrowDirection | 箭头方向，可选值为 left up down         | _string_              | `right`  |
-| leftIcon <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 左侧图标                          | _ResourceStr_         |          |
-| leftIconColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 左侧图标颜色                 | _ResourceStr_ |          |
-| leftIconSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 左侧图标大小                 | _number_ \| _string_ |   `16`  |
-| rightIcon <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 右侧图标                           | _ResourceStr_|          |
-| rightIconColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 右侧图标颜色                 | _ResourceStr_ |          |
-| rightIconSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>| 右侧图标大小                 | _number_ \| _string_|   `16`  |
+| leftIcon| 左侧图标                          | _ResourceStr_         |          |
+| leftIconColor  | 左侧图标颜色                 | _ResourceStr_ |          |
+| leftIconSize   | 左侧图标大小                 | _number_ \| _string_ |   `16`  |
+| rightIcon      | 右侧图标                           | _ResourceStr_|          |
+| rightIconColor | 右侧图标颜色                 | _ResourceStr_ |          |
+| rightIconSize  | 右侧图标大小                 | _number_ \| _string_|   `16`  |
 | leftIconMarginRight <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 左侧图标与title间距                  | _number_ \| _string_ |   `4`  |
 | rightIconMarginLeft <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 右侧图标与内容间距                    | _number_ \| _string_ |   `4`  |
 | leftContentWidth <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 左侧内容宽度                             | _number_ \| _string_ |   ``  |

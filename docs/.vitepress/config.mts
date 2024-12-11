@@ -62,7 +62,7 @@ export default defineConfig({
           { text: "Button 按钮", link: "/components/button/" },
           { text: "Cell 单元格", link: "/components/cell/" },
           {
-            text: `Icon 图标 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>`,
+            text: `Icon 图标`,
             link: "/components/icon/",
           },
           {
@@ -155,7 +155,7 @@ export default defineConfig({
             link: "/components/notify/",
           },
           {
-            text: `PullRefresh 下拉刷新 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>`,
+            text: `PullRefresh 下拉刷新`,
             link: "/components/pullrefresh/",
           },
         ],
@@ -176,6 +176,10 @@ export default defineConfig({
             link: "/components/collapse/",
           },
           {
+            text: `CountDown 倒计时 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
+            link: "/components/countDown/",
+          },
+          {
             text: `Divider 分割线 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>`,
             link: "/components/divider/",
           },
@@ -187,6 +191,22 @@ export default defineConfig({
             text: "ImagePreview 图片预览",
             link: "/components/imagepreview/",
           },
+          {
+            text: `NoticeBar 通知栏 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
+            link: "/components/noticeBar/",
+          },
+          {
+            text: `Popover 气泡弹出框 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
+            link: "/components/popover/",
+          },
+          {
+            text: `Progress 进度条 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
+            link: "/components/progress/",
+          },
+          {
+            text: `TextEllipsis 文本省略 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
+            link: "/components/textEllipsis/",
+          },
           { text: "Tag 标签", link: "/components/tag/" },
           { text: "Watermark 水印", link: "/components/watermark/" },
         ],
@@ -195,8 +215,12 @@ export default defineConfig({
         text: "导航组件",
         items: [
           {
-            text: `NavBar <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>`,
+            text: `NavBar 导航栏 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>`,
             link: "/components/navBar/",
+          },
+          {
+            text: `SideBar 侧边导航 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
+            link: "/components/sideBar/",
           },
           {
             text: `Tab 标签页`,

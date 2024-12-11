@@ -6,7 +6,7 @@ title: "IBest-UI"
 
 ## 介绍
 
-{{ $frontmatter.title }} 是一套轻量，可定制化主题的基于鸿蒙 `API 12` 的参照 `vant` 设计开发的UI组件库，希望得到业界的帮助以及开源贡献(通过 [PR](https://github.com/ibestservices/ibest-ui/pulls) 贡献代码啦~)。
+{{ $frontmatter.title }} 是一套轻量、可定制化主题的基于鸿蒙 `API 13`，参照 `vant` 样式设计开发的UI组件库，希望得到业界的帮助以及开源贡献(通过 [PR](https://github.com/ibestservices/ibest-ui/pulls) 贡献代码啦~)。
 
 ![{{ $frontmatter.title }}](IBest-UI.png)
 

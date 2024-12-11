@@ -590,6 +590,7 @@ struct DemoPage {
 | labelColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 左侧字体颜色                                               | _ResourceStr_ | `#323233` |
 | letIconSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 左侧图标大小                                               | _number_ \| _string_ | `14` |
 | rightIconSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 右侧图标大小                                             | _number_ \| _string_ | `14` |
+| showLabel <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>| 是否显示label     | _boolean_ | `true` |
 
 ### Events
 
