@@ -426,7 +426,7 @@ struct DemoPage {
 ```
 :::
 
-### 平铺展示 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span>
+### 平铺展示
 
 ![平铺展示](./images/flat.png)
 

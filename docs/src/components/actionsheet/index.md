@@ -381,8 +381,9 @@ struct DemoPage {
 | onSelect   | 点击选项后触发, 当 `acions` 为一维数组时, `index1` 为选项索引, `index` 为选项标识; 当 `acions` 为二维数组时, `index1` 为点击选项的行索引, `index2` 为当前行的选项索引, `value` 为选项标识 | _(index1: number, index2?: number \| string, value?: string) => void_ |  `-`  |
 | onCancel   | 点击取消按钮触发                                     | _() => void_ |  `-`  |
 | onClose    | 面板关闭后触发                                       | _() => void_ |  `-`  |
-| cancelTextColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span> | 取消按钮文字颜色      | _ResourceColor_ |  `#646566`  |
-| beforeClose <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.17.0</span> | 关闭前的回调函数，返回 false 可阻止关闭，支持返回 Promise      | _() => Promise\<boolean\> \| boolean_ |  `-`  |
+| cancelTextColor | 取消按钮文字颜色      | _ResourceColor_ |  `#646566`  |
+| beforeClose | 关闭前的回调函数，返回 false 可阻止关闭，支持返回 Promise      | _() => Promise\<boolean\> \| boolean_ |  `-`  |
+| itemHeight <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>| 选项高度 | _number_ \| _string_ |  `50`  |
 
 ### IBestActionType 数据结构
 | 参数         | 说明                                          | 类型      |
