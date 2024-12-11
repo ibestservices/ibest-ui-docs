@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "IBest-UI@HarmonyOS"
   text: "一个简单易用的鸿蒙开源UI库"
-  tagline: 基于HarmonyOS，抹平 Web 与 鸿蒙 的差异
+  tagline: 基于HarmonyOS，抹平 H5 与 鸿蒙 的差异
   actions:
     - theme: brand
       text: 指南

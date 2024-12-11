@@ -29,6 +29,7 @@ export default defineConfig({
       },
     ],
   ],
+  lastUpdated: true,
   themeConfig: {
     logo: "/favicon.ico",
     // https://vitepress.dev/reference/default-theme-config
@@ -40,6 +41,9 @@ export default defineConfig({
         link: "/components/button/",
         activeMatch: "/components/",
       },
+      {
+        text: "v2.0.0", link: ""
+      }
     ],
     sidebar: [
       {
