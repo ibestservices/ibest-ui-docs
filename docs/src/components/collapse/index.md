@@ -332,10 +332,10 @@ struct DemoPage {
 | icon         | 标题栏左侧图标                                  | _ResourceStr_  | `''` |
 | iconColor    | 标题栏左侧图标颜色                               | _ResourceColor_ | `#323233` |
 | iconSize     | 选项图标                                       | _string_ \| _number_ | `16` |
-| title        | 标题文字                                       | _string_ | `''` |
+| title        | 标题文字                                       | _ResourceStr_ | `''` |
 | titleColor   | 标题文字颜色                                    | _ResourceColor_ | `#323233` |
 | titleFontSize| 标题文字大小                                    | _string_ \| _number_ | `14` |
-| value        | 标题右侧文字                                    | _string_ | `''` |
+| value        | 标题右侧文字                                    | _ResourceStr_ | `''` |
 | valueColor   | 标题右侧文字颜色                                 | _ResourceColor_ | `#969799` |
 | valueFontSize| 标题右侧文字大小                                 | _string_ \| _number_ | `14` |
 | isShowBorder | 是否显示内边框                                   | _boolean_ | `true` |

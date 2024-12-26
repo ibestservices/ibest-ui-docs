@@ -19,10 +19,19 @@ import { IBestToast } from "@ibestservices/ibest-ui";
 ::: details 点我查看代码
 
 ```ts
-IBestToast.show("提示内容")
-    
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestButton({
+      text: '基础用法',
+      onClickBtn: () => {
+        IBestToast.show("提示内容")
+      }
+    })
+  }
+}
 ```
-
 :::
 
 ### 成功提示
@@ -30,15 +39,23 @@ IBestToast.show("提示内容")
 ![成功提示](./images/success-tip.png)
 
 ::: details 点我查看代码
-
 ```ts
-IBestToast.show({
-    type: "success",
-    message: "提示内容"
-})
-    
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestButton({
+      text: '成功提示',
+      onClickBtn: () => {
+        IBestToast.show({
+          type: "success",
+          message: "提示内容"
+        })
+      }
+    })
+  }
+}
 ```
-
 :::
 
 ### 警告提示
@@ -46,15 +63,23 @@ IBestToast.show({
 ![警告提示](./images/warning-tip.png)
 
 ::: details 点我查看代码
-
 ```ts
-IBestToast.show({
-    type: "warning",
-    message: "提示内容"
-})
-    
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestButton({
+      text: '警告提示',
+      onClickBtn: () => {
+        IBestToast.show({
+          type: "warning",
+          message: "提示内容"
+        })
+      }
+    })
+  }
+}
 ```
-
 :::
 
 ### 失败提示
@@ -62,15 +87,23 @@ IBestToast.show({
 ![失败提示](./images/fail-tip.png)
 
 ::: details 点我查看代码
-
 ```ts
-IBestToast.show({
-    type: "fail",
-    message: "提示内容"
-})
-    
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestButton({
+      text: '失败提示',
+      onClickBtn: () => {
+        IBestToast.show({
+          type: "fail",
+          message: "提示内容"
+        })
+      }
+    })
+  }
+}
 ```
-
 :::
 
 ### 加载提示
@@ -78,15 +111,23 @@ IBestToast.show({
 ![加载提示](./images/loading-tip.png)
 
 ::: details 点我查看代码
-
 ```ts
-IBestToast.showLoading()
-setTimeout(() => {
-    IBestToast.hide()
-}, 1500)
-    
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestButton({
+      text: '加载提示',
+      onClickBtn: () => {
+        IBestToast.showLoading()
+        setTimeout(() => {
+          IBestToast.hide()
+        }, 1500)
+      }
+    })
+  }
+}
 ```
-
 :::
 
 ### 自定义图标
@@ -94,15 +135,23 @@ setTimeout(() => {
 ![自定义图标](./images/custom-icon-tip.png)
 
 ::: details 点我查看代码
-
 ```ts
-IBestToast.show({
-    icon: $r("app.media.startIcon"),
-    message: "提示内容"
-})
-    
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestButton({
+      text: '自定义图标',
+      onClickBtn: () => {
+        IBestToast.show({
+          icon: $r("app.media.startIcon"),
+          message: "提示内容"
+        })
+      }
+    })
+  }
+}
 ```
-
 :::
 
 ### 自定义图片
@@ -110,15 +159,23 @@ IBestToast.show({
 ![自定义图片](./images/custom-img-tip.png)
 
 ::: details 点我查看代码
-
 ```ts
-IBestToast.show({
-    icon: "https://ibestui.ibestservices.com/favicon.ico",
-    message: "提示内容"
-})
-    
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestButton({
+      text: '自定义图片',
+      onClickBtn: () => {
+        IBestToast.show({
+          icon: "https://ibestui.ibestservices.com/favicon.ico",
+          message: "提示内容"
+        })
+      }
+    })
+  }
+}
 ```
-
 :::
 
 ### 自定义加载图标类型
@@ -126,24 +183,32 @@ IBestToast.show({
 ![自定义加载图标类型](./images/custom-loadingtype-tip.png)
 
 ::: details 点我查看代码
-
 ```ts
-IBestToast.show({
-    type: "loading",
-    loadingType: "spinner",
-    message: "加载中...",
-    onOpened: () => {
-        // 可在此延时关闭toast
-        console.log("toast打开成功")
-    }
-})
-setTimeout(() => {
-    // 也可在此关闭toast
-    IBestToast.hide()
-}, 2000)
-    
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestButton({
+      text: '自定义加载图标类型',
+      onClickBtn: () => {
+        IBestToast.show({
+          type: "loading",
+          loadingType: "spinner",
+          message: "加载中...",
+          onOpened: () => {
+            // 可在此关闭loading
+            console.log("toast打开成功")
+          }
+        })
+        setTimeout(() => {
+          // 也可在此关闭loading
+          IBestToast.hide()
+        }, 2000)
+      }
+    })
+  }
+}
 ```
-
 :::
 
 ### 自定义位置
@@ -154,14 +219,23 @@ setTimeout(() => {
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestToast.show({
-    position: "top",
-    offsetY: "20%",
-    message: "提示内容"
-})
-    
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestButton({
+      text: '自定义位置',
+      onClickBtn: () => {
+        IBestToast.show({
+          position: "top",
+          offsetY: "20%",
+          message: "提示内容"
+        })
+      }
+    })
+  }
+}
 ```
 :::
 
@@ -173,13 +247,22 @@ IBestToast.show({
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestToast.show({
-    wordBreak: "break-all",
-    message: "This message will contain a incomprehensibilities long word."
-})
-    
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestButton({
+      text: '文字换行方式',
+      onClickBtn: () => {
+        IBestToast.show({
+          wordBreak: "break-all",
+          message: "This message will contain a incomprehensibilities long word."
+        })
+      }
+    })
+  }
+}
 ```
 :::
 
@@ -188,26 +271,33 @@ IBestToast.show({
 ![动态更新提示](./images/dynamic-updates-tip.gif)
 
 ::: details 点我查看代码
-
 ```ts
-showCountDownLoading(){
-    let count = 3
-    let toast = IBestToast.show({
-        type: "loading",
-        message: `倒计时 ${count} 秒`,
-        duration: 0
-    })
-    let timer = setInterval(() => {
-        count--
-        if (count) {
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestButton({
+      text: '动态更新提示',
+      onClickBtn: () => {
+        let count = 3
+        let toast = IBestToast.show({
+          type: "loading",
+          message: `倒计时 ${count} 秒`,
+          duration: 0
+        })
+        let timer = setInterval(() => {
+          count--
+          if (count) {
             toast.message = `倒计时 ${count} 秒`
-        } else {
+          } else {
             clearInterval(timer)
             IBestToast.hide()
-        }
-    }, 1000)
+          }
+        }, 1000)
+      }
+    })
+  }
 }
-    
 ```
 :::
 
@@ -215,16 +305,16 @@ showCountDownLoading(){
 
 ### 方法
 
-| 方法名     | 说明                       | 参数                       |  返回值          |
-| ----------| -------------------------- |--------------------------- |------------------|
+| 方法名      | 说明                      | 参数                       |  返回值          |
+| ---------- | -------------------------|--------------------------- |------------------|
 | show       |  展示提示                  | _string_ \| _ToastParams_  | toast 实例        |
 | hide       |  隐藏提示                  | -                          | -                |
-| showLoading|  展示loading     |  _LoadingOption_ |  -  |
+| showLoading|  展示loading              |  _LoadingOption_ |  -  |
 
 ### LoadingOption 数据结构
 | 参数         | 说明                                                     | 类型      | 默认值     |
 | ------------ | --------------------------------------------------------| --------- | ---------|
-| message      | 展示文本内容                                              | _string_  | "" |
+| message      | 展示文本内容                                              | _ResourceStr_  | "" |
 | duration     | 展示时长(ms)，值为 0 或 type为 `loading` 时toast 不会自动消失 | _number_   | 1500  |
 | loadingType  | 加载图标类型，可选值为 `circular`、`spinner`，type为 `loading` 时有效 | _boolean_   | `circular` |
 
@@ -239,4 +329,4 @@ showCountDownLoading(){
 | position     | 位置，可选值为 `top` 、`center`、`bottom`                  | _string_   | `center` |
 | offsetY      | 偏移量                                                   | _string_ \| _number_   | `0` |
 | onOpened     | 完全展示后的回调函数                                        | _() => void_ | `-` |
-| iconWidth <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 自定义图标宽度                | _string_ \| _number_   | `36` |
+| iconWidth    | 自定义图标宽度                                             | _string_ \| _number_   | `36` |

@@ -30,19 +30,17 @@ struct DemoPage {
   ]
   @State selectValue: string[] = []
   build() {
-    Column(){
-      IBestPicker({
-        options: this.options,
-        title: "标题",
-        value: $selectValue,
-        onConfirm: (selectedValues: Array<string>, selectTexts: Array<string>) => {
-          IBestToast.show(selectTexts.join('-'))
-        },
-        onChange: (selectedValues: Array<string>, selectTexts: Array<string>, columnIndex: number) => {
-          IBestToast.show(selectTexts.join('-'))
-        }
-      })
-    }
+    IBestPicker({
+      options: this.options,
+      title: "标题",
+      value: $selectValue,
+      onConfirm: (selectedValues: Array<string>, selectTexts: Array<string>) => {
+        IBestToast.show(selectTexts.join('-'))
+      },
+      onChange: (selectedValues: Array<string>, selectTexts: Array<string>, columnIndex: number) => {
+        IBestToast.show(selectTexts.join('-'))
+      }
+    })
   }
 }
 ```
@@ -128,19 +126,17 @@ struct DemoPage {
     { text: '镇江', value: 'Zhejiang' }
   ]
   build() {
-    Column(){
-      IBestPicker({
-        options: this.options,
-        title: "标题",
-        value: $selectValue,
-        onConfirm: (selectedValues: Array<string>, selectTexts: Array<string>) => {
-          IBestToast.show(selectTexts.join('-'))
-        },
-        onChange: (selectedValues: Array<string>, selectTexts: Array<string>, columnIndex: number) => {
-          IBestToast.show(selectTexts.join('-'))
-        }
-      })
-    }
+    IBestPicker({
+      options: this.options,
+      title: "标题",
+      value: $selectValue,
+      onConfirm: (selectedValues: Array<string>, selectTexts: Array<string>) => {
+        IBestToast.show(selectTexts.join('-'))
+      },
+      onChange: (selectedValues: Array<string>, selectTexts: Array<string>, columnIndex: number) => {
+        IBestToast.show(selectTexts.join('-'))
+      }
+    })
   }
 }
 ```
@@ -171,19 +167,17 @@ struct DemoPage {
   ]
   @State selectValue: string[] = []
   build() {
-    Column(){
-      IBestPicker({
-        options: this.options,
-        title: "标题",
-        value: $selectValue,
-        onConfirm: (selectedValues: Array<string>, selectTexts: Array<string>) => {
-          IBestToast.show(selectTexts.join('-'))
-        },
-        onChange: (selectedValues: Array<string>, selectTexts: Array<string>, columnIndex: number) => {
-          IBestToast.show(selectTexts.join('-'))
-        }
-      })
-    }
+    IBestPicker({
+      options: this.options,
+      title: "标题",
+      value: $selectValue,
+      onConfirm: (selectedValues: Array<string>, selectTexts: Array<string>) => {
+        IBestToast.show(selectTexts.join('-'))
+      },
+      onChange: (selectedValues: Array<string>, selectTexts: Array<string>, columnIndex: number) => {
+        IBestToast.show(selectTexts.join('-'))
+      }
+    })
   }
 }
 ```
@@ -269,19 +263,17 @@ struct DemoPage {
   ]
   @State selectValue: string[] = []
   build() {
-    Column(){
-      IBestPicker({
-        options: this.options,
-        title: "标题",
-        value: $selectValue,
-        onConfirm: (selectedValues: Array<string>, selectTexts: Array<string>) => {
-          IBestToast.show(selectTexts.join('-'))
-        },
-        onChange: (selectedValues: Array<string>, selectTexts: Array<string>, columnIndex: number) => {
-          IBestToast.show(selectTexts.join('-'))
-        }
-      })
-    }
+    IBestPicker({
+      options: this.options,
+      title: "标题",
+      value: $selectValue,
+      onConfirm: (selectedValues: Array<string>, selectTexts: Array<string>) => {
+        IBestToast.show(selectTexts.join('-'))
+      },
+      onChange: (selectedValues: Array<string>, selectTexts: Array<string>, columnIndex: number) => {
+        IBestToast.show(selectTexts.join('-'))
+      }
+    })
   }
 }
 ```

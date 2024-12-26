@@ -1,8 +1,8 @@
-# 自定义主题
+# 自定义样式
 
 ## 介绍
 
-由于 ArkTS 样式不支持统一配置和预处理器，因此需要开发者自行实现自定义主题功能。本 UI 库实现思路是通过[AppStorage](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V2/arkts-appstorage-0000001524417209-V2)进行存储，在需要更改主题时，通过调用 `IBestSetUIBaseStyle` 方法，设置主题。
+在需要更改主题样式时，可通过调用 `IBestSetUIBaseStyle` 方法设置样式。
 
 ## 更改主题
 

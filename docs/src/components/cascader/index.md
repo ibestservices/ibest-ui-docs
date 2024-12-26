@@ -14,7 +14,7 @@ import { IBestCascader, IBestCascaderOption } from "@ibestservices/ibest-ui";
 
 ### 基础用法
 
-![基础用法](./images/cascader-base.png)
+![基础用法](./images/base.png)
 
 ::: details 点我查看代码
 ```ts

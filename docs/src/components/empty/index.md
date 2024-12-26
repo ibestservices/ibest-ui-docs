@@ -65,18 +65,21 @@ IBestEmpty({
 
 ::: tip
 通过 `imageSize` 属性更改图片的大小。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestEmpty({
-  imageSize: 100,
-  description: "描述文字",
-});
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestEmpty({
+      imageSize: 100,
+      description: "描述文字"
+    })
+  }
+}
 ```
-
 :::
 
 ### 自定义图片
@@ -85,14 +88,10 @@ IBestEmpty({
 
 ::: tip
 需要自定义图片时，可以使用 `emptyImgBuilder` 插槽中传入任意内容。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-import { IBestEmpty } from '@ibestservices/ibset-ui'
-
 @Entry
 @Component
 struct EmptyPage {
@@ -101,16 +100,14 @@ struct EmptyPage {
     Image($r('app.media.title_back'))
     .height(160)
   }
-
   build(){
     IBestEmpty({
       description: '描述文字',
-      emptyImgBuilder: this.Arrow
+      emptyImgBuilder: (): void => this.Arrow()
     })
   }
 }
 ```
-
 :::
 
 ### 底部内容
@@ -119,31 +116,24 @@ struct EmptyPage {
 
 ::: tip
 通过默认插槽 `defaultBuilder` 可以在 `Empty` 组件的下方插入内容。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-import { IBestEmpty, IBestButton } from '@ibestservices/ibset-ui'
-
 @Entry
 @Component
 struct EmptyPage {
-  @Builder
-  Btn() {
+  @Builder Btn() {
     IBestButton({ text: '按钮', type: 'primary' })
   }
-
   build(){
     IBestEmpty({
       description: '描述文字',
-      defaultBuilder: this.Btn
+      defaultBuilder: (): void => this.Btn()
     })
   }
 }
 ```
-
 :::
 
 ## API
@@ -154,7 +144,7 @@ struct EmptyPage {
 | ------------------- | ----------------------------------------| -------------| ---- |
 | emptyImage          | 类型，可选值为 `error` `network` `search` | _string_      | `default`    |
 | imageSize           | 图片大小                                 | _string_ \| _number_ | `160` |
-| description         | 图片下方的描述文字                         | _string_ |   |
+| description         | 图片下方的描述文字                         | _ResourceStr_ |   |
 | descriptionFontSize | 图片下方的描述文字的大小                    | _string_ | `14` |
 | descriptionColor    | 图片下方的描述文字的颜色                    | _ResourceColor_ | `#969799` |
 

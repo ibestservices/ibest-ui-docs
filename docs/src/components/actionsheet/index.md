@@ -367,12 +367,12 @@ struct DemoPage {
 | title    | 标题, 原生属性                                      | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-universal-attributes-sheet-transition-V5#sheettitleoptions11" target="__blank">SheetTitleOptions</a> \| CustomBuilder_ | `-` |
 | showClose    | 是否显示原生关闭图标, 原生属性, 在配置 `title` 时默认为 `true` | _boolean_ |  `false`  |
 | actions      | 选项列表                                        | _(IBestActionType \| string)[] \| (IBestActionMultiLine)[][]_ |  `false`  |
-| customTitle  | 自定义标题                                      | _string_ |  `''`  |
+| customTitle  | 自定义标题                                      | _ResourceStr_ |  `''`  |
 | titleBgColor | 自定义标题背景色                                 | _ResourceColor_ |  `#fff`  |
-| description  | 描述                                           | _string_ |  `''`  |
+| description  | 描述                                           | _ResourceStr_ |  `''`  |
 | closeable    | 是否显示自定义关闭图标                            | _boolean_ |  `true`  |
 | closeIcon    | 自定义关闭图标                                   | _ResourceStr_ |  `-`  |
-| cancelText   | 取消按钮文字                                     | _string_ |  `''`  |
+| cancelText   | 取消按钮文字                                     | _ResourceStr_ |  `''`  |
 | safeAreaInsetBottom| 是否开启底部安全距离适配                     | _boolean_ |  `true`  |
 | closeOnBackPress   | 是否允许物理关闭                            | _boolean_ |  `true`  |
 | closeOnClickOverlay| 是否允许点击遮罩关闭                         | _boolean_ |  `true`  |
@@ -388,9 +388,9 @@ struct DemoPage {
 ### IBestActionType 数据结构
 | 参数         | 说明                                          | 类型      |
 | ------------ | ---------------------------------------------| --------- |
-| name         | 选项文案, 必填                                 | _string_  |
+| name         | 选项文案, 必填                                 | _ResourceStr_  |
 | value        | 选项标识                                       | _string_  |
-| subName      | 选项描述                                       | _string_ |
+| subName      | 选项描述                                       | _ResourceStr_ |
 | color        | 选项字体颜色                                    | _ResourceColor_ |
 | icon         | 选项图标                                       | _ResourceStr_ |
 | isDisabled   | 是否禁用                                       | _boolean_ |
@@ -399,9 +399,9 @@ struct DemoPage {
 ### IBestActionMultiLine 数据结构
 | 参数         | 说明                                          | 类型      |
 | ------------ | ---------------------------------------------| --------- |
-| name         | 选项文案, 必填                                 | _string_  |
+| name         | 选项文案, 必填                                 | _ResourceStr_  |
 | value        | 选项标识                                       | _string_  |
-| subName      | 选项描述                                       | _string_ |
+| subName      | 选项描述                                       | _ResourceStr_ |
 | color        | 选项字体颜色                                    | _ResourceColor_ |
 | icon         | 选项图标, 必填                                  | _ResourceStr_ |
 | isDisabled   | 是否禁用                                       | _boolean_ |

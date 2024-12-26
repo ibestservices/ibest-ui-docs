@@ -151,3 +151,8 @@ body {
 .VPDoc .main .vp-doc em {
   color: #693dd6;
 }
+
+.VPDoc.has-aside .content-container{
+  max-width: 100% !important;
+  margin: 0;
+}

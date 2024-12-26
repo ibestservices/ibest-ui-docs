@@ -339,24 +339,20 @@ struct DemoPage {
   @Builder checkboxGroupContent() {
     IBestCheckboxGroup({
       group: "group1",
-      onChange: checkboxNames => {
-        if(checkboxNames.length){
-          this.value3 = checkboxNames
-        }
-      }
-    })
-    Flex({space: { main: new LengthMetrics(20)}}) {
+			activeList: $value3,
+			placeDirection: Axis.Horizontal
+    }){
       IBestCheckbox({
         group: "group1",
         shape: "square",
         label: "复选框1",
-        name: "checkbox1"
+        name: "1"
       })
       IBestCheckbox({
         group: "group1",
         shape: "square",
         label: "复选框2",
-        name: "checkbox2"
+        name: "2"
       })
     }
   }
