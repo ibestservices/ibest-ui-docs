@@ -555,12 +555,12 @@ struct DemoPage {
 | formId      | 唯一id, 当组件用于验证时必传                               | _string_  | `''` |
 | prop        | 绑定value的属性名, 当组件用于验证时必传                     | _string_  | `''` |
 | rules       | 验证规则列表, 可由form统一配置                             | _IBestFormRuleItem[]_ |`[]`|
-| label       | 输入框左侧文本	                                         | _string_ | `''`|
+| label       | 输入框左侧文本	                                         | _ResourceStr_ | `''`|
 | colon       | 是否在label后加冒号, 可由form统一配置                      | _boolean_ | `false` |
 | labelWidth  | 左侧文本宽度，可由form统一配置                              | _number_ \| _string_ |`80`|
 | labelPosition | 左侧文本位置, 可选值 `left` `top`, 可由form统一配置       | _string_ |`left`|
 | labelAlign  | 左侧文本对齐方式, 可选值 `left` `center` `right`, 可由form统一配置| _string_ |`left`|
-| placeholder | 输入框占位提示文字                                        | _string_ |`''`|
+| placeholder | 输入框占位提示文字                                        | _ResourceStr_ |`''`|
 | type        | 输入框类型, `autosize` 为true时, 可选值 `normal` `password` `email` `number` `phone` `username` `number-password` `decimal` ; `autosize` 为false时, 可选值 `normal` `email` `number` `phone` `decimal`, 其他无效| _string_ |`'normal'`|
 | decimalLength| 小数点位数, 仅当type为`decimal`时生效, 默认不限制           | _number_ |`-1`|
 | showPasswordIcon| 是否显示密码框末尾图标                                 | _boolean_ | `true` |
@@ -586,27 +586,29 @@ struct DemoPage {
 | showMessage | 是否显示验证信息, 可由form统一配置                            | _boolean_ | `true` |
 | formatter   | 格式化函数                                                  | _(value: string) => string_ | `-` |
 | formatTrigger   | 执行格式化函数触发时机, 可选值 `onchange` `onblur`        | _string_ | `onchange` |
-| labelFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 左侧字体大小                                             | _number_ \| _string_ | `14` |
-| labelColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 左侧字体颜色                                               | _ResourceStr_ | `#323233` |
-| letIconSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 左侧图标大小                                               | _number_ \| _string_ | `14` |
-| rightIconSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 右侧图标大小                                             | _number_ \| _string_ | `14` |
+| labelFontSize| 左侧字体大小                                             | _number_ \| _string_ | `14` |
+| labelColor | 左侧字体颜色                                               | _ResourceStr_ | `#323233` |
+| letIconSize | 左侧图标大小                                               | _number_ \| _string_ | `14` |
+| rightIconSize | 右侧图标大小                                             | _number_ \| _string_ | `14` |
 | showLabel <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>| 是否显示label     | _boolean_ | `true` |
+| placeholderColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 占位文字颜色     | _ResourceColor_ | `#c8c9cc` |
+| bgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 背景色     | _ResourceColor_ | `#fff` |
 
 ### Events
 
-| 事件名     | 说明                                             | 回调参数                         |
-| ---------- | ----------------------------------------------- | -------------------------------- |
-| onChange  | value变化时触发                                   | `value: string \| number \| boolean \| (string \| number)[]` |
-| onClear   | 点击清除按钮时触发                                  | `-` |
-| onFieldClick| 点击组件时触发                                    | `-` |
-| onFieldFocus| 输入框获得焦点时触发                                 | `-` |
-| onFieldBlur| 输入框失去焦点时触发                                 | `-` |
-| onLeftIconClick| 左侧图标点击时触发                               | `-` |
-| onRightIconClick| 右侧图标点击时触发                               | `-` |
+| 事件名     | 说明                        | 回调参数                         |
+| ---------- | ------------------------- | -------------------------------- |
+| onChange  | value变化时触发              | `value: string \| number \| boolean \| (string \| number)[]` |
+| onClear   | 点击清除按钮时触发            | `-` |
+| onFieldClick| 点击组件时触发             | `-` |
+| onFieldFocus| 输入框获得焦点时触发        | `-` |
+| onFieldBlur| 输入框失去焦点时触发         | `-` |
+| onLeftIconClick| 左侧图标点击时触发       | `-` |
+| onRightIconClick| 右侧图标点击时触发      | `-` |
 
 
 ### 插槽
 | 插槽名         | 说明                         | 类型                      |
-| ------------ | -------------------------- | ------------------------- |
-|buttonBuilder| 右侧按钮                      |  _CustomBuilder_  |
+| ------------  | -----------------------------| -------------------------|
+|buttonBuilder  | 右侧按钮                      |  _CustomBuilder_  |
 |customRightContent| 右侧内容, 使用该插槽后, 与输入框相关的属性和事件将失效 |  _CustomBuilder_  |

@@ -78,10 +78,10 @@ struct DemoPage {
 | name        | 图标名称或图标地址, 具体名称可参考<a href="https://vant-ui.github.io/vant/#/zh-CN/icon#jie-shao" target="__blank">这里</a>   | _ResourceStr_  | `arrow` |
 | color       | 图标颜色                              | _ResourceColor_ |  `''`  |
 | iconSize    | 图标大小                              | _number_ \| _string_ | `16` |
-| iconRadius <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>| 图标圆角                              | _number_ \| _string_ | `0` |
+| iconRadius | 图标圆角                              | _number_ \| _string_ | `0` |
 
 ### Events
 
-| 事件名       | 说明                     | 事件类型                         |
-| ----------  | -------------------------| -------------------------------- |
-| onIconClick | 点击图标时的回调函数        | _() => void_ | - |
+| 事件名       | 说明                     | 回调参数                         |
+| ----------  | ------------------------ | -------------------------------- |
+| onIconClick | 点击图标时的回调函数        | - |

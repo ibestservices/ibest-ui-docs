@@ -14,7 +14,7 @@ import { IBestPopup } from "@ibestservices/ibest-ui";
 
 ### 基础用法
 
-![展示弹出层](./images/popup-base.png)
+![展示弹出层](./images/base.png)
 ::: tip
 通过 `visible` 属性可控制弹出层是否显示。
 :::
@@ -47,7 +47,7 @@ struct DemoPage {
       IBestPopup({
         visible: $visible,
         popupWidth: 500,
-        contentBuilder: this.centerBuilder
+        contentBuilder: (): void => this.centerBuilder()
       })
     }
   }
@@ -196,7 +196,7 @@ struct DemoPage {
 				cornerRadius: 20,
 				isShowHeader: true,
 				title: "标题",
-				contentBuilder: this.centerBuilder
+				contentBuilder: (): void => this.centerBuilder()
       })
       IBestPopup({
         visible: $visible2,
@@ -273,6 +273,53 @@ struct DemoPage {
 ```
 :::
 
+### 动态高度
+
+![动态高度](./images/height.gif)
+
+::: details 点我查看代码
+```ts
+import { IBestCell } from "@ibestservices/ibest-ui"
+@Entry
+@Component
+struct DemoPage {
+  @State visible: boolean = false
+  @State popupHeight: number = 150
+  @Builder cusHeightBuilder() {
+		Column() {
+			IBestButton({
+				text: "切换高度",
+				type: "primary",
+				onClickBtn: () => {
+					this.popupHeight = this.popupHeight == 150 ? 300 : 150
+				}
+			})
+		}
+		.width("100%")
+		.padding(20)
+		.justifyContent(FlexAlign.Center)
+	}
+  build() {
+    Column(){
+      IBestCell({
+        title: '切换高度',
+        isLink: true,
+        onClickCell: () => {
+          this.visible = true
+        }
+      })
+      IBestPopup({
+				visible: $visible,
+				popupWidth: 300,
+				popupHeight: this.popupHeight,
+				contentBuilder: (): void => this.cusHeightBuilder()
+			})
+    }
+  }
+}
+```
+:::
+
 ### 事件监听
 
 ![事件监听](./images/popup-event.gif)
@@ -284,7 +331,6 @@ struct DemoPage {
 :::
 
 ::: details 点我查看代码
-
 ```ts
 import { IBestCell, IBestToast } from "@ibestservices/ibest-ui"
 @Entry
@@ -315,7 +361,6 @@ struct DemoPage {
   }
 }
 ```
-
 :::
 
 ### 安全区域适配
@@ -326,7 +371,6 @@ struct DemoPage {
 :::
 
 ::: details 点我查看代码
-
 ```ts
 import { IBestCell } from "@ibestservices/ibest-ui"
 @Entry
@@ -388,6 +432,8 @@ struct DemoPage {
 | safeAreaInsetBottom | 是否开启底部安全区适配                               | _boolean_ | `false` |
 | maskColor  | 蒙层颜色      | _ResourceColor_ | `0x33000000` |
 | isModal    | 是否为模态窗口                                               | _boolean_ | `true` |
+| titleColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 标题字体颜色                                                 | _ResourceColor_ | `#323232` |
+| closeIconColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 关闭图标的颜色                                           | _ResourceColor_ | `#c8c9cc` |
 
 ### Events
 

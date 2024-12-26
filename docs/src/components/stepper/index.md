@@ -15,160 +15,184 @@ import { IBestStepper } from "@ibestservices/ibest-ui";
 ### 基础用法
 
 ![基础用法](./images/basic.png)
-::: tip
-
-通过 `defaultValue` 设置默认输入值，可以通过 `onChange` 事件监听到输入值的变化。
-
-:::
 
 ::: details 点我查看代码
-
 ```ts
-IBestStepper({
-  onChange(val) {
-    console.log("触发变化了", val);
-  },
-});
+@Entry
+@Component
+struct DemoPage {
+  @State value: number = 1
+  build() {
+    IBestStepper({
+      value: $value
+    })
+  }
+}
 ```
-
 :::
 
 ### 步长设置
 
 ![步长设置](./images/step.png)
 ::: tip
-
 通过 `step` 属性设置每次点击增加或减少按钮时变化的值，默认为 `1`。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestStepper({
-  step: 2,
-});
+@Entry
+@Component
+struct DemoPage {
+  @State value: number = 1
+  build() {
+    IBestStepper({
+      value: $value,
+      step: 2
+    })
+  }
+}
 ```
-
 :::
 
 ### 限制输入范围
 
 ![限制输入范围](./images/input-range.png)
 ::: tip
-
 通过 `min` 和 `max` 属性限制输入值的范围，默认超出范围后会自动校正最大值或最小值，通过 `autoFixed` 可以关闭自动校正。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestStepper({
-  defaultValue: 5,
-  min: 5,
-  max: 8,
-});
+@Entry
+@Component
+struct DemoPage {
+  @State value: number = 1
+  build() {
+    IBestStepper({
+      value: $value,
+      min: 5,
+      max: 8
+    })
+  }
+}
 ```
-
 :::
 
 ### 限制输入整数
 
 ![限制输入整数](./images/basic.png)
 ::: tip
-
 设置 `integer` 属性后，输入框将限制只能输入整数。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestStepper({
-  integer: true,
-});
+@Entry
+@Component
+struct DemoPage {
+  @State value: number = 1
+  build() {
+    IBestStepper({
+      value: $value,
+      integer: true
+    })
+  }
+}
 ```
-
 :::
 
 ### 禁用状态
 
 ![禁用状态](./images/disabled.png)
 ::: tip
-
 通过设置 `disabled` 属性来禁用步进器，禁用状态下无法点击按钮或修改输入框。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestStepper({
-  disabled: true,
-});
+@Entry
+@Component
+struct DemoPage {
+  @State value: number = 1
+  build() {
+    IBestStepper({
+      value: $value,
+      disabled: true
+    })
+  }
+}
 ```
-
 :::
 
 ### 禁用输入框
 
 ![禁用输入框](./images/disabled-input.png)
 ::: tip
-
 通过设置 `disableInput` 属性来禁用输入框，此时按钮仍然可以点击。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestStepper({
-  disableInput: true,
-});
+@Entry
+@Component
+struct DemoPage {
+  @State value: number = 1
+  build() {
+    IBestStepper({
+      value: $value,
+      disableInput: true
+    })
+  }
+}
 ```
-
 :::
 
 ### 固定小数位数
 
 ![固定小数位数](./images/decimal-length.png)
 ::: tip
-
 通过设置 `decimalLength` 属性可以保留固定的小数位数。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestStepper({
-  defaultValue: 14,
-  step: 0.2,
-  decimalLength: 1,
-});
+@Entry
+@Component
+struct DemoPage {
+  @State value: number = 1
+  build() {
+    IBestStepper({
+      value: $value,
+      step: 0.2,
+      decimalLength: 1
+    })
+  }
+}
 ```
-
 :::
 
 ### 自定义大小
 
 ![自定义大小](./images/custom-size.png)
 ::: tip
-
-通过 `input-width` 属性设置输入框宽度，通过 `button-size` 属性设置按钮大小和输入框高度。
-
+通过 `inputWidth` 属性设置输入框宽度，通过 `buttonSize` 属性设置按钮大小和输入框高度。
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestStepper({
-  inputWidth: 40,
-  buttonSize: 32,
-});
+@Entry
+@Component
+struct DemoPage {
+  @State value: number = 1
+  build() {
+    IBestStepper({
+      value: $value,
+      inputWidth: 40,
+      buttonSize: 32
+    })
+  }
+}
 ```
-
 :::
 
 ## API
@@ -180,7 +204,7 @@ IBestStepper({
 | min           | 最小值                                      | _string_ \| _number_ | `1` |
 | max           | 最大值                                      | _string_ \| _number_ | `Infinity` |
 | autoFixed     | 是否自动校正超出限制范围的数值                  | _boolean_            | `true`     |
-| defaultValue  | 展示的默认值                                 | _string_ \| _number_ | `1`        |
+| defaultValue <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">已废弃</span>| 展示的默认值, `从 2.0.1 开始废弃, 请使用value`          | _string_ \| _number_ | `1`        |
 | step          | 步长，每次点击时改变的值                       | _number_ \| _string_ | `1`        |
 | inputWidth    | 输入框宽度                                   | _number_ \| _string_ | `32`    |
 | buttonSize    | 按钮大小以及输入框高度                         | _number_ \| _string_ | `27`    |
@@ -197,18 +221,12 @@ IBestStepper({
 | validateTime  | 多少毫秒触发自动校验修正，为 `0` 时不修正，单位 `ms`| _number_    | `1000`     |
 | iconSize      | 输入框中图标的宽度                              | _number_ \| _string_ | `20` |
 | buttonRadius  | 按钮的圆角                                     | _number_ \| _string_ | `2`  |
+| value <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span> | 绑定值, 支持双向绑定 | _number_ | `-` |
 
 ### Events
 
-| 事件名   | 说明                 | 事件类型                            |
-| -------- | -------------------- | ----------------------------------- |
-| onChange | 当值变化时触发的事件 | (val: _string_\|_number_) => _void_ |
-| onPlus   | 点击增加按钮时触发   | () => _void_                        |
-| onMinus  | 点击较少按钮时触发   | () => _void_                        |
-
-## 常见问题
-
-### 为什么 value 有时候会变成 string 类型？
-
-这是因为用户输入过程中可能出现小数点或空值，比如 `1.`，这种情况下组件会抛出字符串类型。
-如果希望 value 保持 number 类型，可以在 `onChange` 回调中手动转换。
+| 事件名   | 说明                | 参数类型                            |
+| -------- | ------------------| ----------------------------------- |
+| onChange | 当值变化时触发的事件 | `val: number` |
+| onPlus   | 点击增加按钮时触发   | `-`                        |
+| onMinus  | 点击较少按钮时触发   | `-`                        |

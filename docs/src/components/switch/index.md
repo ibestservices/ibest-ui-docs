@@ -14,115 +14,124 @@ import { IBestSwitch } from "@ibestservices/ibest-ui";
 
 ### 基础用法
 
-![基础用法](./images/basic-switch.png)
+![基础用法](./images/base.png)
 ::: tip
-
 通过 `IBestSwitch` 组件的 `value` 来设置开关的状态，通过 `onChange` 监听状态变化。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestSwitch({
-  value: true,
-  onChange: value => {
-    console.log("switch", value);
-  },
-});
+@Entry
+@Component
+struct DemoPage {
+  @State value: boolean = false
+  build() {
+    IBestSwitch({
+      value: $value
+    })
+  }
+}
 ```
-
 :::
 
 ### 禁用状态
 
-![禁用状态](./images/disabled-switch.png)
+![禁用状态](./images/disabled.png)
 ::: tip
-
 通过 `disabled` 属性来禁用开关，禁用状态下开关不可点击。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestSwitch({
-  loading: true,
-  disabled: true,
-});
-
-IBestSwitch({
-  disabled: true,
-  value: true,
-});
+@Entry
+@Component
+struct DemoPage {
+  @State value1: boolean = true
+	@State value2: boolean = false
+  build() {
+    Column({space: 14}){
+      IBestSwitch({
+        value: $value1,
+        disabled: true
+      })
+      IBestSwitch({
+        value: $value2,
+        disabled: true
+      })
+    }
+  }
+}
 ```
-
 :::
 
 ### 加载状态
 
-![加载状态](./images/loading-switch.png)
+![加载状态](./images/loading.png)
 ::: tip
-
 通过 `loading` 属性来禁用开关，加载状态下开关不可点击。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestSwitch({
-  loading: true,
-  value: true,
-});
-
-IBestSwitch({
-  loading: true,
-  activeColor: "#07c160",
-});
+@Entry
+@Component
+struct DemoPage {
+  @State value1: boolean = true
+	@State value2: boolean = false
+  build() {
+    Column({space: 14}){
+      IBestSwitch({
+        value: $value1,
+        loading: true
+      })
+      IBestSwitch({
+        value: $value2,
+        loading: true,
+        activeColor: '#07c160'
+      })
+    }
+  }
+}
 ```
-
 :::
 
 ### 自定义大小
 
-![自定义大小](./images/size-switch.png)
+![自定义大小](./images/size.png)
 ::: tip
-
 通过 `switchSize` 属性自定义开关的大小。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestSwitch({
-  value: true,
-  switchSize: 40,
-});
+@Entry
+@Component
+struct DemoPage {
+  @State value: boolean = true
+  build() {
+    IBestSwitch({
+      value: $value,
+      switchSize: 20
+    })
+  }
+}
 ```
-
 :::
 
 ### 自定义按钮
 
-![自定义按钮](./images/node-switch.png)
+![自定义按钮](./images/node.png)
 ::: tip
-
 通过 `nodeBuilder` 插槽自定义按钮的内容。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-import { IBestSwitch } from '@ibestservices/ibset-ui'
-
 @Entry
 @Component
-struct SwitchPage {
-  @State arrowDirection: 'left' | 'right' = 'left';
-
+struct DemoPage {
+  @State value: boolean = true
+  @State arrowDirection: 'left' | 'right' = 'left'
   @Builder Arrow(){
     Row(){
       Image($r('app.media.arrow'))
@@ -131,71 +140,59 @@ struct SwitchPage {
         .rotate({
           angle: this.arrowDirection === 'left' ? 0 : -180
         }).animation({
-        duration: 200,
-      })
+          duration: 200
+        })
     }
   }
-
   build(){
     IBestSwitch({
-      value: true,
+      value: $value,
       activeColor: '#db3131',
       nodeBuilder: () => this.Arrow(),
-      onChange: (value) => {
-        this.arrowDirection = value ? 'left' : 'right';
+      onChange: value => {
+        this.arrowDirection = value ? 'left' : 'right'
       }
     })
   }
 }
-
 ```
-
 :::
 
 ### 异步控制
 
-![异步控制](./images/async-switch.png)
+![异步控制](./images/async.png)
 ::: tip
-
 当需要异步控制开关状态时，可以在 `onBeforeChange` 事件的回调函数中返回一个 `Promise` 。如果 `Promise` 状态为 `resolve` ，则按钮状态变化将继续进行；如果状态为 `reject` ，则将阻止按钮状态的变化。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestSwitch({
-  value: true,
-  onBeforeChange: () => {
-    return new Promise((resolve, reject) => {
-      AlertDialog.show({
-        title: "提示",
-        message: "确定更改状态吗",
-        autoCancel: true,
-        alignment: DialogAlignment.Bottom,
-        offset: { dx: 0, dy: -20 },
-        gridCount: 3,
-        primaryButton: {
-          value: "取消",
-          action: () => {
-            reject("");
-          },
-        },
-        secondaryButton: {
-          value: "确认",
-          action: () => {
-            resolve("");
-          },
-        },
-        cancel: () => {
-          reject("");
-        },
-      });
-    });
-  },
-});
+@Entry
+@Component
+struct DemoPage {
+  @State value: boolean = true
+  build() {
+    IBestSwitch({
+      value: $value,
+      onBeforeChange: () => {
+        return new Promise((resolve, reject) => {
+          IBestDialogUtil.open({
+            title: "提示",
+            message: "确定更改状态?",
+            showCancelButton: true,
+            onConfirm: () => {
+              resolve()
+            },
+            onCancel: () => {
+              reject()
+            }
+          })
+        })
+      }
+    })
+  }
+}
 ```
-
 :::
 
 ## API
@@ -204,25 +201,25 @@ IBestSwitch({
 
 | 参数     | 说明       | 类型      | 默认值        |
 | ------- | ---------- | --------- | ----------- |
-| value   | 默认是否选中 非双向绑定，如果要获取最新的值请从 `onChange` 回调中获取 | _boolean_ | `false` |
-| disabled | 是否禁用按钮                          | _boolean_ | `false`  |
-| loading  | 是否显示为加载状态                     | _boolean_ | `false` |
-| switchSize| 大小尺寸                            | _number_  | `26` |
-| activeColor | 打开时的背景色                     | _ResourceColor_  | `#1989fa` |
-| inactiveColor | 关闭时的背景色                   | _ResourceColor_  | `rgba(120, 120, 128, 0.2)` |
-| loadingActiveColor | 打开时的 loading 颜色，默认跟随 `activeColor` | _ResourceColor_  |        |
+| value           | 默认是否选中, 支持双向绑定 | _boolean_ | `false` |
+| disabled        | 是否禁用按钮             | _boolean_ | `false`  |
+| loading         | 是否显示为加载状态        | _boolean_ | `false` |
+| switchSize      | 大小尺寸                | _number_ \| _string_  | `26` |
+| activeColor     | 打开时的背景色           | _ResourceColor_  | `#1989fa` |
+| inactiveColor   | 关闭时的背景色           | _ResourceColor_  | `rgba(120, 120, 128, 0.2)` |
+| loadingActiveColor | 打开时的 loading 颜色，默认跟随 `activeColor`    | _ResourceColor_  |        |
 | loadingInactiveColor | 关闭时的 loading 颜色，默认跟随 `activeColor`  | _ResourceColor_  |        |
 
 ### Events
 
-| 事件名         | 说明                 | 事件类型                   |
-| -------------- | ------------------------------ | -------------------------------------- |
-| onChange       | 开关状态改变的回调事件         | `(value: boolean) => void `   |
-| onBeforeChange | 开关状态改变前的回调事件，接收一个 `Promise` 对象，如果 `Promise` 状态为 `resolve` ，则按钮状态变化将继续进行；如果状态为 `reject` ，则将阻止按钮状态的变化。 | `(value: boolean) => Promise<any>` |
-| onClickSwitch  | 点击开关的回调事 | `(event: ClickEvent) => void`  |
+| 事件名          | 说明                 | 事件类型                   |
+| -------------- | ---------------------------| -------------------------------------- |
+| onChange       | 开关状态改变的回调事件         | `value: boolean`   |
+| onBeforeChange | 开关状态改变前的回调事件，value 为将要改变的状态, 接收一个 `Promise` 对象，如果 `Promise` 状态为 `resolve` ，则按钮状态变化将继续进行；如果状态为 `reject` ，则将阻止按钮状态的变化。 | `(value: boolean) => Promise<boolean>` |
+| onClickSwitch  | 点击开关的回调事 | `event: ClickEvent`  |
 
 ### 插槽
 
 | 插槽名      | 说明             | 类型                      |
-| ----------- | ---------------- | ------------------------- |
-| nodeBuilder | 自定义按钮的内容 | _CustomBuilder \| null_ |
+| ----------- | ---------------| ------------------------- |
+| nodeBuilder | 自定义按钮的内容 | _CustomBuilder_ |

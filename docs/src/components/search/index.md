@@ -3,13 +3,13 @@
 ## 介绍
 
 用于搜索场景的输入框组件。
- 
+
 ## 引入
 
 ```ts
 import { IBestSearch } from "@ibestservices/ibest-ui";
 ```
- 
+
 ## 代码演示
 
 ### 基础用法
@@ -180,8 +180,6 @@ struct DemoPage {
 ```
 :::
 
-
-
 ## API
 
 ### @Props
@@ -189,28 +187,31 @@ struct DemoPage {
 | 参数         | 说明                                          | 类型      | 默认值     |
 | ------------ | ---------------------------------------------| --------- | ---------- |
 | value        | 当前输入的值, 支持双向绑定                       | _string_  | `''` |
-| label        | 输入框左侧文本                                  | _string_  | `''` |
-| placeholder  | 占位文字                                       | _string_  | `请输入搜索关键词` |
-| placeholderColor  | 占位文字颜色                               | _ResourceColor_  | `#c8c9cc` |
+| label        | 输入框左侧文本                                  | _ResourceStr_  | `''` |
+| placeholder  | 占位文字                                       | _ResourceStr_  | `请输入搜索关键词` |
+| placeholderColor  | 占位文字颜色                              | _ResourceColor_  | `#c8c9cc` |
 | contentHeight| 搜索框高度                                     | _number_ \| _string_ | `34` |
 | outBgColor   | 外侧背景色                                     | _ResourceColor_ | `#fff` |
 | innerBgColor | 内侧背景色                                     | _ResourceColor_ | `#f7f8fa` |
 | isRound      | 是否为胶囊搜索框, 优先级大于 `radius`             | _boolean_ |  `false`  |
 | radius       | 圆角大小                                       | _number_ \| _string_ | `0` |
 | leftIcon     | 左侧图标                                       | _ResourceStr_ | `-` |
-| leftIconColor| 左侧图标颜色                                    | _ResourceColor_ |  `#969799`  |
-| clearable    | 是否可清空                                      | _boolean_ |  `true`  |
-| clearIcon    | 清除图标                                        | _ResourceStr_ |  `-`  |
-| clearTrigger | 清除图标显示时机, 可选值 `always` `focus`          | _string_ |  `focus`  |
-| autoFocus    | 是否自定聚焦                                     | _boolean_ |  `false`  |
-| showRightButton| 是否显示右侧按钮                                | _boolean_ |  `false`  |
-| rightButtonText| 右侧按钮文本                                    | _string_ |  `取消`  |
-| disabled     | 是否禁用                                         | _boolean_ |  `false`  |
-| readOnly     | 是否只读                                         | _boolean_ |  `false`  |
+| leftIconColor| 左侧图标颜色                                   | _ResourceColor_ |  `#969799`  |
+| clearable    | 是否可清空                                     | _boolean_ |  `true`  |
+| clearIcon    | 清除图标                                       | _ResourceStr_ |  `-`  |
+| clearTrigger | 清除图标显示时机, 可选值 `always` `focus`         | _string_ |  `focus`  |
+| autoFocus    | 是否自定聚焦                                    | _boolean_ |  `false`  |
+| showRightButton| 是否显示右侧按钮                               | _boolean_ |  `false`  |
+| rightButtonText| 右侧按钮文本                                   | _string_ |  `取消`  |
+| disabled     | 是否禁用                                        | _boolean_ |  `false`  |
+| readOnly     | 是否只读                                        | _boolean_ |  `false`  |
 | enterKeyType | 输入法回车键类型, 详见<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-types-V5#enterkeytype%E6%9E%9A%E4%B8%BE%E8%AF%B4%E6%98%8E" target="__blank">EnterKeyType枚举说明</a> | _EnterKeyType_ |  `Search`  |
 | customRightButton| 自定义右侧按钮 | _CustomBuilder_ | `-` |
-|textColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 输入框文字颜色           | _ResourceColor_ |  `#323233`  |
-
+|textColor     | 输入框文字颜色           | _ResourceColor_ |  `#323233`  |
+|labelColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 左侧文本颜色             | _ResourceColor_ |  `#323233`  |
+|textFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 输入框文字大小    | _number_ \| _string_ |  `14`  |
+|rightBtnBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 右侧按钮背景色    | _ResourceColor_ |  `#fff`  |
+|rightBtnPressBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 右侧按钮按压背景色 | _ResourceColor_ |  `#f2f3f5`  |
 
 ### Events
 

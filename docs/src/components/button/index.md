@@ -20,34 +20,36 @@ import { IBestButton } from "@ibestservices/ibest-ui";
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestButton({
-  text: "主要按钮",
-  type: "primary",
-});
-
-IBestButton({
-  text: "成功按钮",
-  type: "success",
-});
-
-IBestButton({
-  text: "默认按钮",
-  type: "default",
-});
-
-IBestButton({
-  text: "危险按钮",
-  type: "danger",
-});
-
-IBestButton({
-  text: "警告按钮",
-  type: "warning",
-});
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    Flex({ wrap: FlexWrap.Wrap, space: {main: LengthMetrics.vp(12), cross: LengthMetrics.vp(12)} }) {
+      IBestButton({
+        text: '主要按钮',
+        type: 'primary'
+      })
+      IBestButton({
+        text: '成功按钮',
+        type: 'success'
+      })
+      IBestButton({
+        text: '默认按钮',
+        type: 'default'
+      })
+      IBestButton({
+        text: '危险按钮',
+        type: 'danger'
+      })
+      IBestButton({
+        text: '警告按钮',
+        type: 'warning'
+      })
+    }
+  }
+}
 ```
-
 :::
 
 ### 朴素按钮
@@ -58,21 +60,26 @@ IBestButton({
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestButton({
-  text: "朴素按钮",
-  type: "primary",
-  plain: true,
-});
-
-IBestButton({
-  text: "朴素按钮",
-  plain: true,
-  type: "success",
-});
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    Row({ space: 12 }) {
+      IBestButton({
+        text: '朴素按钮',
+        type: 'primary',
+        plain: true
+      })
+      IBestButton({
+        text: '朴素按钮',
+        plain: true,
+        type: 'success'
+      })
+    }
+  }
+}
 ```
-
 :::
 
 ### 禁用状态
@@ -83,21 +90,26 @@ IBestButton({
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestButton({
-  text: "禁用状态",
-  type: "primary",
-  disabled: true,
-});
-
-IBestButton({
-  text: "禁用状态",
-  disabled: true,
-  type: "success",
-});
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    Row({ space: 12 }) {
+      IBestButton({
+        text: '禁用状态',
+        type: 'primary',
+        disabled: true
+      })
+      IBestButton({
+        text: '禁用状态',
+        type: 'success',
+        disabled: true
+      })
+    }
+  }
+}
 ```
-
 :::
 
 ### 加载状态
@@ -108,21 +120,26 @@ IBestButton({
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestButton({
-  type: "primary",
-  loading: true,
-});
-
-IBestButton({
-  text: "加载状态",
-  loadingText: "加载中...",
-  type: "success",
-  loading: true,
-});
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    Row({ space: 12 }) {
+      IBestButton({
+        loading: true,
+        type: 'primary',
+      })
+      IBestButton({
+        text: '加载状态',
+        loadingText: '加载中...',
+        type: 'success',
+        loading: true
+      })
+    }
+  }
+}
 ```
-
 :::
 
 ### 按钮形状
@@ -135,17 +152,25 @@ IBestButton({
 ::: details 点我查看代码
 
 ```ts
-IBestButton({
-  text: "方形按钮",
-  type: "primary",
-  square: true,
-});
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    Row({ space: 12 }) {
+      IBestButton({
+        text: "方形按钮",
+        type: "primary",
+        square: true,
+      });
 
-IBestButton({
-  text: "圆形按钮",
-  type: "success",
-  round: true,
-});
+      IBestButton({
+        text: "圆形按钮",
+        type: "success",
+        round: true,
+      });
+    }
+  }
+}
 ```
 
 :::
@@ -158,47 +183,35 @@ IBestButton({
 :::
 
 ::: details 点我查看代码
-
 ```ts
-import { IBestButton } from "@ibestservices/ibest-ui";
-
-@Builder function Arrow(color = '#fff'){
-  Image($r('app.media.title_back'))
-    .width(20)
-    .fillColor(color)
-
-}
-
 @Entry
 @Component
 struct ButtonPage {
+  @Builder Arrow(){
+    Image($r('app.media.title_back'))
+      .width(16)
+  }
   build(){
-    // ...
-
-    IBestButton({
-      type: 'primary',
-      iconBuilder: Arrow
-    })
-
-    IBestButton({
-      text: '按钮',
-      type: 'primary',
-      iconBuilder: Arrow
-    })
-
-    IBestButton({
-      plain: true,
-      text: '按钮',
-      type: 'default',
-      iconBuilder: Arrow.bind(this, '#4B72EF')
-    })
-
-    // ...
+    Row({ space: 12 }) {
+      IBestButton({
+        type: 'primary',
+        icon: 'plus'
+      })
+      IBestButton({
+        text: '按钮',
+        type: 'primary',
+        icon: $r('app.media.title_back')
+      })
+      IBestButton({
+        plain: true,
+        text: '按钮',
+        type: 'default',
+        iconBuilder: this.Arrow
+      })
+    }
   }
 }
-
 ```
-
 :::
 
 ### 按钮尺寸
@@ -209,56 +222,72 @@ struct ButtonPage {
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestButton({
-  text: "大号按钮",
-  type: "primary",
-  buttonSize: "large",
-});
-
-IBestButton({
-  type: "primary",
-  text: "普通按钮",
-});
-
-IBestButton({
-  text: "小型按钮",
-  type: "primary",
-  buttonSize: "small",
-});
-
-IBestButton({
-  text: "迷你按钮",
-  type: "primary",
-  buttonSize: "mini",
-});
+@Entry
+@Component
+struct ButtonPage {
+  build(){
+    Row({ space: 12 }) {
+      IBestButton({
+        text: '大号按钮',
+        type: 'primary',
+        buttonSize: 'large'
+      })
+      IBestButton({
+        type: 'primary',
+        text: '普通按钮',
+      })
+      IBestButton({
+        text: '小型按钮',
+        type: 'primary',
+        buttonSize: 'small'
+      })
+      IBestButton({
+        text: '迷你按钮',
+        type: 'primary',
+        buttonSize: 'mini'
+      })
+    }
+  }
+}
 ```
-
 :::
 
-### 自定义颜色
+### 自定义样式
 
-![自定义颜色](./images/color-btn.png)
+![自定义样式](./images/cutom-style.png)
 ::: tip
 通过 `color` 属性可以自定义按钮的颜色。
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestButton({
-  text: "自定义颜色按钮",
-  color: "#7232dd",
-});
-
-IBestButton({
-  text: "自定义颜色按钮",
-  plain: true,
-  color: "#7232dd",
-});
+@Entry
+@Component
+struct ButtonPage {
+  build(){
+    Row({space: 12}) {
+      IBestButton({
+        text: '颜色',
+        color: "#7232dd"
+      })
+      IBestButton({
+        text: '字体色',
+        fontColor: "#7232dd"
+      })
+      IBestButton({
+        text: '边框',
+        btnBorderColor: "red"
+      })
+      IBestButton({
+        type: "primary",
+        text: '圆角',
+        btnBorderRadius: 16
+      })
+    }
+  }
+}
 ```
-
 :::
 
 ### 自定义大小
@@ -269,46 +298,54 @@ IBestButton({
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestButton({
-  text: "自定义大小按钮",
-  btnWidth: 300,
-  btnHeight: 80,
-  btnFontSize: 32,
-});
+@Entry
+@Component
+struct ButtonPage {
+  build(){
+    IBestButton({
+      text: "自定义大小按钮",
+      btnWidth: 150,
+      btnHeight: 40,
+      btnFontSize: 16
+    })
+  }
+}
 ```
-
 :::
 
 ## API
 
 ### @Props
 
-| 参数         | 说明                                                               | 类型            | 默认值      |
-| ------------ | ------------------------------------------------------------------| -------------- | -----------|
-| type         | 类型，可选值为 `primary` `success` `warning` `danger`               | _string_  | `default`   |
-| buttonSize   | 尺寸，可选值为 `large` `small` `mini`                               | _string_   | `normal`    |
-| btnWidth | 按钮宽度，不写的话则使用 `buttonSize` 尺寸    | _string_ \| _number_ | `-` |
-| btnHeight| 按钮高度，不写的话则使用 `buttonSize` 尺寸    | _string_ \| _number_ | `-` |
-| btnFontSize | 按钮文字大小，不写的话则使用 `buttonSize` 尺寸 | _string_ \| _number_ | `-` |
-| text         | 按钮文字                                                            | _string_   |             |
-| color        | 按钮颜色                                                            | _ResourceColor_  |       |
-| iconPosition | 图标展示位置，可选值为 right                                           | _string_  | `left`      |
-| plain        | 是否为朴素按钮                                                        | _boolean_  | `false`    |
-| square       | 是否为方形按钮                                                        | _boolean_ | `false`     |
-| round        | 是否为圆形按钮                                                        | _boolean_ | `false`     |
-| disabled     | 是否禁用按钮                                                          | _boolean_ | `false`     |
-| hairline     | 是否使用细边框                                                        | _boolean_ | `false`     |
-| loading      | 是否显示为加载状态                                                     | _boolean_   | `false`   |
-| loadingText  | 加载状态提示文字                                                       |_string_ |             |
-| loadingSize  | 加载图标大小，如果为-1 默认跟随字体大小                                   | _number_  | `-1`       |
+| 参数         | 说明                                                | 类型       | 默认值      |
+| ------------ | ---------------------------------------------------| ----------| -----------|
+| type         | 类型，可选值为 `primary` `success` `warning` `danger`| _string_  | `default`   |
+| buttonSize   | 尺寸，可选值为 `large` `small` `mini`                | _string_  | `normal`    |
+| btnWidth     | 按钮宽度，不写的话则使用 `buttonSize` 尺寸             | _string_ \| _number_ | `-` |
+| btnHeight    | 按钮高度，不写的话则使用 `buttonSize` 尺寸             | _string_ \| _number_ | `-` |
+| btnFontSize  | 按钮文字大小，不写的话则使用 `buttonSize` 尺寸          | _string_ \| _number_ | `-` |
+| text         | 按钮文字                                            | _ResourceStr_   |   `''`   |
+| color        | 按钮颜色                                            | _ResourceColor_ |     |
+| iconPosition | 图标展示位置，可选值为 right                          | _string_  | `left`    |
+| plain        | 是否为朴素按钮                                       | _boolean_ | `false`  |
+| square       | 是否为方形按钮                                       | _boolean_ | `false`  |
+| round        | 是否为圆形按钮                                       | _boolean_ | `false`  |
+| disabled     | 是否禁用按钮                                         | _boolean_ | `false`  |
+| hairline     | 是否使用细边框                                       | _boolean_ | `false`  |
+| loading      | 是否显示为加载状态                                    | _boolean_ | `false`  |
+| loadingText  | 加载状态提示文字                                      | _ResourceStr_   |          |
+| loadingSize  | 加载图标大小，如果为-1 默认跟随字体大小                  | _string_ \| _number_  | `-1`      |
+| icon <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 按钮图标                   | _ResourceStr_ | `-` |
+| fontColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 按钮文字颜色                | _ResourceColor_ | `-` |
+| btnBorderColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 按钮边框颜色    | _ResourceColor_ | `-` |
+| btnBorderRadius <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 按钮圆角        | _string_ \| _number_ | `-` |
 
 ### Events
 
 | 事件名     | 说明                                             | 回调参数                         |
 | ---------- | -----------------------------------------------| -------------------------------- |
-| onClickBtn | 点击按钮的回调事件，按钮状态不为加载或禁用时触发       | `event?: ClickEvent` |
+| onClickBtn | 点击按钮的回调事件，按钮状态不为加载或禁用时触发       | `event: TouchEvent` |
 
 ### 插槽
 

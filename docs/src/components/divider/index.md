@@ -156,7 +156,7 @@ struct DemoPage {
 | vertical     | 是否为垂直方向                         | _boolean_  | `false` |
 | lineHeight   | 分割线高度, 仅垂直时有效                | _number_ \| _string_  | `14` |
 | lineColor    | 分割线颜色                            | _ResourceColor_ |  `#ebedf0` |
-| text         | 文本内容, 仅水平时生效                  | _string_  | `''` |
+| text         | 文本内容, 仅水平时生效                  | _ResourceStr_  | `''` |
 | color        | 文本内容颜色, 仅水平时生效               | _ResourceColor_ | `#969799` |
 | textFontSize | 文本字体大小, 仅水平时生效               | _number_ \| _string_  | `14` |
 | textLineSpace| 文本与线段间距, 仅水平时生效             | _number_ \| _string_  | `16` |

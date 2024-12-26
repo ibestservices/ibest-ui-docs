@@ -127,9 +127,10 @@ IBestWatermark({
 | fontFamily       | 文字字体                                   | _string_ | `sans-serif` |
 | fontColor        | 文字颜色                                   | _string \| number \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvasgradient-V5" target="__blank">CanvasGradient</a> \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvaspattern-V5#canvaspattern" target="__blank">CanvasPattern</a>_ | <div style="padding: 2px 4px; background: #000; color: #fff; border-radius: 4px">#000000</div> |
 | waterMarkZIndex  | 水印的 z-index                             | _number_ | `-1`      |
+| bgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 背景色   | _ResourceColor_ | `#fff` |
 
 ### 插槽
 
 | 插槽名         | 说明             | 类型                      |
 | -------------- | ---------------- | ------------------------- |
-| defaultBuilder | 水印包裹的子组件 | _CustomBuilder_ \| _null_ |
+| defaultBuilder | 水印包裹的内容 | _CustomBuilder_ |

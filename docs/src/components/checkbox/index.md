@@ -12,546 +12,471 @@ import { IBestCheckbox, IBestCheckboxGroup } from "@ibestservices/ibest-ui";
 
 ## 代码演示
 
-::: tip
 
-- 通过 `IBestCheckboxGroup` 的 `onChange` 事件获取当前选中的 `IBestCheckbox` 的 `name` 。
-- 通过 `group` 属性将 `IBestCheckboxGroup` 与 `IBestCheckbox` 组件关联起来， `group` 的值具有**全局唯一性**或已入栈的页面**唯一性**，与 `IBestRadio` 组件的 `group` 值不冲突。
-- 通过 `IBestCheckbox` 组件的 `value` 来设置默认选中。
-- `IBestCheckbox` 组件的 `name` 值在同一 `group` 中需具备**唯一性**。
-
-:::
 
 ### 基础用法
 
 ![基础用法](./images/basic-checkbox.png)
 ::: tip
-
-- 通过 `IBestCheckbox` 的 `onChange` 事件来响应选中状态的变化。
-- 通过 `IBestCheckbox` 组件的 `value` 来设置默认选中。
-
+• 通过 `group` 属性绑定 `IBestCheckboxGroup` 与 `IBestCheckbox` 的关系, `group` 值需具有**全局唯一性**。   
+• `IBestCheckbox` 组件的 `name` 值在同一 `group` 中需具备**唯一性**。
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestCheckbox({
-  value: true,
-  label: "复选框",
-  name: "checkbox1",
-  onChange: value => {
-    console.log("checkbox1", value);
-  },
-});
+@Entry
+@Component
+struct DemoPage {
+  @State isChecked: boolean = true
+  build() {
+    IBestCheckbox({
+      value: this.isChecked,
+      label: this.isChecked + "",
+      onChange: (checked: boolean) => {
+        this.isChecked = checked
+      }
+    })
+  }
+}
 ```
-
 :::
 
 ### 禁用状态
 
 ![禁用状态](./images/disabled-checkbox.png)
 ::: tip
-
 通过设置 `disabled` 属性可以禁用复选框。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestCheckbox({
-  value: true,
-  disabled: true,
-  label: "复选框",
-  name: "checkbox2",
-});
-IBestCheckbox({
-  value: false,
-  disabled: true,
-  label: "复选框",
-  name: "checkbox3",
-});
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    Column(){
+      IBestCheckbox({
+        value: false,
+        disabled: true,
+        label: "复选框"
+      })
+      IBestCheckbox({
+        value: true,
+        disabled: true,
+        label: "复选框"
+      })
+    }
+  }
+}
 ```
-
 :::
 
 ### 自定义形状
 
 ![自定义形状](./images/shape-checkbox.png)
 ::: tip
-
 将 `shape` 属性设置为 `square`，复选框的形状会变成方形。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestCheckbox({
-  value: true,
-  shape: "square",
-  label: "自定义形状a",
-  name: "checkbox4",
-});
-
-IBestCheckbox({
-  value: false,
-  shape: "square",
-  label: "自定义形状b",
-  name: "checkbox5",
-});
+@Entry
+@Component
+struct DemoPage {
+  @State isChecked: boolean = true
+  build() {
+    IBestCheckbox({
+      value: this.isChecked,
+      shape: 'square',
+      label: "自定义形状",
+      onChange: (checked: boolean) => {
+        this.isChecked = checked
+      }
+    })
+  }
+}
 ```
-
 :::
 
 ### 自定义颜色
 
 ![自定义颜色](./images/color-checkbox.png)
 ::: tip
-
 通过 `checkedColor` 属性设置选中状态的图标颜色。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestCheckbox({
-  value: true,
-  checkedColor: "#ee0a24",
-  shape: "square",
-  label: "自定义颜色a",
-  name: "checkbox5",
-});
-IBestCheckbox({
-  value: true,
-  checkedColor: "#ee0a24",
-  label: "自定义颜色b",
-  name: "checkbox6",
-});
+@Entry
+@Component
+struct DemoPage {
+  @State isChecked: boolean = true
+  build() {
+    IBestCheckbox({
+      value: this.isChecked,
+      checkedColor: '#ee0a24',
+      label: '自定义颜色',
+      onChange: (checked: boolean) => {
+        this.isChecked = checked
+      }
+    })
+  }
+}
 ```
-
 :::
 
 ### 自定义大小
 
 ![自定义大小](./images/size-checkbox.png)
 ::: tip
-
 通过 `iconSize` 属性可以自定义图标与文字的大小。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestCheckbox({
-  value: true,
-  iconSize: 60,
-  label: "自定义大小",
-  name: "checkbox7",
-});
+@Entry
+@Component
+struct DemoPage {
+  @State isChecked: boolean = true
+  build() {
+    IBestCheckbox({
+      value: this.isChecked,
+      iconSize: 30,
+      label: '自定义大小',
+      onChange: (checked: boolean) => {
+        this.isChecked = checked
+      }
+    })
+  }
+}
 ```
-
 :::
 
 ### 左侧文本
 
 ![左侧文本](./images/label-position-checkbox.png)
 ::: tip
-
 将 `labelPosition` 属性设置为 `'left'`，可以将文本位置调整到复选框左侧。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestCheckbox({
-  value: true,
-  labelPosition: "left",
-  label: "左侧文本",
-  name: "checkbox8",
-});
+@Entry
+@Component
+struct DemoPage {
+  @State isChecked: boolean = true
+  build() {
+    IBestCheckbox({
+      value: this.isChecked,
+      labelPosition: 'left',
+      label: '左侧文本',
+      onChange: (checked: boolean) => {
+        this.isChecked = checked
+      }
+    })
+  }
+}
 ```
-
 :::
 
 ### 禁用文本点击
 
 ![禁用文本点击](./images/label-disabled-checkbox.png)
 ::: tip
-
 设置 `labelDisabled` 属性后，点击图标以外的内容不会触发复选框切换。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestCheckbox({
-  value: true,
-  label: "复选框",
-  labelDisabled: true,
-  name: "checkbox9",
-});
+@Entry
+@Component
+struct DemoPage {
+  @State isChecked: boolean = true
+  build() {
+    IBestCheckbox({
+      value: this.isChecked,
+      label: '左侧文本',
+      labelDisabled: true,
+      onChange: (checked: boolean) => {
+        this.isChecked = checked
+      }
+    })
+  }
+}
 ```
-
 :::
 
 ### 复选框组
 
 ![复选框组](./images/checkbox-group.png)
-::: tip
-
-- 通过 `IBestCheckboxGroup` 的 `onChange` 事件获取当前选中的 `checkbox` 的 `name` 。
-- 通过 `IBestCheckbox` 组件的 `value` 来设置默认选中。
-
-:::
 
 ::: details 点我查看代码
-
 ```ts
-IBestCheckboxGroup({
-  group: "group1",
-  onChange: checkboxNames => {
-    console.log(JSON.stringify(checkboxNames));
-  },
-});
-IBestCheckbox({
-  value: true,
-  group: "group1",
-  label: "复选框a",
-  name: "checkbox10",
-});
-
-IBestCheckbox({
-  value: true,
-  group: "group1",
-  label: "复选框b",
-  name: "checkbox11",
-});
+@Entry
+@Component
+struct DemoPage {
+  @State group: string = "group"
+  @State activeList: string[] = ["1", "2"]
+  build() {
+    IBestCheckboxGroup({ group: this.group, activeList: $activeList }){
+      IBestCheckbox({
+        group: this.group,
+        label: '复选框1',
+        name: '1'
+      })
+      IBestCheckbox({
+        group: this.group,
+        label: '复选框2',
+        name: '2'
+      })
+    }
+  }
+}
 ```
-
 :::
 
 ### 水平排列
 
 ![水平排列](./images/row-checkbox-group.png)
-::: tip
-
-给组件包裹一层 `Row` 组件，复选框组会变成水平排列。
-
-:::
 
 ::: details 点我查看代码
-
 ```ts
-IBestCheckboxGroup({
-  group: "group3"
-});
-
-Row(){
-  IBestCheckbox({
-    value: true,
-    group: "group3",
-    label: "复选框a",
-    name: "checkbox10",
-  });
-
-  IBestCheckbox({
-    value: true,
-    group: "group3",
-    label: "复选框b",
-    name: "checkbox11",
-  });
+@Entry
+@Component
+struct DemoPage {
+  @State group: string = "group"
+  @State activeList: string[] = ["1", "2"]
+  build() {
+    IBestCheckboxGroup({ group: this.group, activeList: $activeList, placeDirection: Axis.Horizontal }){
+      IBestCheckbox({
+        group: this.group,
+        label: '复选框1',
+        name: '1'
+      })
+      IBestCheckbox({
+        group: this.group,
+        label: '复选框2',
+        name: '2'
+      })
+    }
+  }
 }
-
 ```
-
 :::
 
 ### 限制最大可选数
 
 ![限制最大可选数](./images/max-checkbox-group.png)
 ::: tip
-
 通过 `max` 属性可以限制复选框组的最大可选数。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestCheckboxGroup({
-  group: "group2",
-  max: 2
-});
-
-Row(){
-  IBestCheckbox({
-    value: true,
-    group: "group2",
-    label: "复选框a",
-    name: "checkbox10",
-  });
-
-  IBestCheckbox({
-    value: true,
-    group: "group2",
-    label: "复选框b",
-    name: "checkbox11",
-  });
-
-  IBestCheckbox({
-    value: true,
-    group: "group2",
-    label: "复选框c",
-    name: "checkbox11",
-  });
-}
-
-```
-
-:::
-
-### 全选与反选
-
-![全选与反选](./images/toggle-checkbox-group.png)
-::: tip
-
-通过 `CheckboxGroup` 实例上的 `toggleAll` 方法可以实现全选与反选。
-
-:::
-
-::: details 点我查看代码
-
-```ts
-import { IBestCheckboxGroup, IBestCheckbox, CheckboxGroupContext } from '@ibestservices/ibset-ui'
-
 @Entry
 @Component
-struct CheckboxPage {
-  /**
-   * 全选反选的chekboxGroup的this指向
-   */
-  checkboxGroupContext: CheckboxGroupContext | null = null;
-
-  build(){
-    Column(){
-      IBestCheckboxGroup({
-        group: 'group4',
-        // 代表子组件和当前组件加载完成
-        onReady: (checkboxGroupContext) => {
-          this.checkboxGroupContext = checkboxGroupContext
-        }
-      })
-
+struct DemoPage {
+  @State group: string = "group"
+  @State activeList: string[] = ["1", "2"]
+  build() {
+    IBestCheckboxGroup({ group: this.group, activeList: $activeList, max: 2 }){
       IBestCheckbox({
-        group: 'group4',
-        label: '复选框a',
-        name: 'checkbox1'
+        group: this.group,
+        label: '复选框1',
+        name: '1'
       })
-
       IBestCheckbox({
-        group: 'group4',
-        label: '复选框b',
-        name: 'checkbox2',
+        group: this.group,
+        label: '复选框2',
+        name: '2'
       })
-
       IBestCheckbox({
-        group: 'group4',
-        label: '复选框c',
-        name: 'checkbox3',
+        group: this.group,
+        label: '复选框3',
+        name: '3'
       })
-
-      Row(){
-        IBestButton({
-          text: '全选',
-          type: 'primary',
-          onClickBtn: () => {
-            this.checkboxGroupContext.toggleAll(true)
-          }
-        })
-
-        IBestButton({
-          text: '反选',
-          type: 'warning',
-          onClickBtn: () => {
-            this.checkboxGroupContext.toggleAll()
-          }
-        })
-
-        IBestButton({
-          text: '取消选中',
-          onClickBtn: () => {
-            this.checkboxGroupContext.toggleAll(false)
-          }
-        })
-      }
     }
   }
 }
 ```
+:::
 
+### 全选与反选
+
+![全选与反选](./images/toggle.gif)
+::: tip
+通过 `controller` 上的 `toggleAll` 方法可以实现全选与反选。
+:::
+
+::: details 点我查看代码
+```ts
+import { IBestCheckboxGroupController } from '@ibestservices/ibset-ui'
+@Entry
+@Component
+struct CheckboxPage {
+  @State group: string = "group"
+  @State activeList: string[] = ["1"]
+  private controller: IBestCheckboxGroupController = new IBestCheckboxGroupController()
+  build(){
+    Column(){
+      IBestCheckboxGroup({ group: this.group, activeList: $activeList, controller: this.controller }){
+        IBestCheckbox({
+          group: this.group,
+          label: '复选框1',
+          name: '1'
+        })
+        IBestCheckbox({
+          group: this.group,
+          label: '复选框2',
+          name: '2'
+        })
+        IBestCheckbox({
+          group: this.group,
+          label: '复选框3',
+          name: '3'
+        })
+      }
+      Row({space: 12}){
+        IBestButton({
+          text: '全选',
+          type: 'primary',
+          onClickBtn: ()=>{
+            this.controller.toggleAll(true)
+          }
+        })
+        IBestButton({
+          text: '反选',
+          type: 'warning',
+          onClickBtn: ()=>{
+            this.controller.toggleAll()
+          }
+        })
+        IBestButton({
+          text: '取消选中',
+          onClickBtn: ()=>{
+            this.controller.toggleAll(false)
+          }
+        })
+      }.margin({top: 12})
+    }
+  }
+}
+```
 :::
 
 ### 不确定状态
 
 ![不确定状态](./images/indeterminate-checkbox-group.png)
 ::: tip
-
 通过 `indeterminate` 设置复选框是否为不确定状态。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-import { IBestCheckboxGroup, IBestCheckbox, CheckboxGroupContext } from '@ibestservices/ibset-ui'
-
+import { IBestCheckboxGroupController } from '@ibestservices/ibset-ui'
 @Entry
 @Component
 struct CheckboxPage {
-  /**
-   * 不确定状态
-   */
-  @State isIndeterminate: boolean = true;
-  /**
-   * 不确定状态数据是否选中了全部
-   */
-  @State isIndeterminateCheckAll: boolean = false;
-  /**
-   * 全选反选的chekboxGroup的this指向
-   */
-  checkboxGroupIndeterminateContext: CheckboxGroupContext | null = null;
-
+  @State group: string = "group"
+  @State activeList: string[] = ["2"]
+  @State isIndeterminate: boolean = true
+  @State isIndeterminateCheckAll: boolean = false
+  private controller: IBestCheckboxGroupController = new IBestCheckboxGroupController()
   build(){
-    // ...
-
     Column() {
       IBestCheckbox({
         value: this.isIndeterminateCheckAll,
         label: '全选',
         indeterminate: this.isIndeterminate,
-        name: 'checkbox10',
-        onChange: (checked) => {
-          this.checkboxGroupIndeterminateContext?.toggleAll(checked)
+        onChange: checked => {
+          this.controller.toggleAll(checked)
         }
       })
-    }
-
-    IBestCheckboxGroup({
-      group: 'group5',
-      onChange: (checkedNames) => {
-        const length = checkedNames.length
-        this.isIndeterminate = length < 2 && length > 0;
-        this.isIndeterminateCheckAll = length === 2
-      },
-      onReady: (checkboxGroupContext) => {
-        this.checkboxGroupIndeterminateContext = checkboxGroupContext
+      IBestCheckboxGroup({
+        group: this.group,
+        activeList: $activeList,
+        controller: this.controller,
+        onChange: checkedNames => {
+          const length = checkedNames.length
+          this.isIndeterminate = length < 2 && length > 0
+          this.isIndeterminateCheckAll = length === 2
+        }
+      }){
+        IBestCheckbox({
+          group: this.group,
+          label: '复选框1',
+          name: '1'
+        })
+        IBestCheckbox({
+          group: this.group,
+          label: '复选框2',
+          name: '2'
+        })
       }
-    })
-
-    IBestCheckbox({
-      group: 'group5',
-      label: '复选框a',
-      name: 'checkbox10'
-    })
-
-    IBestCheckbox({
-      value: true,
-      group: 'group5',
-      label: '复选框b',
-      name: 'checkbox11',
-    })
-
-    // ...
+    }
   }
 }
 ```
-
 :::
 
 ### 搭配单元格组件使用
 
 ![搭配单元格组件使用](./images/cell-checkbox-group.png)
-::: tip
-
-搭配单元格组件使用时，需要再引入 `IBestCell` 和 `IBestCellGroup` 组件。
-
-:::
 
 ::: details 点我查看代码
-
 ```ts
-import { IBestCheckboxGroup, IBestCheckbox, CheckboxGroupContext } from '@ibestservices/ibset-ui'
-
 @Entry
 @Component
 struct CheckboxPage {
-  /**
-   * 搭配单元格组件选中的name
-   */
-  @State cellCheckedNames: string[] = [];
-
-  /**
-   * 最大可选数量
-   */
-  cellCheckedMaxNum = 2
-
+  @State group: string = "group"
+  @State activeList: string[] = []
+  @State cellCheckedMaxNum: number = 2
   @Builder CellCheckbox(name, group){
-    IBestCheckbox({
-      name,
-      group,
-      value: this.cellCheckedNames.includes(name)
-    })
+    IBestCheckbox({ name, group })
   }
-
   handleClickCell(name){
-    const index = this.cellCheckedNames.indexOf(name)
+    const index = this.activeList.indexOf(name)
     if(index > -1){
-      this.cellCheckedNames.splice(index ,1)
+      this.activeList.splice(index, 1)
     }else{
-      (this.cellCheckedMaxNum > this.cellCheckedNames.length) && this.cellCheckedNames.push(name)
+      this.activeList.push(name)
     }
   }
-
   build(){
     Column() {
       IBestCheckboxGroup({
-        group: 'group17',
+        group: this.group,
+        activeList: $activeList,
         max: this.cellCheckedMaxNum,
-        onChange: (names)=>{
-          console.log(JSON.stringify(names))
-        }
-      })
-
-      IBestCell({
-        clickable: true,
-        title: '复选框1',
-        rightIconBuilder: () => this.CellCheckbox('checkbox1-cell', 'group17'),
-        onClickCell: () => this.handleClickCell('checkbox1-cell')
-      })
-
-      IBestCell({
-        clickable: true,
-        title: '复选框2',
-        rightIconBuilder: () => this.CellCheckbox('checkbox2-cell', 'group17'),
-        onClickCell: () => this.handleClickCell('checkbox2-cell')
-      })
-
-      IBestCell({
-        clickable: true,
-        title: '复选框3',
-        hasBorder: false,
-        rightIconBuilder: () => this.CellCheckbox('checkbox3-cell', 'group17'),
-        onClickCell: () => this.handleClickCell('checkbox3-cell')
-      })
+        space: 0
+      }){
+        IBestCell({
+          clickable: true,
+          title: '复选框1',
+          disabled: this.activeList.length >= this.cellCheckedMaxNum && !this.activeList.includes('1'),
+          rightIconBuilder: (): void => this.CellCheckbox('1', this.group),
+          onClickCell: (): void => this.handleClickCell('1')
+        })
+        IBestCell({
+          clickable: true,
+          title: '复选框2',
+          disabled: this.activeList.length >= this.cellCheckedMaxNum && !this.activeList.includes('2'),
+          rightIconBuilder: (): void => this.CellCheckbox('2', this.group),
+          onClickCell: (): void => this.handleClickCell('2')
+        })
+        IBestCell({
+          clickable: true,
+          title: '复选框3',
+          disabled: this.activeList.length >= this.cellCheckedMaxNum && !this.activeList.includes('3'),
+          hasBorder: false,
+          rightIconBuilder: (): void => this.CellCheckbox('3', this.group),
+          onClickCell: (): void => this.handleClickCell('3')
+        })
+      }
     }
   }
 }
 ```
-
 :::
 
 ## API
@@ -562,40 +487,56 @@ struct CheckboxPage {
 | ------------- | -------------------------------------------------------------- | ----- | ------- |
 | name          | 标识符，通常为一个唯一的字符串或数字，同一 `group` 的 `name` 不可重复   | _string_ \| _number_ |    |
 | group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`   | _string_        |         |
-| label         | 显示的文本                                                       | _string_        |         |
-| value         | 默认是否选中 非双向绑定，如果要获取最新的值请从 `onChange` 回调中获取    | _string_        |         |
-| iconSize      | 图标大小                                                         | _number_ \| _string_ | `18`  |
+| label         | 显示的文本                                                       | _ResourceStr_   |         |
+| value         | 默认是否选中 非双向绑定，如果要获取最新的值请从 `onChange` 回调中获取    | _boolean_       | `false` |
+| iconSize      | 图标大小                                                         | _number_ \| _string_ | `18`|
 | shape         | 形状，可选值为 `square` `dot`                                     | _string_        | `round` |
 | disabled      | 是否为禁用状态                                                    | _boolean_       | `false` |
 | labelDisabled | 是否禁用文本内容点击                                               | _boolean_       | `false` |
 | labelPosition | 文本位置，可选值为 `left`                                          | _string_        | `right` |
 | checkedColor  | 选中状态颜色                                                      | _ResourceColor_ |         |
 | indeterminate | 是否为不确定状态                                                   | _boolean_     | `false` |
-|labelFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 文本字体大小                                                      | _number_ \| _string_ | `16`   |
-
-### CheckboxGroup @Props
-
-| 参数  | 说明                                                                     | 类型     | 默认值 |
-| ----- | ------------------------------------------------------------------------ | -------- | ------ |
-| group | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性` | _string_ |        |
-| max   | 最大可选数，`0` 为无限制                                                 | _number_ |        |
+| labelFontSize | 文本字体大小                                                      | _number_ \| _string_ | `16`|
 
 ### Checkbox Events
 
-| 事件名   | 说明                   | 事件类型                       |
-| -------- | ---------------------- | ------------------------------ |
-| onChange | 选中状态改变的回调事件 | (checked: _boolean_) => _void_ |
+| 事件名   | 说明                   | 参数类型                       |
+| -------- | ---------------------| ------------------------------ |
+| onChange | 选中状态改变的回调事件   | `checked: boolean` |
+
+### Checkbox 插槽
+
+| 插槽名         | 说明                        | 参数类型    |
+| --------------| ---------------------------| --------- |
+| defaultBuilder | `label` 的插槽，优先级大于 `label` 属性  | `data: { checked: boolean, disabled: boolean }` |
+| iconBuilder    | 自定义图标插槽，需要自己调整选中与未选中展示的 `UI` 内容 | `data: { checked: boolean, disabled: boolean }` |
+
+### CheckboxGroup @Props
+
+| 参数  | 说明                                                           | 类型     | 默认值 |
+| ----- | -------------------------------------------------------------| -------- | ------ |
+| group | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性` | _string_ |  `''`  |
+| max   | 最大可选数，`0` 为无限制                                         | _number_ |  `0`   |
+| activeList <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 激活的标识列表, 支持双向绑定              | _string[]_  |  `[]`  |
+| placeDirection <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 排列方向                    | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#axis" target="__blank">Axis</a>_   | `Axis.Vertical` |
+| space <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 间距                                       | _string_ \| _number_ | `12` |
+| controller <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 组件实例                               | _IBestCheckboxGroupController_ | `-` |
+
+### IBestCheckboxGroupController 方法
+
+| 方法名     |       说明                | 参数类型             |
+| --------- | -------------------------| --------------------|
+| toggleAll | 全选与反选, true 为选中，false 为取消选中，不传参为取反 | `isSelectAll?: boolean` |
 
 ### CheckboxGroup Events
 
-| 事件名   | 说明                                                                 | 事件类型                                                 |
-| -------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
-| onChange | 选中状态改变的回调事件，回调参数是选中的 `checkbox` 组件的 `name` 值 | (checkboxNames: _string[]_) => _void_                    |
-| onReady  | 初始化完成的回调                                                     | (checkboxGroupContext: _CheckboxGroupContext_) => _void_ |
+| 事件名    | 说明                            | 参数类型                  |
+| -------- | ------------------------------ | ------------------------ |
+| onChange | 选中状态改变的回调事件，回调参数是选中的 `checkbox` 组件的 `name` 值 | `checkboxNames: string[]`  |
+| onReady <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">已废弃</span>| 初始化完成的回调, `从2.0.1开始废弃, 请使用 controller`     | `checkboxGroupContext: CheckboxGroupContext` |
 
-### Checkbox @BuilderParam 插槽
+### CheckboxGroup 插槽
 
-| 插槽名         | 说明                                                     | 类型                                                         |
-| -------------- | -------------------------------------------------------- | ------------------------------------------------------------ |
-| defaultBuilder | `label` 的插槽，优先级大于 `label` 属性                  | (data: { checked: _boolean_, disabled: _boolean_ }) => _any_ |
-| iconBuilder    | 自定义图标插槽，需要自己调整选中与未选中展示的 `UI` 内容 | (data: { checked: _boolean_, disabled: _boolean_ }) => _any_ |
+| 插槽名         | 说明                        | 参数类型    |
+| --------------| ---------------------------| --------- |
+| defaultBuilder | 默认内容插槽                | `-` |

@@ -2,8 +2,7 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "IBest-UI@HarmonyOS",
-  description:
-    "IBest-UI是一个简单易用的鸿蒙开源UI库，基于鸿蒙API12，参照vant进行组件封装设计，方便，快捷，高效",
+  description: "IBest-UI是一个轻量、简单易用、可定制主题、支持深色模式和浅色模式的鸿蒙开源UI组件库。",
   srcDir: "./src",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
@@ -42,7 +41,7 @@ export default defineConfig({
         activeMatch: "/components/",
       },
       {
-        text: "v2.0.0", link: ""
+        text: "v2.0.1", link: ""
       }
     ],
     sidebar: [
@@ -52,12 +51,11 @@ export default defineConfig({
           { text: "介绍", link: "/guide/home/" },
           { text: "快速上手", link: "/guide/quickstart/" },
           { text: "全局配置", link: "/guide/config-unit/" },
-          { text: "自定义主题", link: "/guide/custom-theme/" },
-          { text: "进阶用法", link: "/guide/advanced-usage/" },
+          { text: "自定义样式", link: "/guide/custom-theme/" },
+          { text: "颜色模式", link: "/guide/color-mode/" },
           { text: "常见问题", link: "/guide/faq/" },
           { text: "更新日志", link: "/guide/changelog/" },
-          { text: "贡献指南", link: "/guide/contribution/" },
-          { text: "迭代计划", link: "/guide/interation-plan/" },
+          { text: "贡献指南", link: "/guide/contribution/" }
         ],
       },
       {
@@ -106,7 +104,7 @@ export default defineConfig({
           },
           {
             text: `PasswordInput 密码输入框 `,
-            link: "/components/passwordInput/",
+            link: "/components/passwordinput/",
           },
           { text: `Picker 选择器 `, link: "/components/picker/" },
           { text: `PickerGroup 选择器组`, link: "/components/pickergroup/" },
@@ -162,29 +160,33 @@ export default defineConfig({
             text: `PullRefresh 下拉刷新`,
             link: "/components/pullrefresh/",
           },
+          {
+            text: `SwipeCell 滑动单元格 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>`,
+            link: "/components/swipecell/",
+          },
         ],
       },
       {
         text: "展示组件",
         items: [
           {
-            text: `Badge 徽标 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>`,
+            text: `Badge 徽标`,
             link: "/components/badge/",
           },
           {
-            text: `CircleProgress 环形进度条 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>`,
-            link: "/components/circleProgress/",
+            text: `CircleProgress 环形进度条`,
+            link: "/components/circleprogress/",
           },
           {
-            text: `Collapse 折叠面板 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>`,
+            text: `Collapse 折叠面板`,
             link: "/components/collapse/",
           },
           {
-            text: `CountDown 倒计时 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
-            link: "/components/countDown/",
+            text: `CountDown 倒计时`,
+            link: "/components/countdown/",
           },
           {
-            text: `Divider 分割线 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>`,
+            text: `Divider 分割线`,
             link: "/components/divider/",
           },
           {
@@ -197,7 +199,7 @@ export default defineConfig({
           },
           {
             text: `NoticeBar 通知栏 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
-            link: "/components/noticeBar/",
+            link: "/components/noticebar/",
           },
           {
             text: `Popover 气泡弹出框 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
@@ -209,7 +211,7 @@ export default defineConfig({
           },
           {
             text: `TextEllipsis 文本省略 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
-            link: "/components/textEllipsis/",
+            link: "/components/textellipsis/",
           },
           { text: "Tag 标签", link: "/components/tag/" },
           { text: "Watermark 水印", link: "/components/watermark/" },
@@ -219,12 +221,12 @@ export default defineConfig({
         text: "导航组件",
         items: [
           {
-            text: `NavBar 导航栏 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.19.0</span>`,
-            link: "/components/navBar/",
+            text: `NavBar 导航栏`,
+            link: "/components/navbar/",
           },
           {
             text: `SideBar 侧边导航 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
-            link: "/components/sideBar/",
+            link: "/components/sidebar/",
           },
           {
             text: `Tab 标签页`,

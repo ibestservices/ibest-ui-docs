@@ -20,20 +20,24 @@ import { IBestCell, IBestCellGroup } from "@ibestservices/ibest-ui";
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestCellGroup() {
-  IBestCell({
-    title: '标题',
-    value: '内容'
-  })
-
-  IBestCell({
-    title: '标题',
-    value: '内容',
-    label: '描述信息',
-    hasBorder: false
-  })
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestCellGroup() {
+      IBestCell({
+        title: '标题',
+        value: '内容'
+      })
+      IBestCell({
+        title: '标题',
+        value: '内容',
+        label: '描述信息',
+        hasBorder: false
+      })
+    }
+  }
 }
 ```
 :::
@@ -45,16 +49,22 @@ IBestCellGroup() {
 ::: details 点我查看代码
 
 ```ts
-IBestCellGroup() {
-  IBestCell({ title: 'full', value: '内容', borderSizeType: 'full' })
-  IBestCell({ title: 'center', value: '内容', borderSizeType: 'center' })
-  IBestCell({
-    leftIcon: $r("app.media.icon_like_o"),
-    title: 'right',
-    value: '内容',
-    borderSizeType: 'right'
-  })
-  IBestCell({ title: '占位', value: '内容', hasBorder: false })
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestCellGroup() {
+      IBestCell({ title: 'full', value: '内容', borderSizeType: 'full' })
+      IBestCell({ title: 'center', value: '内容', borderSizeType: 'center' })
+      IBestCell({
+        leftIcon: $r("app.media.icon_like_o"),
+        title: 'right',
+        value: '内容',
+        borderSizeType: 'right'
+      })
+      IBestCell({ title: '占位', value: '内容', hasBorder: false })
+    }
+  }
 }
 ```
 :::
@@ -67,23 +77,26 @@ IBestCellGroup() {
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestCellGroup({ inset: true }) {
-  IBestCell({
-    title: '标题',
-    value: '内容'
-  })
-
-  IBestCell({
-    title: '标题',
-    value: '内容',
-    label: '描述信息',
-    hasBorder: false
-  })
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestCellGroup({ inset: true }) {
+      IBestCell({
+        title: '标题',
+        value: '内容'
+      })
+      IBestCell({
+        title: '标题',
+        value: '内容',
+        label: '描述信息',
+        hasBorder: false
+      })
+    }
+  }
 }
 ```
-
 :::
 
 ### 分组标题
@@ -94,27 +107,32 @@ IBestCellGroup({ inset: true }) {
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestCellGroup({ title: '分组1' }) {
-  IBestCell({
-    title: '标题',
-    value: '内容',
-    label: '描述信息',
-    hasBorder: false
-  })
-}
-
-IBestCellGroup({ title: '分组2' }) {
-  IBestCell({
-    title: '标题',
-    value: '内容',
-    label: '描述信息',
-    hasBorder: false
-  })
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    Column(){
+      IBestCellGroup({ title: '分组1' }) {
+        IBestCell({
+          title: '标题',
+          value: '内容',
+          label: '描述信息',
+          hasBorder: false
+        })
+      }
+      IBestCellGroup({ title: '分组2' }) {
+        IBestCell({
+          title: '标题',
+          value: '内容',
+          label: '描述信息',
+          hasBorder: false
+        })
+      }
+    }
+  }
 }
 ```
-
 :::
 
 ### 单元格大小
@@ -125,23 +143,24 @@ IBestCellGroup({ title: '分组2' }) {
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestCell({
-  title: "标题",
-  value: "内容",
-  cellSize: "large",
-});
-
-IBestCell({
-  title: "标题",
-  value: "内容",
-  label: "描述信息",
-  hasBorder: false,
-  cellSize: "large",
-});
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    IBestCellGroup() {
+      IBestCell({ title: '标题', value: '内容', cellSize: 'large' })
+      IBestCell({
+        title: '标题',
+        value: '内容',
+        label: '描述信息',
+        hasBorder: false,
+        cellSize: 'large'
+      })
+    }
+  }
+}
 ```
-
 :::
 
 ### 展示图标
@@ -151,18 +170,14 @@ IBestCell({
 ::: details 点我查看代码
 
 ```ts
-import { IBestCell } from "@ibestservices/ibest-ui";
-
 @Entry
 @Component
-struct CellPage {
-  @Builder
-  StarIcon(height = 24) {
-    Image($r('app.media.startIcon')).height(height).margin({ right: 10 })
+struct DemoPage {
+  @Builder StarIcon() {
+    Image($r('app.media.startIcon')).width(16)
   }
-
   build(){
-    Column(){
+    IBestCellGroup() {
       IBestCell({
         title: '标题',
         value: '内容',
@@ -171,23 +186,19 @@ struct CellPage {
       IBestCell({
         title: '标题',
         value: '内容',
-        iconBuilder: () => {
-          this.StarIcon()
-        }
+        iconBuilder: () => this.StarIcon()
       })
       IBestCell({
         title: '标题',
         value: '内容',
-        rightIcon: $r("app.media.icon_star"),
+        rightIcon: $r("app.media.ibest_icon_star"),
         rightIconColor: '#FF0000',
         hasBorder: false
       })
     }
   }
 }
-
 ```
-
 :::
 
 ### 展示箭头
@@ -198,37 +209,43 @@ struct CellPage {
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestCell({
-  title: "标题",
-  value: "箭头朝右",
-  isLink: true,
-});
-
-IBestCell({
-  title: "标题",
-  value: "箭头朝下",
-  isLink: true,
-  arrowDirection: "bottom",
-});
-
-IBestCell({
-  title: "标题",
-  value: "箭头朝左",
-  isLink: true,
-  arrowDirection: "left",
-});
-
-IBestCell({
-  title: "标题",
-  value: "箭头朝上",
-  isLink: true,
-  arrowDirection: "top",
-  hasBorder: false,
-});
+@Entry
+@Component
+struct DemoPage {
+  @Builder StarIcon() {
+    Image($r('app.media.startIcon')).width(16)
+  }
+  build(){
+    IBestCellGroup() {
+      IBestCell({
+        title: "标题",
+        value: "箭头朝右",
+        isLink: true,
+      })
+      IBestCell({
+        title: "标题",
+        value: "箭头朝下",
+        isLink: true,
+        arrowDirection: "bottom",
+      })
+      IBestCell({
+        title: "标题",
+        value: "箭头朝左",
+        isLink: true,
+        arrowDirection: "left",
+      })
+      IBestCell({
+        title: "标题",
+        value: "箭头朝上",
+        isLink: true,
+        arrowDirection: "top",
+        hasBorder: false,
+      })
+    }
+  }
+}
 ```
-
 :::
 
 ### 必填项
@@ -239,35 +256,31 @@ IBestCell({
 :::
 
 ::: details 点我查看代码
-
 ```ts
-import { IBestCell } from "@ibestservices/ibest-ui";
-
 @Entry
 @Component
-struct CellPage {
+struct DemoPage {
   @Builder
   InputContain() {
     TextInput({ placeholder: '请输入内容' })
   }
-
   build(){
     IBestCell({
       title: '标题',
       value: '内容',
+      center: true,
       required: true,
       hasBorder: false,
-      valueBuilder: this.InputContain.bind(this)
+      valueBuilder: (): void => this.InputContain()
     })
   }
 }
 ```
-
 :::
 
-### 垂直居中
+### 内容居中
 
-![垂直居中](./images/center-cell.png)
+![内容居中](./images/center-cell.png)
 ::: tip
 通过 `center` 属性可以让 `Cell`的左右内容都垂直居中。
 :::
@@ -275,37 +288,31 @@ struct CellPage {
 ::: details 点我查看代码
 
 ```ts
-import { IBestCell } from "@ibestservices/ibest-ui";
-
 @Entry
 @Component
-struct CellPage {
-  @Builder
-  StarIcon(height = 24) {
-    Image($r('app.media.startIcon')).height(height).margin({ right: 10 })
+struct DemoPage {
+  @Builder StarIcon(width = 16) {
+    Image($r('app.media.app_icon')).width(width)
   }
-
   build(){
-    // ...
-
-    IBestCell({
-      title: '居中',
-      label: '描述内容',
-      value: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
-      center: true,
-      iconBuilder: this.StarIcon(16),
-      isLink: true
-    })
-    IBestCell({
-      title: '居上',
-      label: '描述内容',
-      value: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
-      hasBorder: false,
-      iconBuilder: this.StarIcon(16),
-      isLink: true
-    })
-
-    // ...
+    Column(){
+      IBestCell({
+        title: '居中',
+        label: '描述内容',
+        value: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
+        center: true,
+        iconBuilder: () => this.StarIcon(),
+        isLink: true
+      })
+      IBestCell({
+        title: '居上',
+        label: '描述内容',
+        value: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
+        hasBorder: false,
+        iconBuilder: () => this.StarIcon(24),
+        isLink: true
+      })
+    }
   }
 }
 ```
@@ -322,65 +329,47 @@ struct CellPage {
 ::: details 点我查看代码
 
 ```ts
-import { IBestCell, IBestTag } from "@ibestservices/ibest-ui";
-
 @Entry
 @Component
-struct CellPage {
-  @Builder
-  StarIcon(height = 24) {
+struct DemoPage {
+  @Builder StarIcon(height = 24) {
     Image($r('app.media.startIcon')).height(height).margin({ right: 10 })
   }
-
-  @Builder
-  Arrow() {
-    Image($r('app.media.title_back'))
-    .height(12)
+  @Builder Arrow() {
+    Image($r('app.media.title_back')).height(14).margin({ left: 14 }).rotate({ angle: 180 })
   }
-
-  @Builder
-  Title() {
-    Row() {
-      Text('单元格')
-        .fontSize(14)
+  @Builder Title() {
+    Row({space: 5}) {
+      Text('单元格').fontSize(14)
       IBestTag({ text: '标签' })
-        .margin({
-          left: 5
-        })
     }
   }
-
   build(){
-    // ...
-
-    IBestCell({
-      title: '标题',
-      value: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
-      iconBuilder: this.StarIcon(16),
-      rightIconBuilder: this.Arrow,
-      clickable: true
-    })
-
-    IBestCell({
-      titleBuilder: this.Title,
-      value: '内容',
-      rightIconBuilder: this.Arrow,
-      clickable: true
-    })
-
-    IBestCell({
-      title: '标题',
-      iconBuilder: this.StarIcon(),
-      hasBorder: false,
-      rightIconBuilder: this.Arrow,
-      clickable: true
-    })
-
-    // ...
+    Column(){
+      IBestCell({
+        title: '标题',
+        value: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
+        iconBuilder: () => this.StarIcon(16),
+        rightIconBuilder: this.Arrow,
+        clickable: true
+      })
+      IBestCell({
+        titleBuilder: this.Title,
+        value: '内容',
+        rightIconBuilder: this.Arrow,
+        clickable: true
+      })
+      IBestCell({
+        title: '标题',
+        iconBuilder: () => this.StarIcon(),
+        hasBorder: false,
+        rightIconBuilder: this.Arrow,
+        clickable: true
+      })
+    }
   }
 }
 ```
-
 :::
 
 ## API
@@ -397,11 +386,11 @@ struct CellPage {
 
 | 参数           | 说明                                  | 类型                  | 默认值               |
 | -------------- | -------------------------------------| ------------------   | --------------------|
-| title          | 左侧标题                              | _number_ \| _string_  |        |
+| title          | 左侧标题                              | _ResourceStr_  |   `''`   |
 | titleColor     | 左侧标题文字颜色                       | _ResourceColor_       | `#323233` |
-| value          | 右侧内容                              | _number_ \| _string_  |       |
+| value          | 右侧内容                              | _ResourceStr_  |  `''`  |
 | valueColor     | 右侧内容文字颜色                       | _ResourceColor_       | `#969799` |
-| label          | 标题下方的描述信息                      | _number_ \| _string_  |          |
+| label          | 标题下方的描述信息                      | _ResourceStr_  |   `''`   |
 | labelColor     | 标题下方的描述信息文字颜色               | _ResourceColor_       | `#969799` |
 | cellSize       | 单元格大小，可选值为 `large` `normal`   | _string_              |          |
 | hasBorder      | 是否显示内边框                         | _boolean_             | `true`   |
@@ -416,13 +405,13 @@ struct CellPage {
 | rightIcon      | 右侧图标                           | _ResourceStr_|          |
 | rightIconColor | 右侧图标颜色                 | _ResourceStr_ |          |
 | rightIconSize  | 右侧图标大小                 | _number_ \| _string_|   `16`  |
-| leftIconMarginRight <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 左侧图标与title间距                  | _number_ \| _string_ |   `4`  |
-| rightIconMarginLeft <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 右侧图标与内容间距                    | _number_ \| _string_ |   `4`  |
-| leftContentWidth <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 左侧内容宽度                             | _number_ \| _string_ |   ``  |
-| leftRightPadding <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 左右padding                             | _number_ \| _string_ |   `16`  |
-| borderSizeType <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 底部分割线尺寸类型, 可选值 `full` `center` `right` | _string_ | `center` |
-| borderLeft <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 底部分割线left值, `borderSizeType` 为 `right` 时有效| _Dimension_| `16` |
-| bdColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">1.18.0</span>| 底部分割线颜色| _ResourceColor_| `#ebedf0` |
+| leftIconMarginRight| 左侧图标与title间距                  | _number_ \| _string_ |   `4`  |
+| rightIconMarginLeft| 右侧图标与内容间距                    | _number_ \| _string_ |   `4`  |
+| leftContentWidth| 左侧内容宽度                             | _number_ \| _string_ |   ``  |
+| leftRightPadding| 左右padding                             | _number_ \| _string_ |   `16`  |
+| borderSizeType  | 底部分割线尺寸类型, 可选值 `full` `center` `right` | _string_ | `center` |
+| borderLeft      | 底部分割线left值, `borderSizeType` 为 `right` 时有效| _Dimension_| `16` |
+| bdColor         | 底部分割线颜色               | _ResourceColor_| `#ebedf0` |
 
 
 ### Events

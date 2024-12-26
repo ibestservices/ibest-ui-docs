@@ -402,6 +402,39 @@ struct DemoPage {
 ```
 :::
 
+### 打卡模式
+
+![打卡模式](./images/clock.png)
+:::tip
+设置 `clock` 为 `true`, 可开启打卡模式, 打卡模式下只能切换年月, 不能选择日期.
+:::
+
+::: details 点我查看代码
+```ts
+import dayjs from "@hview/dayjs"
+@Entry
+@Component
+struct DemoPage {
+  @State clockDate: Array<string> = [dayjs().startOf("month").format('YYYY-MM-DD')]
+  build() {
+    Column({space: 14}){
+      IBestButton({
+        type: "primary",
+        text: "打卡",
+        onClickBtn: () => {
+          this.clockDate.push(dayjs(this.clockDate[this.clockDate.length-1]).add(1, 'day').format("YYYY-MM-DD"))
+        }
+      })
+      IBestCalendar({
+        clock: true,
+        defaultSelectedDate: this.clockDate
+      })
+    }
+  }
+}
+```
+:::
+
 
 ## API
 
@@ -411,7 +444,7 @@ struct DemoPage {
 | ------------ | --------------------------------------------------------| --------- | ---------- |
 | type         | 主题类型，可选值为 `primary` `success` `warning` `danger` | _string_  | `primary` |
 | defaultSelectedDate   | 默认选中日期                                    | _string[]_  | `[]` |
-| itemWidth   | 每一项宽度                                                | _string_ \| _number_  | `50`|
+| itemWidth    | 每一项宽度                                               | _string_ \| _number_  | `50`|
 | weekFirstDay | 周起始日期                                               | _string_  |    `一`     |
 | isShowLunar  | 是否显示农历                                             | _boolean_ | `false`  |
 | selectType   | 选择类型，可选值为 `single` `multiple` `range`            | _string_ | `single`|
@@ -425,6 +458,12 @@ struct DemoPage {
 | isShowConfirmBtn | 是否显示底部确定按钮                                   | _boolean_ | `false` |
 | confirmBtnColor  | 确认按钮颜色                                          | _ResourceColor_  | `#3D8AF2` |
 | confirmBtnText   | 确认按钮文案                                          | _string_  | `确认` |
+| cornerRadius | 弹框圆角                                                 | _string_ \| _number_  | `10`|
+| clock <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 开启打卡模式                                              | _boolean_ | `false`  |
+| clockSuccessText <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 打卡成功文案                                          | _ResourceStr_  | `已成功` |
+| isShowUnClock <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 是否显示未打卡`                                          | _boolean_ | `true`  |
+| unClockText <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 未打卡文案                                              | _ResourceStr_  | `未打卡` |
+
 
 ### CalendarDialog @Props
 ::: tip
