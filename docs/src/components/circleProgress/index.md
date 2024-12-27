@@ -1,4 +1,4 @@
-# CirclrProgress 环形进度条
+# CircleProgress 环形进度条
 
 ## 介绍
 

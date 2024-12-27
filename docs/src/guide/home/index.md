@@ -6,9 +6,12 @@ title: "IBest-UI"
 
 ## 介绍
 
-{{ $frontmatter.title }} 是一个轻量、简单易用、可定制主题、支持深色模式和浅色模式的鸿蒙开源UI组件库，希望得到业界的帮助以及开源贡献(通过 [PR](https://github.com/ibestservices/ibest-ui/pulls) 贡献代码啦~)。
+{{ $frontmatter.title }} 是一个轻量、简单易用、可定制主题、支持深色模式和浅色模式的鸿蒙开源UI组件库。
 
-![{{ $frontmatter.title }}](IBest-UI.png)
+<div style="display: flex;justify-content: space-between;">
+  <img src="./IBest-UI-Light.png" alt="IBest-UI-Light" style="width: 48%;">
+  <img src="./IBest-UI-Dark.png" alt="IBest-UI-Dark" style="width: 48%;">
+</div>
 
 ## 快速上手
 
