@@ -4,22 +4,6 @@
 
 #### 从 2.0.0 版本开始，IBestUI 的更新日志将统一发布在<a href="https://ohpm.openharmony.cn/#/cn/detail/@ibestservices%2Fibest-ui" target="__blank">OpenHarmony 三方库中心仓的更新日志</a>, 当前页面不再发布.
 
-### 2.0.1
-
-1. 已适配深色模式, 可自定义浅色与深色主题颜色;
-2. 新增 SwipeCell 滑动单元格组件;
-3. IBestButton 增加 icon fontColor btnBorderColor btnBorderRadius 属性;
-4. IBestCalendar 增加 clock 打卡模式, clockSuccessText isShowUnClock unClockText 属性;
-5. IBestCheckbox 增加 activeList placeDirection space controller 属性;
-6. IBestPopup 增加 titleColor closeIconColor 属性;
-7. IBestField 增加 bgColor placeholderColor 属性;
-8. IBestRadio 增加 active placeDirection space 属性;
-9. IBestSearch 增加 labelColor textFontSize rightBtnBgColor rightBtnPressBgColor 属性;
-10. IBestSlider 增加 buttonBgColor 属性;
-11. IBestStepper 增加 value 属性;
-12. IBestUploader 增加 uploaderBgColor 属性;
-13. IBestWatermark 增加 bgColor 属性.
-
 ### 2.0.0
 
 1. 增加 IBestNoticeBar 通知栏组件;
