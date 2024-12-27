@@ -104,7 +104,7 @@ export default defineConfig({
           },
           {
             text: `PasswordInput 密码输入框 `,
-            link: "/components/passwordinput/",
+            link: "/components/passwordInput/",
           },
           { text: `Picker 选择器 `, link: "/components/picker/" },
           { text: `PickerGroup 选择器组`, link: "/components/pickergroup/" },
@@ -175,7 +175,7 @@ export default defineConfig({
           },
           {
             text: `CircleProgress 环形进度条`,
-            link: "/components/circleprogress/",
+            link: "/components/circleProgress/",
           },
           {
             text: `Collapse 折叠面板`,
@@ -183,7 +183,7 @@ export default defineConfig({
           },
           {
             text: `CountDown 倒计时`,
-            link: "/components/countdown/",
+            link: "/components/countDown/",
           },
           {
             text: `Divider 分割线`,
@@ -199,7 +199,7 @@ export default defineConfig({
           },
           {
             text: `NoticeBar 通知栏 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
-            link: "/components/noticebar/",
+            link: "/components/noticeBar/",
           },
           {
             text: `Popover 气泡弹出框 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
@@ -211,7 +211,7 @@ export default defineConfig({
           },
           {
             text: `TextEllipsis 文本省略 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
-            link: "/components/textellipsis/",
+            link: "/components/textEllipsis/",
           },
           { text: "Tag 标签", link: "/components/tag/" },
           { text: "Watermark 水印", link: "/components/watermark/" },
@@ -222,11 +222,11 @@ export default defineConfig({
         items: [
           {
             text: `NavBar 导航栏`,
-            link: "/components/navbar/",
+            link: "/components/navBar/",
           },
           {
             text: `SideBar 侧边导航 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
-            link: "/components/sidebar/",
+            link: "/components/sideBar/",
           },
           {
             text: `Tab 标签页`,
