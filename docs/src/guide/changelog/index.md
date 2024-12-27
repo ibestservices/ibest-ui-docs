@@ -2,11 +2,39 @@
 
 ## 重要提示
 
-#### 从2.0.0版本开始，IBestUI的更新日志将统一发布在<a href="https://ohpm.openharmony.cn/#/cn/detail/@ibestservices%2Fibest-ui" target="__blank">OpenHarmony三方库中心仓的更新日志</a>, 当前页面不再发布.
+#### 从 2.0.0 版本开始，IBestUI 的更新日志将统一发布在<a href="https://ohpm.openharmony.cn/#/cn/detail/@ibestservices%2Fibest-ui" target="__blank">OpenHarmony 三方库中心仓的更新日志</a>, 当前页面不再发布.
 
+### 2.0.1
+
+1. 已适配深色模式, 可自定义浅色与深色主题颜色;
+2. 新增 SwipeCell 滑动单元格组件;
+3. IBestButton 增加 icon fontColor btnBorderColor btnBorderRadius 属性;
+4. IBestCalendar 增加 clock 打卡模式, clockSuccessText isShowUnClock unClockText 属性;
+5. IBestCheckbox 增加 activeList placeDirection space controller 属性;
+6. IBestPopup 增加 titleColor closeIconColor 属性;
+7. IBestField 增加 bgColor placeholderColor 属性;
+8. IBestRadio 增加 active placeDirection space 属性;
+9. IBestSearch 增加 labelColor textFontSize rightBtnBgColor rightBtnPressBgColor 属性;
+10. IBestSlider 增加 buttonBgColor 属性;
+11. IBestStepper 增加 value 属性;
+12. IBestUploader 增加 uploaderBgColor 属性;
+13. IBestWatermark 增加 bgColor 属性.
+
+### 2.0.0
+
+1. 增加 IBestNoticeBar 通知栏组件;
+2. 增加 IBestProgress 进度条组件;
+3. 增加 IBestPopover 气泡弹出框组件;
+4. 增加 IBestTextEllipsis 文本省略组件;
+5. 增加 IBestCountDown 倒计时组件;
+6. 增加 IBestSideBar 侧边导航组件;
+7. IBestPicker、IBestDatePicker、IBestTimePicker 增加 horizontal、itemWidth、contentHeight、optionFontSize 属性;
+8. IBestField 增加 showLabel 属性.
 
 ### 1.19.0
+
 #### 新功能 🎉
+
 1. 增加 IBestNavBar 导航栏组件;
 2. 增加 IBestCircleProgress 环形进度条组件;
 3. 增加 IBestCollapse 折叠面板组件;
@@ -15,12 +43,14 @@
 6. IBestField 增加 leftIconSize rightIconSize labelFontSize labelColor 属性;
 7. IBestPasswordInput 增加 isShowBorder bdColor cellBgColor cellTextColor dotFontSize textFontSize tipFontSize 属性.
 
-#### bug修复
+#### bug 修复
+
 1. 修复 IBestCalendar 在设定的跨月时间范围时, 如果翻到下月, 上月日期会被禁用.
 
 ### 1.18.0
 
 #### 新功能 🎉
+
 1. 新增 IBestBadge 徽标组件;
 2. Search 增加 textColor 属性;
 3. IBestCell 增加 leftContentWidth、leftIconMarginRight、rightIconMarginLeft、leftRightPadding、borderSizeType、borderLeft、bdColor 属性;
@@ -29,15 +59,20 @@
 6. IBestEmpty 增加 emptyImgUrl 属性;
 7. IBestPopup 增加 headerBuilder 插槽;
 8. IBestSearch 增加 textColor 属性;
+
 #### 重要变更:
-组件库全局尺寸单位默认为vp, 可自定义配置, 升级后可能会出现部分组件尺寸偏大情况, 只需将原先传递的尺寸改为原来一半即可.
+
+组件库全局尺寸单位默认为 vp, 可自定义配置, 升级后可能会出现部分组件尺寸偏大情况, 只需将原先传递的尺寸改为原来一半即可.
+
 #### 修复:
+
 1. IBestToast 同时打开无法关闭问题;
 2. IBestCascader 异步加载时崩溃问题;
 
 ### 1.17.0
 
-#### 新功能 🎉   
+#### 新功能 🎉
+
 1. 新增 IBestIcon 组件;
 2. 新增 IBestPullRefresh 下拉刷新组件;
 3. IBestTab 新增 onTabClick 事件;
@@ -45,7 +80,7 @@
 5. IBestCell 增加 leftIcon leftIconColor leftIconSize rightIcon rightIconColor rightIconSize 属性;
 6. IBestActionSheet 增加 cancelTextColor、beforeClose 属性.
 
-#### 另: 新发布 @ibestservices/area-data 库, 可用于Cascader相关组件. 
+#### 另: 新发布 @ibestservices/area-data 库, 可用于 Cascader 相关组件.
 
 #### 新贡献者
 
