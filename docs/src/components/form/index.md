@@ -320,10 +320,7 @@ struct DemoPage {
 
   @Builder switchContent() {
     IBestSwitch({
-      value: this.value1,
-      onChange: value => {
-        this.value1 = value
-      }
+      value: $value1
     })
   }
   @Builder checkboxContent() {
@@ -358,33 +355,28 @@ struct DemoPage {
   }
   @Builder radioContent() {
     IBestRadioGroup({
+      active: $value4,
       group: "group1",
-      onChange: radioName => {
-        this.value4 = radioName
-      }
-    })
-    Flex({space: { main: new LengthMetrics(20)}}){
-      IBestRadio({
-        group: "group1",
-        label: "单选框1",
-        name: "radio1"
-      })
-      IBestRadio({
-        group: "group1",
-        label: "单选框2",
-        name: "radio2"
-      })
-    }
+      placeDirection: Axis.Horizontal
+    }){
+			IBestRadio({
+				group: "group1",
+				label: "单选框1",
+				name: "1"
+			})
+			IBestRadio({
+				group: "group1",
+				label: "单选框2",
+				name: "2"
+			})
+		}
   }
   @Builder stepperContent(){
     IBestStepper({
-      defaultValue: 1,
-      min: 1,
-      max: 99,
-      step: 1,
-      onChange: value => {
-        this.value5 = Number(value)
-      }
+      value: $value5,
+			min: 1,
+			max: 99,
+			step: 1
     })
   }
   @Builder uploadImg(){
