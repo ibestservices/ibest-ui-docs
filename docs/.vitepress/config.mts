@@ -41,7 +41,7 @@ export default defineConfig({
         activeMatch: "/components/",
       },
       {
-        text: "v2.0.3", link: ""
+        text: "v2.0.4", link: ""
       }
     ],
     sidebar: [
@@ -56,184 +56,85 @@ export default defineConfig({
           { text: "常见问题", link: "/guide/faq/" },
           { text: "更新日志", link: "/guide/changelog/" },
           { text: "贡献指南", link: "/guide/contribution/" }
-        ],
+        ]
       },
       {
         text: "基础组件",
         items: [
           { text: "Button 按钮", link: "/components/button/" },
           { text: "Cell 单元格", link: "/components/cell/" },
-          {
-            text: `Icon 图标`,
-            link: "/components/icon/",
-          },
-          {
-            text: `Popup 弹出层 `,
-            link: "/components/popup/",
-          },
-          {
-            text: `Toast 轻提示 `,
-            link: "/components/toast/",
-          },
-        ],
+          { text: "Icon 图标", link: "/components/icon/" },
+          { text: "Popup 弹出层", link: "/components/popup/" },
+          { text: "Toast 轻提示", link: "/components/toast/" }
+        ]
       },
       {
         text: "表单组件",
         items: [
-          {
-            text: `Calendar 日历 `,
-            link: "/components/calendar/",
-          },
-          {
-            text: `Cascader 级联选择器 `,
-            link: "/components/cascader/",
-          },
+          { text: "Calendar 日历", link: "/components/calendar/" },
+          { text: "Cascader 级联选择器", link: "/components/cascader/" },
           { text: "Checkbox 复选框", link: "/components/checkbox/" },
-          { text: `DatePicker 日期选择 `, link: "/components/datepicker/" },
-          {
-            text: `Field 输入框 `,
-            link: "/components/field/",
-          },
-          {
-            text: `Form 表单`,
-            link: "/components/form/",
-          },
-          {
-            text: `NumberKeyboard 数字键盘 `,
-            link: "/components/numberkeyboard/",
-          },
-          {
-            text: `PasswordInput 密码输入框 `,
-            link: "/components/passwordInput/",
-          },
-          { text: `Picker 选择器 `, link: "/components/picker/" },
-          { text: `PickerGroup 选择器组`, link: "/components/pickergroup/" },
+          { text: "DatePicker 日期选择", link: "/components/datepicker/" },
+          { text: "Field 输入框", link: "/components/field/" },
+          { text: "Form 表单", link: "/components/form/" },
+          { text: "NumberKeyboard 数字键盘", link: "/components/numberkeyboard/" },
+          { text: "PasswordInput 密码输入框", link: "/components/passwordInput/" },
+          { text: "Picker 选择器", link: "/components/picker/" },
+          { text: "PickerGroup 选择器组", link: "/components/pickergroup/" },
           { text: "Radio 单选框", link: "/components/radio/" },
-          {
-            text: `Rate 评分`,
-            link: "/components/rate/",
-          },
-          {
-            text: `Search 搜索`,
-            link: "/components/search/",
-          },
-          {
-            text: `Slider 滑块`,
-            link: "/components/slider/",
-          },
-          {
-            text: `Signature 签名`,
-            link: "/components/signature/",
-          },
-          {
-            text: `Stepper 步进器 `,
-            link: "/components/stepper/",
-          },
+          { text: "Rate 评分", link: "/components/rate/" },
+          { text: "Search 搜索", link: "/components/search/" },
+          { text: "Slider 滑块", link: "/components/slider/" },
+          { text: "Signature 签名", link: "/components/signature/" },
+          { text: "Stepper 步进器", link: "/components/stepper/" },
           { text: "Switch 开关", link: "/components/switch/" },
-          { text: `TimePicker 时间选择 `, link: "/components/timepicker/" },
-          {
-            text: `Uploader 文件上传`,
-            link: "/components/uploader/",
-          },
-        ],
+          { text: "TimePicker 时间选择", link: "/components/timepicker/" },
+          { text: "Uploader 文件上传", link: "/components/uploader/" }
+        ]
       },
       {
         text: "反馈组件",
         items: [
-          {
-            text: `ActionSheet 动作面板`,
-            link: "/components/actionsheet/",
-          },
-          {
-            text: `Dialog 弹出框`,
-            link: "/components/dialog/",
-          },
-          {
-            text: `Loading 加载`,
-            link: "/components/loading/",
-          },
-          {
-            text: `Notify 消息通知`,
-            link: "/components/notify/",
-          },
-          {
-            text: `PullRefresh 下拉刷新`,
-            link: "/components/pullrefresh/",
-          },
-          {
-            text: `SwipeCell 滑动单元格 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>`,
-            link: "/components/swipecell/",
-          },
-        ],
+          { text: "ActionSheet 动作面板", link: "/components/actionsheet/" },
+          { text: "Dialog 弹出框", link: "/components/dialog/" },
+          { text: "Loading 加载", link: "/components/loading/" },
+          { text: "Notify 消息通知", link: "/components/notify/" },
+          { text: "PullRefresh 下拉刷新", link: "/components/pullrefresh/" },
+          { text: "SwipeCell 滑动单元格", link: "/components/swipecell/" },
+        ]
       },
       {
         text: "展示组件",
         items: [
-          {
-            text: `Badge 徽标`,
-            link: "/components/badge/",
-          },
-          {
-            text: `CircleProgress 环形进度条`,
-            link: "/components/circleProgress/",
-          },
-          {
-            text: `Collapse 折叠面板`,
-            link: "/components/collapse/",
-          },
-          {
-            text: `CountDown 倒计时`,
-            link: "/components/countDown/",
-          },
-          {
-            text: `Divider 分割线`,
-            link: "/components/divider/",
-          },
-          {
-            text: "Empty 空状态",
-            link: "/components/empty/",
-          },
-          {
-            text: "ImagePreview 图片预览",
-            link: "/components/imagepreview/",
-          },
-          {
-            text: `NoticeBar 通知栏 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
-            link: "/components/noticeBar/",
-          },
-          {
-            text: `Popover 气泡弹出框 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
-            link: "/components/popover/",
-          },
-          {
-            text: `Progress 进度条 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
-            link: "/components/progress/",
-          },
-          {
-            text: `TextEllipsis 文本省略 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
-            link: "/components/textEllipsis/",
-          },
+          { text: "Badge 徽标", link: "/components/badge/" },
+          { text: "CircleProgress 环形进度条", link: "/components/circleProgress/" },
+          { text: "Collapse 折叠面板", link: "/components/collapse/" },
+          { text: "CountDown 倒计时", link: "/components/countDown/" },
+          { text: "Divider 分割线", link: "/components/divider/" },
+          { text: "Empty 空状态", link: "/components/empty/" },
+          { text: "ImagePreview 图片预览", link: "/components/imagepreview/" },
+          { text: "NoticeBar 通知栏", link: "/components/noticeBar/" },
+          { text: "Popover 气泡弹出框", link: "/components/popover/" },
+          { text: "Progress 进度条", link: "/components/progress/" },
+          { text: "TextEllipsis 文本省略", link: "/components/textEllipsis/" },
           { text: "Tag 标签", link: "/components/tag/" },
-          { text: "Watermark 水印", link: "/components/watermark/" },
-        ],
+          { text: "Watermark 水印", link: "/components/watermark/" }
+        ]
       },
       {
         text: "导航组件",
         items: [
-          {
-            text: `NavBar 导航栏`,
-            link: "/components/navBar/",
-          },
-          {
-            text: `SideBar 侧边导航 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>`,
-            link: "/components/sideBar/",
-          },
-          {
-            text: `Tab 标签页`,
-            link: "/components/tab/",
-          },
-        ],
+          { text: "NavBar 导航栏", link: "/components/navBar/" },
+          { text: "SideBar 侧边导航", link: "/components/sideBar/" },
+          { text: "Tab 标签页", link: "/components/tab/" }
+        ]
       },
+      {
+        text: "业务组件",
+        items: [
+          { text: `CanvasDrawer 画布绘制 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>`, link: "/components/canvasDrawer/" }
+        ]
+      }
     ],
     socialLinks: [
       {

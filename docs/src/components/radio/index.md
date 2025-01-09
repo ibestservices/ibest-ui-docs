@@ -338,7 +338,6 @@ struct DemoPage {
 | name          | 标识符，通常为一个唯一的字符串或数字，同一 `group` 的 `name` 不可重复          | _string_ \| _number_ |         |
 | group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`          | _string_             |         |
 | label         | 显示的文本                                                              | _ResourceStr_             |         |
-| value         | 默认是否选中 非双向绑定，`从 2.0.1 开始废弃, 请使用 RadioGroup 的 active 属性`| _boolean_            |         |
 | iconSize      | 图标大小                                                                | _number_ \| _string_ |  `18`  |
 | shape         | 形状，可选值为 `square` `dot`                                            | _string_             | `round` |
 | disabled      | 是否为禁用状态                                                           | _boolean_            | `false` |
@@ -346,12 +345,6 @@ struct DemoPage {
 | labelPosition | 文本位置，可选值为 `left`                                                 | _string_             | `right` |
 | checkedColor  | 选中状态颜色                                                             | _ResourceColor_      |  `#1989fa` |
 | labelFontSize | 文本字体大小                                                             | _number_ \| _string_ |  `16`  |
-
-### Radio Events
-
-| 事件名    | 说明                | 参数类型                       |
-| -------- | -------------------| -----------------------------|
-| onChange <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">已废弃</span> | 选中状态改变的回调事件, `从 2.0.1 开始废弃` | `checked: boolean` |
 
 ### Radio 插槽
 
@@ -364,10 +357,10 @@ struct DemoPage {
 
 | 参数  | 说明                                                           | 类型      | 默认值 |
 | ----- | --------------------------------------------------------------| -------- | ------ |
-| group | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性` | _string_  |  `''`   |
-| active <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 激活的标识, 支持双向绑定              | _string_  |  `''`  |
-| placeDirection <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 排列方向                    | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#axis" target="__blank">Axis</a>_   | `Axis.Vertical` |
-| space <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 间距                                       | _string_ \| _number_ | `12` |
+| group | 标识符，通常为一个唯一的字符串, 需保证全局唯一性      | _string_  |  `''`   |
+| active| 激活的标识, 支持双向绑定                          | _string_  |  `''`  |
+| placeDirection | 排列方向                               | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#axis" target="__blank">Axis</a>_   | `Axis.Vertical` |
+| space | 间距                                            | _string_ \| _number_ | `12` |
 
 ### RadioGroup Events
 

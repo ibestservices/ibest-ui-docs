@@ -336,10 +336,10 @@ struct ButtonPage {
 | loading      | 是否显示为加载状态                                    | _boolean_ | `false`  |
 | loadingText  | 加载状态提示文字                                      | _ResourceStr_   |          |
 | loadingSize  | 加载图标大小，如果为-1 默认跟随字体大小                  | _string_ \| _number_  | `-1`      |
-| icon <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 按钮图标                   | _ResourceStr_ | `-` |
-| fontColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 按钮文字颜色                | _ResourceColor_ | `-` |
-| btnBorderColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 按钮边框颜色    | _ResourceColor_ | `-` |
-| btnBorderRadius <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 按钮圆角        | _string_ \| _number_ | `-` |
+| icon   | 按钮图标                   | _ResourceStr_ | `-` |
+| fontColor | 按钮文字颜色                | _ResourceColor_ | `-` |
+| btnBorderColor | 按钮边框颜色    | _ResourceColor_ | `-` |
+| btnBorderRadius| 按钮圆角        | _string_ \| _number_ | `-` |
 
 ### Events
 

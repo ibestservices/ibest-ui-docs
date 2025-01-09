@@ -208,10 +208,10 @@ struct DemoPage {
 | enterKeyType | 输入法回车键类型, 详见<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-types-V5#enterkeytype%E6%9E%9A%E4%B8%BE%E8%AF%B4%E6%98%8E" target="__blank">EnterKeyType枚举说明</a> | _EnterKeyType_ |  `Search`  |
 | customRightButton| 自定义右侧按钮 | _CustomBuilder_ | `-` |
 |textColor     | 输入框文字颜色           | _ResourceColor_ |  `#323233`  |
-|labelColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 左侧文本颜色             | _ResourceColor_ |  `#323233`  |
-|textFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 输入框文字大小    | _number_ \| _string_ |  `14`  |
-|rightBtnBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 右侧按钮背景色    | _ResourceColor_ |  `#fff`  |
-|rightBtnPressBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 右侧按钮按压背景色 | _ResourceColor_ |  `#f2f3f5`  |
+|labelColor    | 左侧文本颜色             | _ResourceColor_ |  `#323233`  |
+|textFontSize  | 输入框文字大小    | _number_ \| _string_ |  `14`  |
+|rightBtnBgColor | 右侧按钮背景色    | _ResourceColor_ |  `#fff`  |
+|rightBtnPressBgColor| 右侧按钮按压背景色 | _ResourceColor_ |  `#f2f3f5`  |
 
 ### Events
 

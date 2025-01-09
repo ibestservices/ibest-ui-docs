@@ -28,7 +28,7 @@ struct DemoPage {
   @State isLoading: boolean = false
 	private listScroller: ListScroller = new ListScroller()
   @State arr: String[] = ['0', '1', '2', '3', '4','5','6','7','8','9','10']
-  @Builder customContent(type: string) {
+  @Builder customContent() {
     List({scroller: this.listScroller }) {
       ForEach(this.arr, (item: string) => {
         ListItem() {
@@ -42,7 +42,7 @@ struct DemoPage {
             .backgroundColor(0x89CFF0)
         }.width("100%")
       }, (item: string) => item)
-    }
+    }.width("100%").edgeEffect(EdgeEffect.None).height("100%")
 	}
   build() {
     Column(){
@@ -52,7 +52,7 @@ struct DemoPage {
         defaultContent: (): void => this.customContent("1"),
         onRefresh: (): void => this.onRefresh()
       })
-    }
+    }.height("100%")
   }
 }
 ```
@@ -87,7 +87,7 @@ struct DemoPage {
             .backgroundColor(0x89CFF0)
         }, (item: string) => item)
       }.width("100%")
-    }
+    }.height("100%")
 	}
   onRefresh(){
 		// 此处模拟请求 延时关闭
@@ -103,7 +103,7 @@ struct DemoPage {
         defaultContent: (): void => this.customContent(),
         onRefresh: (): void => this.onRefresh()
       })
-    }
+    }.height("100%")
   }
 }
 ```
@@ -149,7 +149,7 @@ struct DemoPage {
             .backgroundColor(0x89CFF0)
         }, (item: string) => item)
       }.width("100%")
-    }
+    }.height("100%")
 	}
   onRefresh(){
 		// 此处模拟请求 延时关闭
@@ -167,12 +167,11 @@ struct DemoPage {
         loadingContent: (): void => this.customLoadingContent(),
         onRefresh: (): void => this.onRefresh()
       })
-    }
+    }.height("100%")
   }
 }
 ```
 :::
-
 
 ## API
 
@@ -182,13 +181,21 @@ struct DemoPage {
 | ------------ | --------------------------------------| --------- | ---------- |
 | loading      | 是否处于加载状态, 支持双向绑定             | _boolean_  | `false` |
 | pullingText  | 下拉过程提示文案                         | _ResourceStr_ |  `下拉即可刷新...`  |
-| loosingText  | 释放过程提示文案                         | _ResourceStr_ | `释放即可刷新...` |
-| loadingText  | 加载过程提示文案                         | _ResourceStr_| `加载中...` |
-| successText  | 刷新成功提示文案                         | _ResourceStr_ | `''` |
-| successDuration | 刷新成功提示展示时长(ms)               | _number_ | `500` |
-| duration     | 动画时长                                | _number_ | `300` |
+| loosingText  | 下拉释放过程提示文案                      | _ResourceStr_ | `释放即可刷新...` |
+| loadingText  | 下拉加载过程提示文案                      | _ResourceStr_| `加载中...` |
+| successText  | 下拉刷新成功提示文案                      | _ResourceStr_ | `''` |
+| successDuration| 下拉刷新成功提示展示时长(ms)             | _number_ | `500` |
+| duration     | 下拉刷新动画时长(ms)                      | _number_ | `300` |
 | headHeight   | 顶部内容高度                             | _number_ \| _string_ | `50` |
 | scroller     | 当自定义内容包含List Grid Scroll组件时必传  | _Scroller_ |  `-`  |
+| isEnableSlideUp <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 是否启用上滑加载 | _boolean_ | `true` |
+| bottomHeight <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 底部加载内容高度                           | _number_ \| _string_ | `50` |
+| slidingUpText <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 上滑过程提示文案                           | _ResourceStr_ | `上滑即可加载...` |
+| slideUpLoosingText <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 上滑释放过程提示文案                  | _ResourceStr_ | `释放即可加载...` |
+| slideUpLoadingText <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 上滑加载过程提示文案                  | _ResourceStr_ | `加载中...` |
+| slideUpSuccessText <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 上滑加载成功提示文案                  | _ResourceStr_ | `''` |
+| slideUpSuccessDuration <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 上滑加载成功提示展示时长(ms)        | _number_ | `500` |
+| slideUpDuration <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 上滑加载动画时长(ms)                   | _number_ | `300` |
 
 ### Events
 
@@ -199,12 +206,16 @@ struct DemoPage {
 ### 插槽
 
 | 插槽名           | 说明                          | 类型      |
-| ----------------| ----------------------------- | --------- |
-| defaultContent  | 默认内容                       | _CustomBuilder_ |
-| pullingContent  | 自定义下拉过程顶部内容           | _($$: IBestRefreshContentParams) => void_ |
-| loosingContent  | 自定义释放过程顶部内容           | _($$: IBestRefreshContentParams) => void_ |
-| loadingContent  | 自定义加载过程顶部内容           | _CustomBuilder_ |
-|successContent   | 自定义刷新成功提示内容           | _CustomBuilder_ |
+| ----------------| -----------------------------| --------- |
+| defaultContent  | 默认内容                      | _CustomBuilder_ |
+| pullingContent  | 自定义下拉过程内容              | _($$: IBestRefreshContentParams) => void_ |
+| loosingContent  | 自定义释放过程内容              | _($$: IBestRefreshContentParams) => void_ |
+| loadingContent  | 自定义加载过程内容              | _CustomBuilder_ |
+| successContent  | 自定义刷新成功提示内容           | _CustomBuilder_ |
+| slidingUpContent <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 自定义上滑过程内容              | _($$: IBestRefreshContentParams) => void_ |
+| slideUpLoosingContent <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 自定义上滑释放过程内容      | _($$: IBestRefreshContentParams) => void_ |
+| slideUpLoadingContent <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 自定义上滑加载过程内容      | _CustomBuilder_ |
+| slideUpSuccessContent <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 自定义上滑加载成功提示内容   | _CustomBuilder_ |
 
 ### IBestRefreshContentParams 数据结构
 | 参数          | 说明                                         | 类型      |

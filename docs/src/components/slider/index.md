@@ -279,7 +279,7 @@ struct DemoPage {
 | vertical     | 是否垂直展示                           | _boolean_ |  `false`  |
 | reverse      | 是否换向                              | _boolean_ |  `false`  |
 | customButton | 自定义滑块                             | _CustomBuilder_ |  `-`|
-| buttonBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 滑块背景颜色                           | _ResourceColor_ |  `#fff`  |
+| buttonBgColor| 滑块背景颜色                           | _ResourceColor_ |  `#fff`  |
 
 ### Events
 

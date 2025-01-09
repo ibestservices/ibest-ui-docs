@@ -294,10 +294,10 @@ struct DemoPage {
 | confirmText   | 确认按钮文字                                   | _string_ |  `确定`  |
 | cancelText    | 取消按钮文字                                   | _string_ |  `取消`  |
 | groupId       | 分组id, 通常在配合PickerGroup组件使用时传入		    | _string_ | `''` |
-| horizontal <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>| 是否横向     | _boolean_ | `false` |
-| itemWidth <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>| 单项宽度     | _number_ \| _string_ | `44`   |
-| contentHeight <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>| 整体高度, 仅横向时生效 | _number_ \| _string_ | `44`   |
-| optionFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>| 选项字体大小    | _number_ \| _string_ | `16`   |
+| horizontal | 是否横向     | _boolean_ | `false` |
+| itemWidth | 单项宽度     | _number_ \| _string_ | `44`   |
+| contentHeight | 整体高度, 仅横向时生效 | _number_ \| _string_ | `44`   |
+| optionFontSize| 选项字体大小    | _number_ \| _string_ | `16`   |
  
 ### Events
 

@@ -515,12 +515,12 @@ struct CheckboxPage {
 
 | 参数  | 说明                                                           | 类型     | 默认值 |
 | ----- | -------------------------------------------------------------| -------- | ------ |
-| group | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性` | _string_ |  `''`  |
-| max   | 最大可选数，`0` 为无限制                                         | _number_ |  `0`   |
-| activeList <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 激活的标识列表, 支持双向绑定              | _string[]_  |  `[]`  |
-| placeDirection <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 排列方向                    | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#axis" target="__blank">Axis</a>_   | `Axis.Vertical` |
-| space <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 间距                                       | _string_ \| _number_ | `12` |
-| controller <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 组件实例                               | _IBestCheckboxGroupController_ | `-` |
+| group | 标识符，通常为一个唯一的字符串，需具备`全局唯一性` | _string_ |  `''`  |
+| max   | 最大可选数，`0` 为无限制                      | _number_ |  `0`   |
+| activeList | 激活的标识列表, 支持双向绑定              | _string[]_  |  `[]`  |
+| placeDirection | 排列方向                           | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#axis" target="__blank">Axis</a>_   | `Axis.Vertical` |
+| space | 间距                                       | _string_ \| _number_ | `12` |
+| controller | 组件实例                               | _IBestCheckboxGroupController_ | `-` |
 
 ### IBestCheckboxGroupController 方法
 
@@ -533,7 +533,6 @@ struct CheckboxPage {
 | 事件名    | 说明                            | 参数类型                  |
 | -------- | ------------------------------ | ------------------------ |
 | onChange | 选中状态改变的回调事件，回调参数是选中的 `checkbox` 组件的 `name` 值 | `checkboxNames: string[]`  |
-| onReady <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">已废弃</span>| 初始化完成的回调, `从2.0.1开始废弃, 请使用 controller`     | `checkboxGroupContext: CheckboxGroupContext` |
 
 ### CheckboxGroup 插槽
 

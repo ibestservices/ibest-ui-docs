@@ -201,10 +201,10 @@ struct DemoPage {
 
 | 参数          | 说明                                        | 类型          | 默认值     |
 | ------------- | -------------------------------------------| ------------- | ---------- |
+| value         | 绑定值, 支持双向绑定                          | _number_ | `-` |
 | min           | 最小值                                      | _string_ \| _number_ | `1` |
 | max           | 最大值                                      | _string_ \| _number_ | `Infinity` |
 | autoFixed     | 是否自动校正超出限制范围的数值                  | _boolean_            | `true`     |
-| defaultValue <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">已废弃</span>| 展示的默认值, `从 2.0.1 开始废弃, 请使用value`          | _string_ \| _number_ | `1`        |
 | step          | 步长，每次点击时改变的值                       | _number_ \| _string_ | `1`        |
 | inputWidth    | 输入框宽度                                   | _number_ \| _string_ | `32`    |
 | buttonSize    | 按钮大小以及输入框高度                         | _number_ \| _string_ | `27`    |
@@ -221,7 +221,6 @@ struct DemoPage {
 | validateTime  | 多少毫秒触发自动校验修正，为 `0` 时不修正，单位 `ms`| _number_    | `1000`     |
 | iconSize      | 输入框中图标的宽度                              | _number_ \| _string_ | `20` |
 | buttonRadius  | 按钮的圆角                                     | _number_ \| _string_ | `2`  |
-| value <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span> | 绑定值, 支持双向绑定 | _number_ | `-` |
 
 ### Events
 

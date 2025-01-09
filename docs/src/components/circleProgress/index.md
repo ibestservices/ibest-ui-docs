@@ -24,7 +24,7 @@ struct DemoPage {
   @State value: number = 30
   build() {
     IBestCircleProgress({
-      value: this.value,
+      value: $value,
       text: `${this.value}%`
     })
   }
@@ -45,24 +45,24 @@ struct DemoPage {
   build() {
     Flex({wrap: FlexWrap.Wrap, space: { main: LengthMetrics.vp(20), cross: LengthMetrics.vp(20) }}){
       IBestCircleProgress({
-        value: this.value,
+        value: $value,
         strokeWidth: 6,
         text: "宽度定制"
       })
       IBestCircleProgress({
-        value: this.value,
+        value: $value,
         color: "#ee0a24",
         bgColor: "#ebedf0",
         text: "颜色定制"
       })
       IBestCircleProgress({
-        value: this.value,
+        value: $value,
         clockwise: false,
         text: "逆时针",
         color: "#07c160"
       })
       IBestCircleProgress({
-        value: this.value,
+        value: $value,
         diameter: 120,
         clockwise: false,
         text: "大小定制",
@@ -87,34 +87,34 @@ struct DemoPage {
   build() {
     Flex({wrap: FlexWrap.Wrap, space: { main: LengthMetrics.vp(20), cross: LengthMetrics.vp(20) }}){
       IBestCircleProgress({
-        value: this.value,
+        value: $value,
         startPosition: "left",
         text: "左侧"
       })
       IBestCircleProgress({
-        value: this.value,
+        value: $value,
         startPosition: "right",
         text: "右侧"
       })
       IBestCircleProgress({
-        value: this.value,
+        value: $value,
         startPosition: "bottom",
         text: "底部"
       })
       IBestCircleProgress({
-        value: this.value,
+        value: $value,
         startPosition: "left",
         clockwise: false,
         text: "左侧逆时针"
       })
       IBestCircleProgress({
-        value: this.value,
+        value: $value,
         startPosition: "right",
         clockwise: false,
         text: "右侧逆时针"
       })
       IBestCircleProgress({
-        value: this.value,
+        value: $value,
         startPosition: "bottom",
         clockwise: false,
         text: "底部逆时针"
@@ -131,7 +131,7 @@ struct DemoPage {
 
 | 参数         | 说明                                 | 类型      | 默认值     |
 | ------------ | ----------------------------------- | --------- | ---------- |
-| value        | 进度值                               | _number_  | `0` |
+| value        | 进度值, 支持双向绑定                    | _number_  | `0` |
 | diameter     | 进度条直径(宽度)                       | _number_  | `100` |
 | target       | 目标进度                              | _number_  | `100` |
 | text         | 中间文字                              | _string_ |  `''`  |

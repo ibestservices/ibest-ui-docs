@@ -25,7 +25,28 @@ import { IBestPopover, IBestPopoverAction } from "@ibestservices/ibest-ui";
     }else if(type == "input"){
       TextInput({text: this.textValue, placeholder: text})
         .width("100%")
-        .focusable(false)
+        .onChange((text: string) => {
+          if(text){
+            this.actions = text.split("").map(e => {
+              let obj: IBestPopoverAction = {
+                text: "选项" + e
+              }
+              return obj
+            })
+          }else{
+            this.actions = [
+              {
+                text: '选项一'
+              },
+              {
+                text: '选项二'
+              },
+              {
+                text: '选项三'
+              }
+            ]
+          }
+        })
     }
   }
 ```
@@ -324,8 +345,9 @@ struct DemoPage {
 ### Events
 
 | 事件名     | 说明                           | 回调参数                         |
-| ---------- | -----------------------------| --------------------------------|
-| onSelect   | 点击通知栏回调                 | `action: IBestPopoverAction, index: number` |
+| ----------| -----------------------------| --------------------------------|
+| onSelect  | 点击通知栏回调                 | `action: IBestPopoverAction, index: number` |
+| onOpen <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>|
 
 ### 插槽
 
@@ -341,7 +363,8 @@ struct DemoPage {
 | iconName      | 文字左侧图标名称                       | _string_ | `''` |
 | icon          | 自定义文字左侧图标                      | _ResourceStr_ | `''` |
 | color         | 左侧图标颜色                           | _ResourceColor_ | `''` |
-| disabled      | 是否禁用                               | _boolean_ | `''` |
+| disabled      | 是否禁用                              | _boolean_ | `''` |
+| value <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 选项标识     | _string_ | `''` |    
 
 ### IBestPopoverController 实例
 | 方法名         | 说明                                 | 参数类型   |

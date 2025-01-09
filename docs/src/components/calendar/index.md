@@ -459,10 +459,10 @@ struct DemoPage {
 | confirmBtnColor  | 确认按钮颜色                                          | _ResourceColor_  | `#3D8AF2` |
 | confirmBtnText   | 确认按钮文案                                          | _string_  | `确认` |
 | cornerRadius | 弹框圆角                                                 | _string_ \| _number_  | `10`|
-| clock <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 开启打卡模式                                              | _boolean_ | `false`  |
-| clockSuccessText <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 打卡成功文案                                          | _ResourceStr_  | `已成功` |
-| isShowUnClock <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 是否显示未打卡`                                          | _boolean_ | `true`  |
-| unClockText <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 未打卡文案                                              | _ResourceStr_  | `未打卡` |
+| clock  | 开启打卡模式                                              | _boolean_ | `false`  |
+| clockSuccessText | 打卡成功文案                                          | _ResourceStr_  | `已成功` |
+| isShowUnClock | 是否显示未打卡`                                          | _boolean_ | `true`  |
+| unClockText  | 未打卡文案                                              | _ResourceStr_  | `未打卡` |
 
 
 ### CalendarDialog @Props

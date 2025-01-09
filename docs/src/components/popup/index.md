@@ -432,8 +432,8 @@ struct DemoPage {
 | safeAreaInsetBottom | 是否开启底部安全区适配                               | _boolean_ | `false` |
 | maskColor  | 蒙层颜色      | _ResourceColor_ | `0x33000000` |
 | isModal    | 是否为模态窗口                                               | _boolean_ | `true` |
-| titleColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 标题字体颜色                                                 | _ResourceColor_ | `#323232` |
-| closeIconColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 关闭图标的颜色                                           | _ResourceColor_ | `#c8c9cc` |
+| titleColor    | 标题字体颜色                                                 | _ResourceColor_ | `#323232` |
+| closeIconColor| 关闭图标的颜色                                           | _ResourceColor_ | `#c8c9cc` |
 
 ### Events
 

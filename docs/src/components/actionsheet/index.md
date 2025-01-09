@@ -383,7 +383,7 @@ struct DemoPage {
 | onClose    | 面板关闭后触发                                       | _() => void_ |  `-`  |
 | cancelTextColor | 取消按钮文字颜色      | _ResourceColor_ |  `#646566`  |
 | beforeClose | 关闭前的回调函数，返回 false 可阻止关闭，支持返回 Promise      | _() => Promise\<boolean\> \| boolean_ |  `-`  |
-| itemHeight <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>| 选项高度 | _number_ \| _string_ |  `50`  |
+| itemHeight | 选项高度 | _number_ \| _string_ |  `50`  |
 
 ### IBestActionType 数据结构
 | 参数         | 说明                                          | 类型      |

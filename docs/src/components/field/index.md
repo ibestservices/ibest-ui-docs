@@ -585,14 +585,15 @@ struct DemoPage {
 | clearTrigger| 显示清除图标的时机, 可选值 `always` `focus`                   | _string_ | `focus` |
 | showMessage | 是否显示验证信息, 可由form统一配置                            | _boolean_ | `true` |
 | formatter   | 格式化函数                                                  | _(value: string) => string_ | `-` |
-| formatTrigger   | 执行格式化函数触发时机, 可选值 `onchange` `onblur`        | _string_ | `onchange` |
-| labelFontSize| 左侧字体大小                                             | _number_ \| _string_ | `14` |
-| labelColor | 左侧字体颜色                                               | _ResourceStr_ | `#323233` |
+| formatTrigger| 执行格式化函数触发时机, 可选值 `onchange` `onblur`        | _string_ | `onchange` |
+| labelFontSize| 左侧字体大小                                              | _number_ \| _string_ | `14` |
+| labelColor  | 左侧字体颜色                                               | _ResourceStr_ | `#323233` |
 | letIconSize | 左侧图标大小                                               | _number_ \| _string_ | `14` |
 | rightIconSize | 右侧图标大小                                             | _number_ \| _string_ | `14` |
-| showLabel <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.0</span>| 是否显示label     | _boolean_ | `true` |
-| placeholderColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 占位文字颜色     | _ResourceColor_ | `#c8c9cc` |
-| bgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 背景色     | _ResourceColor_ | `#fff` |
+| showLabel   | 是否显示label                                             | _boolean_ | `true` |
+| placeholderColor | 占位文字颜色                                          | _ResourceColor_ | `#c8c9cc` |
+| bgColor     | 背景色                                                    | _ResourceColor_ | `#fff` |
+| inputFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 输入框字体大小                               | _number_ \| _string_ | `14` |
 
 ### Events
 

@@ -242,9 +242,9 @@ struct DemoPage {
     "value7": [
       { required: true, message: "请选择日期" }
     ],
-		"value12": [
-			{ required: true, message: "请上传图片" }
-		]
+    "value12": [
+      { required: true, message: "请上传图片" }
+    ]
   }
   private controller: IBestFormController = new IBestFormController()
   @State options: IBestCascaderOption[] = [
@@ -336,8 +336,8 @@ struct DemoPage {
   @Builder checkboxGroupContent() {
     IBestCheckboxGroup({
       group: "group1",
-			activeList: $value3,
-			placeDirection: Axis.Horizontal
+      activeList: $value3,
+      placeDirection: Axis.Horizontal
     }){
       IBestCheckbox({
         group: "group1",
@@ -359,32 +359,32 @@ struct DemoPage {
       group: "group1",
       placeDirection: Axis.Horizontal
     }){
-			IBestRadio({
-				group: "group1",
-				label: "单选框1",
-				name: "1"
-			})
-			IBestRadio({
-				group: "group1",
-				label: "单选框2",
-				name: "2"
-			})
-		}
+      IBestRadio({
+        group: "group1",
+        label: "单选框1",
+        name: "1"
+      })
+      IBestRadio({
+        group: "group1",
+        label: "单选框2",
+        name: "2"
+      })
+    }
   }
   @Builder stepperContent(){
     IBestStepper({
       value: $value5,
-			min: 1,
-			max: 99,
-			step: 1
+      min: 1,
+      max: 99,
+      step: 1
     })
   }
   @Builder uploadImg(){
-		IBestUploader({
-			fileList: $value12,
-			max: 2
-		})
-	}
+    IBestUploader({
+      fileList: $value12,
+      max: 2
+    })
+  }
   build() {
     Column(){
       IBestForm({
@@ -502,7 +502,7 @@ struct DemoPage {
 
 | 参数         | 说明                                            | 类型      | 默认值     |
 | ------------ | ----------------------------------------------| --------- | ---------- |
-| formId       | 表单id, 必传                                   | _string_  | `''` |
+| formId       | 表单id, 必传, 需保证全局唯一性                    | _string_  | `''` |
 | rules        | 表单验证信息                                    | _Record<string, IBestFormRuleItem[]>_  | `{}` |
 | space        | 表单子项间距                                    | _number_ \| _string_  | `10`  |
 | labelWidth   | 表单项左侧文本区域宽度                            | _number_ \| _string_ | `80`  |

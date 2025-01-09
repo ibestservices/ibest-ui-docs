@@ -254,7 +254,7 @@ struct DemoPage {
 | disabled     | 是否禁用                                        | _boolean_ | `false` |
 | customUploader | 自定义上传触发器                               | _CustomBuilder_ | `-`|
 | customPreview  | 自定义预览内容                                 | _(file: IBestUploaderFile) => void_ |  `-`|
-| uploaderBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.1</span>| 触发器背景色           | _ResourceColor_ |  `#f7f8fa`|
+| uploaderBgColor| 触发器背景色                                   | _ResourceColor_ |  `#f7f8fa`|
 
 ### FileSelectOptions  数据结构
 
