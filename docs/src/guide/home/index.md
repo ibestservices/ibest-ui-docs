@@ -30,6 +30,7 @@ title: "IBest-UI"
 ## 特别感谢
 
 [vant](https://vant-contrib.gitee.io/vant/#/zh-CN/home)：灵感来源
+
 [安徽百得思维信息科技有限公司](https://www.ibestservices.com/)：孵化公司
 
 ## 贡献者
