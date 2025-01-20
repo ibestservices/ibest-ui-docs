@@ -6,7 +6,7 @@ title: "IBest-UI"
 
 ## 介绍
 
-{{ $frontmatter.title }} 是一个轻量、简单易用、可定制主题、支持深色模式和浅色模式的鸿蒙开源UI组件库。
+{{ $frontmatter.title }} 是一个轻量、简单易用、可定制主题、支持深色模式和浅色模式的鸿蒙开源 UI 组件库。
 
 <div style="display: flex;justify-content: space-between;">
   <img src="./IBest-UI-Light.png" alt="IBest-UI-Light" style="width: 48%;">
@@ -29,7 +29,8 @@ title: "IBest-UI"
 
 ## 特别感谢
 
-[vant](https://vant-contrib.gitee.io/vant/#/zh-CN/home)
+[vant](https://vant-contrib.gitee.io/vant/#/zh-CN/home)：灵感来源
+[安徽百得思维信息科技有限公司](https://www.ibestservices.com/)：孵化公司
 
 ## 贡献者
 
@@ -47,4 +48,4 @@ title: "IBest-UI"
 
 ## 微信群
 
-先进QQ群, 群里有微信群二维码
+先进 QQ 群, 群里有微信群二维码
