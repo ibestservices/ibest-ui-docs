@@ -328,12 +328,12 @@ struct DemoPage {
 | itemHeight   | 选项高度                              | _string_ \| _number_ | `44` |
 | itemPadding  | 左右内边距                            | _string_ \| _number_ | `16` |
 | textAlign    | 文字对齐方式                           | _TextAlign_ |  `-`  |
-| iconSize     | 自定义左侧图标                         | _string_ \| _number_ |  `20`  |
-| iconColor    | 左侧图标大小                           | _ResourceColor_ | `#323232` |
-| dividerColor | 左侧图标颜色                           | _ResourceColor_ | `#ebedf0` |
+| iconSize     | 左侧图标大小                           | _string_ \| _number_ |  `20`  |
+| iconColor    | 左侧图标颜色                           | _ResourceColor_ | `#323232` |
+| dividerColor | 分割线颜色                             | _ResourceColor_ | `#ebedf0` |
 | placement    | 弹出位置                              | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#placement8" target="__blank">Placement</a>_ | `Bottom` |
-| popoverWidth | 文本字体大小                           | _string_ \| _number_ | `''` |
-| bgColor      | 右侧图标名称                           | _ResourceColor_ |  `#fff`  |
+| popoverWidth | 气泡框宽度                             | _string_ \| _number_ | `''` |
+| bgColor      | 气泡框背景色                           | _ResourceColor_ |  `#fff`  |
 | showArrow    | 是否显示箭头                           | _boolean_ |  `true`  |
 | arrowWidth   | 箭头宽度                               | _string_ \| _number_ | `12` |
 | arrowHeight  | 箭头高度                               | _string_ \| _number_ | `6` |
