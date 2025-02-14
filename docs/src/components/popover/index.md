@@ -341,6 +341,7 @@ struct DemoPage {
 | space        | 气泡与目标的间隙                         | _string_ \| _number_ | `4` |
 | radius       | 气泡圆角                               | _string_ \| _number_ | `8` |
 | popoverShadow| 气泡阴影                               | _ShadowOptions_ \| _ShadowStyle_ | `ShadowStyle.OUTER_DEFAULT_MD` |
+| borderSizeType <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 底部分割线尺寸类型, 可选值 `full` `center` `right` | _BorderSizeType_ | `center` |
 
 ### Events
 

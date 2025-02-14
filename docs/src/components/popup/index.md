@@ -192,11 +192,11 @@ struct DemoPage {
       }
       IBestPopup({
         visible: $visible1,
-				popupWidth: 500,
-				cornerRadius: 20,
-				isShowHeader: true,
-				title: "标题",
-				contentBuilder: (): void => this.centerBuilder()
+        popupWidth: 500,
+        cornerRadius: 20,
+        isShowHeader: true,
+        title: "标题",
+        contentBuilder: (): void => this.centerBuilder()
       })
       IBestPopup({
         visible: $visible2,
@@ -286,19 +286,19 @@ struct DemoPage {
   @State visible: boolean = false
   @State popupHeight: number = 150
   @Builder cusHeightBuilder() {
-		Column() {
-			IBestButton({
-				text: "切换高度",
-				type: "primary",
-				onClickBtn: () => {
-					this.popupHeight = this.popupHeight == 150 ? 300 : 150
-				}
-			})
-		}
-		.width("100%")
-		.padding(20)
-		.justifyContent(FlexAlign.Center)
-	}
+    Column() {
+      IBestButton({
+        text: "切换高度",
+        type: "primary",
+        onClickBtn: () => {
+          this.popupHeight = this.popupHeight == 150 ? 300 : 150
+        }
+      })
+    }
+    .width("100%")
+    .padding(20)
+    .justifyContent(FlexAlign.Center)
+  }
   build() {
     Column(){
       IBestCell({
@@ -309,11 +309,11 @@ struct DemoPage {
         }
       })
       IBestPopup({
-				visible: $visible,
-				popupWidth: 300,
-				popupHeight: this.popupHeight,
-				contentBuilder: (): void => this.cusHeightBuilder()
-			})
+        visible: $visible,
+        popupWidth: 300,
+        popupHeight: this.popupHeight,
+        contentBuilder: (): void => this.cusHeightBuilder()
+      })
     }
   }
 }
@@ -378,15 +378,15 @@ import { IBestCell } from "@ibestservices/ibest-ui"
 struct DemoPage {
   @State visible: boolean = false
   @Builder safeBuilder() {
-		Column(){
-			Text("内容")
-			Text("内容")
-		}
-		.width("100%")
-		.height("100%")
-		.justifyContent(FlexAlign.SpaceBetween)
-		.alignItems(HorizontalAlign.Center)
-	}
+    Column(){
+      Text("内容")
+      Text("内容")
+    }
+    .width("100%")
+    .height("100%")
+    .justifyContent(FlexAlign.SpaceBetween)
+    .alignItems(HorizontalAlign.Center)
+  }
   build() {
     Column(){
       IBestCell({
@@ -399,10 +399,10 @@ struct DemoPage {
       })
       IBestPopup({
         visible: $visible,
-				popupAlign: "left",
-				contentBuilder: this.safeBuilder,
-				safeAreaInsetTop: true,
-				safeAreaInsetBottom: true
+        popupAlign: "left",
+        contentBuilder: this.safeBuilder,
+        safeAreaInsetTop: true,
+        safeAreaInsetBottom: true
       })
     }
   }

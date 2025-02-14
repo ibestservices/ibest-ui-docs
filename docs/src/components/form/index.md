@@ -495,6 +495,250 @@ struct DemoPage {
 ```
 :::
 
+### 动态表单校验
+![动态表单校验](./images/form-dynamics.png)
+:::tip
+• 将需要遍历的表单项封装为单个组件, 在其内部处理每项表单数据;   
+• 需注意, ForEach的key值需要设置为唯一值(事例中为生成的随机id);   
+• 组件内部需在aboutToAppear中初始化表单项的值, 否则动态删除时, 表单数据会丢失;   
+• 组价内部需监听每个变量的变化, 并将新值赋值给表单项(事例中为item);
+:::
+
+::: details 点我查看代码
+```ts
+import {
+  IBestButton,
+  IBestCellGroup,
+  IBestField,
+  IBestForm,
+  IBestFormController,
+  IBestFormRule,
+  IBestPicker,
+  IBestPickerOption,
+  IBestPopup,
+  IBestRadio,
+  IBestRadioGroup,
+  IBestToast
+} from '@ibestservices/ibest-ui'
+@Observed
+class Subject {
+  id: string = ""
+  type: string = ""
+  name: string = ""
+  score: number = 0
+  constructor() {
+    this.id = Math.random().toString(36).substring(2, 9)
+  }
+}
+@Entry
+@Component
+struct DemoPage {
+  private formId: string = 'form'
+  @State sex: string = ""
+  @State info1: string = ""
+  @State info2: string = ""
+  @State list: Subject[] = []
+  private rules: IBestFormRule = {
+    "sex": [
+      { required: true, message: "请选择是否" }
+    ],
+    "info1": [
+      { required: true, message: "请输入男生信息" }
+    ],
+    "info2": [
+      { required: true, message: "请输入女生信息" }
+    ],
+    "type": [
+      { required: true, message: "请选择学科类型" }
+    ],
+    "score": [
+      { required: true, message: "请输入分数" }
+    ]
+  }
+  private controller: IBestFormController = new IBestFormController()
+  @Builder radioContent() {
+    IBestRadioGroup({
+      active: $sex,
+      group: "group",
+      placeDirection: Axis.Horizontal
+    }){
+      IBestRadio({
+        group: "group",
+        label: "男",
+        name: "1"
+      })
+      IBestRadio({
+        group: "group",
+        label: "女",
+        name: "2"
+      })
+    }
+  }
+  deleteContent(index: number){
+    this.list.splice(index, 1)
+  }
+  build() {
+    Column(){
+      IBestForm({
+        formId: this.formId,
+        rules: this.rules,
+        controller: this.controller
+      }){
+        IBestCellGroup({hasBorder: false}){
+          IBestField({
+            formId: this.formId,
+            prop: 'sex',
+            value: $sex,
+            label: "性别",
+            hasBorder: this.sex != '',
+            customRightContent: (): void => this.radioContent()
+          })
+          if(this.sex == '1'){
+            IBestField({
+              formId: this.formId,
+              prop: 'info1',
+              value: $info1,
+              label: "男生信息",
+              placeholder: "请输入男生信息",
+              hasBorder: false
+            })
+          }else if(this.sex == '2'){
+            IBestField({
+              formId: this.formId,
+              prop: 'info2',
+              value: $info2,
+              label: "女生信息",
+              placeholder: "请输入女生信息",
+              hasBorder: false
+            })
+          }
+          ForEach(this.list, (item: Subject, index) => {
+            subjectItem({
+              item: item,
+              index: index,
+              formId: this.formId,
+              delete: (): void => this.deleteContent(index)
+            })
+          }, (item: Subject) => item.id)
+        }
+        IBestButton({
+          text: "添加内容",
+          type: "primary",
+          buttonSize: 'large',
+          onClickBtn: () => {
+            this.list.push(new Subject())
+          }
+        })
+        IBestButton({
+          text: "提交",
+          type: 'primary',
+          buttonSize: 'large',
+          onClickBtn: () => {
+            this.controller.validate((valid) => {
+              if (valid) {
+                IBestToast.show("验证成功")
+              }
+            })
+          }
+        })
+      }
+    }
+  }
+}
+@Component
+struct subjectItem{
+  @ObjectLink item: Subject
+  @Prop index: number
+  @Prop formId: string
+  @State @Watch("typeChange") type: string = ""
+  @State @Watch("nameChange") name: string = ""
+  @State visible: boolean = false
+  @State @Watch("scoreChange") score: string = ""
+  private options: IBestPickerOption[] = [
+    { text: '语文', value: '1' },
+    { text: '数学', value: '2' },
+    { text: '英语', value: '3' },
+    { text: '物理', value: '4' },
+    { text: '化学', value: '5' },
+    { text: '生物', value: '6' }
+  ]
+  delete: (index: number) => void = () => {}
+  @Builder pickerBuilder(){
+    IBestPicker({
+      options: this.options,
+      title: "请选择学科",
+      visibleItemCount: 5,
+      value: $type,
+      onConfirm: (selectedValues: string[], selectTexts: string[]) => {
+        this.visible = false
+        this.name = selectTexts.join('-')
+      },
+      onCancel: () => {
+        this.visible = false
+      }
+    })
+  }
+  aboutToAppear(): void {
+    let item = this.item
+    if(item.type){
+      this.type = item.type
+    }
+    if(item.name){
+      this.name = item.name
+    }
+    if(item.score){
+      this.score = item.score.toString()
+    }
+  }
+  typeChange(){
+    this.item.type = this.type
+  }
+  nameChange(){
+    this.item.name = this.name
+  }
+  scoreChange(){
+    this.item.score = Number(this.score)
+  }
+
+  build() {
+    IBestCellGroup({title: `学科${this.index+1}`, hasBorder: false}){
+      Text("删除")
+        .fontColor("#969799")
+        .fontSize(14)
+        .position({right: 0, top: 17})
+        .onClick(() => {
+          this.delete(this.index)
+        })
+      IBestField({
+        formId: this.formId,
+        prop: `type.${this.index}`,
+        label: '学科',
+        value: this.name,
+        placeholder: "请选择学科",
+        isLink: true,
+        onFieldClick: () => {
+          this.visible = true
+        }
+      })
+      IBestField({
+        formId: this.formId,
+        prop: `score.${this.index}`,
+        label: "分数",
+        value: $score,
+        type: "number",
+        placeholder: "请输入分数",
+        hasBorder: false
+      })
+      IBestPopup({
+        visible: $visible,
+        popupAlign: "bottom",
+        contentBuilder: (): void => this.pickerBuilder()
+      })
+    }
+  }
+}
+```
+:::
 
 ## API
 

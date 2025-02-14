@@ -593,7 +593,10 @@ struct DemoPage {
 | showLabel   | 是否显示label                                             | _boolean_ | `true` |
 | placeholderColor | 占位文字颜色                                          | _ResourceColor_ | `#c8c9cc` |
 | bgColor     | 背景色                                                    | _ResourceColor_ | `#fff` |
-| inputFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 输入框字体大小                               | _number_ \| _string_ | `14` |
+| inputFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 输入框字体大小                           | _number_ \| _string_ | `14` |
+| caretColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 光标颜色                                    | _ResourceColor_ | `''` |
+| min <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 最小值, type 为 `number` `decimal` 时有效            | _number_ | `-1` |
+| max <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 最大值, type 为 `number` `decimal` 时有效            | _number_ | `-1` |
 
 ### Events
 

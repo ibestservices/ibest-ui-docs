@@ -41,7 +41,7 @@ export default defineConfig({
         activeMatch: "/components/",
       },
       {
-        text: "v2.0.4", link: ""
+        text: "v2.0.5", link: ""
       }
     ],
     sidebar: [

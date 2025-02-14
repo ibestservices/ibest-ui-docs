@@ -24,24 +24,24 @@ import {IBestTabs, IBestTabItem, IBestTabItemType} from "@ibestservices/ibest-ui
 struct DemoPage {
   @State tabsList: IBestTabItemType[] = [
     {
-        label: "标签一",
-        name: "1"
+      label: "标签一",
+      name: "1"
     },
     {
-        label: "标签二",
-        name: "2"
+      label: "标签二",
+      name: "2"
     },
     {
-        label: "标签三",
-        name: "3"
+      label: "标签三",
+      name: "3"
     },
     {
-        label: "标签四",
-        name: "4"
+      label: "标签四",
+      name: "4"
     },
     {
-        label: "标签五",
-        name: "5"
+      label: "标签五",
+      name: "5"
     }
   ]
   @State curTabName: string = "1"
@@ -140,44 +140,44 @@ struct DemoPage {
   ]
   @State tabsList1: IBestTabItem[] = [
     new IBestTabItem({
-        label: "标签一",
-        name: "1"
+      label: "标签一",
+      name: "1"
     }),
     new IBestTabItem({
-        label: "标签二",
-        name: "2"
+      label: "标签二",
+      name: "2"
     }),
     new IBestTabItem({
-        label: "标签三",
-        name: "3"
+      label: "标签三",
+      name: "3"
     }),
     new IBestTabItem({
-        label: "标签四",
-        name: "4"
+      label: "标签四",
+      name: "4"
     }),
     new IBestTabItem({
-        label: "标签五",
-        name: "5"
+      label: "标签五",
+      name: "5"
     }),
     new IBestTabItem({
-        label: "标签六",
-        name: "6"
+      label: "标签六",
+      name: "6"
     }),
     new IBestTabItem({
-        label: "标签七",
-        name: "7"
+      label: "标签七",
+      name: "7"
     }),
     new IBestTabItem({
-        label: "标签八",
-        name: "8"
+      label: "标签八",
+      name: "8"
     }),
     new IBestTabItem({
-        label: "标签九",
-        name: "9"
+      label: "标签九",
+      name: "9"
     }),
     new IBestTabItem({
-        label: "标签十",
-        name: "10"
+      label: "标签十",
+      name: "10"
     })
   ]
   @State curTabName: string = "1"
@@ -306,11 +306,11 @@ struct DemoPage {
         currentName: $curTabName
       })
       IBestButton({
-          text: "禁用标签3",
-          buttonSize: "small",
-          onClickBtn: () => {
-            this.tabsList[2].isDisable = !this.tabsList[2].isDisable
-          }
+        text: "禁用标签3",
+        buttonSize: "small",
+        onClickBtn: () => {
+          this.tabsList[2].isDisable = !this.tabsList[2].isDisable
+        }
       })
     }
   }
@@ -477,9 +477,9 @@ struct DemoPage {
 
 ## API
 
-### Tab @Props
+### @Props
 
-| 参数                | 说明                                          | 类型            | 默认值       |
+| 参数                 | 说明                                        | 类型             | 默认值       |
 | ------------------- | --------------------------------------------| --------------- | ------------ |
 | type                | 样式类型，可选值为 `line` `card`               | _string_        | `line`    |
 | tabHeight           | 默认高度                                      | _number_ \| _string_  | `35`   |
@@ -492,10 +492,14 @@ struct DemoPage {
 | tabLineHeight       | 标记线高度                                     | _number_        |    `2`   |
 | inactiveTextColor   | 未激活的tab文字颜色                             | _ResourceColor_ |  `#666`  |
 | activeTextColor     | 激活的tab文字颜色                               | _ResourceColor_ | `#333`      |
-| tabLineColor        | 标记线颜色                                     | _ResourceColor_  |  `#3D8AF2` |
+| tabLineColor        | type 为 `line` 时, 为标记线颜色, type 为 `card` 时, 为标记块背景色| _ResourceColor_  |  `#3D8AF2` |
 | lineOffsetY         | 标记线Y方向偏移量                               | _number_ \| _string_ | `0` |
 | tabBgColor          | tab区域背景颜色                                 | _ResourceColor_ | `#fff`       |
 | fontSize            | tab文字大小                                     | _number_ \| _string_ | `14` |
+| isShowActiveBg <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 是否显示激活背景, 仅type为`line`时有效      | _boolean_      |  `false` |
+| activeBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 激活背景色, 仅type为`line`时有效           | _ResourceColor_      |  `''` |
+| inactiveBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 非激活背景色, 仅type为`line`时有效           | _ResourceColor_      |  `''` |
+| radius <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 选项圆角, 仅type为`line`时有效 | _number_ \| _string_ |  `0` |
 
 ### IBestTabItem IBestTabItemType  数据结构
 
