@@ -2,7 +2,8 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "IBest-UI@HarmonyOS",
-  description: "IBest-UI是一个轻量、简单易用、可定制主题、支持深色模式和浅色模式的鸿蒙开源UI组件库。",
+  description:
+    "IBest-UI是一个轻量、简单易用、可定制主题、支持深色模式和浅色模式的鸿蒙开源UI组件库。",
   srcDir: "./src",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }],
@@ -24,7 +25,7 @@ export default defineConfig({
       {
         name: "keywords",
         content:
-          "IBest,IBest-UI,鸿蒙,鸿蒙UI,鸿蒙UI库,鸿蒙UI框架,鸿蒙UI框架,鸿蒙UI组件,鸿蒙UI组件库,鸿蒙UI组件框架,百得思维,安徽百得思维,合肥百德思维,Harmony,OpenHarmony,HarmonyOS,HarmonyOS UI,HarmonyOS Ui,HarmonyOS Ui库,HarmonyOS Ui框架,HarmonyOS Ui组件,HarmonyOS Ui组件库,HarmonyOS Ui组件框架"
+          "IBest,IBest-UI,鸿蒙,鸿蒙UI,鸿蒙UI库,鸿蒙UI框架,鸿蒙UI框架,鸿蒙UI组件,鸿蒙UI组件库,鸿蒙UI组件框架,百得思维,安徽百得思维,合肥百德思维,Harmony,OpenHarmony,HarmonyOS,HarmonyOS UI,HarmonyOS Ui,HarmonyOS Ui库,HarmonyOS Ui框架,HarmonyOS Ui组件,HarmonyOS Ui组件库,HarmonyOS Ui组件框架",
       },
     ],
   ],
@@ -41,8 +42,9 @@ export default defineConfig({
         activeMatch: "/components/",
       },
       {
-        text: "v2.0.5", link: ""
-      }
+        text: "v2.0.5",
+        link: "",
+      },
     ],
     sidebar: [
       {
@@ -55,8 +57,9 @@ export default defineConfig({
           { text: "颜色模式", link: "/guide/color-mode/" },
           { text: "常见问题", link: "/guide/faq/" },
           { text: "更新日志", link: "/guide/changelog/" },
-          { text: "贡献指南", link: "/guide/contribution/" }
-        ]
+          { text: "贡献指南", link: "/guide/contribution/" },
+          { text: "设计资源", link: "/guide/design/" },
+        ],
       },
       {
         text: "基础组件",
@@ -65,8 +68,8 @@ export default defineConfig({
           { text: "Cell 单元格", link: "/components/cell/" },
           { text: "Icon 图标", link: "/components/icon/" },
           { text: "Popup 弹出层", link: "/components/popup/" },
-          { text: "Toast 轻提示", link: "/components/toast/" }
-        ]
+          { text: "Toast 轻提示", link: "/components/toast/" },
+        ],
       },
       {
         text: "表单组件",
@@ -77,8 +80,14 @@ export default defineConfig({
           { text: "DatePicker 日期选择", link: "/components/datepicker/" },
           { text: "Field 输入框", link: "/components/field/" },
           { text: "Form 表单", link: "/components/form/" },
-          { text: "NumberKeyboard 数字键盘", link: "/components/numberkeyboard/" },
-          { text: "PasswordInput 密码输入框", link: "/components/passwordInput/" },
+          {
+            text: "NumberKeyboard 数字键盘",
+            link: "/components/numberkeyboard/",
+          },
+          {
+            text: "PasswordInput 密码输入框",
+            link: "/components/passwordInput/",
+          },
           { text: "Picker 选择器", link: "/components/picker/" },
           { text: "PickerGroup 选择器组", link: "/components/pickergroup/" },
           { text: "Radio 单选框", link: "/components/radio/" },
@@ -89,8 +98,8 @@ export default defineConfig({
           { text: "Stepper 步进器", link: "/components/stepper/" },
           { text: "Switch 开关", link: "/components/switch/" },
           { text: "TimePicker 时间选择", link: "/components/timepicker/" },
-          { text: "Uploader 文件上传", link: "/components/uploader/" }
-        ]
+          { text: "Uploader 文件上传", link: "/components/uploader/" },
+        ],
       },
       {
         text: "反馈组件",
@@ -101,13 +110,16 @@ export default defineConfig({
           { text: "Notify 消息通知", link: "/components/notify/" },
           { text: "PullRefresh 下拉刷新", link: "/components/pullrefresh/" },
           { text: "SwipeCell 滑动单元格", link: "/components/swipecell/" },
-        ]
+        ],
       },
       {
         text: "展示组件",
         items: [
           { text: "Badge 徽标", link: "/components/badge/" },
-          { text: "CircleProgress 环形进度条", link: "/components/circleProgress/" },
+          {
+            text: "CircleProgress 环形进度条",
+            link: "/components/circleProgress/",
+          },
           { text: "Collapse 折叠面板", link: "/components/collapse/" },
           { text: "CountDown 倒计时", link: "/components/countDown/" },
           { text: "Divider 分割线", link: "/components/divider/" },
@@ -118,23 +130,26 @@ export default defineConfig({
           { text: "Progress 进度条", link: "/components/progress/" },
           { text: "TextEllipsis 文本省略", link: "/components/textEllipsis/" },
           { text: "Tag 标签", link: "/components/tag/" },
-          { text: "Watermark 水印", link: "/components/watermark/" }
-        ]
+          { text: "Watermark 水印", link: "/components/watermark/" },
+        ],
       },
       {
         text: "导航组件",
         items: [
           { text: "NavBar 导航栏", link: "/components/navBar/" },
           { text: "SideBar 侧边导航", link: "/components/sideBar/" },
-          { text: "Tab 标签页", link: "/components/tab/" }
-        ]
+          { text: "Tab 标签页", link: "/components/tab/" },
+        ],
       },
       {
         text: "业务组件",
         items: [
-          { text: `CanvasDrawer 画布绘制 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>`, link: "/components/canvasDrawer/" }
-        ]
-      }
+          {
+            text: `CanvasDrawer 画布绘制 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>`,
+            link: "/components/canvasDrawer/",
+          },
+        ],
+      },
     ],
     socialLinks: [
       {
