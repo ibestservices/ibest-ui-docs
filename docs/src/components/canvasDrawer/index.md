@@ -101,41 +101,41 @@ struct DemoPage {
         .width(this.canvasWidth)
         .height(this.canvasHeight)
       if(this.canvasShow){
-				IBestCanvasDrawer({
-					canvasWidth: this.canvasWidth,
-					canvasHeight: this.canvasHeight,
-					canvasBgColor: "#1989fa",
-					onDrawFinish: pixelMap => {
-						this.pixelMap = pixelMap
+        IBestCanvasDrawer({
+          canvasWidth: this.canvasWidth,
+          canvasHeight: this.canvasHeight,
+          canvasBgColor: "#1989fa",
+          onDrawFinish: pixelMap => {
+            this.pixelMap = pixelMap
             this.canvasShow = false
-					}
-				})
-			}
-			if(this.canvasShow1){
-				IBestCanvasDrawer({
-					canvasWidth: this.canvasWidth,
-					canvasHeight: this.canvasHeight,
-					canvasBgImg: "https://img0.baidu.com/it/u=295003109,130135700&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800",
-					onDrawFinish: pixelMap => {
-						this.pixelMap1 = pixelMap
+          }
+        })
+      }
+      if(this.canvasShow1){
+        IBestCanvasDrawer({
+          canvasWidth: this.canvasWidth,
+          canvasHeight: this.canvasHeight,
+          canvasBgImg: "https://img0.baidu.com/it/u=295003109,130135700&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800",
+          onDrawFinish: pixelMap => {
+            this.pixelMap1 = pixelMap
             this.canvasShow1 = false
-					}
-				})
-			}
-			if(this.canvasShow2){
-				IBestCanvasDrawer({
-					canvasWidth: this.canvasWidth,
-					canvasHeight: this.canvasHeight,
-					linerGradient: {
-						angle: 128,
-						colors: [["rgba(69,123,180,1)", 0], ["rgba(152,174,199,1)", 0.7]]
-					},
-					onDrawFinish: pixelMap => {
+          }
+        })
+      }
+      if(this.canvasShow2){
+        IBestCanvasDrawer({
+          canvasWidth: this.canvasWidth,
+          canvasHeight: this.canvasHeight,
+          linerGradient: {
+            angle: 128,
+            colors: [["rgba(69,123,180,1)", 0], ["rgba(152,174,199,1)", 0.7]]
+          },
+          onDrawFinish: pixelMap => {
             this.canvasShow2 = false
-						this.pixelMap2 = pixelMap
-					}
-				})
-			}
+            this.pixelMap2 = pixelMap
+          }
+        })
+      }
     }
   }
 }
@@ -156,9 +156,9 @@ struct DemoPage {
   @State canvasShow: boolean = false
   @State pixelMap: PixelMap | null = null
   @State contentList: IBestCanvasContent[] = [
-		{ type: "image", url: "https://img1.baidu.com/it/u=3367326055,3107318562&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500", width: 100, height: 100, left: 20, top: 20, borderRadius: 50 },
-		{ type: "image", url: "https://img1.baidu.com/it/u=1371594408,1235079511&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=539", left: 160, top: 30, width: 112, height: 120, deg: 45, borderRadius: 20 }
-	]
+    { type: "image", url: "https://img1.baidu.com/it/u=3367326055,3107318562&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500", width: 100, height: 100, left: 20, top: 20, borderRadius: 50 },
+    { type: "image", url: "https://img1.baidu.com/it/u=1371594408,1235079511&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=539", left: 160, top: 30, width: 112, height: 120, deg: 45, borderRadius: 20 }
+  ]
   aboutToAppear(){
     this.canvasShow = true
   }
@@ -169,14 +169,14 @@ struct DemoPage {
         .height(this.canvasHeight)
       if(this.canvasShow){
         IBestCanvasDrawer({
-					canvasWidth: this.canvasWidth,
-					canvasHeight: this.canvasHeight,
-					contentList: this.contentList,
-					onDrawFinish: pixelMap => {
-						this.pixelMap = pixelMap
-						this.canvasShow = false
-					}
-				})
+          canvasWidth: this.canvasWidth,
+          canvasHeight: this.canvasHeight,
+          contentList: this.contentList,
+          onDrawFinish: pixelMap => {
+            this.pixelMap = pixelMap
+            this.canvasShow = false
+          }
+        })
       }
     }
   }
@@ -198,12 +198,12 @@ struct DemoPage {
   @State canvasShow: boolean = false
   @State pixelMap: PixelMap | null = null
   @State contentList: IBestCanvasContent[] = [
-		{ type: "text", text: $r("app.string.app_name"), fontSize: 20, left: 20, top: 10 },
-		{ type: "text", text: "IBest-UI", fontColor: "red", left: 120, top: 10 },
-		{ type: "text", text: "今人不见古时月, 今月曾经照古人", textDecoration: "underline", width: 150, maxLineNumber: 2, left: 20, top:40 },
-		{ type: "text", text: "今人不见古时月, 今月曾经照古人", textDecoration: "lineThrough", lineHeight: 24, width: 150, maxLineNumber: 2, textAlign: "center", left: 20, top: 90 },
-		{ type: "text", text: "今人不见古时月, 今月曾经照古人", fontWeight: "bold", width: 150, maxLineNumber: 2, textAlign: "right", right: 20, top: 130 }
-	]
+    { type: "text", text: $r("app.string.app_name"), fontSize: 20, left: 20, top: 10 },
+    { type: "text", text: "IBest-UI", fontColor: "red", left: 120, top: 10 },
+    { type: "text", text: "今人不见古时月, 今月曾经照古人", textDecoration: "underline", width: 150, maxLineNumber: 2, left: 20, top:40 },
+    { type: "text", text: "今人不见古时月, 今月曾经照古人", textDecoration: "lineThrough", lineHeight: 24, width: 150, maxLineNumber: 2, textAlign: "center", left: 20, top: 90 },
+    { type: "text", text: "今人不见古时月, 今月曾经照古人", fontWeight: "bold", width: 150, maxLineNumber: 2, textAlign: "right", right: 20, top: 130 }
+  ]
   aboutToAppear(){
     this.canvasShow = true
   }
@@ -214,14 +214,14 @@ struct DemoPage {
         .height(this.canvasHeight)
       if(this.canvasShow){
         IBestCanvasDrawer({
-					canvasWidth: this.canvasWidth,
-					canvasHeight: this.canvasHeight,
-					contentList: this.contentList,
-					onDrawFinish: pixelMap => {
-						this.pixelMap = pixelMap
-						this.canvasShow = false
-					}
-				})
+          canvasWidth: this.canvasWidth,
+          canvasHeight: this.canvasHeight,
+          contentList: this.contentList,
+          onDrawFinish: pixelMap => {
+            this.pixelMap = pixelMap
+            this.canvasShow = false
+          }
+        })
       }
     }
   }

@@ -117,12 +117,12 @@ struct DemoPage {
         text: '展示标题、描述信息',
         onClickBtn: () => {
           IBestActionSheet.show({
-            customTitle: '标题文字',
+            customTitle: $r("app.string.app_name"),// 替换为自己项目的资源
             description: '这是一段描述信息',
             actions: [
-              { name: '选项一' },
-              { name: '选项二', subName: '描述信息' },
-              { name: '选项三' }
+              { name: $r("app.string.app_name") },// 替换为自己项目的资源
+              { name: '选项二', subName: $r("app.string.app_doc_url") },// 替换为自己项目的资源
+              { name: '选项三', icon: $r("app.media.app_icon") }// 替换为自己项目的资源
             ],
             cancelText: '取消'
           })

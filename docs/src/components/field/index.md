@@ -21,7 +21,6 @@ import { IBestField } from "@ibestservices/ibest-ui";
 
 ::: details 点我查看代码
 ```ts
-import { IBestCellGroup } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
@@ -29,14 +28,12 @@ struct DemoPage {
   
   build() {
     Column(){
-      IBestCellGroup({inset: true}) {
-        IBestField({
-          value: $value,
-          label: "文本",
-          placeholder: "请输入文本",
-          hasBorder: false
-        })
-      }
+      IBestField({
+        value: $value,
+        label: "文本",
+        placeholder: "请输入文本",
+        hasBorder: false
+      })
     }
   }
 }
@@ -52,7 +49,6 @@ struct DemoPage {
 
 ::: details 点我查看代码
 ```ts
-import { IBestCellGroup } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
@@ -63,37 +59,35 @@ struct DemoPage {
   
   build() {
     Column(){
-      IBestCellGroup({inset: true}) {
-        // 密码
-        IBestField({
-          value: $value1,
-          label: "密码",
-          placeholder: "请输入密码",
-          type: "password"
-        })
-        // 手机号
-        IBestField({
-          value: $value2,
-          label: "手机号",
-          placeholder: "请输入手机号",
-          type: "phone"
-        })
-        // 整数数字
-        IBestField({
-          value: $value3,
-          label: "整数",
-          placeholder: "请输入整数",
-          type: "number"
-        })
-        // 小数
-        IBestField({
-          value: $value4,
-          label: "小数",
-          hasBorder: false,
-          placeholder: "请输入小数",
-          type: "decimal"
-        })
-      }
+      // 密码
+      IBestField({
+        value: $value1,
+        label: "密码",
+        placeholder: "请输入密码",
+        type: "password"
+      })
+      // 手机号
+      IBestField({
+        value: $value2,
+        label: "手机号",
+        placeholder: "请输入手机号",
+        type: "phone"
+      })
+      // 整数数字
+      IBestField({
+        value: $value3,
+        label: "整数",
+        placeholder: "请输入整数",
+        type: "number"
+      })
+      // 小数
+      IBestField({
+        value: $value4,
+        label: "小数",
+        hasBorder: false,
+        placeholder: "请输入小数",
+        type: "decimal"
+      })
     }
   }
 }
@@ -109,7 +103,6 @@ struct DemoPage {
 
 ::: details 点我查看代码
 ```ts
-import { IBestCellGroup } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
@@ -118,19 +111,17 @@ struct DemoPage {
   
   build() {
     Column(){
-      IBestCellGroup({inset: true}) {
-        IBestField({
-          value: $value1,
-          label: "文本",
-          readOnly: true
-        })
-        IBestField({
-          value: $value2,
-          label: "文本",
-          hasBorder: false,
-          disabled: true
-        })
-      }
+      IBestField({
+        value: $value1,
+        label: "文本",
+        readOnly: true
+      })
+      IBestField({
+        value: $value2,
+        label: "文本",
+        hasBorder: false,
+        disabled: true
+      })
     }
   }
 }
@@ -146,7 +137,6 @@ struct DemoPage {
 
 ::: details 点我查看代码
 ```ts
-import { IBestCellGroup } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
@@ -155,22 +145,20 @@ struct DemoPage {
   
   build() {
     Column(){
-      IBestCellGroup({inset: true}) {
-        IBestField({
-          value: $value1,
-          label: "文本",
-          placeholder: "请输入文本",
-          leftIcon: "https://ibestui.ibestservices.com/favicon.ico",
-          rightIcon: $r("app.media.arrow_right")
-        })
-        IBestField({
-          value: $value2,
-          label: "文本",
-          placeholder: "请输入文本",
-          hasBorder: false,
-          clearable: true
-        })
-      }
+      IBestField({
+        value: $value1,
+        label: "文本",
+        placeholder: "请输入文本",
+        leftIcon: "https://ibestui.ibestservices.com/favicon.ico",
+        rightIcon: $r("app.media.arrow_right")
+      })
+      IBestField({
+        value: $value2,
+        label: "文本",
+        placeholder: "请输入文本",
+        hasBorder: false,
+        clearable: true
+      })
     }
   }
 }
@@ -186,23 +174,20 @@ struct DemoPage {
 :::
 ::: details 点我查看代码
 ```ts
-import { IBestCellGroup } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
   @State value: string = ''
-  
   build() {
     Column(){
-      IBestCellGroup({inset: true}) {
-        IBestField({
-          value: $value,
-          label: "文本",
-          placeholder: "请输入文本",
-          hasBorder: false,
-          required: true
-        })
-      }
+      IBestField({
+        value: $value,
+        label: "文本",
+        placeholder: "请输入文本",
+        hasBorder: false,
+        radius: 6,
+        required: true
+      })
     }
   }
 }
@@ -217,7 +202,7 @@ struct DemoPage {
 :::
 ::: details 点我查看代码
 ```ts
-import { IBestCellGroup, IBestButton } from "@ibestservices/ibest-ui";
+import { IBestButton } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
@@ -251,15 +236,13 @@ struct DemoPage {
   }
   build() {
     Column(){
-      IBestCellGroup({inset: true}) {
-        IBestField({
-          value: $value,
-          label: "短信验证码",
-          placeholder: "请输入验证码",
-          hasBorder: false,
-          buttonBuilder: (): void => this.sendCodeButton()
-        })
-      }
+      IBestField({
+        value: $value,
+        label: "短信验证码",
+        placeholder: "请输入验证码",
+        hasBorder: false,
+        buttonBuilder: (): void => this.sendCodeButton()
+      })
     }
   }
 }
@@ -274,7 +257,6 @@ struct DemoPage {
 :::
 ::: details 点我查看代码
 ```ts
-import { IBestCellGroup } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
@@ -285,22 +267,20 @@ struct DemoPage {
   }
   build() {
     Column(){
-      IBestCellGroup({inset: true}) {
-        IBestField({
-          value: $value1,
-          label: "文本",
-          placeholder: "在输入时执行格式化",
-          formatter: (value: string): string => this.formatValue(value)
-        })
-        IBestField({
-          value: $value2,
-          label: "文本",
-          placeholder: "在失焦时执行格式化",
-          hasBorder: false,
-          formatter: (value: string): string => this.formatValue(value),
-          formatTrigger: "onBlur"
-        })
-      }
+      IBestField({
+        value: $value1,
+        label: "文本",
+        placeholder: "在输入时执行格式化",
+        formatter: (value: string): string => this.formatValue(value)
+      })
+      IBestField({
+        value: $value2,
+        label: "文本",
+        placeholder: "在失焦时执行格式化",
+        hasBorder: false,
+        formatter: (value: string): string => this.formatValue(value),
+        formatTrigger: "onBlur"
+      })
     }
   }
 }
@@ -315,23 +295,20 @@ struct DemoPage {
 :::
 ::: details 点我查看代码
 ```ts
-import { IBestCellGroup } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
   @State value: string = ''
   build() {
     Column(){
-      IBestCellGroup({inset: true}) {
-        IBestField({
-          value: $value,
-          label: "留言",
-          placeholder: "请输入留言",
-          hasBorder: false,
-          autosize: true,
-          rows: 3
-        })
-      }
+      IBestField({
+        value: $value,
+        label: "留言",
+        placeholder: "请输入留言",
+        hasBorder: false,
+        autosize: true,
+        rows: 3
+      })
     }
   }
 }
@@ -346,7 +323,6 @@ struct DemoPage {
 :::
 ::: details 点我查看代码
 ```ts
-import { IBestCellGroup } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
@@ -354,27 +330,25 @@ struct DemoPage {
   @State value2: string = ''
   build() {
     Column(){
-      IBestCellGroup({inset: true}) {
-        IBestField({
-          value: $value1,
-          label: "文本",
-          placeholder: "请输入文本",
-          maxlength: 30,
-          clearable: true,
-          showWordLimit: true
-        })
-        IBestField({
-          value: $value2,
-          label: "文本",
-          placeholder: "请输入文本",
-          hasBorder: false,
-          autosize: true,
-          rows: 3,
-          maxlength: 100,
-          clearable: true,
-          showWordLimit: true
-        })
-      }
+      IBestField({
+        value: $value1,
+        label: "文本",
+        placeholder: "请输入文本",
+        maxlength: 30,
+        clearable: true,
+        showWordLimit: true
+      })
+      IBestField({
+        value: $value2,
+        label: "文本",
+        placeholder: "请输入文本",
+        hasBorder: false,
+        autosize: true,
+        rows: 3,
+        maxlength: 100,
+        clearable: true,
+        showWordLimit: true
+      })
     }
   }
 }
@@ -389,22 +363,19 @@ struct DemoPage {
 :::
 ::: details 点我查看代码
 ```ts
-import { IBestCellGroup } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
   @State value: string = ''
   build() {
     Column(){
-      IBestCellGroup({inset: true}) {
-        IBestField({
-          value: $value,
-          label: "文本",
-          placeholder: "输入框内容右对齐",
-          hasBorder: false,
-          inputAlign: "right"
-        })
-      }
+      IBestField({
+        value: $value,
+        label: "文本",
+        placeholder: "输入框内容右对齐",
+        hasBorder: false,
+        inputAlign: "right"
+      })
     }
   }
 }
@@ -419,7 +390,6 @@ struct DemoPage {
 :::
 ::: details 点我查看代码
 ```ts
-import { IBestCellGroup } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
@@ -429,33 +399,31 @@ struct DemoPage {
   @State value4: string = ''
   build() {
     Column(){
-      IBestCellGroup({inset: true}) {
-        IBestField({
-          value: $value1,
-          label: "文本",
-          placeholder: "顶部对齐",
-          labelPosition: "top"
-        })
-        IBestField({
-          value: $value2,
-          label: "文本",
-          placeholder: "左对齐",
-          labelAlign: "left"
-        })
-        IBestField({
-          value: $value3,
-          label: "文本",
-          placeholder: "居中对齐",
-          labelAlign: "center"
-        })
-        IBestField({
-          value: $value4,
-          label: "文本",
-          placeholder: "右对齐",
-          labelAlign: "right",
-          hasBorder: false
-        })
-      }
+      IBestField({
+        value: $value1,
+        label: "文本",
+        placeholder: "顶部对齐",
+        labelPosition: "top"
+      })
+      IBestField({
+        value: $value2,
+        label: "文本",
+        placeholder: "左对齐",
+        labelAlign: "left"
+      })
+      IBestField({
+        value: $value3,
+        label: "文本",
+        placeholder: "居中对齐",
+        labelAlign: "center"
+      })
+      IBestField({
+        value: $value4,
+        label: "文本",
+        placeholder: "右对齐",
+        labelAlign: "right",
+        hasBorder: false
+      })
     }
   }
 }
@@ -470,25 +438,22 @@ struct DemoPage {
 :::
 ::: details 点我查看代码
 ```ts
-import { IBestCellGroup } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
   @State value: string = ''
   build() {
     Column(){
-      IBestCellGroup({inset: true}) {
-        IBestField({
-          value: $value,
-          label: "地区",
-          placeholder: "点击选择地区",
-          hasBorder: false,
-          isLink: true,
-          onFieldClick: () => {
-            console.log("点击")
-          }
-        })
-      }
+      IBestField({
+        value: $value,
+        label: "地区",
+        placeholder: "点击选择地区",
+        hasBorder: false,
+        isLink: true,
+        onFieldClick: () => {
+          console.log("点击")
+        }
+      })
     }
   }
 }
@@ -503,7 +468,7 @@ struct DemoPage {
 :::
 ::: details 点我查看代码
 ```ts
-import { IBestCellGroup, IBestRadioGroup, IBestRadio } from "@ibestservices/ibest-ui";
+import { IBestRadioGroup, IBestRadio } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
@@ -531,14 +496,12 @@ struct DemoPage {
   }
   build() {
     Column(){
-      IBestCellGroup({inset: true}) {
-        IBestField({
-          value: $value,
-          label: "文本",
-          hasBorder: false,
-          customRightContent: (): void => this.radioContent()
-        })
-      }
+      IBestField({
+        value: $value,
+        label: "文本",
+        hasBorder: false,
+        customRightContent: (): void => this.radioContent()
+      })
     }
   }
 }
@@ -588,15 +551,18 @@ struct DemoPage {
 | formatTrigger| 执行格式化函数触发时机, 可选值 `onchange` `onblur`        | _string_ | `onchange` |
 | labelFontSize| 左侧字体大小                                              | _number_ \| _string_ | `14` |
 | labelColor  | 左侧字体颜色                                               | _ResourceStr_ | `#323233` |
-| letIconSize | 左侧图标大小                                               | _number_ \| _string_ | `14` |
+| leftIconSize | 左侧图标大小                                               | _number_ \| _string_ | `14` |
 | rightIconSize | 右侧图标大小                                             | _number_ \| _string_ | `14` |
 | showLabel   | 是否显示label                                             | _boolean_ | `true` |
 | placeholderColor | 占位文字颜色                                          | _ResourceColor_ | `#c8c9cc` |
 | bgColor     | 背景色                                                    | _ResourceColor_ | `#fff` |
-| inputFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 输入框字体大小                           | _number_ \| _string_ | `14` |
+| inputFontSize| 输入框字体大小                           | _number_ \| _string_ | `14` |
 | caretColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 光标颜色                                    | _ResourceColor_ | `''` |
 | min <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 最小值, type 为 `number` `decimal` 时有效            | _number_ | `-1` |
 | max <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 最大值, type 为 `number` `decimal` 时有效            | _number_ | `-1` |
+| verticalAlign <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 垂直方向对齐方式, 仅 `labelPosition` 为left时有效, 可选值 `top` `center` | _string_ | `''` |
+| radius <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 外部圆角 | _string_ \| _number_ | `0` |
+
 
 ### Events
 

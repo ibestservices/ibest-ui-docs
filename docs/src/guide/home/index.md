@@ -6,7 +6,7 @@ title: "IBest-UI"
 
 ## 介绍
 
-{{ $frontmatter.title }} 是一个轻量、简单易用、可定制主题、支持深色模式和浅色模式的鸿蒙开源 UI 组件库。
+{{ $frontmatter.title }} 是一个轻量、简单易用、可定制主题、支持深色模式和浅色模式的鸿蒙开源 UI 组件库, 完美兼容元服务。
 
 <div style="display: flex;justify-content: space-between;">
   <img src="./IBest-UI-Light.png" alt="IBest-UI-Light" style="width: 48%;">

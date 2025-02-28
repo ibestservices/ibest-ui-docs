@@ -313,9 +313,9 @@ struct DemoPage {
 | onChange  | 面板状态变化回调        | `name: string \| string[]` |
 
 ### IBestCollapseController 实例方法
-| 方法名      | 说明                  | 参数             | 默认值 |
+| 方法名      | 说明                  | 参数             | 返回值 |
 | ----------| ---------------------| -------------------------------- | ---|
-| toggleAll  | 切换所有面板状态, 传 true 为全部展开，false 为全部收起，不传参为全部切换 | `option?: boolean \| ToggleOption` | undefined |
+| toggleAll  | 切换所有面板状态, 传 true 为全部展开，false 为全部收起，不传参为全部切换 | `option?: boolean \| ToggleOption` | `-` |
 
 ### ToggleOption 数据类型
 | 参数         | 说明                         | 类型                       | 默认值     |

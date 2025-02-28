@@ -379,8 +379,9 @@ struct DemoPage {
 | 参数   | 说明                   | 类型      | 默认值  |
 | ------ | ---------------------- | --------- | ------- |
 | title  | 分组标题               | _string_  |         |
-| inset  | 是否展示为圆角卡片风格 | _boolean_ | `false` |
-| border | 是否显示外边框         | _boolean_ | `true`  |
+| inset  | 是否展示为圆角卡片风格   | _boolean_ | `false` |
+| border | 是否显示外边框          | _boolean_ | `true`  |
+| radius <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 圆角大小, 仅inset为true时有效| _string_ \| _number_ | `8`   |
 
 ### Cell @Props
 

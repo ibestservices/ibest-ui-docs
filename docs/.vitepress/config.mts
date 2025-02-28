@@ -42,7 +42,7 @@ export default defineConfig({
         activeMatch: "/components/",
       },
       {
-        text: "v2.0.5",
+        text: "v2.0.6",
         link: "",
       },
     ],
@@ -145,8 +145,12 @@ export default defineConfig({
         text: "业务组件",
         items: [
           {
-            text: `CanvasDrawer 画布绘制 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>`,
+            text: "CanvasDrawer 画布绘制",
             link: "/components/canvasDrawer/",
+          },
+          {
+            text: `ImageCropper 图片裁剪 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>`,
+            link: "/components/imageCropper/",
           },
         ],
       },

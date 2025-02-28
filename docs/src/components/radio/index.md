@@ -264,20 +264,20 @@ struct DemoPage {
 @Component
 struct DemoPage {
   @State group: string = "group"
-  @State active: string = "1"
+  @State active: number = 1
   build() {
     IBestRadioGroup({ group: this.group, active: $active }){
       IBestRadio({
         group: this.group,
         label: '单选框',
         labelDisabled: true,
-        name: '1'
+        name: 1
       })
       IBestRadio({
         group: this.group,
         label: '单选框',
         labelDisabled: true,
-        name: '2'
+        name: 2
       })
     }
   }
@@ -299,27 +299,27 @@ import { IBestCell } from '@ibestservices/ibset-ui'
 @Component
 struct DemoPage {
   @State group: string = "group"
-  @State active: string = "1"
-  @Builder CellRadio(name: string, group: string) {
+  @State active: boolean = true
+  @Builder CellRadio(name: boolean, group: string) {
     IBestRadio({ name, group })
   }
   build() {
     IBestRadioGroup({ group: this.group, active: $active }){
       IBestCell({
-        title: '单选框1',
-        rightIconBuilder: () => this.CellRadio('1', this.group),
+        title: '是',
+        rightIconBuilder: () => this.CellRadio(true, this.group),
         clickable: true,
         onClickCell: () => {
-          this.active = '1'
+          this.active = true
         }
       })
       IBestCell({
-        title: '单选框2',
-        rightIconBuilder: () => this.CellRadio('2', this.group),
+        title: '否',
+        rightIconBuilder: () => this.CellRadio(false, this.group),
         hasBorder: false,
         clickable: true,
         onClickCell: () => {
-          this.active = '2'
+          this.active = false
         }
       })
     }
@@ -333,18 +333,18 @@ struct DemoPage {
 
 ### Radio @Props
 
-| 参数           | 说明                                                                  | 类型   | 默认值  |
-| ------------- | ----------------------------------------------------------------------| -------------------- | ------- |
-| name          | 标识符，通常为一个唯一的字符串或数字，同一 `group` 的 `name` 不可重复          | _string_ \| _number_ |         |
-| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`          | _string_             |         |
-| label         | 显示的文本                                                              | _ResourceStr_             |         |
-| iconSize      | 图标大小                                                                | _number_ \| _string_ |  `18`  |
-| shape         | 形状，可选值为 `square` `dot`                                            | _string_             | `round` |
-| disabled      | 是否为禁用状态                                                           | _boolean_            | `false` |
-| labelDisabled | 是否禁用文本内容点击                                                      | _boolean_            | `false` |
-| labelPosition | 文本位置，可选值为 `left`                                                 | _string_             | `right` |
-| checkedColor  | 选中状态颜色                                                             | _ResourceColor_      |  `#1989fa` |
-| labelFontSize | 文本字体大小                                                             | _number_ \| _string_ |  `16`  |
+| 参数           | 说明                                                            | 类型   | 默认值  |
+| ------------- | ----------------------------------------------------------------| -------------------- | ------- |
+| name          | 标识符，通常为一个唯一的字符串或数字                                  | _string_ \| _number_ \| _boolean_ |         |
+| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`   | _string_             |         |
+| label         | 显示的文本                                                       | _ResourceStr_         |         |
+| iconSize      | 图标大小                                                         | _number_ \| _string_ |  `18`  |
+| shape         | 形状，可选值为 `square` `dot`                                     | _string_             | `round` |
+| disabled      | 是否为禁用状态                                                    | _boolean_            | `false` |
+| labelDisabled | 是否禁用文本内容点击                                               | _boolean_            | `false` |
+| labelPosition | 文本位置，可选值为 `left`                                          | _string_             | `right` |
+| checkedColor  | 选中状态颜色                                                      | _ResourceColor_      |  `#1989fa` |
+| labelFontSize | 文本字体大小                                                      | _number_ \| _string_ |  `16`  |
 
 ### Radio 插槽
 
@@ -358,7 +358,7 @@ struct DemoPage {
 | 参数  | 说明                                                           | 类型      | 默认值 |
 | ----- | --------------------------------------------------------------| -------- | ------ |
 | group | 标识符，通常为一个唯一的字符串, 需保证全局唯一性      | _string_  |  `''`   |
-| active| 激活的标识, 支持双向绑定                          | _string_  |  `''`  |
+| active| 激活的标识, 支持双向绑定                          | _string_ \| _number_ \| _boolean_  |  `''`  |
 | placeDirection | 排列方向                               | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#axis" target="__blank">Axis</a>_   | `Axis.Vertical` |
 | space | 间距                                            | _string_ \| _number_ | `12` |
 

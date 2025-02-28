@@ -60,16 +60,34 @@ struct DemoPage {
             ]
           })
           IBestButton({
+            text: "验证姓名",
+            type: 'primary',
+            buttonSize: 'large',
+            onClickBtn: () => {
+              this.controller.validateField("name").then(res => {
+                if(res.valid){
+                  IBestToast.show("验证成功")
+                } else {
+                  IBestToast.show({
+                    message: `${res.field.label}验证失败`
+                  })
+                }
+              })
+            }
+          })
+          IBestButton({
             text: "提交",
             type: 'primary',
             buttonSize: 'large',
             onClickBtn: () => {
-              this.controller.validate((valid, fields) => {
-                if (valid) {
+              this.controller.validate().then(res => {
+                if(res.valid){
                   IBestToast.show("验证成功")
                 } else {
-                  let names: string[] = fields.map(item => item.name)
-                  console.log(`${names.join(',')}验证失败`)
+                  let labels: string[] = res.fields.map(item => item.label)
+                  IBestToast.show({
+                    message: `${labels.join(',')}验证失败`
+                  })
                 }
               })
             }
@@ -198,7 +216,6 @@ struct DemoPage {
 ::: details 点我查看代码
 ```ts
 import {
-  CalendarConfirmResultType,
   IBestButton,
   IBestCalendarDialog,
   IBestCascader,
@@ -405,6 +422,7 @@ struct DemoPage {
             prop: 'value2',
             value: $value2,
             label: "复选框",
+            rules: this.value2 ? [{required: true, message: '请选择'}] : [],
             customRightContent: (): void => this.checkboxContent()
           })
           IBestField({
@@ -478,14 +496,14 @@ struct DemoPage {
         visible: this.visible,
         options: this.options,
         value: $selectValue,
-        onConfirm: (value: IBestCascaderOption[]) => {
+        onConfirm: value => {
           this.value6 = value.map(item => item.text).join(',')
         }
       })
       // 日历
       IBestCalendarDialog({
         visible: $visible1,
-        onConfirm: (value: Array<CalendarConfirmResultType>): void => {
+        onConfirm: value => {
           this.value7 = value[0].dateStr
         }
       })
@@ -756,23 +774,21 @@ struct subjectItem{
 | requireAsteriskPosition| 星号的位置, 可选值 `left` `right`      | _string_ | `left` |
 | showMessage | 是否显示验证信息                                  | _boolean_ | `true` |
 | disabled    | 是否禁用                                         | _boolean_ | `false` |
+| controller  | 表单实例控制器                                    | _IBestFormController_ | `null` |
 
 ### 插槽
 |插槽名         | 说明                        | 类型                      |
 | ------------ | -------------------------- | ------------------------- |
 |defaultBuilder| 表单子项                     |  _CustomBuilder_  |
 
-### API
-::: tip
-通过传入 `controller` 属性可调用组件实例方法
-:::
+### IBestFormController API
 
-| 方法名     |       说明                 | 参数                | 返回值   |
-| --------- | ------------------------- | ---------------------- |-------|
-| validate | 验证整个表单                 | `callback?: (valid: boolean, field: FieldValidateResult[]) => void` | `void` |
-| validateField | 验证指定表单            | `prop: string, callBack?: (valid: boolean, field?: FieldValidateResult) => void` | `void` |
-| resetValidation | 重置整个/指定表单验证信息| `prop?: string \| string[]` | `void` |
-| getFormValues | 获取表单所有表单项的值    | `-` | `Record<string, IBestFieldValueType>` |
+| 方法名          |       说明            | 参数                   | 返回值   |
+| -------------- | ---------------------| ---------------------- |-------|
+| validate       | 验证整个表单           | `callback?: (valid: boolean, field: FieldValidateResult[]) => void` | `Promise<IBestFormValidateResult>` |
+| validateField  | 验证指定表单           | `prop: string, callBack?: (valid: boolean, field?: FieldValidateResult) => void` | `Promise<IBestFieldValidateResult>` |
+| resetValidation| 重置整个/指定表单验证信息| `prop?: string \| string[]` | `void` |
+| getFormValues  | 获取表单所有表单项的值   | `-` | `Record<string, IBestFieldValueType>` |
 
 ### IBestFormRuleItem  数据结构
 

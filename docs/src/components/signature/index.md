@@ -155,17 +155,18 @@ struct DemoPage {
 | clearText    | 清除按钮文案                                    | _string_ | `清空` |
 | confirmText  | 确认按钮文案                                    | _string_ | `确认` |
 | isShowFooter | 是否显示底部按钮                                 | _boolean_ | `true` |
+| controller   | 实例控制器                                      | _IBestSignatureController_ | `-` |
 
 ### Events
 
-| 事件名     | 说明         | 回调参数             |
-| ----------| ------------------------------ | -------------------------------- |
+| 事件名     | 说明             | 回调参数  |
+| ----------| -------------- | -------- |
 | onDrawEnd  | 手指离开屏幕触发 | `-` |
 | onConfirm | 点击确定按钮的回调 | `url: string` |
 | onClear   | 点击清空按钮的回调 | `-` |
 
-### controller 控制器
-| 方法名     | 说明         | 方法参数             |
-| ----------| ------------------------------ | -------------------------------- |
-| clear     | 清空画板, 会触发onClear事件 | `-` |
-| confirm   | 确认签名, 会触发onConfirm事件  | `-` |
+### IBestSignatureController 控制器
+| 方法名     | 说明                            | 参数类型  |
+| ----------| ------------------------------ | -------- |
+| clear     | 清空画板, 会触发onClear事件       | `-` |
+| confirm   | 确认签名, 会触发onConfirm事件     | `-` |

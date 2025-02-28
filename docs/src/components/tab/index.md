@@ -510,6 +510,7 @@ struct DemoPage {
 | number  | 自定义显示数量 | _number_ |  |
 | icon    | 自定义显示图片 | _ResourceStr_ | `''` |
 | isDisable | 控制是否禁用 | _boolean_ | `false` |
+| tabController | 实例控制器 | _IBestTabController_ | `-` |
 
 ### Events
 
@@ -524,5 +525,5 @@ struct DemoPage {
 :::
 
 | 方法名    | 说明                      | 参数类型                |
-| --------- | -------------------------| ---------------------- |
+| --------- | ------------------------| ---------------------- |
 | changeTab | 切换到name对应的tab       | `name: string` |

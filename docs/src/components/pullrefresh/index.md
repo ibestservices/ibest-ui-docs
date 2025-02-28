@@ -188,14 +188,14 @@ struct DemoPage {
 | duration     | 下拉刷新动画时长(ms)                      | _number_ | `300` |
 | headHeight   | 顶部内容高度                             | _number_ \| _string_ | `50` |
 | scroller     | 当自定义内容包含List Grid Scroll组件时必传  | _Scroller_ |  `-`  |
-| isEnableSlideUp <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 是否启用上滑加载 | _boolean_ | `true` |
-| bottomHeight <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 底部加载内容高度                           | _number_ \| _string_ | `50` |
-| slidingUpText <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 上滑过程提示文案                           | _ResourceStr_ | `上滑即可加载...` |
-| slideUpLoosingText <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 上滑释放过程提示文案                  | _ResourceStr_ | `释放即可加载...` |
-| slideUpLoadingText <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 上滑加载过程提示文案                  | _ResourceStr_ | `加载中...` |
-| slideUpSuccessText <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 上滑加载成功提示文案                  | _ResourceStr_ | `''` |
-| slideUpSuccessDuration <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 上滑加载成功提示展示时长(ms)        | _number_ | `500` |
-| slideUpDuration <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 上滑加载动画时长(ms)                   | _number_ | `300` |
+| isEnableSlideUp| 是否启用上滑加载 | _boolean_ | `true` |
+| bottomHeight| 底部加载内容高度                           | _number_ \| _string_ | `50` |
+| slidingUpText| 上滑过程提示文案                           | _ResourceStr_ | `上滑即可加载...` |
+| slideUpLoosingText| 上滑释放过程提示文案                  | _ResourceStr_ | `释放即可加载...` |
+| slideUpLoadingText| 上滑加载过程提示文案                  | _ResourceStr_ | `加载中...` |
+| slideUpSuccessText| 上滑加载成功提示文案                  | _ResourceStr_ | `''` |
+| slideUpSuccessDuration| 上滑加载成功提示展示时长(ms)        | _number_ | `500` |
+| slideUpDuration| 上滑加载动画时长(ms)                   | _number_ | `300` |
 
 ### Events
 
@@ -212,10 +212,10 @@ struct DemoPage {
 | loosingContent  | 自定义释放过程内容              | _($$: IBestRefreshContentParams) => void_ |
 | loadingContent  | 自定义加载过程内容              | _CustomBuilder_ |
 | successContent  | 自定义刷新成功提示内容           | _CustomBuilder_ |
-| slidingUpContent <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 自定义上滑过程内容              | _($$: IBestRefreshContentParams) => void_ |
-| slideUpLoosingContent <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 自定义上滑释放过程内容      | _($$: IBestRefreshContentParams) => void_ |
-| slideUpLoadingContent <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 自定义上滑加载过程内容      | _CustomBuilder_ |
-| slideUpSuccessContent <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.4</span>| 自定义上滑加载成功提示内容   | _CustomBuilder_ |
+| slidingUpContent| 自定义上滑过程内容              | _($$: IBestRefreshContentParams) => void_ |
+| slideUpLoosingContent| 自定义上滑释放过程内容      | _($$: IBestRefreshContentParams) => void_ |
+| slideUpLoadingContent| 自定义上滑加载过程内容      | _CustomBuilder_ |
+| slideUpSuccessContent| 自定义上滑加载成功提示内容   | _CustomBuilder_ |
 
 ### IBestRefreshContentParams 数据结构
 | 参数          | 说明                                         | 类型      |
