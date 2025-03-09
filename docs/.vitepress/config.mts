@@ -124,6 +124,7 @@ export default defineConfig({
           { text: "CountDown 倒计时", link: "/components/countDown/" },
           { text: "Divider 分割线", link: "/components/divider/" },
           { text: "Empty 空状态", link: "/components/empty/" },
+          { text: "Highlight 高亮文本", link: "/components/highlight/" },
           { text: "ImagePreview 图片预览", link: "/components/imagepreview/" },
           { text: "NoticeBar 通知栏", link: "/components/noticeBar/" },
           { text: "Popover 气泡弹出框", link: "/components/popover/" },
