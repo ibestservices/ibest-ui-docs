@@ -22,7 +22,6 @@ import { IBestTimePicker, IBestPickerOption } from "@ibestservices/ibest-ui";
 @Component
 struct DemoPage {
   @State selectValue: string[] = ["10", "18", "18"]
-  
   build() {
     Column(){
       IBestTimePicker({
@@ -51,7 +50,6 @@ struct DemoPage {
 @Component
 struct DemoPage {
   @State selectValue: string[] = ["10", "18"]
-  
   build() {
     Column(){
       IBestTimePicker({
@@ -86,7 +84,6 @@ struct DemoPage {
 @Component
 struct DemoPage {
   @State selectValue: string[] = []
-  
   build() {
     Column(){
       IBestTimePicker({
@@ -116,25 +113,20 @@ struct DemoPage {
 @Entry
 @Component
 struct DemoPage {
-  @State selectValue: string[] = ["10", "18", "18"]
-  
+  @State selectValue: string[] = []
   build() {
-    @State selectValue: string[] = []
-    
-    build() {
-      Column(){
-        IBestTimePicker({
-          title: "选择时间",
-          showUnit: true,
-          value: $selectValue,
-          onConfirm: (value: string[]) => {
-            IBestToast.show(value.join(":"))
-          },
-          onChange: (value: string[]) => {
-            IBestToast.show(value.join(":"))
-          }
-        })
-      }
+    Column(){
+      IBestTimePicker({
+        title: "选择时间",
+        showUnit: true,
+        value: $selectValue,
+        onConfirm: (value: string[]) => {
+          IBestToast.show(value.join(":"))
+        },
+        onChange: (value: string[]) => {
+          IBestToast.show(value.join(":"))
+        }
+      })
     }
   }
 }
@@ -176,8 +168,6 @@ struct DemoPage {
 ```
 :::
 
-
-
 ## API
 
 ### @Props
@@ -187,18 +177,18 @@ struct DemoPage {
 | value        | 当前选中的日期, 支持双向绑定                      | _string[]_  | `[]` | 
 | minTime      | 最小可选时间                                   | _string_  | `00:00:00`  |
 | maxTime      | 最大可选时间                                   | _string_ | `23:59:59`  |
-| listType     | 列表类型    | _('hour' \| 'minute' \| 'second')[]_ | `["hour", "minute", "second"]`|
+| listType     | 列表类型                    | _('hour' \| 'minute' \| 'second')[]_ | `["hour", "minute", "second"]`|
 | showUnit     | 是否显示单位                                   | _boolean_ | `false` |
-| title        |  标题                                         | _string_ |  `''`  |
+| title        |  标题                                         | _ResourceStr_ |  `''`  |
 | itemHeight   | 单项高度                                       | _number_ \| _string_ | `44`   |
 | visibleItemCount | 可见选项数量                                | _number_ | `6`   |
 | showToolBar   | 是否显示顶部栏                                 | _boolean_ | `true` |
-| confirmText   | 确认按钮文字                                   | _string_ |  `确定`  |
-| cancelText    | 取消按钮文字                                   | _string_ |  `取消`  |
-| filter        | 过滤器  | _(type: string, options: IBestPickerOption[]) => IBestPickerOption[]_ | `null` |
+| confirmText   | 确认按钮文字                                   | _ResourceStr_ |  `确定`  |
+| cancelText    | 取消按钮文字                                   | _ResourceStr_ |  `取消`  |
+| filter        | 过滤器           | _(type: string, options: IBestPickerOption[]) => IBestPickerOption[]_ | `null` |
 | groupId       | 分组id, 通常在配合PickerGroup组件使用时传入       | _string_ | `''` |
-| horizontal | 是否横向     | _boolean_ | `false` |
-| itemWidth  | 单项宽度     | _number_ \| _string_ | `44`   |
+| horizontal    | 是否横向       | _boolean_ | `false` |
+| itemWidth     | 单项宽度       | _number_ \| _string_ | `44`   |
 | contentHeight | 整体高度, 仅横向时生效 | _number_ \| _string_ | `44`   |
 | optionFontSize| 选项字体大小    | _number_ \| _string_ | `16`   |
  

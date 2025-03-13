@@ -30,17 +30,19 @@ struct DemoPage {
   ]
   @State selectValue: string[] = []
   build() {
-    IBestPicker({
-      options: this.options,
-      title: "标题",
-      value: $selectValue,
-      onConfirm: (selectedValues: Array<string>, selectTexts: Array<string>) => {
-        IBestToast.show(selectTexts.join('-'))
-      },
-      onChange: (selectedValues: Array<string>, selectTexts: Array<string>, columnIndex: number) => {
-        IBestToast.show(selectTexts.join('-'))
-      }
-    })
+    Column(){
+      IBestPicker({
+        options: this.options,
+        title: "标题",
+        value: $selectValue,
+        onConfirm: (selectedValues, selectTexts) => {
+          IBestToast.show(selectTexts.join('-'))
+        },
+        onChange: (selectedValues, selectTexts, columnIndex) => {
+          IBestToast.show(selectTexts.join('-'))
+        }
+      })
+    }
   }
 }
 ```
@@ -71,10 +73,10 @@ struct DemoPage {
       title: "标题",
       visibleItemCount: 5,
       value: $selectValue,
-      onChange: (selectedValues: Array<string>, selectTexts: Array<string>, columnIndex: number) => {
+      onChange: (selectedValues, selectTexts, columnIndex) => {
         IBestToast.show(selectTexts.join('-'))
       },
-      onConfirm: (selectedValues: Array<string>, selectTexts: Array<string>) => {
+      onConfirm: (selectedValues, selectTexts) => {
         this.visible = false
         this.filedValue = selectTexts.join('-')
       },
@@ -126,17 +128,19 @@ struct DemoPage {
     { text: '镇江', value: 'Zhejiang' }
   ]
   build() {
-    IBestPicker({
-      options: this.options,
-      title: "标题",
-      value: $selectValue,
-      onConfirm: (selectedValues: Array<string>, selectTexts: Array<string>) => {
-        IBestToast.show(selectTexts.join('-'))
-      },
-      onChange: (selectedValues: Array<string>, selectTexts: Array<string>, columnIndex: number) => {
-        IBestToast.show(selectTexts.join('-'))
-      }
-    })
+    Column(){
+      IBestPicker({
+        options: this.options,
+        title: "标题",
+        value: $selectValue,
+        onConfirm: (selectedValues, selectTexts) => {
+          IBestToast.show(selectTexts.join('-'))
+        },
+        onChange: (selectedValues, selectTexts, columnIndex) => {
+          IBestToast.show(selectTexts.join('-'))
+        }
+      })
+    }
   }
 }
 ```
@@ -167,17 +171,19 @@ struct DemoPage {
   ]
   @State selectValue: string[] = []
   build() {
-    IBestPicker({
-      options: this.options,
-      title: "标题",
-      value: $selectValue,
-      onConfirm: (selectedValues: Array<string>, selectTexts: Array<string>) => {
-        IBestToast.show(selectTexts.join('-'))
-      },
-      onChange: (selectedValues: Array<string>, selectTexts: Array<string>, columnIndex: number) => {
-        IBestToast.show(selectTexts.join('-'))
-      }
-    })
+    Column(){
+      IBestPicker({
+        options: this.options,
+        title: "标题",
+        value: $selectValue,
+        onConfirm: (selectedValues, selectTexts) => {
+          IBestToast.show(selectTexts.join('-'))
+        },
+        onChange: (selectedValues, selectTexts, columnIndex) => {
+          IBestToast.show(selectTexts.join('-'))
+        }
+      })
+    }
   }
 }
 ```
@@ -263,17 +269,19 @@ struct DemoPage {
   ]
   @State selectValue: string[] = []
   build() {
-    IBestPicker({
-      options: this.options,
-      title: "标题",
-      value: $selectValue,
-      onConfirm: (selectedValues: Array<string>, selectTexts: Array<string>) => {
-        IBestToast.show(selectTexts.join('-'))
-      },
-      onChange: (selectedValues: Array<string>, selectTexts: Array<string>, columnIndex: number) => {
-        IBestToast.show(selectTexts.join('-'))
-      }
-    })
+    Column(){
+      IBestPicker({
+        options: this.options,
+        title: "标题",
+        value: $selectValue,
+        onConfirm: (selectedValues, selectTexts) => {
+          IBestToast.show(selectTexts.join('-'))
+        },
+        onChange: (selectedValues, selectTexts, columnIndex) => {
+          IBestToast.show(selectTexts.join('-'))
+        }
+      })
+    }
   }
 }
 ```
@@ -285,31 +293,31 @@ struct DemoPage {
 
 | 参数         | 说明                                          | 类型      | 默认值     |
 | ------------ | ---------------------------------------------| --------- | ---------- |
-| value        | 当前选中的日期, 支持双向绑定                      | _string[]_  | `[]` | 
+| value        | 当前选中的值, 支持双向绑定                       | _(string \| number)[]_  | `[]` | 
 | options      | 选项         | _(IBestPickerOption \| IBestPickerOption[])[]_  | `[]` |
-| title        |  标题                                         | _string_ |  `''`  |
+| title        |  标题                                         | _ResourceStr_ |  `''`  |
 | itemHeight   | 单项高度                                       | _number_ \| _string_ | `44`   |
 | visibleItemCount | 可见选项数量                                | _number_ | `6`   |
 | showToolBar   | 是否显示顶部栏                                 | _boolean_ | `true` |
-| confirmText   | 确认按钮文字                                   | _string_ |  `确定`  |
-| cancelText    | 取消按钮文字                                   | _string_ |  `取消`  |
+| confirmText   | 确认按钮文字                                   | _ResourceStr_ |  `确定`  |
+| cancelText    | 取消按钮文字                                   | _ResourceStr_ |  `取消`  |
 | groupId       | 分组id, 通常在配合PickerGroup组件使用时传入		    | _string_ | `''` |
-| horizontal | 是否横向     | _boolean_ | `false` |
-| itemWidth | 单项宽度     | _number_ \| _string_ | `44`   |
+| horizontal    | 是否横向     | _boolean_ | `false` |
+| itemWidth     | 单项宽度     | _number_ \| _string_ | `44`   |
 | contentHeight | 整体高度, 仅横向时生效 | _number_ \| _string_ | `44`   |
 | optionFontSize| 选项字体大小    | _number_ \| _string_ | `16`   |
  
 ### Events
 
-| 事件名     | 说明         | 回调参数             |
+| 事件名     | 说明         | 回调参数          |
 | ----------| ------------------------------ | -------------------------------- |
-| onChange | 某一列选项变更后触发 | `selectedValues: string[], selectTexts: string[], columnIndex: number` |
-| onConfirm | 点击确定按钮时触发 | `selectedValues: string[], selectTexts: string[]` |
+| onChange | 某一列选项变更后触发 | `selectedValues: (string \| number)[], selectTexts: string[], columnIndex` |
+| onConfirm | 点击确定按钮时触发 | `selectedValues: (string \| number)[], selectTexts: string[]` |
 | onCancel |  点击取消按钮时触发 | `-` |
 
 ### IBestPickerOption 数据结构
 | 参数         | 说明                                          | 类型      |
 | ------------ | ---------------------------------------------| --------- |
-| text         | 选项文字, 必传                               	| _string_  |
-| value        | 选项值, 必传                                   | _string_  |
+| text         | 选项文字, 必传                               	| _ResourceStr_  |
+| value        | 选项值, 必传                                   | _string_ \| _number_  |
 | children     | 下级选项, 可选                                 | _IBestPickerOption[]_  |

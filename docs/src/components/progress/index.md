@@ -23,9 +23,11 @@ import { IBestProgress } from "@ibestservices/ibest-ui";
 struct DemoPage {
   @State value: number = 50
   build() {
-    IBestProgress({
-      value: this.value
-    })
+    Column(){
+      IBestProgress({
+        value: this.value
+      })
+    }
   }
 }
 ```
@@ -42,11 +44,13 @@ struct DemoPage {
 struct DemoPage {
   @State value: number = 50
   build() {
-    IBestProgress({
-      value: this.value,
-      lineWidth: 18,
-      textInside: true
-    })
+    Column(){
+      IBestProgress({
+        value: this.value,
+        lineWidth: 18,
+        textInside: true
+      })
+    }
   }
 }
 ```
@@ -96,10 +100,12 @@ struct DemoPage {
 struct DemoPage {
   @State value: number = 50
   build() {
-    IBestProgress({
-      value: this.value,
-      inactive: true
-    })
+    Column(){
+      IBestProgress({
+        value: this.value,
+        inactive: true
+      })
+    }
   }
 }
 ```

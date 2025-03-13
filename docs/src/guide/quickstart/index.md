@@ -31,19 +31,24 @@ onWindowStageCreate(windowStage: window.WindowStage): void {
 }
 ```
 
-## 三、使用组件
+## 三、使用
 
 ```ts
-import { IBestButton } from "@ibestservices/ibest-ui";
+import { IBestButton } from "@ibestservices/ibest-ui"
 
 @Component
-export struct ButtonPage {
-
+export struct DemoPage {
   build(){
-    IBestButton({
-      // ...
-    })
+    Column(){
+      IBestButton({
+        // ...
+      })
+    }
   }
-
 }
 ```
+
+## 四、提示
+
+- 在传递组件插槽时, 请使用箭头函数传递, 避免this指向问题
+- 一些组件需要传递分组id, 以关联子组件, 请保证传入的id具有全局唯一性, 否则会出现一些不可预知的问题

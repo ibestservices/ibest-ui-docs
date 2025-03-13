@@ -17,13 +17,19 @@ import { IBestEmpty } from "@ibestservices/ibest-ui";
 ![基础用法](./images/basic.png)
 
 ::: details 点我查看代码
-
 ```ts
-IBestEmpty({
-  description: "描述文字",
-});
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    Column(){
+      IBestEmpty({
+        description: "描述文字"
+      })
+    }
+  }
+}
 ```
-
 :::
 
 ### 图片类型
@@ -32,31 +38,34 @@ IBestEmpty({
 
 ::: tip
 Empty 组件内置了多种占位图片类型，可以在不同业务场景下使用。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-// 通用错误
-IBestEmpty({
-  emptyImage: "error",
-  description: "通用错误",
-});
-
-// 网络错误
-IBestEmpty({
-  emptyImage: "network",
-  description: "网络错误",
-});
-
-// 搜索提示
-IBestEmpty({
-  emptyImage: "search",
-  description: "搜索提示",
-});
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    Column(){
+      // 通用错误
+      IBestEmpty({
+        emptyImage: "error",
+        description: "通用错误",
+      })
+      // 网络错误
+      IBestEmpty({
+        emptyImage: "network",
+        description: "网络错误",
+      })
+      // 搜索提示
+      IBestEmpty({
+        emptyImage: "search",
+        description: "搜索提示",
+      })
+    }
+  }
+}
 ```
-
 :::
 
 ### 自定义大小
@@ -73,10 +82,12 @@ IBestEmpty({
 @Component
 struct DemoPage {
   build() {
-    IBestEmpty({
-      imageSize: 100,
-      description: "描述文字"
-    })
+    Column(){
+      IBestEmpty({
+        imageSize: 100,
+        description: "描述文字"
+      })
+    }
   }
 }
 ```
@@ -95,16 +106,17 @@ struct DemoPage {
 @Entry
 @Component
 struct EmptyPage {
-  @Builder
-  Arrow() {
+  @Builder Arrow() {
     Image($r('app.media.title_back'))
-    .height(160)
+      .height(160)
   }
   build(){
-    IBestEmpty({
-      description: '描述文字',
-      emptyImgBuilder: (): void => this.Arrow()
-    })
+    Column(){
+      IBestEmpty({
+        description: '描述文字',
+        emptyImgBuilder: (): void => this.Arrow()
+      })
+    }
   }
 }
 ```
@@ -127,10 +139,12 @@ struct EmptyPage {
     IBestButton({ text: '按钮', type: 'primary' })
   }
   build(){
-    IBestEmpty({
-      description: '描述文字',
-      defaultBuilder: (): void => this.Btn()
-    })
+    Column(){
+      IBestEmpty({
+        description: '描述文字',
+        defaultBuilder: (): void => this.Btn()
+      })
+    }
   }
 }
 ```
@@ -147,6 +161,7 @@ struct EmptyPage {
 | description         | 图片下方的描述文字                         | _ResourceStr_ |   |
 | descriptionFontSize | 图片下方的描述文字的大小                    | _string_ | `14` |
 | descriptionColor    | 图片下方的描述文字的颜色                    | _ResourceColor_ | `#969799` |
+| emptyImageUrl       | 自定义占位图                              | _ResourceStr_ |  `''`  |
 
 ### 插槽
 

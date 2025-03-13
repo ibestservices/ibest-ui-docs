@@ -23,9 +23,11 @@ import { IBestTextEllipsis } from "@ibestservices/ibest-ui";
 struct DemoPage {
   @State text: string = '人一生的大部分时间都是平淡无奇的。这也是我们身体养精蓄锐的必要条件。因为只有身心在泛起涟漪的生活中得到充分的修正，才能圆满的迎接人生的下一次高峰。'
   build() {
-    IBestTextEllipsis({
-      text: this.text
-    })
+    Column(){
+      IBestTextEllipsis({
+        text: this.text
+      })
+    }
   }
 }
 ```
@@ -42,10 +44,12 @@ struct DemoPage {
 struct DemoPage {
   @State text: string = '人一生的大部分时间都是平淡无奇的。这也是我们身体养精蓄锐的必要条件。因为只有身心在泛起涟漪的生活中得到充分的修正，才能圆满的迎接人生的下一次高峰。'
   build() {
-    IBestTextEllipsis({
-      text: this.text,
-      showAction: true
-    })
+    Column(){
+      IBestTextEllipsis({
+        text: this.text,
+        showAction: true
+      })
+    }
   }
 }
 ```
@@ -121,10 +125,12 @@ struct DemoPage {
 struct DemoPage {
   @State text: string = '人一生的大部分时间都是平淡无奇的。这也是我们身体养精蓄锐的必要条件。因为只有身心在泛起涟漪的生活中得到充分的修正，才能圆满的迎接人生的下一次高峰。'
   build() {
-    IBestTextEllipsis({
-      text: this.text,
-      omitContent: "•••"
-    })
+    Column(){
+      IBestTextEllipsis({
+        text: this.text,
+        omitContent: "•••"
+      })
+    }
   }
 }
 ```
@@ -141,13 +147,15 @@ struct DemoPage {
 struct DemoPage {
   @State text: string = '人一生的大部分时间都是平淡无奇的。这也是我们身体养精蓄锐的必要条件。因为只有身心在泛起涟漪的生活中得到充分的修正，才能圆满的迎接人生的下一次高峰。'
   build() {
-    IBestTextEllipsis({
-      text: this.text,
-      showAction: true,
-      expandText: "平铺",
-      collapseText: "折叠",
-      actionColor: "#DB3131"
-    })
+    Column(){
+      IBestTextEllipsis({
+        text: this.text,
+        showAction: true,
+        expandText: "平铺",
+        collapseText: "折叠",
+        actionColor: "#DB3131"
+      })
+    }
   }
 }
 ```
@@ -159,14 +167,14 @@ struct DemoPage {
 
 | 参数          | 说明                                | 类型       | 默认值     |
 | ------------ | ----------------------------------- | --------- | ---------- |
-| text         | 显示文本                              | _string_ | `''` |  
+| text         | 显示文本                              | _ResourceStr_ | `''` |  
 | textColor    | 文本颜色                              | _ResourceColor_ | `#323233` |
 | textFontSize | 左侧图标颜色                           | _string_ \| _number_ | `16` |
 | lineHeight   | 行高                                  | _string_ \| _number_  | `20` |
 | rows         | 展示的行数                             | _number_ | `1` |
 | showAction   | 是否显示操作                           | _boolean_ |  `false`  |
-| expandText   | 展开操作文案                           | _string_ | `展开` |
-| collapseText | 收起操作文案                           | _string_ | `收起` |
-| omitContent  | 省略号内容                             | _string_ |  `…`  |
+| expandText   | 展开操作文案                           | _ResourceStr_ | `展开` |
+| collapseText | 收起操作文案                           | _ResourceStr_ | `收起` |
+| omitContent  | 省略号内容                             | _ResourceStr_ |  `…`  |
 | actionColor  | 操作文字颜色                           | _ResourceColor_ |  `#3D8AF2`  |
 | omitPosition | 省略位置，可选值 `start` `middle` `end` | _string_ |  `end`  |

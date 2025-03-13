@@ -22,9 +22,11 @@ import { IBestNavBar } from "@ibestservices/ibest-ui";
 @Component
 struct DemoPage {
   build() {
-    IBestNavBar({
-      title: "IBest-UI"
-    })
+    Column(){
+      IBestNavBar({
+        title: "IBest-UI"
+      })
+    }
   }
 }
 ```
@@ -73,10 +75,12 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestNavBar({
-      title: "IBest-UI",
-      titleTextAlign: "left"
-    })
+    Column(){
+      IBestNavBar({
+        title: "IBest-UI",
+        titleTextAlign: "left"
+      })
+    }
   }
 }
 ```
@@ -128,9 +132,11 @@ struct DemoPage {
 		TextInput({text: this.searchVal, placeholder: "请输入搜索内容"}).width("70%").height("70%")
 	}
   build() {
-    IBestNavBar({
-      titleBuilder: (): void => this.titleBuilder()
-    })
+    Column(){
+      IBestNavBar({
+        titleBuilder: (): void => this.titleBuilder()
+      })
+    }
   }
 }
 ```
@@ -190,10 +196,12 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestNavBar({
-      title: "IBest-UI",
-      subTitle: "一套轻量、可定制化主题的鸿蒙UI组件库"
-    })
+    Column(){
+      IBestNavBar({
+        title: "IBest-UI",
+        subTitle: "一套轻量、可定制化主题的鸿蒙UI组件库"
+      })
+    }
   }
 }
 ```
@@ -213,16 +221,18 @@ struct DemoPage {
     return '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0')
   }
   build() {
-    IBestNavBar({
-      title: "点我修改颜色",
-      titleColor: "#fff",
-      leftIconColor: "#fff",
-      navBarBgColor: this.navBarBgColor,
-      isShowStatusBar: true,
-      onTitleClick: () => {
-        this.navBarBgColor = this.getRandomColor()
-      }
-    })
+    Column(){
+      IBestNavBar({
+        title: "点我修改颜色",
+        titleColor: "#fff",
+        leftIconColor: "#fff",
+        navBarBgColor: this.navBarBgColor,
+        isShowStatusBar: true,
+        onTitleClick: () => {
+          this.navBarBgColor = this.getRandomColor()
+        }
+      })
+    }
   }
 }
 ```
@@ -242,8 +252,7 @@ struct DemoPage {
 | title        | 标题文字                                | _ResourceStr_ | `''` |  
 | titleColor   | 标题文字颜色                             | _ResourceColor_ | `#323233` |
 | titleFontSize| 标题文字大小                             | _number_ \| _string_ | `16` |
-| titleIconName| 标题图标名称                             | _string_ | `''` |
-| titleIcon    | 标题图标, 优先级大于titleIconName         | _ResourceStr_ | `-` |
+| titleIcon    | 标题图标                                | _ResourceStr_ | `''` |
 | titleIconColor| 标题图标颜色                            | _ResourceColor_ | `#323233` |
 | titleIconSize| 标题图标大小                             | _number_ \| _string_ | `20` |
 | titleIconRadius| 标题图标圆角                           | _number_ \| _string_ | `0` |
@@ -252,8 +261,7 @@ struct DemoPage {
 | subTitleColor| 副标题文字颜色                            | _ResourceColor_ | `#969799` |
 | subTitleFontSize| 副标题文字大小                         | _number_ \| _string_ | `12` |
 | isShowLeft   | 是否显示左侧内容                          | _boolean_ | `true` |
-| leftIconName | 左侧图标名称                              | _string_ | `arrow-left` |
-| leftIcon     | 自定义左侧图标, 优先级大于leftIconName      | _string_ | `''` |
+| leftIcon     | 自定义左侧图标                            | _ResourceStr_ | `arrow-left` |
 | leftIconColor| 左侧图标颜色                              | _ResourceColor_ | `#323233` |
 | leftIconSize| 左侧图标大小                               | _number_ \| _string_ | `20` |
 | leftIconRadius| 左侧图标圆角                             | _number_ \| _string_ | `0` |
@@ -261,8 +269,7 @@ struct DemoPage {
 | leftLabelColor| 左侧文字颜色                             | _ResourceColor_ | `#323233` |
 | leftLabelFontSize| 左侧文字大小                          | _number_ \| _string_ | `16` |
 | isShowRight  | 是否显示右侧                              | _boolean_ | `false` |
-| rightIconName | 右侧图标名称                             | _string_ | `''` |
-| rightIcon    | 自定义右侧图标, 优先级大于rightIconName      | _string_ | `''` |
+| rightIcon    | 自定义右侧图标                             | _ResourceStr_ | `''` |
 | rightIconColor | 右侧图标颜色                             | _ResourceColor_ | `#323233` |
 | rightIconSize | 右侧图标大小                              | _number_ \| _string_ | `20` |
 | rightIconRadius| 右侧图标圆角                             | _number_ \| _string_ | `0` |

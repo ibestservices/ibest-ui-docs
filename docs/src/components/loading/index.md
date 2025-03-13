@@ -103,9 +103,11 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestLoading({
-      loadingText: "加载中..."
-    })
+    Column(){
+      IBestLoading({
+        loadingText: "加载中..."
+      })
+    }
   }
 }
 ```
@@ -124,10 +126,12 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestLoading({
-      loadingText: "加载中...",
-      vertical: false
-    })
+    Column(){
+      IBestLoading({
+        loadingText: "加载中...",
+        vertical: false
+      })
+    }
   }
 }
 ```
@@ -146,15 +150,17 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestLoading({
-      loadingText: "加载中...",
-      loadingColor: "rgb(25, 137, 250)",
-      loadingTextColor: "rgb(25, 137, 250)"
-    })
-    IBestLoading({
-      loadingText: "加载中...",
-      loadingTextColor: "rgb(25, 137, 250)"
-    })
+    Column(){
+      IBestLoading({
+        loadingText: "加载中...",
+        loadingColor: "rgb(25, 137, 250)",
+        loadingTextColor: "rgb(25, 137, 250)"
+      })
+      IBestLoading({
+        loadingText: "加载中...",
+        loadingTextColor: "rgb(25, 137, 250)"
+      })
+    }
   }
 }
 ```
@@ -177,11 +183,13 @@ struct LoadingPage {
     IBestEmpty()
   }
   build(){
-    IBestLoading({
-      defaultBuilder: (): void => this.EmptyContain(),
-      loadingMaskColor: 'rgba(0,0,0,0.5)',
-      loadingColor: 'rgb(25, 137, 250)'
-    })
+    Column(){
+      IBestLoading({
+        defaultBuilder: (): void => this.EmptyContain(),
+        loadingMaskColor: 'rgba(0,0,0,0.5)',
+        loadingColor: 'rgb(25, 137, 250)'
+      })
+    }
   }
 }
 ```

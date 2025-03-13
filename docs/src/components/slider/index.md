@@ -214,7 +214,6 @@ struct DemoPage {
 struct DemoPage {
   @State value: number = 30
   @State value1: [number, number] = [20, 60]
-  
   build() {
     Row({ space: 80 }){
       Row({ space: 30 }){
@@ -259,7 +258,6 @@ struct DemoPage {
 }
 ```
 :::
-
 
 ## API
 

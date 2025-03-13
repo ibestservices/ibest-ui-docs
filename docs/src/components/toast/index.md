@@ -23,12 +23,14 @@ import { IBestToast } from "@ibestservices/ibest-ui";
 @Component
 struct DemoPage {
   build() {
-    IBestButton({
-      text: '基础用法',
-      onClickBtn: () => {
-        IBestToast.show("提示内容")
-      }
-    })
+    Column(){
+      IBestButton({
+        text: '基础用法',
+        onClickBtn: () => {
+          IBestToast.show("提示内容")
+        }
+      })
+    }
   }
 }
 ```
@@ -44,15 +46,17 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestButton({
-      text: '成功提示',
-      onClickBtn: () => {
-        IBestToast.show({
-          type: "success",
-          message: "提示内容"
-        })
-      }
-    })
+    Column(){
+      IBestButton({
+        text: '成功提示',
+        onClickBtn: () => {
+          IBestToast.show({
+            type: "success",
+            message: "提示内容"
+          })
+        }
+      })
+    }
   }
 }
 ```
@@ -68,15 +72,17 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestButton({
-      text: '警告提示',
-      onClickBtn: () => {
-        IBestToast.show({
-          type: "warning",
-          message: "提示内容"
-        })
-      }
-    })
+    Column(){
+      IBestButton({
+        text: '警告提示',
+        onClickBtn: () => {
+          IBestToast.show({
+            type: "warning",
+            message: "提示内容"
+          })
+        }
+      })
+    }
   }
 }
 ```
@@ -92,15 +98,17 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestButton({
-      text: '失败提示',
-      onClickBtn: () => {
-        IBestToast.show({
-          type: "fail",
-          message: "提示内容"
-        })
-      }
-    })
+    Column(){
+      IBestButton({
+        text: '失败提示',
+        onClickBtn: () => {
+          IBestToast.show({
+            type: "fail",
+            message: "提示内容"
+          })
+        }
+      })
+    }
   }
 }
 ```
@@ -116,15 +124,17 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestButton({
-      text: '加载提示',
-      onClickBtn: () => {
-        IBestToast.showLoading()
-        setTimeout(() => {
-          IBestToast.hide()
-        }, 1500)
-      }
-    })
+    Column(){
+      IBestButton({
+        text: '加载提示',
+        onClickBtn: () => {
+          IBestToast.showLoading()
+          setTimeout(() => {
+            IBestToast.hide()
+          }, 1500)
+        }
+      })
+    }
   }
 }
 ```
@@ -140,15 +150,17 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestButton({
-      text: '自定义图标',
-      onClickBtn: () => {
-        IBestToast.show({
-          icon: $r("app.media.startIcon"),
-          message: "提示内容"
-        })
-      }
-    })
+    Column(){
+      IBestButton({
+        text: '自定义图标',
+        onClickBtn: () => {
+          IBestToast.show({
+            icon: $r("app.media.startIcon"),
+            message: "提示内容"
+          })
+        }
+      })
+    }
   }
 }
 ```
@@ -164,15 +176,17 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestButton({
-      text: '自定义图片',
-      onClickBtn: () => {
-        IBestToast.show({
-          icon: "https://ibestui.ibestservices.com/favicon.ico",
-          message: "提示内容"
-        })
-      }
-    })
+    Column(){
+      IBestButton({
+        text: '自定义图片',
+        onClickBtn: () => {
+          IBestToast.show({
+            icon: "https://ibestui.ibestservices.com/favicon.ico",
+            message: "提示内容"
+          })
+        }
+      })
+    }
   }
 }
 ```
@@ -188,24 +202,26 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestButton({
-      text: '自定义加载图标类型',
-      onClickBtn: () => {
-        IBestToast.show({
-          type: "loading",
-          loadingType: "spinner",
-          message: "加载中...",
-          onOpened: () => {
-            // 可在此关闭loading
-            console.log("toast打开成功")
-          }
-        })
-        setTimeout(() => {
-          // 也可在此关闭loading
-          IBestToast.hide()
-        }, 2000)
-      }
-    })
+    Column(){
+      IBestButton({
+        text: '自定义加载图标类型',
+        onClickBtn: () => {
+          IBestToast.show({
+            type: "loading",
+            loadingType: "spinner",
+            message: "加载中...",
+            onOpened: () => {
+              // 可在此关闭loading
+              console.log("toast打开成功")
+            }
+          })
+          setTimeout(() => {
+            // 也可在此关闭loading
+            IBestToast.hide()
+          }, 2000)
+        }
+      })
+    }
   }
 }
 ```
@@ -224,16 +240,18 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestButton({
-      text: '自定义位置',
-      onClickBtn: () => {
-        IBestToast.show({
-          position: "top",
-          offsetY: "20%",
-          message: "提示内容"
-        })
-      }
-    })
+    Column(){
+      IBestButton({
+        text: '自定义位置',
+        onClickBtn: () => {
+          IBestToast.show({
+            position: "top",
+            offsetY: "20%",
+            message: "提示内容"
+          })
+        }
+      })
+    }
   }
 }
 ```
@@ -252,15 +270,17 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestButton({
-      text: '文字换行方式',
-      onClickBtn: () => {
-        IBestToast.show({
-          wordBreak: "break-all",
-          message: "This message will contain a incomprehensibilities long word."
-        })
-      }
-    })
+    Column(){
+      IBestButton({
+        text: '文字换行方式',
+        onClickBtn: () => {
+          IBestToast.show({
+            wordBreak: "break-all",
+            message: "This message will contain a incomprehensibilities long word."
+          })
+        }
+      })
+    }
   }
 }
 ```
@@ -276,26 +296,28 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestButton({
-      text: '动态更新提示',
-      onClickBtn: () => {
-        let count = 3
-        let toast = IBestToast.show({
-          type: "loading",
-          message: `倒计时 ${count} 秒`,
-          duration: 0
-        })
-        let timer = setInterval(() => {
-          count--
-          if (count) {
-            toast.message = `倒计时 ${count} 秒`
-          } else {
-            clearInterval(timer)
-            IBestToast.hide()
-          }
-        }, 1000)
-      }
-    })
+    Column(){
+      IBestButton({
+        text: '动态更新提示',
+        onClickBtn: () => {
+          let count = 3
+          let toast = IBestToast.show({
+            type: "loading",
+            message: `倒计时 ${count} 秒`,
+            duration: 0
+          })
+          let timer = setInterval(() => {
+            count--
+            if (count) {
+              toast.message = `倒计时 ${count} 秒`
+            } else {
+              clearInterval(timer)
+              IBestToast.hide()
+            }
+          }, 1000)
+        }
+      })
+    }
   }
 }
 ```

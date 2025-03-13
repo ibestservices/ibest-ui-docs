@@ -29,8 +29,7 @@ struct DemoPage {
   @State initImg: string = ""
   private controller: IBestImageCropperController = new IBestImageCropperController()
   @State previewUrl: PixelMap | string = ''
-  @Builder
-  imgBuilder() {
+  @Builder imgBuilder() {
     Column() {
       Image(this.previewUrl)
         .width(260)
@@ -67,7 +66,7 @@ struct DemoPage {
         IBestButton({
           type: "primary",
           text: "获取结果",
-          onClickBtn:  () => {
+          onClickBtn: () => {
             this.controller.getResult().then(res => {
               this.previewUrl = res
               this.showResult()
@@ -97,8 +96,7 @@ struct DemoPage {
   @State initImg: string = "https://img0.baidu.com/it/u=3217812679,2585737758&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"
   private controller: IBestImageCropperController = new IBestImageCropperController()
   @State previewUrl: PixelMap | string = ''
-  @Builder
-  imgBuilder() {
+  @Builder imgBuilder() {
     Column() {
       Image(this.previewUrl)
         .width(260)
@@ -147,8 +145,7 @@ struct DemoPage {
   @State initImg: ResourceStr = $r("app.media.01")  // 此处替换为自己项目本地图片
   private controller: IBestImageCropperController = new IBestImageCropperController()
   @State previewUrl: PixelMap | string = ''
-  @Builder
-  imgBuilder() {
+  @Builder imgBuilder() {
     Column() {
       Image(this.previewUrl)
         .width(260)

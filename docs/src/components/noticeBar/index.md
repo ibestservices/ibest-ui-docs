@@ -22,10 +22,12 @@ import { IBestNoticeBar } from "@ibestservices/ibest-ui";
 @Component
 struct DemoPage {
   build() {
-    IBestNoticeBar({
-      leftIconName: "volume-o",
-      text:"无论我们能活多久，我们能够享受的只有无法分割的此刻，此外别无其他。"
-    })
+    Column(){
+      IBestNoticeBar({
+        leftIconName: "volume-o",
+        text:"无论我们能活多久，我们能够享受的只有无法分割的此刻，此外别无其他。"
+      })
+    }
   }
 }
 ```
@@ -69,10 +71,12 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestNoticeBar({
-      text: "不会回头的东西有四件：说出口的话、离弦的箭、逝去的生活和失去的机会。",
-      wrapable: true
-    })
+    Column(){
+      IBestNoticeBar({
+        text: "不会回头的东西有四件：说出口的话、离弦的箭、逝去的生活和失去的机会。",
+        wrapable: true
+      })
+    }
   }
 }
 ```
@@ -116,13 +120,15 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestNoticeBar({
-      leftIconName: "info-o",
-      leftIconColor: "#1989fa",
-      bgColor: "#ecf9ff",
-      text: "今人不见古时月, 今月曾经照古人。",
-      textColor: "#1989fa"
-    })
+    Column(){
+      IBestNoticeBar({
+        leftIconName: "info-o",
+        leftIconColor: "#1989fa",
+        bgColor: "#ecf9ff",
+        text: "今人不见古时月, 今月曾经照古人。",
+        textColor: "#1989fa"
+      })
+    }
   }
 }
 ```
@@ -138,15 +144,17 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestNoticeBar({
-      leftIconName: "volume-o",
-      vertical: true,
-      verticalTextList: [
-          "今人不见古时月, 今月曾经照古人。",
-        "不会回头的东西有四件：说出口的话、离弦的箭、逝去的生活和失去的机会。",
-        "无论我们能活多久，我们能够享受的只有无法分割的此刻，此外别无其他。"
-      ]
-    })
+    Column(){
+      IBestNoticeBar({
+        leftIconName: "volume-o",
+        vertical: true,
+        verticalTextList: [
+            "今人不见古时月, 今月曾经照古人。",
+          "不会回头的东西有四件：说出口的话、离弦的箭、逝去的生活和失去的机会。",
+          "无论我们能活多久，我们能够享受的只有无法分割的此刻，此外别无其他。"
+        ]
+      })
+    }
   }
 }
 ```

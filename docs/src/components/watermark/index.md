@@ -14,99 +14,115 @@ import { IBestWatermark } from "@ibestservices/ibest-ui";
 
 ![文字水印](./images/text-watermark.png)
 ::: tip
-
 通过 `text` 属性来设置水印的文字。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestWatermark({
-  text: 'IBest-UI',
-  fontSize: 14,
-  gapX: 40,
-  gapY: 40
-}){
-  // 你的业务代码
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    Column(){
+      IBestWatermark({
+        text: 'IBest-UI',
+        fontSize: 14,
+        gapX: 40,
+        gapY: 40
+      }){
+        // 你的业务代码
+      }
+    }
+  }
 }
 ```
-
 :::
 
 ### 图片水印
 
 ![图片水印](./images/img-watermark.png)
 ::: tip
-
 通过 `imageUrl` 属性来设置水印的图片。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestWatermark({
-  imageUrl: '图片链接',
-  waterMarkWidth: 105,
-  waterMarkHeight: 40,
-  gapX: 20,
-  gapY: 20,
-  rotateDeg: 0
-}){
-  // 你的业务代码
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    Column(){
+      IBestWatermark({
+        imageUrl: '图片链接',
+        waterMarkWidth: 105,
+        waterMarkHeight: 40,
+        gapX: 20,
+        gapY: 20,
+        rotateDeg: 0
+      }){
+        // 你的业务代码
+      }
+    }
+  }
 }
 ```
-
 :::
 
 ### 自定义间隔
 
 ![自定义间隔](./images/gap-watermark.png)
 ::: tip
-
 通过 `gapX` 和 `gapY` 属性来控制多个重复水印之间的间隔。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestWatermark({
-  text: 'IBest-UI',
-  fontSize: 14,
-  gapX: 80,
-  gapY: 80
-}){
-  // 你的业务代码
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    Column(){
+      IBestWatermark({
+        text: 'IBest-UI',
+        fontSize: 14,
+        gapX: 80,
+        gapY: 80
+      }){
+        // 你的业务代码
+      }
+    }
+  }
 }
 ```
-
 :::
 
 ### 自定义倾斜角度
 
 ![自定义倾斜角度](./images/rotate-watermark.png)
 ::: tip
-
 通过 `rotateDeg` 属性来控制水印的倾斜角度，默认值为 `-22`。
-
 :::
 
 ::: details 点我查看代码
-
 ```ts
-IBestWatermark({
-  text: 'IBest-UI',
-  fontSize: 14,
-  gapX: 20,
-  gapY: 20,
-  rotateDeg: 0
-}){
-  // 你的业务代码
+@Entry
+@Component
+struct DemoPage {
+  build() {
+    Column(){
+      IBestWatermark({
+        text: 'IBest-UI',
+        fontSize: 14,
+        gapX: 20,
+        gapY: 20,
+        rotateDeg: 0
+      }){
+        // 你的业务代码
+      }
+    }
+  }
 }
 ```
-
 :::
 
 ## API
@@ -121,8 +137,8 @@ IBestWatermark({
 | gapX             | 水印之间的水平间隔                          | _number_ | `0`        |
 | gapY             | 水印之间的垂直间隔                          | _number_ | `0`        |
 | rotateDeg        | 水印的旋转角度                             | _number_ | `-22`      |
-| imageUrl         | 水印的图片链接                             | _string_ |            |
-| text             | 文字水印的内容（文字水印优先级高于图片水印，如果同时传了`text`和`imageUrl`那么显示的将会是`text`的内容） | _string_ |    |
+| imageUrl         | 水印的图片链接                             | _string_ |  `''`   |
+| text             | 文字水印的内容（文字水印优先级高于图片水印，如果同时传了`text`和`imageUrl`那么显示的将会是`text`的内容） | _ResourceStr_ | `''` |
 | fontSize         | 文字水印的大小                              | _number_ | `14`      |
 | fontFamily       | 文字字体                                   | _string_ | `sans-serif` |
 | fontColor        | 文字颜色                                   | _string \| number \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvasgradient-V5" target="__blank">CanvasGradient</a> \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvaspattern-V5#canvaspattern" target="__blank">CanvasPattern</a>_ | <div style="padding: 2px 4px; background: #000; color: #fff; border-radius: 4px">#000000</div> |
@@ -131,6 +147,6 @@ IBestWatermark({
 
 ### 插槽
 
-| 插槽名         | 说明             | 类型                      |
+| 插槽名         | 说明              | 类型                      |
 | -------------- | ---------------- | ------------------------- |
-| defaultBuilder | 水印包裹的内容 | _CustomBuilder_ |
+| defaultBuilder | 水印包裹的内容     | _CustomBuilder_ |

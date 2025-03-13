@@ -17,7 +17,7 @@ import { IBestForm, IBestFormRule, IBestField, IBestFormController } from "@ibes
 ![基础用法](./images/form-base.png)
 :::tip
 通过 `formId` 属性绑定表单与表单项的关系, `rules` 属性可配置表单校验规则，绑定 `controller` 属性可获取表单实例。   
-• `formId` `controller` `props` 属性为必填项，未设置 `formId` `prop` 的表单项将不触发表单验证。
+• `formId` `props` 属性为必填项，未设置 `formId` `prop` 的表单项将不触发表单验证。
 :::
 
 ::: details 点我查看代码
@@ -334,7 +334,6 @@ struct DemoPage {
       ]
     }
   ]
-
   @Builder switchContent() {
     IBestSwitch({
       value: $value1
@@ -433,7 +432,7 @@ struct DemoPage {
             customRightContent: (): void => this.checkboxGroupContent()
           })
           IBestField({
-            formId: this.formId3,
+            formId: this.formId,
             prop: 'value4',
             value: $value4,
             label: "单选框",
@@ -519,7 +518,7 @@ struct DemoPage {
 • 将需要遍历的表单项封装为单个组件, 在其内部处理每项表单数据;   
 • 需注意, ForEach的key值需要设置为唯一值(事例中为生成的随机id);   
 • 组件内部需在aboutToAppear中初始化表单项的值, 否则动态删除时, 表单数据会丢失;   
-• 组价内部需监听每个变量的变化, 并将新值赋值给表单项(事例中为item);
+• 组件内部需监听每个变量的变化, 并将新值赋值给表单项(事例中为item);
 :::
 
 ::: details 点我查看代码

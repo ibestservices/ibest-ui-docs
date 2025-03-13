@@ -25,7 +25,6 @@ import { IBestField } from "@ibestservices/ibest-ui";
 @Component
 struct DemoPage {
   @State value: string = ""
-  
   build() {
     Column(){
       IBestField({
@@ -56,7 +55,6 @@ struct DemoPage {
   @State value2: string = ""
   @State value3: string = ""
   @State value4: string = ""
-  
   build() {
     Column(){
       // 密码
@@ -108,7 +106,6 @@ struct DemoPage {
 struct DemoPage {
   @State value1: string = '输入框只读'
   @State value2: string = '输入框已禁用'
-  
   build() {
     Column(){
       IBestField({
@@ -121,6 +118,31 @@ struct DemoPage {
         label: "文本",
         hasBorder: false,
         disabled: true
+      })
+    }
+  }
+}
+```
+:::
+
+### 前后缀
+
+![前后缀](./images/prefix-suffix.png)
+
+::: details 点我查看代码
+```ts
+@Entry
+@Component
+struct DemoPage {
+  @State value: string = ''
+  build() {
+    Column(){
+      IBestField({
+        value: $value,
+        label: "网址",
+        prefix: "https://",
+        suffix: ".com",
+        hasBorder: false
       })
     }
   }
@@ -142,7 +164,6 @@ struct DemoPage {
 struct DemoPage {
   @State value1: string = ''
   @State value2: string = '一蓑烟雨任平生'
-  
   build() {
     Column(){
       IBestField({
@@ -550,18 +571,23 @@ struct DemoPage {
 | formatter   | 格式化函数                                                  | _(value: string) => string_ | `-` |
 | formatTrigger| 执行格式化函数触发时机, 可选值 `onchange` `onblur`        | _string_ | `onchange` |
 | labelFontSize| 左侧字体大小                                              | _number_ \| _string_ | `14` |
-| labelColor  | 左侧字体颜色                                               | _ResourceStr_ | `#323233` |
+| labelColor   | 左侧字体颜色                                               | _ResourceStr_ | `#323233` |
 | leftIconSize | 左侧图标大小                                               | _number_ \| _string_ | `14` |
-| rightIconSize | 右侧图标大小                                             | _number_ \| _string_ | `14` |
-| showLabel   | 是否显示label                                             | _boolean_ | `true` |
+| rightIconSize| 右侧图标大小                                             | _number_ \| _string_ | `14` |
+| showLabel    | 是否显示label                                             | _boolean_ | `true` |
 | placeholderColor | 占位文字颜色                                          | _ResourceColor_ | `#c8c9cc` |
-| bgColor     | 背景色                                                    | _ResourceColor_ | `#fff` |
-| inputFontSize| 输入框字体大小                           | _number_ \| _string_ | `14` |
-| caretColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 光标颜色                                    | _ResourceColor_ | `''` |
-| min <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 最小值, type 为 `number` `decimal` 时有效            | _number_ | `-1` |
-| max <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 最大值, type 为 `number` `decimal` 时有效            | _number_ | `-1` |
+| bgColor      | 背景色                                                    | _ResourceColor_ | `#fff` |
+| inputFontSize| 输入框字体大小                                            | _number_ \| _string_ | `14` |
+| caretColor   | 光标颜色                                                 | _ResourceColor_ | `''` |
+| min          | 最小值, type 为 `number` `decimal` 时有效                  | _number_ | `-1` |
+| max          | 最大值, type 为 `number` `decimal` 时有效                  | _number_ | `-1` |
 | verticalAlign <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 垂直方向对齐方式, 仅 `labelPosition` 为left时有效, 可选值 `top` `center` | _string_ | `''` |
 | radius <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 外部圆角 | _string_ \| _number_ | `0` |
+| prefix <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 前缀内容 | _ResourceStr_ | `''` |
+| prefixFontColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 前缀内容颜色 | _ResourceColor_ | `#969799` |
+| suffix <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 后缀内容 | _ResourceStr_ | `''` |
+| suffixFontColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 后缀内容颜色 | _ResourceColor_ | `#969799` |
+
 
 
 ### Events

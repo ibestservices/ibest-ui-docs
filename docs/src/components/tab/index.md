@@ -254,7 +254,7 @@ struct DemoPage {
   ]
   @State curTabName: string = "1"
   build() {
-    Column({space: 20}){
+    Column(){
       IBestTabs({
         tabsList: this.tabsList,
         tabHeight: 80,
@@ -405,11 +405,11 @@ struct DemoPage {
   ]
   @State curTabName: string = "1"
   build() {
-    Column({space: 20}){
+    Column(){
       IBestTabs({
         tabsList: this.tabsList,
         currentName: $curTabName,
-        onChange: (name: string) => {
+        onChange: name => {
           IBestToast.show("当前点击的是：" + name)
         }
       })
@@ -474,7 +474,6 @@ struct DemoPage {
 ```
 :::
 
-
 ## API
 
 ### @Props
@@ -484,40 +483,40 @@ struct DemoPage {
 | type                | 样式类型，可选值为 `line` `card`               | _string_        | `line`    |
 | tabHeight           | 默认高度                                      | _number_ \| _string_  | `35`   |
 | tabWidthType        | tab宽度类型，可选值为 `auto` `flex`             | _string_        | `flex`       |
-| tabsList            | 展示的tab列表                                  | _IBestTabItem[]_|`[]` |
+| tabsList            | 展示的tab列表                                  | _(IBestTabItemType \| IBestTabItem)[]_|`[]` |
 | tabPadding          | 单个tab内边距                                  | _number_ \| _string_ | `5`     |
 | currentName         | 当前选中标签的标识符, 支持双向绑定                 | _string_        |  `''`    |
 | isTabLineWidthFixed | 标记线宽度是否固定                               | _boolean_      |  `false` |
-| tabLineWidth        | 标记线宽度，默认为tab内容宽度                     | _number_        |  `0` |
-| tabLineHeight       | 标记线高度                                     | _number_        |    `2`   |
+| tabLineWidth        | 标记线宽度，默认为tab内容宽度                     | _number_ \| _string_ |  `0` |
+| tabLineHeight       | 标记线高度                                     | _number_ \| _string_ |    `2`   |
 | inactiveTextColor   | 未激活的tab文字颜色                             | _ResourceColor_ |  `#666`  |
 | activeTextColor     | 激活的tab文字颜色                               | _ResourceColor_ | `#333`      |
 | tabLineColor        | type 为 `line` 时, 为标记线颜色, type 为 `card` 时, 为标记块背景色| _ResourceColor_  |  `#3D8AF2` |
 | lineOffsetY         | 标记线Y方向偏移量                               | _number_ \| _string_ | `0` |
 | tabBgColor          | tab区域背景颜色                                 | _ResourceColor_ | `#fff`       |
 | fontSize            | tab文字大小                                     | _number_ \| _string_ | `14` |
-| isShowActiveBg <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 是否显示激活背景, 仅type为`line`时有效      | _boolean_      |  `false` |
-| activeBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 激活背景色, 仅type为`line`时有效           | _ResourceColor_      |  `''` |
-| inactiveBgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 非激活背景色, 仅type为`line`时有效           | _ResourceColor_      |  `''` |
-| radius <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.5</span>| 选项圆角, 仅type为`line`时有效 | _number_ \| _string_ |  `0` |
+| isShowActiveBg      | 是否显示激活背景, 仅type为`line`时有效      | _boolean_      |  `false` |
+| activeBgColor       | 激活背景色, 仅type为`line`时有效           | _ResourceColor_      |  `''` |
+| inactiveBgColor     | 非激活背景色, 仅type为`line`时有效           | _ResourceColor_      |  `''` |
+| radius              | 选项圆角, 仅type为`line`时有效 | _number_ \| _string_ |  `0` |
 
 ### IBestTabItem IBestTabItemType  数据结构
 
 | 参数 | 说明 | 类型 | 默认值 |
 | ------------ | --------------------------------------------------------| --------- | ---------- |
-| label   | tab文字内容(必填) | _string_ | `''` |
-| name    | tab匹配的标识符(必填) | _string_ | `''` |
-| number  | 自定义显示数量 | _number_ |  |
-| icon    | 自定义显示图片 | _ResourceStr_ | `''` |
-| isDisable | 控制是否禁用 | _boolean_ | `false` |
-| tabController | 实例控制器 | _IBestTabController_ | `-` |
+| label         | tab文字内容(必填)     | _ResourceStr_ | `-` |
+| name          | tab匹配的标识符(必填)  | _string_ \| _number_ | `-` |
+| number        | 自定义显示数量         | _number_ | `-`|
+| icon          | 自定义显示图片         | _ResourceStr_ | `-` |
+| isDisable     | 控制是否禁用          | _boolean_ | `false` |
+| tabController | 实例控制器            | _IBestTabController_ | `-` |
 
 ### Events
 
 | 事件名     | 说明                      | 参数类型                |
 | --------- | ------------------------ | ---------------------- |
-| onChange  | tab切换后的回调            | `name: string` |
-| onTabClick| 点击tab后的回调            | `name: string` |
+| onChange  | tab切换后的回调            | `name: string \| number` |
+| onTabClick| 点击tab后的回调            | `name: string \| number` |
 
 ### 实例方法
 ::: tip
@@ -526,4 +525,4 @@ struct DemoPage {
 
 | 方法名    | 说明                      | 参数类型                |
 | --------- | ------------------------| ---------------------- |
-| changeTab | 切换到name对应的tab       | `name: string` |
+| changeTab | 切换到name对应的tab       | `name: string \| number` |

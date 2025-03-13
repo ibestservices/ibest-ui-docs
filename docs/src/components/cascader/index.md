@@ -527,9 +527,9 @@ struct DemoPage {
 
 | 参数         | 说明                                                     | 类型      | 默认值     |
 | ------------ | --------------------------------------------------------| --------- | ---------- |
-| visible      | 控制弹出层显隐显隐                                        | _boolean_  | `false` |
+| visible      | 控制弹出层显隐                                           | _boolean_  | `false` |
 | value        | 选中选项值, 支持双向绑定                                   | _(string \| number)[]_ | `[]` |
-| title        | 弹出层标题                                              | _string_  | `请选择` |
+| title        | 弹出层标题                                              | _ResourceStr_  | `请选择` |
 | options      | 可选项数据源                                            | _IBestCascaderOption[]_ |`[]`|
 | activeColor  | 选中项颜色                                              | _ResourceColor_ | `#3D8AF2`  |
 | listHeight   | 滚动区域高度                                             | _number_ \| _string_ | `350`|
@@ -541,7 +541,7 @@ struct DemoPage {
 
 | 参数         | 说明                              | 类型      | 默认值     |
 | ------------ | ---------------------------------| --------- | ---------- |
-| text        | 选项文字(必填)                      | _string_ | `''`  |
+| text        | 选项文字(必填)                      | _ResourceStr_ | `''`  |
 | value       | 选项对应的值(必填)                  | _string \| number_ | `''`  |
 | isEnd       | 是否是结束选项                      | _boolean_ | `false`  |
 | disabled    | 是否禁用单项                        | _boolean_ | `false`  |

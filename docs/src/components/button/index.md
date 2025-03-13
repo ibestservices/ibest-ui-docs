@@ -200,12 +200,19 @@ struct ButtonPage {
       IBestButton({
         text: '按钮',
         type: 'primary',
-        icon: $r('app.media.title_back')
+        iconPositon: "right",
+        icon: 'arrow'
       })
       IBestButton({
-        plain: true,
         text: '按钮',
-        type: 'default',
+        type: 'primary',
+        iconPositon: "top",
+        icon: $r('app.media.app_icon')
+      })
+      IBestButton({
+        type: 'primary',
+        text: '按钮',
+        iconPositon: "bottom",
         iconBuilder: this.Arrow
       })
     }
@@ -327,19 +334,20 @@ struct ButtonPage {
 | btnFontSize  | 按钮文字大小，不写的话则使用 `buttonSize` 尺寸          | _string_ \| _number_ | `-` |
 | text         | 按钮文字                                            | _ResourceStr_   |   `''`   |
 | color        | 按钮颜色                                            | _ResourceColor_ |     |
-| iconPosition | 图标展示位置，可选值为 right                          | _string_  | `left`    |
+| iconPosition | 图标展示位置，可选值为 `left` `right` `top` `bottom`  | _string_  | `left`    |
 | plain        | 是否为朴素按钮                                       | _boolean_ | `false`  |
 | square       | 是否为方形按钮                                       | _boolean_ | `false`  |
 | round        | 是否为圆形按钮                                       | _boolean_ | `false`  |
 | disabled     | 是否禁用按钮                                         | _boolean_ | `false`  |
 | hairline     | 是否使用细边框                                       | _boolean_ | `false`  |
 | loading      | 是否显示为加载状态                                    | _boolean_ | `false`  |
-| loadingText  | 加载状态提示文字                                      | _ResourceStr_   |          |
-| loadingSize  | 加载图标大小，如果为-1 默认跟随字体大小                  | _string_ \| _number_  | `-1`      |
-| icon   | 按钮图标                   | _ResourceStr_ | `-` |
-| fontColor | 按钮文字颜色                | _ResourceColor_ | `-` |
+| loadingText  | 加载状态提示文字                                      | _ResourceStr_ |  `''`  |
+| loadingSize  | 加载图标大小，如果为-1 默认跟随字体大小                  | _string_ \| _number_  | `-1` |
+| icon         | 按钮图标                   | _ResourceStr_ | `-` |
+| fontColor    | 按钮文字颜色                | _ResourceColor_ | `-` |
 | btnBorderColor | 按钮边框颜色    | _ResourceColor_ | `-` |
 | btnBorderRadius| 按钮圆角        | _string_ \| _number_ | `-` |
+| space <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.7</span>| 文字与图标间距 | _string_ \| _number_ | `4` |
 
 ### Events
 

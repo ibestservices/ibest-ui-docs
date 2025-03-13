@@ -46,7 +46,7 @@ struct DemoPage {
       })
       IBestPopup({
         visible: $visible,
-        popupWidth: 500,
+        popupWidth: 300,
         contentBuilder: (): void => this.centerBuilder()
       })
     }
@@ -192,7 +192,7 @@ struct DemoPage {
       }
       IBestPopup({
         visible: $visible1,
-        popupWidth: 500,
+        popupWidth: 300,
         cornerRadius: 20,
         isShowHeader: true,
         title: "标题",
@@ -258,7 +258,7 @@ struct DemoPage {
       }
       IBestPopup({
         visible: $visible1,
-        popupWidth: 500,
+        popupWidth: 300,
         cornerRadius: 10,
         contentBuilder: this.centerBuilder
       })
@@ -266,6 +266,48 @@ struct DemoPage {
         visible: $visible2,
         popupAlign: "bottom",
         cornerRadius: 30
+      })
+    }
+  }
+}
+```
+:::
+
+### 背景图片
+
+![背景图片](./images/bg-image.png)
+
+::: details 点我查看代码
+```ts
+import { IBestCell } from "@ibestservices/ibest-ui"
+@Entry
+@Component
+struct DemoPage {
+  @State visible: boolean = false
+  @Builder centerBuilder() {
+    Row() {
+      Text("内容").fontColor("#fff")
+    }
+    .width("100%")
+    .height("100%")
+    .justifyContent(FlexAlign.Center)
+  }
+  build() {
+    Column(){
+      IBestCell({
+        title: '背景图片',
+        isLink: true,
+        hasBorder: false,
+        onClickCell: () => {
+          this.visible = true
+        }
+      })
+      IBestPopup({
+        visible: $visible,
+        popupWidth: 300,
+        popupHeight: 200,
+        bgImage: "https://img1.baidu.com/it/u=1502587040,2600645085&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800",
+        contentBuilder: (): void => this.centerBuilder()
       })
     }
   }
@@ -380,10 +422,9 @@ struct DemoPage {
   @Builder safeBuilder() {
     Column(){
       Text("内容")
-      Text("内容")
     }
     .width("100%")
-    .height("100%")
+    .aspectRatio(1)
     .justifyContent(FlexAlign.SpaceBetween)
     .alignItems(HorizontalAlign.Center)
   }
@@ -414,26 +455,27 @@ struct DemoPage {
 
 ### @Props
 
-| 参数         | 说明                                                     | 类型      | 默认值     |
-| ------------| --------------------------------------------------------| --------- | ---------- |
-| visible     | 控制弹出层显示与隐藏                                        | _boolean_  | `false` |
-| popupAlign  | 弹出层位置,可选值为 `left` `right` `top` `bottom` `center` | _string_  | `center` |
-| popupWidth  | 弹出层宽度,默认值请参考弹出位置事例                           | _string \| number_  | `-`|
-| popupHeight | 弹出层高度,默认值请参考弹出位置事例                           | _string \| number_  | `-`|
-| isShowHeader| 是否展示头部                                              | _boolean_  | `false` |
-| title       | 标题内容                                                  | _string_ | `''`|
-| isShowClose  | 是否显示关闭图标                                           | _boolean_  | `true` |
-| closeIcon   | 自定义关闭图标                                             | _ResourceStr_ | `''`|
-| offsetY     | 弹出层底部偏移量                                           | _number_ |  `0`  |
-| cornerRadius| 弹出层圆角值                                               | _string \| number_ | `0`   |
-| closeOnClickOverlay | 是否允许点击遮罩关闭                                | _boolean_ |  `true`  |
-| closeOnBackPress | 是否允许返回键关闭                                     | _boolean_ |  `false`  |
-| safeAreaInsetTop| 是否开启顶部安全区适配                                   | _boolean_ | `false` |
-| safeAreaInsetBottom | 是否开启底部安全区适配                               | _boolean_ | `false` |
-| maskColor  | 蒙层颜色      | _ResourceColor_ | `0x33000000` |
-| isModal    | 是否为模态窗口                                               | _boolean_ | `true` |
-| titleColor    | 标题字体颜色                                                 | _ResourceColor_ | `#323232` |
-| closeIconColor| 关闭图标的颜色                                           | _ResourceColor_ | `#c8c9cc` |
+| 参数                 | 说明                                                     | 类型      | 默认值     |
+| --------------------| --------------------------------------------------------| --------- | ---------- |
+| visible             | 控制弹出层显示与隐藏                                        | _boolean_  | `false` |
+| popupAlign          | 弹出层位置,可选值为 `left` `right` `top` `bottom` `center` | _string_  | `center` |
+| popupWidth          | 弹出层宽度,默认值请参考弹出位置事例                           | _string \| number_  | `-`|
+| popupHeight         | 弹出层高度,默认值请参考弹出位置事例                           | _string \| number_  | `-`|
+| isShowHeader        | 是否展示头部                                              | _boolean_  | `false` |
+| title               | 标题内容                                                  | _string_ | `''`|
+| titleColor          | 标题字体颜色                                                | _ResourceColor_ | `#323232` |
+| isShowClose         | 是否显示关闭图标                                           | _boolean_  | `true` |
+| closeIcon           | 自定义关闭图标                                             | _ResourceStr_ | `''`|
+| closeIconColor      | 关闭图标的颜色                                              | _ResourceColor_ | `#c8c9cc` |
+| cornerRadius        | 弹出层圆角值                                               | _string \| number_ | `0`   |
+| offsetY             | 弹出层底部偏移量                                           | _number_ |  `0`  |
+| isModal             | 是否为模态窗口                                              | _boolean_ | `true` |
+| maskColor           | 蒙层颜色                                                   | _ResourceColor_ | `0x33000000` |
+| closeOnClickOverlay | 是否允许点击遮罩关闭                                        | _boolean_ |  `true`  |
+| closeOnBackPress    | 是否允许返回键关闭                                          | _boolean_ |  `true`  |
+| safeAreaInsetTop    | 是否开启顶部安全区适配                                       | _boolean_ | `false` |
+| safeAreaInsetBottom | 是否开启底部安全区适配                                       | _boolean_ | `false` |
+| bgImage <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.7</span>| 弹框背景图片 | _ResourceStr_ | `''` |
 
 ### Events
 

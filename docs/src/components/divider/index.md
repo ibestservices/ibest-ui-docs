@@ -22,7 +22,9 @@ import { IBestDivider } from "@ibestservices/ibest-ui";
 @Component
 struct DemoPage {
   build() {
-  IBestDivider()
+    Column(){
+      IBestDivider()
+    }
   }
 }
 ```
@@ -91,10 +93,12 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestDivider({
-      text: '文本',
-      dashed: true
-    })
+    Column(){
+      IBestDivider({
+        text: '文本',
+        dashed: true
+      })
+    }
   }
 }
 ```
@@ -110,12 +114,14 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestDivider({
-      text: '文本',
-      color: "#3d8af2",
-      lineColor: "#3d8af2",
-      leftRightPadding: 20
-    })
+    Column(){
+      IBestDivider({
+        text: '文本',
+        color: "#3d8af2",
+        lineColor: "#3d8af2",
+        leftRightPadding: 20
+      })
+    }
   }
 }
 ```

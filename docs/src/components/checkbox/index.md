@@ -12,8 +12,6 @@ import { IBestCheckbox, IBestCheckboxGroup } from "@ibestservices/ibest-ui";
 
 ## 代码演示
 
-
-
 ### 基础用法
 
 ![基础用法](./images/basic-checkbox.png)
@@ -29,13 +27,15 @@ import { IBestCheckbox, IBestCheckboxGroup } from "@ibestservices/ibest-ui";
 struct DemoPage {
   @State isChecked: boolean = true
   build() {
-    IBestCheckbox({
-      value: this.isChecked,
-      label: this.isChecked + "",
-      onChange: (checked: boolean) => {
-        this.isChecked = checked
-      }
-    })
+    Column(){
+      IBestCheckbox({
+        value: this.isChecked,
+        label: this.isChecked + "",
+        onChange: (checked: boolean) => {
+          this.isChecked = checked
+        }
+      })
+    }
   }
 }
 ```
@@ -85,14 +85,16 @@ struct DemoPage {
 struct DemoPage {
   @State isChecked: boolean = true
   build() {
-    IBestCheckbox({
-      value: this.isChecked,
-      shape: 'square',
-      label: "自定义形状",
-      onChange: (checked: boolean) => {
-        this.isChecked = checked
-      }
-    })
+    Column(){
+      IBestCheckbox({
+        value: this.isChecked,
+        shape: 'square',
+        label: "自定义形状",
+        onChange: (checked: boolean) => {
+          this.isChecked = checked
+        }
+      })
+    }
   }
 }
 ```
@@ -112,14 +114,22 @@ struct DemoPage {
 struct DemoPage {
   @State isChecked: boolean = true
   build() {
-    IBestCheckbox({
-      value: this.isChecked,
-      checkedColor: '#ee0a24',
-      label: '自定义颜色',
-      onChange: (checked: boolean) => {
-        this.isChecked = checked
-      }
-    })
+    Column({ space: 20 }) {
+      IBestCheckbox({
+        value: this.isChecked,
+        checkedColor: '#ee0a24',
+        label: '自定义颜色',
+        onChange: checked => {
+          this.isChecked = checked
+        }
+      })
+      IBestCheckbox({
+        value: false,
+        bdColor: '#ee0a24',
+        bgColor: "#fff",
+        label: '自定义背景色'
+      })
+    }.alignItems(HorizontalAlign.Start)
   }
 }
 ```
@@ -139,14 +149,16 @@ struct DemoPage {
 struct DemoPage {
   @State isChecked: boolean = true
   build() {
-    IBestCheckbox({
-      value: this.isChecked,
-      iconSize: 30,
-      label: '自定义大小',
-      onChange: (checked: boolean) => {
-        this.isChecked = checked
-      }
-    })
+    Column(){
+      IBestCheckbox({
+        value: this.isChecked,
+        iconSize: 30,
+        label: '自定义大小',
+        onChange: (checked: boolean) => {
+          this.isChecked = checked
+        }
+      })
+    }
   }
 }
 ```
@@ -166,14 +178,16 @@ struct DemoPage {
 struct DemoPage {
   @State isChecked: boolean = true
   build() {
-    IBestCheckbox({
-      value: this.isChecked,
-      labelPosition: 'left',
-      label: '左侧文本',
-      onChange: (checked: boolean) => {
-        this.isChecked = checked
-      }
-    })
+    Column(){
+      IBestCheckbox({
+        value: this.isChecked,
+        labelPosition: 'left',
+        label: '左侧文本',
+        onChange: (checked: boolean) => {
+          this.isChecked = checked
+        }
+      })
+    }
   }
 }
 ```
@@ -193,14 +207,16 @@ struct DemoPage {
 struct DemoPage {
   @State isChecked: boolean = true
   build() {
-    IBestCheckbox({
-      value: this.isChecked,
-      label: '左侧文本',
-      labelDisabled: true,
-      onChange: (checked: boolean) => {
-        this.isChecked = checked
-      }
-    })
+    Column(){
+      IBestCheckbox({
+        value: this.isChecked,
+        label: '左侧文本',
+        labelDisabled: true,
+        onChange: (checked: boolean) => {
+          this.isChecked = checked
+        }
+      })
+    }
   }
 }
 ```
@@ -218,17 +234,19 @@ struct DemoPage {
   @State group: string = "group"
   @State activeList: string[] = ["1", "2"]
   build() {
-    IBestCheckboxGroup({ group: this.group, activeList: $activeList }){
-      IBestCheckbox({
-        group: this.group,
-        label: '复选框1',
-        name: '1'
-      })
-      IBestCheckbox({
-        group: this.group,
-        label: '复选框2',
-        name: '2'
-      })
+    Column(){
+      IBestCheckboxGroup({ group: this.group, activeList: $activeList }){
+        IBestCheckbox({
+          group: this.group,
+          label: '复选框1',
+          name: '1'
+        })
+        IBestCheckbox({
+          group: this.group,
+          label: '复选框2',
+          name: '2'
+        })
+      }
     }
   }
 }
@@ -245,19 +263,21 @@ struct DemoPage {
 @Component
 struct DemoPage {
   @State group: string = "group"
-  @State activeList: string[] = ["1", "2"]
+  @State activeList: number[] = [1, 2]
   build() {
-    IBestCheckboxGroup({ group: this.group, activeList: $activeList, placeDirection: Axis.Horizontal }){
-      IBestCheckbox({
-        group: this.group,
-        label: '复选框1',
-        name: '1'
-      })
-      IBestCheckbox({
-        group: this.group,
-        label: '复选框2',
-        name: '2'
-      })
+    Column(){
+      IBestCheckboxGroup({ group: this.group, activeList: $activeList, placeDirection: Axis.Horizontal }){
+        IBestCheckbox({
+          group: this.group,
+          label: '复选框1',
+          name: 1
+        })
+        IBestCheckbox({
+          group: this.group,
+          label: '复选框2',
+          name: 2
+        })
+      }
     }
   }
 }
@@ -279,22 +299,24 @@ struct DemoPage {
   @State group: string = "group"
   @State activeList: string[] = ["1", "2"]
   build() {
-    IBestCheckboxGroup({ group: this.group, activeList: $activeList, max: 2 }){
-      IBestCheckbox({
-        group: this.group,
-        label: '复选框1',
-        name: '1'
-      })
-      IBestCheckbox({
-        group: this.group,
-        label: '复选框2',
-        name: '2'
-      })
-      IBestCheckbox({
-        group: this.group,
-        label: '复选框3',
-        name: '3'
-      })
+    Column(){
+      IBestCheckboxGroup({ group: this.group, activeList: $activeList, max: 2 }){
+        IBestCheckbox({
+          group: this.group,
+          label: '复选框1',
+          name: '1'
+        })
+        IBestCheckbox({
+          group: this.group,
+          label: '复选框2',
+          name: '2'
+        })
+        IBestCheckbox({
+          group: this.group,
+          label: '复选框3',
+          name: '3'
+        })
+      }
     }
   }
 }
@@ -485,18 +507,20 @@ struct CheckboxPage {
 
 | 参数          | 说明                                                            | 类型   | 默认值  |
 | ------------- | -------------------------------------------------------------- | ----- | ------- |
+| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`   | _string_  |  `''`   |
 | name          | 标识符，通常为一个唯一的字符串或数字，同一 `group` 的 `name` 不可重复   | _string_ \| _number_ |    |
-| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`   | _string_        |         |
-| label         | 显示的文本                                                       | _ResourceStr_   |         |
+| label         | 显示的文本                                                       | _ResourceStr_   |  `''`   |
 | value         | 默认是否选中 非双向绑定，如果要获取最新的值请从 `onChange` 回调中获取    | _boolean_       | `false` |
 | iconSize      | 图标大小                                                         | _number_ \| _string_ | `18`|
-| shape         | 形状，可选值为 `square` `dot`                                     | _string_        | `round` |
+| shape         | 形状，可选值为 `square` `round`                                   | _string_        | `round` |
 | disabled      | 是否为禁用状态                                                    | _boolean_       | `false` |
 | labelDisabled | 是否禁用文本内容点击                                               | _boolean_       | `false` |
 | labelPosition | 文本位置，可选值为 `left`                                          | _string_        | `right` |
-| checkedColor  | 选中状态颜色                                                      | _ResourceColor_ |         |
+| checkedColor  | 选中状态颜色                                                      | _ResourceColor_ | `#1989fa`  |
 | indeterminate | 是否为不确定状态                                                   | _boolean_     | `false` |
 | labelFontSize | 文本字体大小                                                      | _number_ \| _string_ | `16`|
+| bgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.7</span>| 默认背景色     | _ResourceColor_ | `''` |
+| bdColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.7</span>| 默认边框色     | _ResourceColor_ | `#ebedf0` |
 
 ### Checkbox Events
 
@@ -517,7 +541,7 @@ struct CheckboxPage {
 | ----- | -------------------------------------------------------------| -------- | ------ |
 | group | 标识符，通常为一个唯一的字符串，需具备`全局唯一性` | _string_ |  `''`  |
 | max   | 最大可选数，`0` 为无限制                      | _number_ |  `0`   |
-| activeList | 激活的标识列表, 支持双向绑定              | _string[]_  |  `[]`  |
+| activeList | 激活的标识列表, 支持双向绑定              | _(string \| number)[]_  |  `[]`  |
 | placeDirection | 排列方向                           | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#axis" target="__blank">Axis</a>_   | `Axis.Vertical` |
 | space | 间距                                       | _string_ \| _number_ | `12` |
 | controller | 组件实例                               | _IBestCheckboxGroupController_ | `-` |
@@ -532,7 +556,7 @@ struct CheckboxPage {
 
 | 事件名    | 说明                            | 参数类型                  |
 | -------- | ------------------------------ | ------------------------ |
-| onChange | 选中状态改变的回调事件，回调参数是选中的 `checkbox` 组件的 `name` 值 | `checkboxNames: string[]`  |
+| onChange | 选中状态改变的回调事件，回调参数是选中的 `checkbox` 组件的 `name` 值 | `checkboxNames: (string \| number)[]`  |
 
 ### CheckboxGroup 插槽
 

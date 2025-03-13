@@ -196,9 +196,10 @@ struct DemoPage {
       IBestNumberKeyboard({
         visible: $visible,
         value: $value,
+        deleteButtonText: "删除",
         styleType: "custom",
         extraKey: ["00", "."],
-        closeBtnText: "完成"
+        closeBtnText: "确定"
       })
     }
   }
@@ -286,10 +287,10 @@ struct DemoPage {
 | ------------ | ---------------------------------------------| --------- | ---------- |
 | visible      | 控制键盘显隐, 支持双向绑定                       | _boolean_ | `false` | 
 | value        | 当前输入的值, 支持双向绑定                       | _string_  | `''` |
-| title        | 顶部标题文字                                    | _string_ | `''` |
+| title        | 顶部标题文字                                    | _ResourceStr_ | `''` |
 | extraKey     | 额外按键                                       | _string \| string[]_ | `''` |
-| closeBtnText | 关闭按钮文字                                    | _string_ | `完成` |
-| deleteButtonText | 删除按钮文字, 为空时显示图标                  | _string_ | `''` |
+| closeBtnText | 关闭按钮文字                                    | _ResourceStr_ | `完成` |
+| deleteButtonText | 删除按钮文字, 为空时显示图标                  | _ResourceStr_ | `''` |
 | styleType    | 样式风格, 可选值为 `default` `custom`            | _string_ |`default`|
 | isRandomKeyOrder | 是否随机排序                                | _boolean_ | `false` |
 | maxLength    | 最大长度, 默认不限制		                          | _number_ | `-1` |
@@ -298,6 +299,6 @@ struct DemoPage {
 
 | 事件名     | 说明                            | 回调参数             |
 | ----------| ------------------------------ | -------------------------------- |
-| onInput | 按下按键后触发 | `value: string` |
-| onDelete | 点击删除键时触发 | `-` |
-| onClose | 点击关闭键时触发 | `-` |
+| onInput   | 按下按键后触发 | `value: string` |
+| onDelete  | 点击删除键时触发 | `-` |
+| onClose   | 点击关闭键时触发 | `-` |

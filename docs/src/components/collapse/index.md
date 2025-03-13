@@ -24,30 +24,32 @@ struct DemoPage {
   @State activeName: string[] = ['1']
   @State groupId: string = 'group'
   build() {
-    IBestCollapse({groupId: this.groupId, activeName: this.activeName}){
-      IBestCollapseItem({
-        groupId: this.groupId,
-        name: '1',
-        index: 0,
-        title: '标题1'
-      }){
-        Text('代码是写出来给人看的，附带能在机器上运行。').fontSize(14).fontColor("#969799")
-      }
-      IBestCollapseItem({
-        groupId: this.groupId,
-        name: '2',
-        index: 1,
-        title: '标题2'
-      }){
-        Text('技术无非就是那些开发它的人的共同灵魂。').fontSize(14).fontColor("#969799")
-      }
-      IBestCollapseItem({
-        groupId: this.groupId,
-        name: '3',
-        index: 2,
-        title: '标题3'
-      }){
-        Text('在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。').fontSize(14).fontColor("#969799")
+    Column(){
+      IBestCollapse({groupId: this.groupId, activeName: this.activeName}){
+        IBestCollapseItem({
+          groupId: this.groupId,
+          name: '1',
+          index: 0,
+          title: '标题1'
+        }){
+          Text('代码是写出来给人看的，附带能在机器上运行。').fontSize(14).fontColor("#969799")
+        }
+        IBestCollapseItem({
+          groupId: this.groupId,
+          name: '2',
+          index: 1,
+          title: '标题2'
+        }){
+          Text('技术无非就是那些开发它的人的共同灵魂。').fontSize(14).fontColor("#969799")
+        }
+        IBestCollapseItem({
+          groupId: this.groupId,
+          name: '3',
+          index: 2,
+          title: '标题3'
+        }){
+          Text('在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。').fontSize(14).fontColor("#969799")
+        }
       }
     }
   }
@@ -64,33 +66,35 @@ struct DemoPage {
 @Entry
 @Component
 struct DemoPage {
-  @State activeName: string = '1'
+  @State activeName: number = 1
   @State groupId: string = 'group'
   build() {
-    IBestCollapse({groupId: this.groupId, activeName: this.activeName, accordion: true}){
-      IBestCollapseItem({
-        groupId: this.groupId,
-        name: '1',
-        index: 0,
-        title: '标题1'
-      }){
-        Text('代码是写出来给人看的，附带能在机器上运行。').fontSize(14).fontColor("#969799")
-      }
-      IBestCollapseItem({
-        groupId: this.groupId,
-        name: '2',
-        index: 1,
-        title: '标题2'
-      }){
-        Text('技术无非就是那些开发它的人的共同灵魂。').fontSize(14).fontColor("#969799")
-      }
-      IBestCollapseItem({
-        groupId: this.groupId,
-        name: '3',
-        index: 2,
-        title: '标题3'
-      }){
-        Text('在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。').fontSize(14).fontColor("#969799")
+    Column(){
+      IBestCollapse({groupId: this.groupId, activeName: this.activeName, accordion: true}){
+        IBestCollapseItem({
+          groupId: this.groupId,
+          name: 1,
+          index: 0,
+          title: '标题1'
+        }){
+          Text('代码是写出来给人看的，附带能在机器上运行。').fontSize(14).fontColor("#969799")
+        }
+        IBestCollapseItem({
+          groupId: this.groupId,
+          name: 2,
+          index: 1,
+          title: '标题2'
+        }){
+          Text('技术无非就是那些开发它的人的共同灵魂。').fontSize(14).fontColor("#969799")
+        }
+        IBestCollapseItem({
+          groupId: this.groupId,
+          name: 3,
+          index: 2,
+          title: '标题3'
+        }){
+          Text('在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。').fontSize(14).fontColor("#969799")
+        }
       }
     }
   }
@@ -110,88 +114,8 @@ struct DemoPage {
   @State activeName: string[] = ['2']
   @State groupId: string = 'group'
   build() {
-    IBestCollapse({groupId: this.groupId, activeName: this.activeName}){
-      IBestCollapseItem({
-        groupId: this.groupId,
-        name: '1',
-        index: 0,
-        title: '标题1'
-      }){
-        Text('代码是写出来给人看的，附带能在机器上运行。').fontSize(14).fontColor("#969799")
-      }
-      IBestCollapseItem({
-        groupId: this.groupId,
-        name: '2',
-        index: 1,
-        title: '标题2',
-        disabled: true
-      }){
-        Text('技术无非就是那些开发它的人的共同灵魂。').fontSize(14).fontColor("#969799")
-      }
-      IBestCollapseItem({
-        groupId: this.groupId,
-        name: '3',
-        index: 2,
-        title: '标题3'
-      }){
-        Text('在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。').fontSize(14).fontColor("#969799")
-      }
-    }
-  }
-}
-```
-:::
-
-### 自定义标题
-
-![自定义标题](./images/custom-title.png)
-
-::: details 点我查看代码
-```ts
-@Entry
-@Component
-struct DemoPage {
-  @State activeName: string[] = ['1']
-  @State groupId: string = 'group'
-  build() {
-    IBestCollapse({groupId: this.groupId, activeName: this.activeName}){
-      IBestCollapseItem({
-        groupId: this.groupId,
-        name: '1',
-        index: 0,
-        icon: $r("app.media.icon_like"),
-        title: '标题1',
-        value: "右侧内容"
-      }){
-        Text('代码是写出来给人看的，附带能在机器上运行。').fontSize(14).fontColor("#969799")
-      }
-    }
-  }
-}
-```
-:::
-
-### 实例方法
-
-![实例方法](./images/controller.gif)
-
-::: details 点我查看代码
-```ts
-import { IBestCollapseController } from '@ibestservices/ibest-ui';
-
-@Entry
-@Component
-struct DemoPage {
-  @State activeName: string[] = ['2']
-  @State groupId: string = 'group'
-  private controller: IBestCollapseController = new IBestCollapseController()
-  build() {
-    Column{
-      IBestCollapse({
-        groupId: this.groupId,
-        activeName: this.activeName,
-        controller: this.controller
-      }){
+    Column(){
+      IBestCollapse({groupId: this.groupId, activeName: this.activeName}){
         IBestCollapseItem({
           groupId: this.groupId,
           name: '1',
@@ -212,6 +136,90 @@ struct DemoPage {
         IBestCollapseItem({
           groupId: this.groupId,
           name: '3',
+          index: 2,
+          title: '标题3'
+        }){
+          Text('在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。').fontSize(14).fontColor("#969799")
+        }
+      }
+    }
+  }
+}
+```
+:::
+
+### 自定义标题
+
+![自定义标题](./images/custom-title.png)
+
+::: details 点我查看代码
+```ts
+@Entry
+@Component
+struct DemoPage {
+  @State activeName: string[] = ['1']
+  @State groupId: string = 'group'
+  build() {
+    Column(){
+      IBestCollapse({groupId: this.groupId, activeName: this.activeName}){
+        IBestCollapseItem({
+          groupId: this.groupId,
+          name: '1',
+          index: 0,
+          icon: $r("app.media.icon_like"),
+          title: '标题1',
+          value: "右侧内容"
+        }){
+          Text('代码是写出来给人看的，附带能在机器上运行。').fontSize(14).fontColor("#969799")
+        }
+      }
+    }
+  }
+}
+```
+:::
+
+### 实例方法
+
+![实例方法](./images/controller.gif)
+
+::: details 点我查看代码
+```ts
+import { IBestCollapseController } from '@ibestservices/ibest-ui';
+
+@Entry
+@Component
+struct DemoPage {
+  @State activeName: number[] = [2]
+  @State groupId: string = 'group'
+  private controller: IBestCollapseController = new IBestCollapseController()
+  build() {
+    Column(){
+      IBestCollapse({
+        groupId: this.groupId,
+        activeName: this.activeName,
+        controller: this.controller
+      }){
+        IBestCollapseItem({
+          groupId: this.groupId,
+          name: 1,
+          index: 0,
+          title: '标题1'
+        }){
+          Text('代码是写出来给人看的，附带能在机器上运行。').fontSize(14).fontColor("#969799")
+        }
+        IBestCollapseItem({
+          groupId: this.groupId,
+          name: 2,
+          index: 1,
+          title: '标题2',
+          disabled: true
+        }){
+          Text('技术无非就是那些开发它的人的共同灵魂。').fontSize(14).fontColor("#969799")
+        }
+        IBestCollapseItem({
+          groupId: this.groupId,
+          name: 3,
           index: 2,
           title: '标题3'
         }){
@@ -288,7 +296,6 @@ struct DemoPage {
 ```
 :::
 
-
 ## API
 
 ### IBestCollapse @Props
@@ -296,7 +303,7 @@ struct DemoPage {
 | 参数         | 说明                         | 类型      | 默认值     |
 | ------------ | ---------------------------| --------- | ---------- |
 | groupId      | 分组id, 需保证全局唯一性       | _string_  | `''`  |
-| activeName   | 当前展开面板的name            | 手风琴模式：_string_ <br>非手风琴模式：_string_ \| _string[]_ | `[]`  |
+| activeName   | 当前展开面板的name            | 手风琴模式：_string_ \| _number_ <br>非手风琴模式：_(string \| number)[]_ | `''`  |
 | accordion    | 是否开启手风琴模式             | _boolean_ | `false`  |
 | isShowBorder | 是否显示外边框                | _boolean_ | `true`  |
 | controller   | 实例方法                     | _IBestCollapseController_ | `-`  |
@@ -327,7 +334,7 @@ struct DemoPage {
 | 参数         | 说明                                          | 类型      | 默认值     |
 | ------------ | ---------------------------------------------| --------- | ---------|
 | groupId      | 分组id, 与IBestCollapse `groupId` 一致         | _string_  | `''`  |
-| name         | 唯一标识符                                     | _string_  | `''`  |
+| name         | 唯一标识符                                     | _string_ \| _number_  | `''`  |
 | index        | 索引                                          | _number_  | `''`  |
 | icon         | 标题栏左侧图标                                  | _ResourceStr_  | `''` |
 | iconColor    | 标题栏左侧图标颜色                               | _ResourceColor_ | `#323233` |

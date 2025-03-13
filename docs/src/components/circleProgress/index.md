@@ -23,10 +23,12 @@ import { IBestCircleProgress } from "@ibestservices/ibest-ui";
 struct DemoPage {
   @State value: number = 30
   build() {
-    IBestCircleProgress({
-      value: $value,
-      text: `${this.value}%`
-    })
+    Column(){
+      IBestCircleProgress({
+        value: $value,
+        text: `${this.value}%`
+      })
+    }
   }
 }
 ```

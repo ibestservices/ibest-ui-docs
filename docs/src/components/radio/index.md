@@ -28,17 +28,19 @@ struct DemoPage {
   @State group: string = "group"
   @State active: string = "1"
   build() {
-    IBestRadioGroup({ group: this.group, active: $active }){
-      IBestRadio({
-        group: this.group,
-        label: '单选框1',
-        name: '1'
-      })
-      IBestRadio({
-        group:this.group,
-        label: '单选框2',
-        name: '2'
-      })
+    Column(){
+      IBestRadioGroup({ group: this.group, active: $active }){
+        IBestRadio({
+          group: this.group,
+          label: '单选框1',
+          name: '1'
+        })
+        IBestRadio({
+          group:this.group,
+          label: '单选框2',
+          name: '2'
+        })
+      }
     }
   }
 }
@@ -57,17 +59,19 @@ struct DemoPage {
   @State group: string = "group"
   @State active: string = "1"
   build() {
-    IBestRadioGroup({ group: this.group, active: $active, placeDirection: Axis.Horizontal }){
-      IBestRadio({
-        group: this.group,
-        label: '单选框1',
-        name: '1'
-      })
-      IBestRadio({
-        group:this.group,
-        label: '单选框2',
-        name: '2'
-      })
+    Column(){
+      IBestRadioGroup({ group: this.group, active: $active, placeDirection: Axis.Horizontal }){
+        IBestRadio({
+          group: this.group,
+          label: '单选框1',
+          name: '1'
+        })
+        IBestRadio({
+          group:this.group,
+          label: '单选框2',
+          name: '2'
+        })
+      }
     }
   }
 }
@@ -89,18 +93,20 @@ struct DemoPage {
   @State group: string = "group"
   @State active: string = "1"
   build() {
-    IBestRadioGroup({ group: this.group, active: $active }){
-      IBestRadio({
-        group: this.group,
-        label: '单选框1',
-        disabled: true,
-        name: '1'
-      })
-      IBestRadio({
-        group:this.group,
-        label: '单选框2',
-        name: '2'
-      })
+    Column(){
+      IBestRadioGroup({ group: this.group, active: $active }){
+        IBestRadio({
+          group: this.group,
+          label: '单选框1',
+          disabled: true,
+          name: '1'
+        })
+        IBestRadio({
+          group:this.group,
+          label: '单选框2',
+          name: '2'
+        })
+      }
     }
   }
 }
@@ -122,19 +128,21 @@ struct DemoPage {
   @State group: string = "group"
   @State active: string = "1"
   build() {
-    IBestRadioGroup({ group: this.group, active: $active }){
-      IBestRadio({
-        group: this.group,
-        label: '单选框1',
-        shape: 'square',
-        name: '1'
-      })
-      IBestRadio({
-        group:this.group,
-        label: '单选框2',
-        shape: 'dot',
-        name: '2'
-      })
+    Column(){
+      IBestRadioGroup({ group: this.group, active: $active }){
+        IBestRadio({
+          group: this.group,
+          label: '单选框1',
+          shape: 'square',
+          name: '1'
+        })
+        IBestRadio({
+          group:this.group,
+          label: '单选框2',
+          shape: 'dot',
+          name: '2'
+        })
+      }
     }
   }
 }
@@ -156,27 +164,37 @@ struct DemoPage {
   @State group: string = "group"
   @State active: string = "1"
   build() {
-    IBestRadioGroup({ group: this.group, active: $active }){
-      IBestRadio({
-        group: this.group,
-        label: '单选框',
-        shape: 'square',
-        checkedColor: '#ee0a24',
-        name: '1'
-      })
-      IBestRadio({
-        group: this.group,
-        label: '单选框',
-        checkedColor: '#ee0a24',
-        name: '2'
-      })
-      IBestRadio({
-        group: this.group,
-        label: '单选框',
-        shape: 'dot',
-        checkedColor: '#ee0a24',
-        name: '3'
-      })
+    Row({space: SPACE.XL}){
+      IBestRadioGroup({ group: this.group, active: $active }){
+        IBestRadio({
+          group: this.group,
+          label: '单选框',
+          checkedColor: '#ee0a24',
+          name: '1'
+        })
+        IBestRadio({
+          group: this.group,
+          label: '单选框',
+          checkedColor: '#ee0a24',
+          name: '2'
+        })
+      }
+      IBestRadioGroup({ group: this.group, active: $active }){
+        IBestRadio({
+          group: this.group,
+          label: '单选框',
+          bgColor: "#fff",
+          bdColor: "#ee0a24",
+          name: '1'
+        })
+        IBestRadio({
+          group: this.group,
+          label: '单选框',
+          bgColor: "#fff",
+          bdColor: "#ee0a24",
+          name: '2'
+        })
+      }
     }
   }
 }
@@ -198,19 +216,21 @@ struct DemoPage {
   @State group: string = "group"
   @State active: string = "1"
   build() {
-    IBestRadioGroup({ group: this.group, active: $active }){
-      IBestRadio({
-        group: this.group,
-        label: '自定义大小',
-        iconSize: 30,
-        name: '1'
-      })
-      IBestRadio({
-        group: this.group,
-        label: '自定义大小',
-        iconSize: 30,
-        name: '2'
-      })
+    Column(){
+      IBestRadioGroup({ group: this.group, active: $active }){
+        IBestRadio({
+          group: this.group,
+          label: '自定义大小',
+          iconSize: 30,
+          name: '1'
+        })
+        IBestRadio({
+          group: this.group,
+          label: '自定义大小',
+          iconSize: 30,
+          name: '2'
+        })
+      }
     }
   }
 }
@@ -232,19 +252,21 @@ struct DemoPage {
   @State group: string = "group"
   @State active: string = "1"
   build() {
-    IBestRadioGroup({ group: this.group, active: $active }){
-      IBestRadio({
-        group: this.group,
-        label: '单选框',
-        labelPosition: 'left',
-        name: '1'
-      })
-      IBestRadio({
-        group: this.group,
-        label: '单选框',
-        labelPosition: 'left',
-        name: '2'
-      })
+    Column(){
+      IBestRadioGroup({ group: this.group, active: $active }){
+        IBestRadio({
+          group: this.group,
+          label: '单选框',
+          labelPosition: 'left',
+          name: '1'
+        })
+        IBestRadio({
+          group: this.group,
+          label: '单选框',
+          labelPosition: 'left',
+          name: '2'
+        })
+      }
     }
   }
 }
@@ -266,19 +288,21 @@ struct DemoPage {
   @State group: string = "group"
   @State active: number = 1
   build() {
-    IBestRadioGroup({ group: this.group, active: $active }){
-      IBestRadio({
-        group: this.group,
-        label: '单选框',
-        labelDisabled: true,
-        name: 1
-      })
-      IBestRadio({
-        group: this.group,
-        label: '单选框',
-        labelDisabled: true,
-        name: 2
-      })
+    Column(){
+      IBestRadioGroup({ group: this.group, active: $active }){
+        IBestRadio({
+          group: this.group,
+          label: '单选框',
+          labelDisabled: true,
+          name: 1
+        })
+        IBestRadio({
+          group: this.group,
+          label: '单选框',
+          labelDisabled: true,
+          name: 2
+        })
+      }
     }
   }
 }
@@ -304,29 +328,30 @@ struct DemoPage {
     IBestRadio({ name, group })
   }
   build() {
-    IBestRadioGroup({ group: this.group, active: $active }){
-      IBestCell({
-        title: '是',
-        rightIconBuilder: () => this.CellRadio(true, this.group),
-        clickable: true,
-        onClickCell: () => {
-          this.active = true
-        }
-      })
-      IBestCell({
-        title: '否',
-        rightIconBuilder: () => this.CellRadio(false, this.group),
-        hasBorder: false,
-        clickable: true,
-        onClickCell: () => {
-          this.active = false
-        }
-      })
+    Column(){
+      IBestRadioGroup({ group: this.group, active: $active }){
+        IBestCell({
+          title: '是',
+          rightIconBuilder: () => this.CellRadio(true, this.group),
+          clickable: true,
+          onClickCell: () => {
+            this.active = true
+          }
+        })
+        IBestCell({
+          title: '否',
+          rightIconBuilder: () => this.CellRadio(false, this.group),
+          hasBorder: false,
+          clickable: true,
+          onClickCell: () => {
+            this.active = false
+          }
+        })
+      }
     }
   }
 }
 ```
-
 :::
 
 ## API
@@ -334,17 +359,19 @@ struct DemoPage {
 ### Radio @Props
 
 | 参数           | 说明                                                            | 类型   | 默认值  |
-| ------------- | ----------------------------------------------------------------| -------------------- | ------- |
-| name          | 标识符，通常为一个唯一的字符串或数字                                  | _string_ \| _number_ \| _boolean_ |         |
-| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`   | _string_             |         |
-| label         | 显示的文本                                                       | _ResourceStr_         |         |
+| ------------- | ----------------------------------------------------------------| ------| ------- |
+| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`   | _string_ |  `''`  |
+| name          | 标识符，通常为一个唯一的字符串或数字                                  | _string_ \| _number_ \| _boolean_ |  `''` |
+| label         | 显示的文本                                                       | _ResourceStr_  |  `''` |
 | iconSize      | 图标大小                                                         | _number_ \| _string_ |  `18`  |
-| shape         | 形状，可选值为 `square` `dot`                                     | _string_             | `round` |
+| shape         | 形状，可选值为 `round` `square` `dot`                             | _string_             | `round` |
 | disabled      | 是否为禁用状态                                                    | _boolean_            | `false` |
 | labelDisabled | 是否禁用文本内容点击                                               | _boolean_            | `false` |
 | labelPosition | 文本位置，可选值为 `left`                                          | _string_             | `right` |
 | checkedColor  | 选中状态颜色                                                      | _ResourceColor_      |  `#1989fa` |
 | labelFontSize | 文本字体大小                                                      | _number_ \| _string_ |  `16`  |
+| bgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.7</span>| 默认背景色     | _ResourceColor_ | `''` |
+| bdColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.7</span>| 默认边框色     | _ResourceColor_ | `#ebedf0` |
 
 ### Radio 插槽
 

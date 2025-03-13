@@ -212,9 +212,9 @@ struct DemoPage {
   ]
   @State selectValue1: string[] = []
   @State selectValue2: string[] = []
-  @State currentName: string = "0"
+  @State currentName: number = 0
   changeName(){
-    this.currentName = this.currentName === "0" ? "1" : "0"
+    this.currentName = this.currentName === 0 ? 1 : 0
   }
   build() {
     Column(){
@@ -232,7 +232,7 @@ struct DemoPage {
         tabs: this.tabs,
         nextStepText: "下一步",
         currentName: this.currentName,
-        onTabNameChange: (name: string) => {
+        onTabNameChange: name => {
           this.currentName = name
         },
         onConfirm: () => {
@@ -265,13 +265,13 @@ struct DemoPage {
 | 参数         | 说明                                                     | 类型      | 默认值     |
 | ------------ | --------------------------------------------------------| --------- | ---------- |
 | groupId      | 分组id, 可实现内部DatePicker组件交互, 需保证全局唯一性  				| _string_  | `''` |
-| title        | 标题                                       						  | _string_ |  `''`  |
-| tabs         | 顶部标签栏列表                                             | _string[]_ | `[]`  |
-| nextStepText | 下一步按钮文案                                             | _string_ | ``  |
+| title        | 标题                                       						  | _ResourceStr_ |  `''`  |
+| tabs         | 顶部标签栏列表                                             | _ResourceStr[]_ | `[]`  |
+| nextStepText | 下一步按钮文案                                             | _ResourceStr_ | ``  |
 | currentName  | 当前标签页名称                                             | _string_ | `0`  |
 | showToolBar   | 是否显示顶部栏                                 						| _boolean_ | `true` |
-| confirmText   | 确认按钮文字                                   						| _string_ |  `确定`  |
-| cancelText    | 取消按钮文字                                   						| _string_ |  `取消`  |
+| confirmText   | 确认按钮文字                                   						| _ResourceStr_ |  `确定`  |
+| cancelText    | 取消按钮文字                                   						| _ResourceStr_ |  `取消`  |
 
 ### 插槽
 

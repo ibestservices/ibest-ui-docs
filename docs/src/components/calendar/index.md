@@ -7,7 +7,7 @@
 ## 引入
 
 ```ts
-import { IBestCalendar, IBestCalendarDialog, CalendarConfirmResultType } from "@ibestservices/ibest-ui";
+import { IBestCalendar, IBestCalendarDialog, IBestCalendarConfirmResult } from "@ibestservices/ibest-ui";
 ```
 
 ## 代码演示
@@ -24,7 +24,7 @@ import { IBestCalendar, IBestCalendarDialog, CalendarConfirmResultType } from "@
 struct DemoPage {
   @State visible: boolean = false
   @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: Array<CalendarConfirmResultType>): void {
+  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
     console.log("onConfirm", JSON.stringify(value))
     this.selectDate = value.map(item => item.dateStr).join(",")
   }
@@ -39,13 +39,12 @@ struct DemoPage {
       })
       IBestCalendarDialog({
         visible: $visible,
-        onConfirm: (value: Array<CalendarConfirmResultType>): void => this.onDialogConfirm(value)
+        onConfirm: (value): void => this.onDialogConfirm(value)
       })
     }
   }
 }
 ```
-
 :::
 
 ### 选择多个日期
@@ -60,7 +59,7 @@ struct DemoPage {
 struct DemoPage {
   @State visible: boolean = false
   @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: Array<CalendarConfirmResultType>): void {
+  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
     console.log("onConfirm", JSON.stringify(value)) 
     this.selectDate = value.map(item => item.dateStr).join(",")
   }
@@ -77,7 +76,7 @@ struct DemoPage {
         visible: $visible,
         type: "danger",
         selectType: "multiple",
-        onConfirm: (value: Array<CalendarConfirmResultType>): void => this.onDialogConfirm(value)
+        onConfirm: (value): void => this.onDialogConfirm(value)
       })
     }
   }
@@ -98,7 +97,7 @@ struct DemoPage {
 struct DemoPage {
   @State visible: boolean = false
   @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: Array<CalendarConfirmResultType>): void {
+  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
     console.log("onConfirm", JSON.stringify(value)) 
     this.selectDate = value.map(item => item.dateStr).join(",")
   }
@@ -114,7 +113,7 @@ struct DemoPage {
       IBestCalendarDialog({
         visible: $visible,
         selectType: "range",
-        onConfirm: (value: Array<CalendarConfirmResultType>): void => this.onDialogConfirm(value)
+        onConfirm: (value): void => this.onDialogConfirm(value)
       })
     }
   }
@@ -139,7 +138,7 @@ struct DemoPage {
 struct DemoPage {
   @State visible: boolean = false
   @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: Array<CalendarConfirmResultType>): void {
+  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
     console.log("onConfirm", JSON.stringify(value)) 
     this.selectDate = value.map(item => item.dateStr).join(",")
   }
@@ -156,7 +155,7 @@ struct DemoPage {
         visible: $visible,
         type: "danger",
         selectedColor: "#58db6b",
-        onConfirm: (value: Array<CalendarConfirmResultType>): void => this.onDialogConfirm(value)
+        onConfirm: (value): void => this.onDialogConfirm(value)
       })
     }
   }
@@ -180,7 +179,7 @@ struct DemoPage {
 struct DemoPage {
   @State visible: boolean = false
   @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: Array<CalendarConfirmResultType>): void {
+  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
     console.log("onConfirm", JSON.stringify(value)) 
     this.selectDate = value.map(item => item.dateStr).join(",")
   }
@@ -197,7 +196,7 @@ struct DemoPage {
         visible: $visible,
         isShowLunar: true,
         cornerRadius: 20,
-        onConfirm: (value: Array<CalendarConfirmResultType>): void => this.onDialogConfirm(value)
+        onConfirm: (value): void => this.onDialogConfirm(value)
       })
     }
   }
@@ -221,7 +220,7 @@ struct DemoPage {
 struct DemoPage {
   @State visible: boolean = false
   @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: Array<CalendarConfirmResultType>): void {
+  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
     console.log("onConfirm", JSON.stringify(value)) 
     this.selectDate = value.map(item => item.dateStr).join(",")
   }
@@ -242,7 +241,7 @@ struct DemoPage {
         maxDate: new Date("2025-01-01"),
         confirmBtnColor: "#ed4040",
         confirmBtnText: "完成",
-        onConfirm: (value: Array<CalendarConfirmResultType>): void => this.onDialogConfirm(value)
+        onConfirm: (value): void => this.onDialogConfirm(value)
       })
     }
   }
@@ -266,7 +265,7 @@ struct DemoPage {
 struct DemoPage {
   @State visible: boolean = false
   @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: Array<CalendarConfirmResultType>): void {
+  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
     console.log("onConfirm", JSON.stringify(value)) 
     this.selectDate = value.map(item => item.dateStr).join(",")
   }
@@ -284,7 +283,7 @@ struct DemoPage {
         type: "danger",
         selectType: "range",
         maxRange: 7,
-        onConfirm: (value: Array<CalendarConfirmResultType>): void => this.onDialogConfirm(value)
+        onConfirm: (value): void => this.onDialogConfirm(value)
       })
     }
   }
@@ -307,7 +306,7 @@ struct DemoPage {
 struct DemoPage {
   @State visible: boolean = false
   @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: Array<CalendarConfirmResultType>): void {
+  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
     console.log("onConfirm", JSON.stringify(value)) 
     this.selectDate = value.map(item => item.dateStr).join(",")
   }
@@ -322,8 +321,8 @@ struct DemoPage {
       })
       IBestCalendarDialog({
         visible: $visible,
-        weekFirstDay: "日",
-        onConfirm: (value: Array<CalendarConfirmResultType>): void => this.onDialogConfirm(value)
+        weekFirstDay: 0,
+        onConfirm: (value): void => this.onDialogConfirm(value)
       })
     }
   }
@@ -346,7 +345,7 @@ struct DemoPage {
 struct DemoPage {
   @State visible: boolean = false
   @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: Array<CalendarConfirmResultType>): void {
+  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
     console.log("onConfirm", JSON.stringify(value)) 
     this.selectDate = value.map(item => item.dateStr).join(",")
   }
@@ -362,7 +361,7 @@ struct DemoPage {
       IBestCalendarDialog({
         visible: $visible,
         weekFirstDay: "日",
-        onConfirm: (value: Array<CalendarConfirmResultType>): void => this.onDialogConfirm(value)
+        onConfirm: (value): void => this.onDialogConfirm(value)
       })
     }
   }
@@ -388,12 +387,12 @@ struct DemoPage {
         selectType: "multiple",
         selectedColor: "#ed4040",
         isShowMark: true,
-        onConfirm: (value: Array<CalendarConfirmResultType>) => {
-            let text = value.map(item => item.dateStr).join(",")
-            promptAction.showDialog({
-                message: `当前日期为：${text}`,
-                alignment: DialogAlignment.Center
-            })
+        onConfirm: (value: IBestCalendarConfirmResult[]) => {
+          let text = value.map(item => item.dateStr).join(",")
+          promptAction.showDialog({
+            message: `当前日期为：${text}`,
+            alignment: DialogAlignment.Center
+          })
         }
       })
     }
@@ -415,7 +414,7 @@ import dayjs from "@hview/dayjs"
 @Entry
 @Component
 struct DemoPage {
-  @State clockDate: Array<string> = [dayjs().startOf("month").format('YYYY-MM-DD')]
+  @State clockDate: string[] = [dayjs().startOf("month").format('YYYY-MM-DD')]
   build() {
     Column({space: 14}){
       IBestButton({
@@ -445,24 +444,24 @@ struct DemoPage {
 | type         | 主题类型，可选值为 `primary` `success` `warning` `danger` | _string_  | `primary` |
 | defaultSelectedDate   | 默认选中日期                                    | _string[]_  | `[]` |
 | itemWidth    | 每一项宽度                                               | _string_ \| _number_  | `50`|
-| weekFirstDay | 周起始日期                                               | _string_  |    `一`     |
+| weekFirstDay | 周起始日期, `周一到周六`分别对应`123456`, 周日为 `0`         | _number_  |    `1`     |
 | isShowLunar  | 是否显示农历                                             | _boolean_ | `false`  |
 | selectType   | 选择类型，可选值为 `single` `multiple` `range`            | _string_ | `single`|
 | selectedStyleType | 选中样式，可选值为 `normal` `circle`                 | _string_ | `normal`|
 | selectedColor| 自定义选中颜色                                           | _ResourceColor_ |    |
 | maxRange     | `selectType` 为 `range` 时，最多可选天数，-1为无限制       | _number_ | `-1`   |
-| minDate      | 最小可选日期                                             | _Date_ |    |
-| maxDate      | 最大可选日期                                             | _Date_ |    |
-| isShowMark   | 是否显示月份背景水印                                      | _boolean_ | `false` |
+| minDate      | 最小可选日期                                             | _Date_ | `` |
+| maxDate      | 最大可选日期                                             | _Date_ | `` |
+| isShowMark   | 是否显示月份背景水印                                       | _boolean_ | `false` |
 | isShowHeader | 是否显示头部                                              | _boolean_ | `true` |
 | isShowConfirmBtn | 是否显示底部确定按钮                                   | _boolean_ | `false` |
 | confirmBtnColor  | 确认按钮颜色                                          | _ResourceColor_  | `#3D8AF2` |
-| confirmBtnText   | 确认按钮文案                                          | _string_  | `确认` |
+| confirmBtnText   | 确认按钮文案                                          | _ResourceStr_  | `确认` |
 | cornerRadius | 弹框圆角                                                 | _string_ \| _number_  | `10`|
-| clock  | 开启打卡模式                                              | _boolean_ | `false`  |
+| clock        | 开启打卡模式                                              | _boolean_ | `false`  |
 | clockSuccessText | 打卡成功文案                                          | _ResourceStr_  | `已成功` |
 | isShowUnClock | 是否显示未打卡`                                          | _boolean_ | `true`  |
-| unClockText  | 未打卡文案                                              | _ResourceStr_  | `未打卡` |
+| unClockText  | 未打卡文案                                                | _ResourceStr_  | `未打卡` |
 
 
 ### CalendarDialog @Props
@@ -480,4 +479,12 @@ CalendarDialog包含Calendar除 `isShowConfirmBtn` 以外所有属性，Calendar
 
 | 事件名     | 说明                                             | 回调参数                         |
 | ----------| ------------------------------------------------ | -------------------------------- |
-| onConfirm | 选择日期后的回调，`selectType` 为 `multiple` 时需点击按钮触发 | `value: CalendarConfirmResultType[]` |
+| onConfirm | 选择日期后的回调，`selectType` 为 `multiple` 时需点击按钮触发 | `value: IBestCalendarConfirmResult[]` |
+
+### IBestCalendarConfirmResult 数据类型
+| 参数          | 说明                                          | 类型      |
+| ------------ | --------------------------------------------- | --------- |
+| date         | 选中日期                                       | _Date_  |
+| dateStr      | 选中日期字符串                                  | _string_  |
+| lunarMonth   | 农历月份                                       | _string_ |
+| lunarDay     | 农历天                                         | _string_ |

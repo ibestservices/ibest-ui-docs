@@ -23,9 +23,11 @@ import { IBestStepper } from "@ibestservices/ibest-ui";
 struct DemoPage {
   @State value: number = 1
   build() {
-    IBestStepper({
-      value: $value
-    })
+    Column(){
+      IBestStepper({
+        value: $value
+      })
+    }
   }
 }
 ```
@@ -45,10 +47,12 @@ struct DemoPage {
 struct DemoPage {
   @State value: number = 1
   build() {
-    IBestStepper({
-      value: $value,
-      step: 2
-    })
+    Column(){
+      IBestStepper({
+        value: $value,
+        step: 2
+      })
+    }
   }
 }
 ```
@@ -68,11 +72,13 @@ struct DemoPage {
 struct DemoPage {
   @State value: number = 1
   build() {
-    IBestStepper({
-      value: $value,
-      min: 5,
-      max: 8
-    })
+    Column(){
+      IBestStepper({
+        value: $value,
+        min: 5,
+        max: 8
+      })
+    }
   }
 }
 ```
@@ -92,10 +98,12 @@ struct DemoPage {
 struct DemoPage {
   @State value: number = 1
   build() {
-    IBestStepper({
-      value: $value,
-      integer: true
-    })
+    Column(){
+      IBestStepper({
+        value: $value,
+        integer: true
+      })
+    }
   }
 }
 ```
@@ -115,10 +123,12 @@ struct DemoPage {
 struct DemoPage {
   @State value: number = 1
   build() {
-    IBestStepper({
-      value: $value,
-      disabled: true
-    })
+    Column(){
+      IBestStepper({
+        value: $value,
+        disabled: true
+      })
+    }
   }
 }
 ```
@@ -138,10 +148,12 @@ struct DemoPage {
 struct DemoPage {
   @State value: number = 1
   build() {
-    IBestStepper({
-      value: $value,
-      disableInput: true
-    })
+    Column(){
+      IBestStepper({
+        value: $value,
+        disableInput: true
+      })
+    }
   }
 }
 ```
@@ -161,11 +173,13 @@ struct DemoPage {
 struct DemoPage {
   @State value: number = 1
   build() {
-    IBestStepper({
-      value: $value,
-      step: 0.2,
-      decimalLength: 1
-    })
+    Column(){
+      IBestStepper({
+        value: $value,
+        step: 0.2,
+        decimalLength: 1
+      })
+    }
   }
 }
 ```
@@ -185,11 +199,13 @@ struct DemoPage {
 struct DemoPage {
   @State value: number = 1
   build() {
-    IBestStepper({
-      value: $value,
-      inputWidth: 40,
-      buttonSize: 32
-    })
+    Column(){
+      IBestStepper({
+        value: $value,
+        inputWidth: 40,
+        buttonSize: 32
+      })
+    }
   }
 }
 ```

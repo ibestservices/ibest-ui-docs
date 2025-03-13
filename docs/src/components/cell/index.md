@@ -53,16 +53,18 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestCellGroup() {
-      IBestCell({ title: 'full', value: '内容', borderSizeType: 'full' })
-      IBestCell({ title: 'center', value: '内容', borderSizeType: 'center' })
-      IBestCell({
-        leftIcon: $r("app.media.icon_like_o"),
-        title: 'right',
-        value: '内容',
-        borderSizeType: 'right'
-      })
-      IBestCell({ title: '占位', value: '内容', hasBorder: false })
+    Column(){
+      IBestCellGroup() {
+        IBestCell({ title: 'full', value: '内容', borderSizeType: 'full' })
+        IBestCell({ title: 'center', value: '内容', borderSizeType: 'center' })
+        IBestCell({
+          leftIcon: $r("app.media.icon_like_o"),
+          title: 'right',
+          value: '内容',
+          borderSizeType: 'right'
+        })
+        IBestCell({ title: '占位', value: '内容', hasBorder: false })
+      }
     }
   }
 }
@@ -82,17 +84,19 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestCellGroup({ inset: true }) {
-      IBestCell({
-        title: '标题',
-        value: '内容'
-      })
-      IBestCell({
-        title: '标题',
-        value: '内容',
-        label: '描述信息',
-        hasBorder: false
-      })
+    Column(){
+      IBestCellGroup({ inset: true }) {
+        IBestCell({
+          title: '标题',
+          value: '内容'
+        })
+        IBestCell({
+          title: '标题',
+          value: '内容',
+          label: '描述信息',
+          hasBorder: false
+        })
+      }
     }
   }
 }
@@ -148,15 +152,17 @@ struct DemoPage {
 @Component
 struct DemoPage {
   build() {
-    IBestCellGroup() {
-      IBestCell({ title: '标题', value: '内容', cellSize: 'large' })
-      IBestCell({
-        title: '标题',
-        value: '内容',
-        label: '描述信息',
-        hasBorder: false,
-        cellSize: 'large'
-      })
+    Column(){
+      IBestCellGroup() {
+        IBestCell({ title: '标题', value: '内容', cellSize: 'large' })
+        IBestCell({
+          title: '标题',
+          value: '内容',
+          label: '描述信息',
+          hasBorder: false,
+          cellSize: 'large'
+        })
+      }
     }
   }
 }
@@ -177,24 +183,26 @@ struct DemoPage {
     Image($r('app.media.startIcon')).width(16)
   }
   build(){
-    IBestCellGroup() {
-      IBestCell({
-        title: '标题',
-        value: '内容',
-        leftIcon: $r("app.media.icon_like")
-      })
-      IBestCell({
-        title: '标题',
-        value: '内容',
-        iconBuilder: () => this.StarIcon()
-      })
-      IBestCell({
-        title: '标题',
-        value: '内容',
-        rightIcon: $r("app.media.ibest_icon_star"),
-        rightIconColor: '#FF0000',
-        hasBorder: false
-      })
+    Column(){
+      IBestCellGroup() {
+        IBestCell({
+          title: '标题',
+          value: '内容',
+          leftIcon: $r("app.media.icon_like")
+        })
+        IBestCell({
+          title: '标题',
+          value: '内容',
+          iconBuilder: () => this.StarIcon()
+        })
+        IBestCell({
+          title: '标题',
+          value: '内容',
+          rightIcon: $r("app.media.ibest_icon_star"),
+          rightIconColor: '#FF0000',
+          hasBorder: false
+        })
+      }
     }
   }
 }
@@ -217,31 +225,33 @@ struct DemoPage {
     Image($r('app.media.startIcon')).width(16)
   }
   build(){
-    IBestCellGroup() {
-      IBestCell({
-        title: "标题",
-        value: "箭头朝右",
-        isLink: true,
-      })
-      IBestCell({
-        title: "标题",
-        value: "箭头朝下",
-        isLink: true,
-        arrowDirection: "bottom",
-      })
-      IBestCell({
-        title: "标题",
-        value: "箭头朝左",
-        isLink: true,
-        arrowDirection: "left",
-      })
-      IBestCell({
-        title: "标题",
-        value: "箭头朝上",
-        isLink: true,
-        arrowDirection: "top",
-        hasBorder: false,
-      })
+    Column(){
+      IBestCellGroup() {
+        IBestCell({
+          title: "标题",
+          value: "箭头朝右",
+          isLink: true,
+        })
+        IBestCell({
+          title: "标题",
+          value: "箭头朝下",
+          isLink: true,
+          arrowDirection: "bottom",
+        })
+        IBestCell({
+          title: "标题",
+          value: "箭头朝左",
+          isLink: true,
+          arrowDirection: "left",
+        })
+        IBestCell({
+          title: "标题",
+          value: "箭头朝上",
+          isLink: true,
+          arrowDirection: "top",
+          hasBorder: false,
+        })
+      }
     }
   }
 }
@@ -260,19 +270,20 @@ struct DemoPage {
 @Entry
 @Component
 struct DemoPage {
-  @Builder
-  InputContain() {
+  @Builder InputContain() {
     TextInput({ placeholder: '请输入内容' })
   }
   build(){
-    IBestCell({
-      title: '标题',
-      value: '内容',
-      center: true,
-      required: true,
-      hasBorder: false,
-      valueBuilder: (): void => this.InputContain()
-    })
+    Column(){
+      IBestCell({
+        title: '标题',
+        value: '内容',
+        center: true,
+        required: true,
+        hasBorder: false,
+        valueBuilder: (): void => this.InputContain()
+      })
+    }
   }
 }
 ```

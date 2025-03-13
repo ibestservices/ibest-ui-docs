@@ -152,16 +152,16 @@ struct DemoPage {
 | penColor     | 笔触颜色                                      | _string \| number \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvasgradient-V5" target="__blank">CanvasGradient</a> \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvaspattern-V5#canvaspattern" target="__blank">CanvasPattern</a>_ | `#000` |
 | lineWidth    | 线条宽度                                       | _number_ | `3` |
 | bgColor      | 背景色                                         | _string \| number \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvasgradient-V5" target="__blank">CanvasGradient</a> \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvaspattern-V5#canvaspattern" target="__blank">CanvasPattern</a>_ | `#fff` |
-| clearText    | 清除按钮文案                                    | _string_ | `清空` |
-| confirmText  | 确认按钮文案                                    | _string_ | `确认` |
+| clearText    | 清除按钮文案                                    | _ResourceStr_ | `清空` |
+| confirmText  | 确认按钮文案                                    | _ResourceStr_ | `确认` |
 | isShowFooter | 是否显示底部按钮                                 | _boolean_ | `true` |
 | controller   | 实例控制器                                      | _IBestSignatureController_ | `-` |
 
 ### Events
 
 | 事件名     | 说明             | 回调参数  |
-| ----------| -------------- | -------- |
-| onDrawEnd  | 手指离开屏幕触发 | `-` |
+| ----------| --------------  | -------- |
+| onDrawEnd | 手指离开屏幕触发   | `-` |
 | onConfirm | 点击确定按钮的回调 | `url: string` |
 | onClear   | 点击清空按钮的回调 | `-` |
 

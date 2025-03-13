@@ -26,9 +26,11 @@ import { IBestSwitch } from "@ibestservices/ibest-ui";
 struct DemoPage {
   @State value: boolean = false
   build() {
-    IBestSwitch({
-      value: $value
-    })
+    Column(){
+      IBestSwitch({
+        value: $value
+      })
+    }
   }
 }
 ```
@@ -109,10 +111,12 @@ struct DemoPage {
 struct DemoPage {
   @State value: boolean = true
   build() {
-    IBestSwitch({
-      value: $value,
-      switchSize: 20
-    })
+    Column(){
+      IBestSwitch({
+        value: $value,
+        switchSize: 20
+      })
+    }
   }
 }
 ```
@@ -145,14 +149,16 @@ struct DemoPage {
     }
   }
   build(){
-    IBestSwitch({
-      value: $value,
-      activeColor: '#db3131',
-      nodeBuilder: () => this.Arrow(),
-      onChange: value => {
-        this.arrowDirection = value ? 'left' : 'right'
-      }
-    })
+    Column(){
+      IBestSwitch({
+        value: $value,
+        activeColor: '#db3131',
+        nodeBuilder: () => this.Arrow(),
+        onChange: value => {
+          this.arrowDirection = value ? 'left' : 'right'
+        }
+      })
+    }
   }
 }
 ```
@@ -172,24 +178,26 @@ struct DemoPage {
 struct DemoPage {
   @State value: boolean = true
   build() {
-    IBestSwitch({
-      value: $value,
-      onBeforeChange: () => {
-        return new Promise((resolve, reject) => {
-          IBestDialogUtil.open({
-            title: "提示",
-            message: "确定更改状态?",
-            showCancelButton: true,
-            onConfirm: () => {
-              resolve()
-            },
-            onCancel: () => {
-              reject()
-            }
+    Column(){
+      IBestSwitch({
+        value: $value,
+        onBeforeChange: () => {
+          return new Promise((resolve, reject) => {
+            IBestDialogUtil.open({
+              title: "提示",
+              message: "确定更改状态?",
+              showCancelButton: true,
+              onConfirm: () => {
+                resolve()
+              },
+              onCancel: () => {
+                reject()
+              }
+            })
           })
-        })
-      }
-    })
+        }
+      })
+    }
   }
 }
 ```

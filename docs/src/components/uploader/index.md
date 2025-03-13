@@ -31,7 +31,6 @@ struct DemoPage {
         fileList: $imgList
       })
     }
-    .padding(20)
   }
 }
 ```
@@ -63,7 +62,6 @@ struct DemoPage {
         fileList: $imgList
       })
     }
-    .padding(20)
   }
 }
 ```
@@ -90,7 +88,6 @@ struct DemoPage {
         max: 1
       })
     }
-    .padding(20)
   }
 }
 ```
@@ -116,7 +113,7 @@ struct DemoPage {
 			.fontSize(14)
 	}
   build() {
-    Column(){
+    Column({space: 20}){
       IBestUploader({
         fileList: $imgList,
         uploaderIcon: $r("app.media.icon_plus")
@@ -126,7 +123,6 @@ struct DemoPage {
         customUploader: (): void => this.customUploader()
       })
     }
-    .padding(20)
   }
 }
 ```
@@ -154,7 +150,6 @@ struct DemoPage {
 				cornerRadius: 8
       })
     }
-    .padding(20)
   }
 }
 ```
@@ -198,7 +193,6 @@ struct DemoPage {
         customPreview: (file: IBestUploaderFile): void => this.previewItem(file)
       })
     }
-    .padding(20)
   }
 }
 ```
@@ -225,12 +219,10 @@ struct DemoPage {
         disabled: true
       })
     }
-    .padding(20)
   }
 }
 ```
 :::
-
 
 ## API
 
@@ -239,14 +231,14 @@ struct DemoPage {
 | 参数         | 说明                                          | 类型      | 默认值     |
 | ------------ | ---------------------------------------------| --------- | ---------- |
 | fileList     | 文件列表，支持双向绑定                           | _IBestUploaderFile[]_ |`[]`|
-| selectType   | 选择文件类型，默认为图片                         | _'image' \| 'file'_ | `image` |
+| selectType   | 选择文件类型，默认为图片                         | _image \| file_ | `image` |
 | max          | 最大上传数量                                   | _number_  | `-1` |
 | maxSize      | 单个文件大小最大限制                             | _number_ |  `-1`  |
 | imageFit     | 预览图片裁剪方式                                | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-appendix-enums-V5#imagefit" target="__blank">ImageFit</a>_ |  `Cover` |
 | previewSize  | 预览大小                                       | _number_ \| _string_ | `80` |
 | isPreviewFullImage| 是否在点击预览图后展示全屏图片预览             | _boolean_ | `true` |
 | cornerRadius | 圆角大小                                        | _number_ \| _string_ | `0` |
-| uploaderIcon | 自定义触发器图标                                 | _ResourceStr_ | `照相机` |
+| uploaderIcon | 自定义触发器图标                                 | _ResourceStr_ | `photograph` |
 | uploaderIconSize| 触发器图标大小                                | _number_ \| _string_ | `24` |
 | uploaderIconColor| 触发器图标颜色                               | _ResourceColor_ | `#dcdee0` |
 | showDelete| 是否显示删除按钮                                    | _boolean_ | `true` |
@@ -267,14 +259,14 @@ struct DemoPage {
 ### IBestUploaderFile 数据结构
 | 参数 | 说明 | 类型 | 默认值 |
 | ------------ | ------------------| --------- | ---------- |
-| url   | 文件在线地址 | _string_ | `''` |
+| url       | 文件在线地址 | _string_ | `''` |
 | internalUri| internal协议地址, 格式为 `internal://cache/` 加文件名 | _string_ | `[]` |
 | previewUri| 选择文件后可预览地址(仅图片) | _string_ | `''` |
 | cacheUri  | 选择文件后在缓存目录中的地址  | _string_ | `''` |
 | name      | 文件名                    | _string_ | `''` |
 | size      | 文件大小, 单位Byte         | _number_ | `0` |
 | isImage   | 是否是图片, 当在线图片地址不包含类型信息时, 可以添加 `isImage` 标记来声明 | _string_ | `''` |
-| status    | 文件上传状态        | _'uploading' \| 'failed' \| 'done'_ | `''` |
+| status    | 文件上传状态               | _'uploading' \| 'failed' \| 'done'_ | `''` |
 
 ### Events
 

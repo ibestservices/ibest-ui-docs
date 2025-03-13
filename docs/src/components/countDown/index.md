@@ -23,9 +23,11 @@ import { IBestCountDown } from "@ibestservices/ibest-ui";
 struct DemoPage {
   @State time: number = 30 * 60 * 60 * 1000
   build() {
-    IBestCountDown({
-      time: this.time
-    })
+    Column(){
+      IBestCountDown({
+        time: this.time
+      })
+    }
   }
 }
 ```
@@ -42,10 +44,12 @@ struct DemoPage {
 struct DemoPage {
   @State time: number = 30 * 60 * 60 * 1000
   build() {
-    IBestCountDown({
-      time: this.time,
-      format: "DD 天 HH 时 mm 分 ss 秒"
-    })
+    Column(){
+      IBestCountDown({
+        time: this.time,
+        format: "DD 天 HH 时 mm 分 ss 秒"
+      })
+    }
   }
 }
 ```
@@ -62,10 +66,12 @@ struct DemoPage {
 struct DemoPage {
   @State time: number = 30 * 60 * 60 * 1000
   build() {
-    IBestCountDown({
-      time: this.time,
-      format: 'HH:mm:ss:SSS'
-    })
+    Column(){
+      IBestCountDown({
+        time: this.time,
+        format: 'HH:mm:ss:SSS'
+      })
+    }
   }
 }
 ```

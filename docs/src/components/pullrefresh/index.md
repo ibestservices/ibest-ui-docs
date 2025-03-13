@@ -201,7 +201,7 @@ struct DemoPage {
 
 | 事件名      | 说明                                | 回调参数      |
 | ---------- | ----------------------------------- | ------------ |
-| onRefresh  | 触发下拉刷新时的回调                   | `-` |
+| onRefresh  | 触发下拉刷新时的回调, pull 为下拉, slideUp 为上滑 | `direction: 'pull' \| 'slideUp'` |
 
 ### 插槽
 
@@ -218,6 +218,6 @@ struct DemoPage {
 | slideUpSuccessContent| 自定义上滑加载成功提示内容   | _CustomBuilder_ |
 
 ### IBestRefreshContentParams 数据结构
-| 参数          | 说明                                         | 类型      |
-| ------------ | -------------------------------------------- | --------- |
-| distance     | 下拉距离                                      | _number_  |
+| 参数          | 说明                        | 类型      |
+| ------------ | --------------------------- | --------- |
+| distance     | 下拉距离                     | _number_  |

@@ -25,17 +25,19 @@ struct DemoPage {
   @State active: number = 0
   @State itemList: Array<string> = ["选项1", "选项2", "选项3"]
   build() {
-    IBestSideBar({
-      groupId: this.groupId,
-      active: $active
-    }){
-      ForEach(this.itemList, (item: string, index) => {
-        IBestSideBarItem({
-          groupId: this.groupId,
-          index: index,
-          title: item
+    Column(){
+      IBestSideBar({
+        groupId: this.groupId,
+        active: $active
+      }){
+        ForEach(this.itemList, (item: string, index) => {
+          IBestSideBarItem({
+            groupId: this.groupId,
+            index: index,
+            title: item
+          })
         })
-      })
+      }
     }
   }
 }
@@ -55,19 +57,21 @@ struct DemoPage {
   @State active: number = 0
   @State itemList: Array<string> = ["选项1", "选项2", "选项3"]
   build() {
-    IBestSideBar({
-      groupId: this.groupId,
-      active: $active,
-      leftBarColor: "#ee0a24",
-      activeFontColor: "#3d8af2"
-    }){
-      ForEach(this.itemList, (item: string, index) => {
-        IBestSideBarItem({
-          groupId: this.groupId,
-          index: index,
-          title: item
+    Column(){
+      IBestSideBar({
+        groupId: this.groupId,
+        active: $active,
+        leftBarColor: "#ee0a24",
+        activeFontColor: "#3d8af2"
+      }){
+        ForEach(this.itemList, (item: string, index) => {
+          IBestSideBarItem({
+            groupId: this.groupId,
+            index: index,
+            title: item
+          })
         })
-      })
+      }
     }
   }
 }
@@ -87,18 +91,20 @@ struct DemoPage {
   @State active: number = 0
   @State itemList: Array<string> = ["选项1", "选项2", "选项3"]
   build() {
-    IBestSideBar({
-      groupId: this.groupId,
-      active: $active
-    }){
-      ForEach(this.itemList, (item: string, index) => {
-        IBestSideBarItem({
-          groupId: this.groupId,
-          index: index,
-          title: item,
-          disabled: index == 1
+    Column(){
+      IBestSideBar({
+        groupId: this.groupId,
+        active: $active
+      }){
+        ForEach(this.itemList, (item: string, index) => {
+          IBestSideBarItem({
+            groupId: this.groupId,
+            index: index,
+            title: item,
+            disabled: index == 1
+          })
         })
-      })
+      }
     }
   }
 }
@@ -118,20 +124,22 @@ struct DemoPage {
   @State active: number = 0
   @State itemList: Array<string> = ["选项1", "选项2", "选项3"]
   build() {
-    IBestSideBar({
-      groupId: this.groupId,
-      active: $active,
-      onChange: (index: number) => {
-        console.log(this.itemList[index])
-      }
-    }){
-      ForEach(this.itemList, (item: string, index) => {
-        IBestSideBarItem({
-          groupId: this.groupId,
-          index: index,
-          title: item
+    Column(){
+      IBestSideBar({
+        groupId: this.groupId,
+        active: $active,
+        onChange: (index: number) => {
+          console.log(this.itemList[index])
+        }
+      }){
+        ForEach(this.itemList, (item: string, index) => {
+          IBestSideBarItem({
+            groupId: this.groupId,
+            index: index,
+            title: item
+          })
         })
-      })
+      }
     }
   }
 }
@@ -181,7 +189,7 @@ struct DemoPage {
 | ------------ | ---------------------------------------------| --------- | ---------|
 | groupId      | 分组id, 与IBestSideBar `groupId` 一致          | _string_  | `''`  |
 | index        | 索引                                          | _number_  | `0`  |
-| title        | 选项文字                                       | _string_ | `''` |
+| title        | 选项文字                                       | _ResourceStr_ | `''` |
 | disabled     | 是否禁用                                       | _boolean_ | `false` |
 
 ### IBestSideBarItem 插槽
