@@ -155,6 +155,7 @@ struct DemoPage {
 | clearText    | 清除按钮文案                                    | _ResourceStr_ | `清空` |
 | confirmText  | 确认按钮文案                                    | _ResourceStr_ | `确认` |
 | isShowFooter | 是否显示底部按钮                                 | _boolean_ | `true` |
+| predictionAssist <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.7</span>| 是否开启报点预测                             | _boolean_ | `false` |
 | controller   | 实例控制器                                      | _IBestSignatureController_ | `-` |
 
 ### Events
