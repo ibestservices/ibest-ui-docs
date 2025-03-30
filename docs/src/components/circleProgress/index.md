@@ -147,3 +147,9 @@ struct DemoPage {
 | strokeLineCap| 进度端点样式                           | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#linecapstyle" target="__blank">LineCapStyle</a>_  | `Round` |
 | clockwise    | 是否顺时针                             | _boolean_  | `true` |
 | startPosition| 进度条起始位置, 可选值 `left` `right` `top` `bottom` | _string_  | `top` |
+
+### Events
+
+| 事件名         | 说明                 | 回调参数                       |
+| --------------| ---------------------| ------------------------------ |
+| onReachTarget <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 到达目标值            | `-` |

@@ -536,7 +536,7 @@ struct DemoPage {
 | 参数         | 说明                                                     | 类型      | 默认值     |
 | ------------| --------------------------------------------------------| --------- | ---------- |
 | value       | 当前输入的值, 支持双向绑定   | _string \| number \| boolean \| (string \| number)[]_ | `''`  |
-| formId      | 唯一id, 当组件用于验证时必传                               | _string_  | `''` |
+| formId      | 唯一id, 当组件用于验证时必传                               | _string_ \| _number_  | `''` |
 | prop        | 绑定value的属性名, 当组件用于验证时必传                     | _string_  | `''` |
 | rules       | 验证规则列表, 可由form统一配置                             | _IBestFormRuleItem[]_ |`[]`|
 | label       | 输入框左侧文本	                                         | _ResourceStr_ | `''`|
@@ -581,12 +581,12 @@ struct DemoPage {
 | caretColor   | 光标颜色                                                 | _ResourceColor_ | `''` |
 | min          | 最小值, type 为 `number` `decimal` 时有效                  | _number_ | `-1` |
 | max          | 最大值, type 为 `number` `decimal` 时有效                  | _number_ | `-1` |
-| verticalAlign <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 垂直方向对齐方式, 仅 `labelPosition` 为left时有效, 可选值 `top` `center` | _string_ | `''` |
-| radius <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 外部圆角 | _string_ \| _number_ | `0` |
-| prefix <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 前缀内容 | _ResourceStr_ | `''` |
-| prefixFontColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 前缀内容颜色 | _ResourceColor_ | `#969799` |
-| suffix <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 后缀内容 | _ResourceStr_ | `''` |
-| suffixFontColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 后缀内容颜色 | _ResourceColor_ | `#969799` |
+| verticalAlign | 垂直方向对齐方式, 仅 `labelPosition` 为left时有效, 可选值 `top` `center` | _string_ | `''` |
+| radius | 外部圆角 | _string_ \| _number_ | `0` |
+| prefix | 前缀内容 | _ResourceStr_ | `''` |
+| prefixFontColor | 前缀内容颜色 | _ResourceColor_ | `#969799` |
+| suffix | 后缀内容 | _ResourceStr_ | `''` |
+| suffixFontColor | 后缀内容颜色 | _ResourceColor_ | `#969799` |
 
 
 

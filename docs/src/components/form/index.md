@@ -762,23 +762,23 @@ struct subjectItem{
 ### @Props
 
 | 参数         | 说明                                            | 类型      | 默认值     |
-| ------------ | ----------------------------------------------| --------- | ---------- |
-| formId       | 表单id, 必传, 需保证全局唯一性                    | _string_  | `''` |
-| rules        | 表单验证信息                                    | _Record<string, IBestFormRuleItem[]>_  | `{}` |
-| space        | 表单子项间距                                    | _number_ \| _string_  | `10`  |
+| ------------ | ------------------------------------------------| --------- | ---------- |
+| formId       | 表单id, 必传, 需保证全局唯一性                    | _string_ \| _number_  | `''` |
+| rules        | 表单验证信息                                     | _Record<string, IBestFormRuleItem[]>_  | `{}` |
+| space        | 表单子项间距                                     | _number_ \| _string_  | `10`  |
 | labelWidth   | 表单项左侧文本区域宽度                            | _number_ \| _string_ | `80`  |
-| labelPosition | 左侧文本位置, 可选值 `left` `top`               | _string_ |`left`|
+| labelPosition | 左侧文本位置, 可选值 `left` `top`                | _string_ |`left`|
 | labelAlign  | 左侧文本对齐方式, 可选值 `left` `center` `right`   | _string_ |`left`|
 | colon       | 是否在label后加冒号                               | _boolean_ | `false` |
 | requireAsteriskPosition| 星号的位置, 可选值 `left` `right`      | _string_ | `left` |
 | showMessage | 是否显示验证信息                                  | _boolean_ | `true` |
-| disabled    | 是否禁用                                         | _boolean_ | `false` |
-| controller  | 表单实例控制器                                    | _IBestFormController_ | `null` |
+| disabled    | 是否禁用                                          | _boolean_ | `false` |
+| controller  | 表单实例控制器                                    | _IBestFormController_ | `-` |
 
 ### 插槽
-|插槽名         | 说明                        | 类型                      |
-| ------------ | -------------------------- | ------------------------- |
-|defaultBuilder| 表单子项                     |  _CustomBuilder_  |
+| 插槽名         | 说明                        | 类型                      |
+|---------------| ----------------------------| ------------------------- |
+| defaultBuilder| 表单子项                     |  _CustomBuilder_  |
 
 ### IBestFormController API
 

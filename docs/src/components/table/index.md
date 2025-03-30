@@ -356,7 +356,7 @@ struct DemoPage {
 ### IBestTable @Props
 | 参数           | 说明                           | 类型      | 默认值     |
 | --------------| ------------------------------ | --------- | ---------- |
-| tableId       | 表格id, 需保证全局唯一性          | _string_  | `''` | 
+| tableId       | 表格id, 需保证全局唯一性         | _string_ \| _number_  | `''` | 
 | data          | 表格数据                        | _any[]_  | `[]` |
 | stripe        | 是否显示斑马纹                   | _boolean_ | `false` |
 | stripeBgColor | 斑马纹背景色                     | _ResourceColor_  | `#fafafa` |
@@ -383,7 +383,7 @@ struct DemoPage {
  ### IBestTableColumn @Props
 | 参数         | 说明                                 | 类型      | 默认值     |
 | ------------| ------------------------------------ | --------- | ---------- |
-| tableId     | 表格id, 与table的 `tableId` 一致       | _string_  | `''` | 
+| tableId     | 表格id, 与table的 `tableId` 一致       | _string_ \| _number_  | `''` | 
 | title       | 列标题                                | _ResourceStr_  | `''` |
 | prop        | 列属性                                | _string_  | `''` |
 | cellWidth   | 列宽度                                | _string_ \| _number_  | `''` |

@@ -263,9 +263,9 @@ struct DemoPage {
 ### @Props
 
 | 参数         | 说明                                                     | 类型      | 默认值     |
-| ------------ | --------------------------------------------------------| --------- | ---------- |
-| groupId      | 分组id, 可实现内部DatePicker组件交互, 需保证全局唯一性  				| _string_  | `''` |
-| title        | 标题                                       						  | _ResourceStr_ |  `''`  |
+| ------------ | ---------------------------------------------------------| --------- | ---------- |
+| groupId      | 分组id, 可实现内部DatePicker组件交互, 需保证全局唯一性  		  | _string_ \| _number_  | `''` |
+| title        | 标题                                       						   | _ResourceStr_ |  `''`  |
 | tabs         | 顶部标签栏列表                                             | _ResourceStr[]_ | `[]`  |
 | nextStepText | 下一步按钮文案                                             | _ResourceStr_ | ``  |
 | currentName  | 当前标签页名称                                             | _string_ | `0`  |

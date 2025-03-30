@@ -301,10 +301,10 @@ struct DemoPage {
 ### IBestCollapse @Props
 
 | 参数         | 说明                         | 类型      | 默认值     |
-| ------------ | ---------------------------| --------- | ---------- |
-| groupId      | 分组id, 需保证全局唯一性       | _string_  | `''`  |
-| activeName   | 当前展开面板的name            | 手风琴模式：_string_ \| _number_ <br>非手风琴模式：_(string \| number)[]_ | `''`  |
-| accordion    | 是否开启手风琴模式             | _boolean_ | `false`  |
+| ------------ | ----------------------------| --------- | ---------- |
+| groupId      | 分组id, 需保证全局唯一性      | _string_ \| _number_  | `''`  |
+| activeName   | 当前展开面板的name           | 手风琴模式：_string_ \| _number_ <br>非手风琴模式：_(string \| number)[]_ | `''`  |
+| accordion    | 是否开启手风琴模式            | _boolean_ | `false`  |
 | isShowBorder | 是否显示外边框                | _boolean_ | `true`  |
 | controller   | 实例方法                     | _IBestCollapseController_ | `-`  |
 
@@ -333,7 +333,7 @@ struct DemoPage {
 ### IBestCollapseItem @Props
 | 参数         | 说明                                          | 类型      | 默认值     |
 | ------------ | ---------------------------------------------| --------- | ---------|
-| groupId      | 分组id, 与IBestCollapse `groupId` 一致         | _string_  | `''`  |
+| groupId      | 分组id, 与IBestCollapse `groupId` 一致         | _string_ \| _number_  | `''`  |
 | name         | 唯一标识符                                     | _string_ \| _number_  | `''`  |
 | index        | 索引                                          | _number_  | `''`  |
 | icon         | 标题栏左侧图标                                  | _ResourceStr_  | `''` |

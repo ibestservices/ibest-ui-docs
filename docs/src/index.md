@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "IBest-UI@HarmonyOS"
-  text: "一个简单易用的鸿蒙开源UI库"
-  tagline: "基于HarmonyOS，可定制主题、支持深色模式和浅色模式"
+  name: "IBest-UI"
+  text: "一个简单易用的鸿蒙开源UI组件库"
+  tagline: "基于HarmonyOS NEXT，可定制主题、支持深色模式和浅色模式"
   actions:
     - theme: brand
       text: 指南
