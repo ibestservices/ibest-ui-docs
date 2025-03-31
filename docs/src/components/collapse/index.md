@@ -25,7 +25,7 @@ struct DemoPage {
   @State groupId: string = 'group'
   build() {
     Column(){
-      IBestCollapse({groupId: this.groupId, activeName: this.activeName}){
+      IBestCollapse({groupId: this.groupId, activeName: $activeName}){
         IBestCollapseItem({
           groupId: this.groupId,
           name: '1',
@@ -70,7 +70,7 @@ struct DemoPage {
   @State groupId: string = 'group'
   build() {
     Column(){
-      IBestCollapse({groupId: this.groupId, activeName: this.activeName, accordion: true}){
+      IBestCollapse({groupId: this.groupId, activeName: $activeName, accordion: true}){
         IBestCollapseItem({
           groupId: this.groupId,
           name: 1,
@@ -115,7 +115,7 @@ struct DemoPage {
   @State groupId: string = 'group'
   build() {
     Column(){
-      IBestCollapse({groupId: this.groupId, activeName: this.activeName}){
+      IBestCollapse({groupId: this.groupId, activeName: $activeName}){
         IBestCollapseItem({
           groupId: this.groupId,
           name: '1',
@@ -161,7 +161,7 @@ struct DemoPage {
   @State groupId: string = 'group'
   build() {
     Column(){
-      IBestCollapse({groupId: this.groupId, activeName: this.activeName}){
+      IBestCollapse({groupId: this.groupId, activeName: $activeName}){
         IBestCollapseItem({
           groupId: this.groupId,
           name: '1',
@@ -197,7 +197,7 @@ struct DemoPage {
     Column(){
       IBestCollapse({
         groupId: this.groupId,
-        activeName: this.activeName,
+        activeName: $activeName,
         controller: this.controller
       }){
         IBestCollapseItem({

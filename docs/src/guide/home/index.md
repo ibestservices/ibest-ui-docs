@@ -12,7 +12,9 @@ title: "IBest-UI"
 
 ## 介绍
 
-{{ $frontmatter.title }}是一个**轻量、简单易用、可定制主题、支持深色模式和浅色模式**的鸿蒙开源UI组件库, 完美兼容元服务。
+{{ $frontmatter.title }}是一个**轻量、简单易用、可定制主题、支持深色模式和浅色模式**的鸿蒙开源UI组件库, 包含 
+Button、Calendar、Form、Field、Picker、Popup、Toast、Dialog、ImageCropper 
+等50+个优质组件。
 
 目前 ibestservices 官方提供了 <a href="https://ibestui.ibestservices.com/guide/home/" target="_blank">V1</a> 和 <a href="https://ibestuiv2.ibestservices.com/guide/home/" target="_blank">V2</a> 版本, 当前文档为状态管理V1版本，请根据自己项目使用的**状态管理版本**选择对应的版本使用。
 

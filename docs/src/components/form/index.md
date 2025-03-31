@@ -412,14 +412,14 @@ struct DemoPage {
           IBestField({
             formId: this.formId,
             prop: 'value1',
-            value: $value1,
+            value: this.value1,
             label: "开关",
             customRightContent: (): void => this.switchContent()
           })
           IBestField({
             formId: this.formId,
             prop: 'value2',
-            value: $value2,
+            value: this.value2,
             label: "复选框",
             rules: this.value2 ? [{required: true, message: '请选择'}] : [],
             customRightContent: (): void => this.checkboxContent()
@@ -427,21 +427,21 @@ struct DemoPage {
           IBestField({
             formId: this.formId,
             prop: 'value3',
-            value: $value3,
+            value: this.value3,
             label: "复选框组",
             customRightContent: (): void => this.checkboxGroupContent()
           })
           IBestField({
             formId: this.formId,
             prop: 'value4',
-            value: $value4,
+            value: this.value4,
             label: "单选框",
             customRightContent: (): void => this.radioContent()
           })
           IBestField({
             formId: this.formId,
             prop: 'value5',
-            value: $value5,
+            value: this.value5,
             label: "步进器",
             customRightContent: (): void => this.stepperContent()
           })
@@ -470,7 +470,7 @@ struct DemoPage {
           IBestField({
             formId: this.formId,
             prop: 'value8',
-            value: $value8,
+            value: this.value8,
             label: "上传图片",
             hasBorder: false,
             customRightContent: (): void => this.uploadImg()
@@ -492,7 +492,7 @@ struct DemoPage {
       }
       // 选择城市
       IBestCascader({
-        visible: this.visible,
+        visible: $visible,
         options: this.options,
         value: $selectValue,
         onConfirm: value => {

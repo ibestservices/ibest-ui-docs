@@ -169,11 +169,11 @@ struct DemoPage {
       }){
         IBestDatePicker({
           groupId: this.groupId,
-          value: $selectValue5
+          value: $selectValue1
         })
         IBestDatePicker({
           groupId: this.groupId,
-          value: $selectValue6
+          value: $selectValue2
         })
       }
     }

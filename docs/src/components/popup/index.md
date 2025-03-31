@@ -260,7 +260,7 @@ struct DemoPage {
         visible: $visible1,
         popupWidth: 300,
         cornerRadius: 10,
-        contentBuilder: this.centerBuilder
+        contentBuilder: (): void => this.centerBuilder()
       })
       IBestPopup({
         visible: $visible2,
