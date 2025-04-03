@@ -152,7 +152,7 @@ struct DemoPage {
 
 | 参数          | 说明                        | 类型      | 默认值     |
 | ------------ | --------------------------- | ---------| ---------- |
-| groupId      | 分组id                       | _string_  | `''`  |
+| groupId      | 分组id                       | _string_ \| _number_  | `''`  |
 | active       | 当前导航项的索引               | _number_  | `0`  |
 | sideWidth    | 宽度                         | _number_ \| _string_ | `80`  |
 | maxHeight    | 是否显示外边框                 | _number_ \| _string_ | `0`  |
@@ -187,7 +187,7 @@ struct DemoPage {
 ### IBestSideBarItem @Props
 | 参数         | 说明                                          | 类型      | 默认值     |
 | ------------ | ---------------------------------------------| --------- | ---------|
-| groupId      | 分组id, 与IBestSideBar `groupId` 一致          | _string_  | `''`  |
+| groupId      | 分组id, 与IBestSideBar `groupId` 一致          | _string_ \| _number_  | `''`  |
 | index        | 索引                                          | _number_  | `0`  |
 | title        | 选项文字                                       | _ResourceStr_ | `''` |
 | disabled     | 是否禁用                                       | _boolean_ | `false` |

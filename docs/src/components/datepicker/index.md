@@ -165,7 +165,7 @@ struct DemoPage {
 | confirmText   | 确认按钮文字                                   | _ResourceStr_ |  `确定`  |
 | cancelText    | 取消按钮文字                                   | _ResourceStr_ |  `取消`  |
 | filter        | 过滤器    | _(type: string, options: IBestPickerOption[]) => IBestPickerOption[]_ | `null` |
-| groupId       | 分组id, 通常在配合PickerGroup组件使用时传入, 可实现多个DatePicker联动| _string_ | `''` |
+| groupId       | 分组id, 通常在配合PickerGroup组件使用时传入, 可实现多个DatePicker联动| _string_ \| _number_ | `''` |
 | horizontal    | 是否横向     | _boolean_ | `false` |
 | itemWidth     | 单项宽度     | _number_ \| _string_ | `44`   |
 | contentHeight | 整体高度, 仅横向时生效 | _number_ \| _string_ | `44`   |

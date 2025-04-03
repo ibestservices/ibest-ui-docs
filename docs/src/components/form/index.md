@@ -412,14 +412,14 @@ struct DemoPage {
           IBestField({
             formId: this.formId,
             prop: 'value1',
-            value: $value1,
+            value: this.value1,
             label: "开关",
             customRightContent: (): void => this.switchContent()
           })
           IBestField({
             formId: this.formId,
             prop: 'value2',
-            value: $value2,
+            value: this.value2,
             label: "复选框",
             rules: this.value2 ? [{required: true, message: '请选择'}] : [],
             customRightContent: (): void => this.checkboxContent()
@@ -427,21 +427,21 @@ struct DemoPage {
           IBestField({
             formId: this.formId,
             prop: 'value3',
-            value: $value3,
+            value: this.value3,
             label: "复选框组",
             customRightContent: (): void => this.checkboxGroupContent()
           })
           IBestField({
             formId: this.formId,
             prop: 'value4',
-            value: $value4,
+            value: this.value4,
             label: "单选框",
             customRightContent: (): void => this.radioContent()
           })
           IBestField({
             formId: this.formId,
             prop: 'value5',
-            value: $value5,
+            value: this.value5,
             label: "步进器",
             customRightContent: (): void => this.stepperContent()
           })
@@ -470,7 +470,7 @@ struct DemoPage {
           IBestField({
             formId: this.formId,
             prop: 'value8',
-            value: $value8,
+            value: this.value8,
             label: "上传图片",
             hasBorder: false,
             customRightContent: (): void => this.uploadImg()
@@ -492,7 +492,7 @@ struct DemoPage {
       }
       // 选择城市
       IBestCascader({
-        visible: this.visible,
+        visible: $visible,
         options: this.options,
         value: $selectValue,
         onConfirm: value => {
@@ -762,23 +762,23 @@ struct subjectItem{
 ### @Props
 
 | 参数         | 说明                                            | 类型      | 默认值     |
-| ------------ | ----------------------------------------------| --------- | ---------- |
-| formId       | 表单id, 必传, 需保证全局唯一性                    | _string_  | `''` |
-| rules        | 表单验证信息                                    | _Record<string, IBestFormRuleItem[]>_  | `{}` |
-| space        | 表单子项间距                                    | _number_ \| _string_  | `10`  |
+| ------------ | ------------------------------------------------| --------- | ---------- |
+| formId       | 表单id, 必传, 需保证全局唯一性                    | _string_ \| _number_  | `''` |
+| rules        | 表单验证信息                                     | _Record<string, IBestFormRuleItem[]>_  | `{}` |
+| space        | 表单子项间距                                     | _number_ \| _string_  | `10`  |
 | labelWidth   | 表单项左侧文本区域宽度                            | _number_ \| _string_ | `80`  |
-| labelPosition | 左侧文本位置, 可选值 `left` `top`               | _string_ |`left`|
+| labelPosition | 左侧文本位置, 可选值 `left` `top`                | _string_ |`left`|
 | labelAlign  | 左侧文本对齐方式, 可选值 `left` `center` `right`   | _string_ |`left`|
 | colon       | 是否在label后加冒号                               | _boolean_ | `false` |
 | requireAsteriskPosition| 星号的位置, 可选值 `left` `right`      | _string_ | `left` |
 | showMessage | 是否显示验证信息                                  | _boolean_ | `true` |
-| disabled    | 是否禁用                                         | _boolean_ | `false` |
-| controller  | 表单实例控制器                                    | _IBestFormController_ | `null` |
+| disabled    | 是否禁用                                          | _boolean_ | `false` |
+| controller  | 表单实例控制器                                    | _IBestFormController_ | `-` |
 
 ### 插槽
-|插槽名         | 说明                        | 类型                      |
-| ------------ | -------------------------- | ------------------------- |
-|defaultBuilder| 表单子项                     |  _CustomBuilder_  |
+| 插槽名         | 说明                        | 类型                      |
+|---------------| ----------------------------| ------------------------- |
+| defaultBuilder| 表单子项                     |  _CustomBuilder_  |
 
 ### IBestFormController API
 

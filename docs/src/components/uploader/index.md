@@ -247,7 +247,7 @@ struct DemoPage {
 | customUploader | 自定义上传触发器                               | _CustomBuilder_ | `-`|
 | customPreview  | 自定义预览内容                                 | _(file: IBestUploaderFile) => void_ |  `-`|
 | uploaderBgColor| 触发器背景色                                   | _ResourceColor_ |  `#f7f8fa`|
-| showPreviewList <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 是否显示预览列表 | _boolean_ | `true` |
+| showPreviewList| 是否显示预览列表 | _boolean_ | `true` |
 
 ### FileSelectOptions  数据结构
 

@@ -309,6 +309,51 @@ struct DemoPage {
 ```
 :::
 
+### 异步切换
+
+![异步切换](./images/async-change.png)
+
+::: details 点我查看代码
+```ts
+@Entry
+@Component
+struct DemoPage {
+  @State group: string = "group"
+  @State active: number = 1
+  build() {
+    Column(){
+      IBestRadioGroup({ group: this.group, active: $active, beforeChange: () => {
+        return new Promise((resolve, reject) => {
+          IBestDialogUtil.open({
+            title: "提示",
+            message: "确定切换?",
+            showCancelButton: true,
+            onConfirm: () => {
+              resolve(true)
+            },
+            onCancel: () => {
+              reject(false)
+            }
+          })
+        })
+      } }){
+        IBestRadio({
+          group: this.group,
+          label: '单选框',
+          name: 1
+        })
+        IBestRadio({
+          group: this.group,
+          label: '单选框',
+          name: 2
+        })
+      }
+    }
+  }
+}
+```
+:::
+
 ### 搭配单元格组件使用
 
 ![搭配单元格组件使用](./images/cell-radio.png)
@@ -358,9 +403,9 @@ struct DemoPage {
 
 ### Radio @Props
 
-| 参数           | 说明                                                            | 类型   | 默认值  |
+| 参数          | 说明                                                            | 类型   | 默认值  |
 | ------------- | ----------------------------------------------------------------| ------| ------- |
-| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`   | _string_ |  `''`  |
+| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`| _string_ \| _number_ |  `''`  |
 | name          | 标识符，通常为一个唯一的字符串或数字                                  | _string_ \| _number_ \| _boolean_ |  `''` |
 | label         | 显示的文本                                                       | _ResourceStr_  |  `''` |
 | iconSize      | 图标大小                                                         | _number_ \| _string_ |  `18`  |
@@ -384,16 +429,17 @@ struct DemoPage {
 
 | 参数  | 说明                                                           | 类型      | 默认值 |
 | ----- | --------------------------------------------------------------| -------- | ------ |
-| group | 标识符，通常为一个唯一的字符串, 需保证全局唯一性      | _string_  |  `''`   |
-| active| 激活的标识, 支持双向绑定                          | _string_ \| _number_ \| _boolean_  |  `''`  |
-| placeDirection | 排列方向                               | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#axis" target="__blank">Axis</a>_   | `Axis.Vertical` |
-| space | 间距                                            | _string_ \| _number_ | `12` |
+| group | 标识符，通常为一个唯一的字符串, 需保证全局唯一性      | _string_ \| _number_  |  `''`   |
+| active| 激活的标识, 支持双向绑定                            | _string_ \| _number_ \| _boolean_  |  `''`  |
+| placeDirection | 排列方向                                  | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#axis" target="__blank">Axis</a>_   | `Axis.Vertical` |
+| space | 间距                                               | _string_ \| _number_ | `12` |
+| beforeChange <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 改变前的回调     | _(value: boolean) => Promise\<boolean\> \| boolean_ | `-` |
 
 ### RadioGroup Events
 
-| 事件名    | 说明                              | 事件类型               |
-| -------- | ---------------------------------| ---------------------- |
-| onChange | 选中状态改变的回调事件               | `name: string` |
+| 事件名    | 说明                               | 事件类型               |
+| -------- | -----------------------------------| ---------------------- |
+| onChange | 选中状态改变的回调事件               | `name: string \| number \| boolean` |
 
 ### RadioGroup 插槽
 

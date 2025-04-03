@@ -209,11 +209,9 @@ struct LoadingPage {
 | loadingTextFontSize   | loading 的文字内容大小   | _number_ \| _string_ | `14`    |
 | loadingStrokeWidth    | loading 图形的线条宽度   | _Length_    | `2`  |
 | loadingMaskColor      | loading 的遮罩颜色      | _ResourceColor_| `transparent`  |
-| loadingIconMarginTop  | loading 的图标距离顶部的 `margin` 因为默认 `loading` 是垂直居中布局的 可通过该属性调整`loading` 图标的上下位置 只有在 `vertical` 为 `true` 即垂直布局时有效 | _string_ \| _number_   | `0`   |
-| loadingTextMarginLeft | `loadingText` 的 `marginLeft` 值 只有在 `vertical` 为 `false` 即水平布局时有效     | _string_ \| _number_   | `8`  |
-| loadingTextMarginTop  | `loadingText` 的 `marginTop` 值 只有在 `vertical` 为 `true` 即垂直布局时有效       | _string_ \| _number_   | `8`  |
 | spinnerStrokeHeight   | `spinner` 图的每条线的长度 | _string_ \| _number_   | `8` |
 | vertical              | 是否垂直排列图标和文字内容   | _boolean_   | `false` |
+| space <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 图标与文字间距  | _string_ \| _number_   | `8` |
 
 ### 插槽
 

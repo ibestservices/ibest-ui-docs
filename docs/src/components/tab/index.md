@@ -419,73 +419,18 @@ struct DemoPage {
 ```
 :::
 
-### controller切换
-
-![controller切换](./images/tab-controller.gif)
-
-::: details 点我查看代码
-
-```ts
-import { IBestButton } from '@ibestservices/ibest-ui'
-@Entry
-@Component
-struct DemoPage {
-  @State tabsList: IBestTabItemType[] = [
-    {
-      label: "标签一",
-      name: "1"
-    },
-    {
-      label: "标签二",
-      name: "2"
-    },
-    {
-      label: "标签三",
-      name: "3"
-    },
-    {
-      label: "标签四",
-      name: "4"
-    },
-    {
-      label: "标签五",
-      name: "5"
-    }
-  ]
-  @State curTabName: string = "1"
-  private tabController: IBestTabController = new IBestTabController()
-  build() {
-    Column({space: 20}){
-      IBestTabs({
-        tabsList: this.tabsList,
-        currentName: $curTabName,
-        tabController: this.tabController
-      })
-      IBestButton({
-        text: "跳转标签3",
-        buttonSize: "small",
-        onClickBtn: () => {
-          this.tabController.changeTab("3")
-        }
-      })
-    }
-  }
-}
-```
-:::
-
 ## API
 
 ### @Props
 
 | 参数                 | 说明                                        | 类型             | 默认值       |
 | ------------------- | --------------------------------------------| --------------- | ------------ |
+| currentName         | 当前选中标签的标识符, 支持双向绑定                | _number_ \| _string_ |  `''`    |
 | type                | 样式类型，可选值为 `line` `card`               | _string_        | `line`    |
 | tabHeight           | 默认高度                                      | _number_ \| _string_  | `35`   |
 | tabWidthType        | tab宽度类型，可选值为 `auto` `flex`             | _string_        | `flex`       |
 | tabsList            | 展示的tab列表                                  | _(IBestTabItemType \| IBestTabItem)[]_|`[]` |
 | tabPadding          | 单个tab内边距                                  | _number_ \| _string_ | `5`     |
-| currentName         | 当前选中标签的标识符, 支持双向绑定                 | _string_        |  `''`    |
 | isTabLineWidthFixed | 标记线宽度是否固定                               | _boolean_      |  `false` |
 | tabLineWidth        | 标记线宽度，默认为tab内容宽度                     | _number_ \| _string_ |  `0` |
 | tabLineHeight       | 标记线高度                                     | _number_ \| _string_ |    `2`   |
@@ -509,7 +454,6 @@ struct DemoPage {
 | number        | 自定义显示数量         | _number_ | `-`|
 | icon          | 自定义显示图片         | _ResourceStr_ | `-` |
 | isDisable     | 控制是否禁用          | _boolean_ | `false` |
-| tabController | 实例控制器            | _IBestTabController_ | `-` |
 
 ### Events
 
@@ -517,12 +461,3 @@ struct DemoPage {
 | --------- | ------------------------ | ---------------------- |
 | onChange  | tab切换后的回调            | `name: string \| number` |
 | onTabClick| 点击tab后的回调            | `name: string \| number` |
-
-### 实例方法
-::: tip
-通过传入 `tabController` 属性可调用组件实例方法
-:::
-
-| 方法名    | 说明                      | 参数类型                |
-| --------- | ------------------------| ---------------------- |
-| changeTab | 切换到name对应的tab       | `name: string \| number` |

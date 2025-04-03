@@ -222,6 +222,46 @@ struct DemoPage {
 ```
 :::
 
+### 异步切换
+
+![异步切换](./images/async-change.png)
+
+::: details 点我查看代码
+```ts
+@Entry
+@Component
+struct DemoPage {
+  @State isChecked: boolean = true
+  build() {
+    Column(){
+      IBestCheckbox({
+        value: this.isChecked,
+        label: '复选框',
+        beforeChange: () => {
+          return new Promise((resolve, reject) => {
+            IBestDialogUtil.open({
+              title: "提示",
+              message: "确定更改状态?",
+              showCancelButton: true,
+              onConfirm: () => {
+                resolve(true)
+              },
+              onCancel: () => {
+                reject(false)
+              }
+            })
+          })
+        },
+        onChange: checked => {
+          this.isChecked = checked
+        }
+      })
+    }
+  }
+}
+```
+:::
+
 ### 复选框组
 
 ![复选框组](./images/checkbox-group.png)
@@ -235,7 +275,21 @@ struct DemoPage {
   @State activeList: string[] = ["1", "2"]
   build() {
     Column(){
-      IBestCheckboxGroup({ group: this.group, activeList: $activeList }){
+      IBestCheckboxGroup({ group: this.group, activeList: $activeList, beforeChange: () => {
+        return new Promise((resolve, reject) => {
+          IBestDialogUtil.open({
+            title: "提示",
+            message: "确定更改状态?",
+            showCancelButton: true,
+            onConfirm: () => {
+              resolve(true)
+            },
+            onCancel: () => {
+              reject(false)
+            }
+          })
+        })
+      }}){
         IBestCheckbox({
           group: this.group,
           label: '复选框1',
@@ -505,33 +559,34 @@ struct CheckboxPage {
 
 ### Checkbox @Props
 
-| 参数          | 说明                                                            | 类型   | 默认值  |
-| ------------- | -------------------------------------------------------------- | ----- | ------- |
-| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`   | _string_  |  `''`   |
-| name          | 标识符，通常为一个唯一的字符串或数字，同一 `group` 的 `name` 不可重复   | _string_ \| _number_ |    |
-| label         | 显示的文本                                                       | _ResourceStr_   |  `''`   |
+| 参数          | 说明                                                                 | 类型   | 默认值  |
+| ------------- | --------------------------------------------------------------------|-------| ------- |
+| group         | 标识符，通常为一个唯一的字符串，需具备`全局唯一性`或已入栈的页面`唯一性`  | _string_ \| _number_  |  `''`   |
+| name          | 标识符，通常为一个唯一的字符串或数字，同一 `group` 的 `name` 不可重复    | _string_ \| _number_ | `''` |
+| label         | 显示的文本                                                           | _ResourceStr_   |  `''`   |
 | value         | 默认是否选中 非双向绑定，如果要获取最新的值请从 `onChange` 回调中获取    | _boolean_       | `false` |
-| iconSize      | 图标大小                                                         | _number_ \| _string_ | `18`|
-| shape         | 形状，可选值为 `square` `round`                                   | _string_        | `round` |
-| disabled      | 是否为禁用状态                                                    | _boolean_       | `false` |
-| labelDisabled | 是否禁用文本内容点击                                               | _boolean_       | `false` |
-| labelPosition | 文本位置，可选值为 `left`                                          | _string_        | `right` |
-| checkedColor  | 选中状态颜色                                                      | _ResourceColor_ | `#1989fa`  |
-| indeterminate | 是否为不确定状态                                                   | _boolean_     | `false` |
-| labelFontSize | 文本字体大小                                                      | _number_ \| _string_ | `16`|
+| iconSize      | 图标大小                                                             | _number_ \| _string_ | `18`|
+| shape         | 形状，可选值为 `square` `round`                                      | _string_        | `round` |
+| disabled      | 是否为禁用状态                                                       | _boolean_       | `false` |
+| labelDisabled | 是否禁用文本内容点击                                                 | _boolean_       | `false` |
+| labelPosition | 文本位置，可选值为 `left`                                            | _string_        | `right` |
+| checkedColor  | 选中状态颜色                                                         | _ResourceColor_ | `#1989fa`  |
+| indeterminate | 是否为不确定状态                                                     | _boolean_     | `false` |
+| labelFontSize | 文本字体大小                                                         | _number_ \| _string_ | `16`|
 | bgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.7</span>| 默认背景色     | _ResourceColor_ | `''` |
 | bdColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.7</span>| 默认边框色     | _ResourceColor_ | `#ebedf0` |
+| beforeChange <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 改变前的回调     | _(value: boolean) => Promise\<boolean\> \| boolean_ | `-` |
 
 ### Checkbox Events
 
-| 事件名   | 说明                   | 参数类型                       |
-| -------- | ---------------------| ------------------------------ |
+| 事件名   | 说明                   | 回调参数                       |
+| -------- | ----------------------| ------------------------------ |
 | onChange | 选中状态改变的回调事件   | `checked: boolean` |
 
 ### Checkbox 插槽
 
 | 插槽名         | 说明                        | 参数类型    |
-| --------------| ---------------------------| --------- |
+| ---------------| ---------------------------| --------- |
 | defaultBuilder | `label` 的插槽，优先级大于 `label` 属性  | `data: { checked: boolean, disabled: boolean }` |
 | iconBuilder    | 自定义图标插槽，需要自己调整选中与未选中展示的 `UI` 内容 | `data: { checked: boolean, disabled: boolean }` |
 
@@ -539,12 +594,13 @@ struct CheckboxPage {
 
 | 参数  | 说明                                                           | 类型     | 默认值 |
 | ----- | -------------------------------------------------------------| -------- | ------ |
-| group | 标识符，通常为一个唯一的字符串，需具备`全局唯一性` | _string_ |  `''`  |
-| max   | 最大可选数，`0` 为无限制                      | _number_ |  `0`   |
-| activeList | 激活的标识列表, 支持双向绑定              | _(string \| number)[]_  |  `[]`  |
-| placeDirection | 排列方向                           | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#axis" target="__blank">Axis</a>_   | `Axis.Vertical` |
-| space | 间距                                       | _string_ \| _number_ | `12` |
-| controller | 组件实例                               | _IBestCheckboxGroupController_ | `-` |
+| group | 标识符，通常为一个唯一的字符串，需具备`全局唯一性` | _string_ \| _number_ |  `''`  |
+| max   | 最大可选数，`0` 为无限制                        | _number_ |  `0`   |
+| activeList | 激活的标识列表, 支持双向绑定                | _(string \| number)[]_  |  `[]`  |
+| placeDirection | 排列方向                              | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#axis" target="__blank">Axis</a>_   | `Axis.Vertical` |
+| space | 间距                                           | _string_ \| _number_ | `12` |
+| controller | 组件实例                                   | _IBestCheckboxGroupController_ | `-` |
+| beforeChange <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 改变前的回调     | _(value: boolean) => Promise\<boolean\> \| boolean_ | `-` |
 
 ### IBestCheckboxGroupController 方法
 

@@ -384,24 +384,27 @@ struct DemoPage {
 | cancelTextColor | 取消按钮文字颜色        | _ResourceColor_ |  `#646566`  |
 | beforeClose     | 关闭前的回调函数，返回 false 可阻止关闭，支持返回 Promise    | _() => Promise\<boolean\> \| boolean_ |  `-`  |
 | itemHeight      | 选项高度 | _number_ \| _string_ |  `50`  |
+| radius <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 面板圆角     | _number_ |  `16`  |
 
 ### IBestActionType 数据结构
 | 参数         | 说明                                          | 类型      |
-| ------------ | ---------------------------------------------| --------- |
+| ------------ | --------------------------------------------- | --------- |
 | name         | 选项文案, 必填                                 | _ResourceStr_  |
 | value        | 选项标识                                       | _string_  |
 | subName      | 选项描述                                       | _ResourceStr_ |
-| color        | 选项字体颜色                                    | _ResourceColor_ |
+| color        | 选项字体颜色                                   | _ResourceColor_ |
 | icon         | 选项图标                                       | _ResourceStr_ |
 | isDisabled   | 是否禁用                                       | _boolean_ |
+| readonly     | 是否只读                                       | _boolean_ |
 
 
 ### IBestActionMultiLine 数据结构
 | 参数         | 说明                                          | 类型      |
-| ------------ | ---------------------------------------------| --------- |
+| ------------ | --------------------------------------------- | --------- |
 | name         | 选项文案, 必填                                 | _ResourceStr_  |
+| icon         | 选项图标, 必填                                 | _ResourceStr_ |
 | value        | 选项标识                                       | _string_  |
 | subName      | 选项描述                                       | _ResourceStr_ |
-| color        | 选项字体颜色                                    | _ResourceColor_ |
-| icon         | 选项图标, 必填                                  | _ResourceStr_ |
+| color        | 选项字体颜色                                   | _ResourceColor_ |
 | isDisabled   | 是否禁用                                       | _boolean_ |
+| readonly     | 是否只读                                       | _boolean_ |

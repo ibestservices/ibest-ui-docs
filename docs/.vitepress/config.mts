@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "IBest-UI@HarmonyOS",
+  title: "IBest-UI",
   description:
     "IBest-UI是一个轻量、简单易用、可定制主题、支持深色模式和浅色模式的鸿蒙开源UI组件库。",
   srcDir: "./src",
@@ -41,7 +41,7 @@ export default defineConfig({
         link: "/components/button/",
         activeMatch: "/components/",
       },
-      { text: "v2.0.7", link: "" },
+      { text: "v2.0.8", link: "" },
     ],
     sidebar: [
       {
@@ -142,6 +142,7 @@ export default defineConfig({
         text: "导航组件",
         items: [
           { text: "NavBar 导航栏", link: "/components/navBar/" },
+          { text: `Pagination 分页 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>`, link: "/components/pagination/" },
           { text: "SideBar 侧边导航", link: "/components/sideBar/" },
           { text: "Tab 标签页", link: "/components/tab/" },
         ],
@@ -150,10 +151,7 @@ export default defineConfig({
         text: "业务组件",
         items: [
           { text: "CanvasDrawer 画布绘制", link: "/components/canvasDrawer/" },
-          {
-            text: `ImageCropper 图片裁剪 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>`,
-            link: "/components/imageCropper/",
-          },
+          { text: "ImageCropper 图片裁剪", link: "/components/imageCropper/" },
         ],
       },
     ],

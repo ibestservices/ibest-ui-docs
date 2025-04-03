@@ -342,9 +342,9 @@ struct DemoPage {
 | radius       | 气泡圆角                               | _string_ \| _number_ | `8` |
 | popoverShadow| 气泡阴影                               | _ShadowOptions_ \| _ShadowStyle_ | `ShadowStyle.OUTER_DEFAULT_MD` |
 | borderSizeType| 底部分割线尺寸类型, 可选值 `full` `center` `right` | _BorderSizeType_ | `center` |
-| fixHeight <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 内容高度      | _string_ \| _number_ | `auto` |
-| maxHeight <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 内容最大高度   | _string_ \| _number_ | `auto` |
-| scrollBarState <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.6</span>| 滚动条状态 | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V14/ts-appendix-enums-V14#barstate" target="__blank">BarState</a>_ | `Auto` |
+| fixHeight    | 内容高度      | _string_ \| _number_ | `auto` |
+| maxHeight    | 内容最大高度   | _string_ \| _number_ | `auto` |
+| scrollBarState | 滚动条状态 | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V14/ts-appendix-enums-V14#barstate" target="__blank">BarState</a>_ | `Auto` |
 
 
 ### Events

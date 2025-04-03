@@ -260,7 +260,7 @@ struct DemoPage {
         visible: $visible1,
         popupWidth: 300,
         cornerRadius: 10,
-        contentBuilder: this.centerBuilder
+        contentBuilder: (): void => this.centerBuilder()
       })
       IBestPopup({
         visible: $visible2,
@@ -476,6 +476,7 @@ struct DemoPage {
 | safeAreaInsetTop    | 是否开启顶部安全区适配                                       | _boolean_ | `false` |
 | safeAreaInsetBottom | 是否开启底部安全区适配                                       | _boolean_ | `false` |
 | bgImage <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.7</span>| 弹框背景图片 | _ResourceStr_ | `''` |
+| bgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 弹框背景颜色 | _ResourceColor_ | `#fff` |
 
 ### Events
 

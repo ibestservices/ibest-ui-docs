@@ -114,3 +114,5 @@ struct DemoPage {
 | highLightColor| 高亮文字颜色                          | _ResourceColor_ |  `#1989fa`  |
 | textFontSize  | 文字大小                              | _string_ \| _number_ |  `14`  |
 | highLightFontSize| 高亮文字大小                        | _string_ \| _number_ |  `14`  |
+| maxLines <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 最大行数                          | _number_ |  `-`  |
+| overflow <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 超出隐藏                          | _TextOverflow_ |  `None`  |

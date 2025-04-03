@@ -3,19 +3,28 @@ title: "IBest-UI"
 ---
 
 <p align="center">
-  <img alt="logo" src="./app_logo.png" 
-width="100">
+  <img alt="logo" src="./app_logo.png" width="100">
 </p>
 
 <p align="center" style="font-size: 40px;font-weight: bold;">{{ $frontmatter.title }}</p>
 
-<p align="center">轻量、可定制的 HarmonyOS 组件库</p>
+<p align="center">轻量、可定制的 HarmonyOS NEXT 组件库</p>
+
+<p align="center">
+    <a href="https://ohpm.openharmony.cn/#/cn/detail/@ibestservices%2Fibest-ui">三方库中心仓</a>
+    &nbsp;
+    ·
+    &nbsp;
+    <a href="https://github.com/ibestservices/ibest-ui">Github</a>
+</p>
 
 ## 介绍
 
-{{ $frontmatter.title }}是一个**轻量、简单易用、可定制主题、支持深色模式和浅色模式**的鸿蒙开源UI组件库, 完美兼容元服务。
+{{ $frontmatter.title }}是一个**轻量、简单易用、可定制主题、支持深色模式和浅色模式**的鸿蒙开源UI组件库, 包含 
+Button、Calendar、Form、Field、Picker、Popup、Toast、Dialog、ImageCropper 
+等50+个优质组件。
 
-目前 ibestservices 官方推出了V1版本, V2版本正在路上!!!
+目前 ibestservices 官方提供了 <a href="https://ibestui.ibestservices.com/guide/home/" target="_blank">V1</a> 和 <a href="https://ibestuiv2.ibestservices.com/guide/home/" target="_blank">V2</a> 版本, 当前文档为状态管理V1版本，请根据自己项目使用的**状态管理版本**选择对应的版本使用。
 
 <div style="display: flex;justify-content: space-between;">
   <img src="./IBest-UI-Light.png" alt="IBest-UI-Light" style="width: 48%;">
@@ -27,6 +36,7 @@ width="100">
 - 💪 单元测试覆盖率超过 90%，提供稳定性保障
 - 📖 提供丰富的中文文档和组件示例
 - 🍭 支持主题定制，内置 100+ 个主题变量
+- 🍭 支持元服务
 - 🍭 支持深色模式
 - 🌍 支持国际化
 
@@ -42,10 +52,9 @@ width="100">
 
 | 项目        | 描述         |          |
 |:-----------|:------------|:----------|
-| area-data | 中国省市区数据，适用于鸿蒙 arkui的 TextPicker 和 {{ $frontmatter.title }} 的 IBestCascader 等组件。 | <a href="https://ohpm.openharmony.cn/#/cn/detail/@ibestservices%2Farea-data">地址</a> |
+| @ibestservices/area-data | 中国省市区数据，适用于鸿蒙 arkui的 TextPicker 和 {{ $frontmatter.title }} 的 IBestCascader 等组件。 | <a href="https://ohpm.openharmony.cn/#/cn/detail/@ibestservices%2Farea-data">地址</a> |
 
-## 链接
-- [Github](https://github.com/ibestservices/ibest-ui)
+## 其它链接
 - [Gitee](https://gitee.com/ibestservices/ibest-ui)
 - [更新日志](https://github.com/ibestservices/ibest-ui/releases)
 

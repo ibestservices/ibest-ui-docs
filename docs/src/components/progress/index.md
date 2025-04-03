@@ -25,7 +25,7 @@ struct DemoPage {
   build() {
     Column(){
       IBestProgress({
-        value: this.value
+        value: $value
       })
     }
   }
@@ -46,7 +46,7 @@ struct DemoPage {
   build() {
     Column(){
       IBestProgress({
-        value: this.value,
+        value: $value,
         lineWidth: 18,
         textInside: true
       })
@@ -72,11 +72,11 @@ struct DemoPage {
   build() {
     Column({space: 16}){
       IBestProgress({
-        value: this.value,
+        value: $value,
         color: "#ee0a24"
       })
       IBestProgress({
-        value: this.value,
+        value: $value,
         linearGradientColor:{
           angle: 90,
           colors: [['#be99ff', 0], ['#7232dd', 1]]
@@ -102,7 +102,7 @@ struct DemoPage {
   build() {
     Column(){
       IBestProgress({
-        value: this.value,
+        value: $value,
         inactive: true
       })
     }
@@ -145,24 +145,23 @@ struct DemoPage {
 
 | 参数          | 说明                                | 类型       | 默认值     |
 | ------------ | ----------------------------------- | --------- | ---------- |
-| value        | 进度值                               | _number_ | `0` |  
+| value        | 进度值, 支持双向绑定                   | _number_ | `0` |  
 | lineWidth    | 进度条粗细                            | _string_ \| _number_  | `4` |
 | color        | 进度条颜色                            | _ResourceColor_ | `#3D8AF2` |
-| linearGradientColor| 进度条渐变色                     | _LinearGradient_ | `-` |
-| bgColor      | 进度条背景色                           | _ResourceColor_ | `#ebedf0` |
-| showText     | 是否显示进度条文字                      | _boolean_ |  `true`  |
-| textInside   | 文字显示在进度条内                      | _boolean_ |  `false`  |
+| linearGradientColor| 进度条渐变色                    | _LinearGradient_ | `-` |
+| bgColor      | 进度条背景色                          | _ResourceColor_ | `#ebedf0` |
+| showText     | 是否显示进度条文字                     | _boolean_ |  `true`  |
+| textInside   | 文字显示在进度条内                     | _boolean_ |  `false`  |
 | textColor    | 文本颜色                              | _ResourceColor_ | `#323233` |
-| textFontSize | 左侧图标颜色                           | _string_ \| _number_ | `16` |
+| textFontSize | 左侧图标颜色                          | _string_ \| _number_ | `16` |
 | inactive     | 文本颜色                              | _boolean_ |  `false`  |
 | indeterminate| 不确定进度                            | _boolean_ |  `false`  |
-| duration     | 不确定进度时动画时长 单位秒              | _number_ | `3` |
+| duration     | 不确定进度时动画时长 单位秒             | _number_ | `3` |
 | format       | 格式化文本函数                         | _(value: number) => string_ |  `-`  |
+| target <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 目标值                           | _number_ |  `100`  |
 
 ### Events
 
-| 事件名     | 说明                            | 回调参数                         |
-| ---------- | ------------------------------| --------------------------------|
-| onBarClick | 点击通知栏回调                   | `-` |
-| onClose    | 点击右侧关闭图标回调              | `-` |
-| onTextClick | 垂直滚动时,点击文字回调          | `index: number` |
+| 事件名         | 说明                            | 回调参数                         |
+| --------------| --------------------------------| --------------------------------|
+| onReachTarget <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 到达目标值触发                   | `-` |

@@ -210,6 +210,7 @@ struct DemoPage {
 
 ### Events
 
-| 事件名     | 说明         | 回调参数             |
-| ----------| ------------------------------ | -------------------------------- |
-| onFieldClick | 点击输入框后触发 | `-` |
+| 事件名        | 说明                  | 回调参数             |
+| -------------| ----------------------| -------------------------------- |
+| onFieldClick | 点击输入框后触发        | `-` |
+| onFinish <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 输入完成后触发    | `-` |
