@@ -177,7 +177,6 @@ struct DemoPage {
 | leftIconColor| 左侧图标颜色                           | _ResourceColor_ | `#ed6a0c` |
 | textColor    | 文本颜色                              | _ResourceColor_ | `#ed6a0c` |
 | textFontSize | 文本字体大小                           | _string_ \| _number_ | `16` |
-| rightIconName | 右侧图标名称                          | _string_ |  `''`  |
 | rightIcon    | 自定义右侧图标                         | _ResourceStr_ |  `''`  |
 | rightIconSize | 右侧图标大小                          | _string_ \| _number_ | `16` |
 | rightIconColor | 右侧图标颜色                         | _ResourceColor_ | `#ed6a0c` |

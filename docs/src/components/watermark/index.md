@@ -112,7 +112,7 @@ struct DemoPage {
   build() {
     Column(){
       IBestWatermark({
-        text: $r("app.string.app_name"),
+        text: 'IBest-UI',
         gapX: 80,
         gapY: 80
       }) {
@@ -139,8 +139,7 @@ struct DemoPage {
   build() {
     Column(){
       IBestWatermark({
-        text: $r("app.string.app_name"),
-        fontSize: 14,
+        text: 'IBest-UI',
         gapX: 20,
         gapY: 20,
         rotateDeg: 0
@@ -168,7 +167,7 @@ struct DemoPage {
   build() {
     Column(){
       IBestWatermark({
-        text: $r("app.string.app_name"),
+        text: 'IBest-UI',
         gapX: 40,
         gapY: 40,
         waterMarkZIndex: 1
