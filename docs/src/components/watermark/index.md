@@ -23,7 +23,7 @@ import { IBestWatermark } from "@ibestservices/ibest-ui";
       }
     })
   }
-  .width(CONTAINER_SIZE.FULL)
+  .width("100%")
   .height(200)
   .padding(20)
   .justifyContent(FlexAlign.Center)

@@ -326,7 +326,6 @@ struct DemoPage {
 :::
 
 ::: details 点我查看代码
-
 ```ts
 import { IBestButton } from '@ibestservices/ibest-ui'
 @Entry
@@ -375,7 +374,6 @@ struct DemoPage {
 ![onChange事件](./images/tab-change.gif)
 
 ::: details 点我查看代码
-
 ```ts
 import { IBestToast } from '@ibestservices/ibest-ui'
 @Entry
@@ -419,6 +417,64 @@ struct DemoPage {
 ```
 :::
 
+### 内容联动
+
+![内容联动](./images/tab-content.gif)
+
+::: details 点我查看代码
+```ts
+@Entry
+@Component
+struct DemoPage {
+  @State tabsList: IBestTabItemType[] = [
+    {
+      label: "标签一",
+      name: "1"
+    },
+    {
+      label: "标签二",
+      name: "2"
+    },
+    {
+      label: "标签三",
+      name: "3"
+    },
+    {
+      label: "标签四",
+      name: "4"
+    },
+    {
+      label: "标签五",
+      name: "5"
+    }
+  ]
+  @State curTabName: string = "1"
+  @Builder tabContent(){
+    ForEach([1,2,3,4,5], (item: number) => {
+      Row(){
+        Text(item.toString())
+          .fontColor("#fff")
+      }
+      .width("100%")
+      .height(200)
+      .justifyContent(FlexAlign.Center)
+      .backgroundColor("#ccc")
+    })
+  }
+  build() {
+    Column(){
+      IBestTabs({
+        tabsList: this.tabsList,
+        currentName: $curTabName
+      }){
+        this.tabContent()
+      }
+    }
+  }
+}
+```
+:::
+
 ## API
 
 ### @Props
@@ -440,20 +496,29 @@ struct DemoPage {
 | lineOffsetY         | 标记线Y方向偏移量                               | _number_ \| _string_ | `0` |
 | tabBgColor          | tab区域背景颜色                                 | _ResourceColor_ | `#fff`       |
 | fontSize            | tab文字大小                                     | _number_ \| _string_ | `14` |
-| isShowActiveBg      | 是否显示激活背景, 仅type为`line`时有效      | _boolean_      |  `false` |
-| activeBgColor       | 激活背景色, 仅type为`line`时有效           | _ResourceColor_      |  `''` |
+| isShowActiveBg      | 是否显示激活背景, 仅type为`line`时有效        | _boolean_      |  `false` |
+| activeBgColor       | 激活背景色, 仅type为`line`时有效             | _ResourceColor_      |  `''` |
 | inactiveBgColor     | 非激活背景色, 仅type为`line`时有效           | _ResourceColor_      |  `''` |
-| radius              | 选项圆角, 仅type为`line`时有效 | _number_ \| _string_ |  `0` |
+| radius              | 选项圆角, 仅type为`line`时有效               | _number_ \| _string_ |  `0` |
+| showActiveLine <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.9</span>| 是否显示激活标记线, 仅type为`line`时有效      | _boolean_      |  `true` |
+| tabLineRadius <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.9</span>| 标记线圆角, 仅type为`line`时有效             | _number_ \| _string_ | `0` |
+| activeFontWeight <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.9</span>| 激活文字字重          | _FontWeight_ | `Normal` |
+| activeFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.9</span>| 激活文字大小          | _number_ \| _string_ | `14` |
 
 ### IBestTabItem IBestTabItemType  数据结构
 
 | 参数 | 说明 | 类型 | 默认值 |
-| ------------ | --------------------------------------------------------| --------- | ---------- |
+| ------------ | ---------------------| --------- | ---------- |
 | label         | tab文字内容(必填)     | _ResourceStr_ | `-` |
 | name          | tab匹配的标识符(必填)  | _string_ \| _number_ | `-` |
 | number        | 自定义显示数量         | _number_ | `-`|
 | icon          | 自定义显示图片         | _ResourceStr_ | `-` |
 | isDisable     | 控制是否禁用          | _boolean_ | `false` |
+
+### 插槽
+| 插槽名     | 说明                      | 类型             |
+| --------- | ------------------------ | ----------------|
+| tabContentBuilder <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.9</span>| 自定义tab内容      | _CustomBuilder_ |
 
 ### Events
 
