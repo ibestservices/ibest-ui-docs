@@ -582,11 +582,12 @@ struct DemoPage {
 | min          | 最小值, type 为 `number` `decimal` 时有效                  | _number_ | `-1` |
 | max          | 最大值, type 为 `number` `decimal` 时有效                  | _number_ | `-1` |
 | verticalAlign | 垂直方向对齐方式, 仅 `labelPosition` 为left时有效, 可选值 `top` `center` | _string_ | `''` |
-| radius | 外部圆角 | _string_ \| _number_ | `0` |
-| prefix | 前缀内容 | _ResourceStr_ | `''` |
+| radius        | 外部圆角 | _string_ \| _number_ | `0` |
+| prefix        | 前缀内容 | _ResourceStr_ | `''` |
 | prefixFontColor | 前缀内容颜色 | _ResourceColor_ | `#969799` |
-| suffix | 后缀内容 | _ResourceStr_ | `''` |
+| suffix        | 后缀内容 | _ResourceStr_ | `''` |
 | suffixFontColor | 后缀内容颜色 | _ResourceColor_ | `#969799` |
+| messageTextAlign <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.9</span>| 验证信息对齐方式, 可选值 `left` `center` `right`, 默认与输入框文字对齐方式一致 | _string_ | `left` |
 
 
 

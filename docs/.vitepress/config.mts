@@ -41,7 +41,7 @@ export default defineConfig({
         link: "/components/button/",
         activeMatch: "/components/",
       },
-      { text: "v2.0.8", link: "" },
+      { text: "v2.0.9", link: "" },
     ],
     sidebar: [
       {
@@ -75,16 +75,11 @@ export default defineConfig({
           { text: "Cascader 级联选择器", link: "/components/cascader/" },
           { text: "Checkbox 复选框", link: "/components/checkbox/" },
           { text: "DatePicker 日期选择", link: "/components/datepicker/" },
+          { text: `DateTimePicker 日期时间选择 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.9</span>`, link: "/components/datetimepicker/" },
           { text: "Field 输入框", link: "/components/field/" },
           { text: "Form 表单", link: "/components/form/" },
-          {
-            text: "NumberKeyboard 数字键盘",
-            link: "/components/numberkeyboard/",
-          },
-          {
-            text: "PasswordInput 密码输入框",
-            link: "/components/passwordInput/",
-          },
+          { text: "NumberKeyboard 数字键盘", link: "/components/numberkeyboard/" },
+          { text: "PasswordInput 密码输入框", link: "/components/passwordInput/" },
           { text: "Picker 选择器", link: "/components/picker/" },
           { text: "PickerGroup 选择器组", link: "/components/pickergroup/" },
           { text: "Radio 单选框", link: "/components/radio/" },
@@ -113,27 +108,18 @@ export default defineConfig({
         text: "展示组件",
         items: [
           { text: "Badge 徽标", link: "/components/badge/" },
-          {
-            text: "CircleProgress 环形进度条",
-            link: "/components/circleProgress/",
-          },
+          { text: "CircleProgress 环形进度条", link: "/components/circleProgress/" },
           { text: "Collapse 折叠面板", link: "/components/collapse/" },
           { text: "CountDown 倒计时", link: "/components/countDown/" },
           { text: "Divider 分割线", link: "/components/divider/" },
           { text: "Empty 空状态", link: "/components/empty/" },
-          {
-            text: `Highlight 高亮文本 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.7</span>`,
-            link: "/components/highlight/",
-          },
+          { text: "Highlight 高亮文本", link: "/components/highlight/" },
           { text: "ImagePreview 图片预览", link: "/components/imagepreview/" },
           { text: "NoticeBar 通知栏", link: "/components/noticeBar/" },
           { text: "Popover 气泡弹出框", link: "/components/popover/" },
           { text: "Progress 进度条", link: "/components/progress/" },
           { text: "TextEllipsis 文本省略", link: "/components/textEllipsis/" },
-          {
-            text: `Table 表格 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.7</span>`,
-            link: "/components/table/",
-          },
+          { text: "Table 表格", link: "/components/table/" },
           { text: "Tag 标签", link: "/components/tag/" },
           { text: "Watermark 水印", link: "/components/watermark/" },
         ],
@@ -151,6 +137,7 @@ export default defineConfig({
         text: "业务组件",
         items: [
           { text: "CanvasDrawer 画布绘制", link: "/components/canvasDrawer/" },
+          { text: `ColorPicker 颜色选择 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.9</span>`, link: "/components/colorPicker/" },
           { text: "ImageCropper 图片裁剪", link: "/components/imageCropper/" },
         ],
       },

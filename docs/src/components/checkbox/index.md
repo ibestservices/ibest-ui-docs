@@ -573,8 +573,8 @@ struct CheckboxPage {
 | checkedColor  | 选中状态颜色                                                         | _ResourceColor_ | `#1989fa`  |
 | indeterminate | 是否为不确定状态                                                     | _boolean_     | `false` |
 | labelFontSize | 文本字体大小                                                         | _number_ \| _string_ | `16`|
-| bgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.7</span>| 默认背景色     | _ResourceColor_ | `''` |
-| bdColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.7</span>| 默认边框色     | _ResourceColor_ | `#ebedf0` |
+| bgColor       | 默认背景色     | _ResourceColor_ | `''` |
+| bdColor       | 默认边框色     | _ResourceColor_ | `#ebedf0` |
 | beforeChange <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 改变前的回调     | _(value: boolean) => Promise\<boolean\> \| boolean_ | `-` |
 
 ### Checkbox Events
