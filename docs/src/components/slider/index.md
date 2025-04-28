@@ -251,7 +251,7 @@ struct DemoPage {
         })
       }
     }
-    .width(CONTAINER_SIZE.FULL)
+    .width("100%")
     .height(300)
     .justifyContent(FlexAlign.Center)
   }

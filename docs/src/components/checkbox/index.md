@@ -575,7 +575,7 @@ struct CheckboxPage {
 | labelFontSize | 文本字体大小                                                         | _number_ \| _string_ | `16`|
 | bgColor       | 默认背景色     | _ResourceColor_ | `''` |
 | bdColor       | 默认边框色     | _ResourceColor_ | `#ebedf0` |
-| beforeChange <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 改变前的回调     | _(value: boolean) => Promise\<boolean\> \| boolean_ | `-` |
+| beforeChange  | 改变前的回调     | _(value: boolean) => Promise\<boolean\> \| boolean_ | `-` |
 
 ### Checkbox Events
 
@@ -600,7 +600,7 @@ struct CheckboxPage {
 | placeDirection | 排列方向                              | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#axis" target="__blank">Axis</a>_   | `Axis.Vertical` |
 | space | 间距                                           | _string_ \| _number_ | `12` |
 | controller | 组件实例                                   | _IBestCheckboxGroupController_ | `-` |
-| beforeChange <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 改变前的回调     | _(value: boolean) => Promise\<boolean\> \| boolean_ | `-` |
+| beforeChange| 改变前的回调     | _(value: boolean) => Promise\<boolean\> \| boolean_ | `-` |
 
 ### IBestCheckboxGroupController 方法
 

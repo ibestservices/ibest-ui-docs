@@ -211,7 +211,7 @@ struct LoadingPage {
 | loadingMaskColor      | loading 的遮罩颜色      | _ResourceColor_| `transparent`  |
 | spinnerStrokeHeight   | `spinner` 图的每条线的长度 | _string_ \| _number_   | `8` |
 | vertical              | 是否垂直排列图标和文字内容   | _boolean_   | `false` |
-| space <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 图标与文字间距  | _string_ \| _number_   | `8` |
+| space                 | 图标与文字间距            | _string_ \| _number_   | `8` |
 
 ### 插槽
 

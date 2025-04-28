@@ -164,7 +164,7 @@ struct DemoPage {
   @State group: string = "group"
   @State active: string = "1"
   build() {
-    Row({space: SPACE.XL}){
+    Row({space: 20}){
       IBestRadioGroup({ group: this.group, active: $active }){
         IBestRadio({
           group: this.group,
@@ -433,7 +433,7 @@ struct DemoPage {
 | active| 激活的标识, 支持双向绑定                            | _string_ \| _number_ \| _boolean_  |  `''`  |
 | placeDirection | 排列方向                                  | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#axis" target="__blank">Axis</a>_   | `Axis.Vertical` |
 | space | 间距                                               | _string_ \| _number_ | `12` |
-| beforeChange <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 改变前的回调     | _(value: boolean) => Promise\<boolean\> \| boolean_ | `-` |
+| beforeChange  | 改变前的回调     | _(value: boolean) => Promise\<boolean\> \| boolean_ | `-` |
 
 ### RadioGroup Events
 
