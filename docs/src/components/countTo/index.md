@@ -14,7 +14,7 @@ import { IBestCountTo } from "@ibestservices/ibest-ui";
 
 ### 基础用法
 
-![基础用法](./images/base.png)
+![基础用法](./images/base.gif)
 
 ::: details 点我查看代码
 ```ts
@@ -35,7 +35,7 @@ struct DemoPage {
 
 ### 自定义滚动时长
 
-![自定时长](./images/duration.png)
+![自定时长](./images/duration.gif)
 
 ::: details 点我查看代码
 ```ts
@@ -57,7 +57,7 @@ struct DemoPage {
 
 ### 显示小数位
 
-![显示小数位](./images/decimals.png)
+![显示小数位](./images/decimals.gif)
 
 ::: details 点我查看代码
 ```ts
@@ -79,7 +79,7 @@ struct DemoPage {
 
 ### 千分位分隔符
 
-![千分位分隔符](./images/hand-movement.png)
+![千分位分隔符](./images/separator.gif)
 
 ::: details 点我查看代码
 ```ts
@@ -101,7 +101,7 @@ struct DemoPage {
 
 ### 手动控制
 
-![手动控制](./images/hand-movement.png)
+![手动控制](./images/hand-movement.gif)
 
 ::: details 点我查看代码
 ```ts

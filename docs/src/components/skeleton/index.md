@@ -14,7 +14,7 @@ import { IBestSkeleton, IBestSkeletonParagraph } from "@ibestservices/ibest-ui";
 
 ### 基础用法
 
-![基础用法](./images/base.png)
+![基础用法](./images/base.gif)
 
 ::: details 点我查看代码
 ```ts
@@ -32,7 +32,7 @@ struct DemoPage {
 
 ### 显示头像
 
-![显示头像](./images/avatar.png)
+![显示头像](./images/avatar.gif)
 
 ::: details 点我查看代码
 ```ts
@@ -52,7 +52,7 @@ struct DemoPage {
 
 ### 自定义段落行数
 
-![自定义段落行数](./images/rows.png)
+![自定义段落行数](./images/rows.gif)
 :::tip
 显示的数量会比传入的数量多 1，首行会被渲染一个长度 40% 的段首。
 :::
@@ -76,7 +76,7 @@ struct DemoPage {
 
 ### 展示子组件
 
-![展示子组件](./images/show-child.png)
+![展示子组件](./images/show-child.gif)
 
 ::: details 点我查看代码
 ```ts
@@ -113,7 +113,7 @@ struct DemoPage {
 
 ### 自定义排版
 
-![自定义排版](./images/custom-arrange.png)
+![自定义排版](./images/custom-arrange.gif)
 
 ::: details 点我查看代码
 ```ts
