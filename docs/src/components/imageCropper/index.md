@@ -59,14 +59,14 @@ struct DemoPage {
       Row({space: 20}){
         IBestButton({
           text: "重选",
-          onClickBtn: () => {
+          onBtnClick: () => {
             this.imgList = []
           }
         })
         IBestButton({
           type: "primary",
           text: "获取结果",
-          onClickBtn: () => {
+          onBtnClick: () => {
             this.controller.getResult().then(res => {
               this.previewUrl = res
               this.showResult()
@@ -119,7 +119,7 @@ struct DemoPage {
       IBestButton({
         type: "primary",
         text: "获取结果",
-        onClickBtn: () => {
+        onBtnClick: () => {
           this.controller.getResult(res => {
             this.previewUrl = res
             this.showResult()
@@ -170,7 +170,7 @@ struct DemoPage {
       IBestButton({
         type: "primary",
         text: "获取结果",
-        onClickBtn: async () => {
+        onBtnClick: async () => {
           this.previewUrl = await this.controller.getResult()
           this.showResult()
         }

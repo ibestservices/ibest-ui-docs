@@ -101,7 +101,7 @@ struct DemoPage {
         title: '地区',
         value: this.fieldValue,
         isLink: true,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -210,7 +210,7 @@ struct DemoPage {
         value: this.fieldValue,
         isLink: true,
         hasBorder: false,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -295,7 +295,7 @@ struct DemoPage {
         title: '地区',
         value: this.fieldValue,
         isLink: true,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -408,7 +408,7 @@ struct DemoPage {
         title: '地区',
         value: this.fieldValue,
         isLink: true,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })

@@ -430,7 +430,7 @@ struct DemoPage {
 
 | 事件名      | 说明                 | 事件类型                         |
 | ----------- | -------------------- | -------------------------------- |
-| onClickCell | 点击单元格的回调事件 | (event?: _ClickEvent_) => _void_ |
+| onCellClick | 点击单元格的回调事件 | (event?: _ClickEvent_) => _void_ |
 
 ### 插槽
 

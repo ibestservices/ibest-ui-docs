@@ -160,6 +160,12 @@ struct DemoPage {
 | inactiveColor| 未激活颜色                                 | _ResourceColor_ |  `#969799`  |
 | activeColor  | 激活颜色                                   | _ResourceColor_ |  `#1989fa`  |
 
+### IBestSteps 插槽
+
+| 插槽名             | 说明               | 类型             |
+| ------------------| ------------------| ----------------|
+| defaultBuilder    | 默认内容的插槽      | _CustomBuilder_ |
+
 ### IBestStep @Props
 
 | 参数         | 说明                                      | 类型      | 默认值     |
@@ -174,3 +180,9 @@ struct DemoPage {
 | iconSize     | 图标大小, 仅type为 icon 时有效              | _string_ \| _number_ |  `14`  |
 | inactiveColor| 未激活颜色                                 | _ResourceColor_ |  `#969799`  |
 | activeColor  | 激活颜色                                   | _ResourceColor_ |  `#1989fa`  |
+
+### IBestStep 插槽
+
+| 插槽名             | 说明               | 类型             |
+| ------------------| ------------------| ----------------|
+| defaultBuilder    | 默认内容的插槽      | _CustomBuilder_ |

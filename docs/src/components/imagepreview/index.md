@@ -35,7 +35,7 @@ struct DemoPage {
           title: '预览图片',
           isLink: true,
           hasBorder: false,
-          onClickCell: () => {
+          onCellClick: () => {
             IBestImagePreview.show(this.imageList)
           }
         })
@@ -69,7 +69,7 @@ struct DemoPage {
           title: '预览图片',
           isLink: true,
           hasBorder: false,
-          onClickCell: () => {
+          onCellClick: () => {
             IBestImagePreview.show(this.imageList, {
               maskColor: '#fff',
               indexFontColor: "#000"
@@ -106,7 +106,7 @@ struct DemoPage {
           title: '预览图片',
           isLink: true,
           hasBorder: false,
-          onClickCell: () => {
+          onCellClick: () => {
             IBestImagePreview.show(this.imageList, {
               startIndex: 1
             })
@@ -142,7 +142,7 @@ struct DemoPage {
           title: '预览图片',
           isLink: true,
           hasBorder: false,
-          onClickCell: () => {
+          onCellClick: () => {
             IBestImagePreview.show(this.imageList, {
               indexPosition: 'top'
             })

@@ -122,14 +122,14 @@ struct DemoPage {
       Row({ space: 10 }){
         IBestButton({
           text: '清空',
-          onClickBtn: () => {
+          onBtnClick: () => {
             this.controller.clear()
           }
         })
         IBestButton({
           text: '确认',
           type: 'primary',
-          onClickBtn: () => {
+          onBtnClick: () => {
             this.controller.confirm()
           }
         })

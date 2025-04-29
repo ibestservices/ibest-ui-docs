@@ -190,5 +190,5 @@ struct DemoPage {
 
 | 事件名     | 说明                   | 事件类型                        |
 | ---------- | ----------------------| ------------------------------- |
-| onClickTag | 点击标签的事件          | (event: _ClickEvent_) => _void_ |
+| onTagClick | 点击标签的事件          | (event: _ClickEvent_) => _void_ |
 | onClose    | 点击标签关闭按钮的事件   | (event: _ClickEvent_) => _void_ |

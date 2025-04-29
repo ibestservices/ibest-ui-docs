@@ -31,7 +31,7 @@ struct DemoPage {
           title: "默认键盘",
           value: this.value,
           clickable: true,
-          onClickCell: () => {
+          onCellClick: () => {
             this.visible = true
           }
         })
@@ -74,7 +74,7 @@ struct DemoPage {
           title: "带右侧栏的键盘",
           value: this.value,
           clickable: true,
-          onClickCell: () => {
+          onCellClick: () => {
             this.visible = true
           }
         })
@@ -111,7 +111,7 @@ struct DemoPage {
           title: "身份证号键盘",
           value: this.value,
           clickable: true,
-          onClickCell: () => {
+          onCellClick: () => {
             this.visible = true
           }
         })
@@ -149,7 +149,7 @@ struct DemoPage {
           title: "带标题的键盘",
           value: this.value,
           clickable: true,
-          onClickCell: () => {
+          onCellClick: () => {
             this.visible = true
           }
         })
@@ -188,7 +188,7 @@ struct DemoPage {
           title: "配置多个按键的键盘",
           value: this.value,
           clickable: true,
-          onClickCell: () => {
+          onCellClick: () => {
             this.visible = true
           }
         })
@@ -226,7 +226,7 @@ struct DemoPage {
           title: "配置随机数字的键盘",
           value: this.value,
           clickable: true,
-          onClickCell: () => {
+          onCellClick: () => {
             this.visible = true
           }
         })

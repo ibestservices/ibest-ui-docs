@@ -219,7 +219,7 @@ struct DemoPage {
         text: `点击切换tab 当前为${this.currentName}`,
         type: "primary",
         buttonSize: "small",
-        onClickBtn: () => {
+        onBtnClick: () => {
           this.changeName()
         }
       })

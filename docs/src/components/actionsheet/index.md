@@ -25,7 +25,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '基础用法',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestActionSheet.show({
             actions: ["选项一", "选项二", "选项三"],
             onSelect: (index: number) => {
@@ -53,7 +53,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '展示图标',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestActionSheet.show({
             actions: [
               { name: '选项一', icon: $r("app.media.icon_like") },
@@ -82,7 +82,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '展示取消按钮',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestActionSheet.show({
             actions: [
               { name: '选项一' },
@@ -115,7 +115,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '展示标题、描述信息',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestActionSheet.show({
             customTitle: $r("app.string.app_name"),// 替换为自己项目的资源
             description: '这是一段描述信息',
@@ -147,7 +147,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '选项状态',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestActionSheet.show({
             description: '这是一段描述信息',
             actions: [
@@ -181,7 +181,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '指定选项标识',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestActionSheet.show({
             actions: [
               { name: '选项一', value: '1' },
@@ -216,7 +216,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '多行选项',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestActionSheet.show({
             actions: [
               [
@@ -300,7 +300,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '展示自定义内容',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestActionSheet.show({
             customTitle: '琵琶行',
             height: 500,
@@ -327,7 +327,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '展示原生标题',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestActionSheet.show({
             title: {
               title: "原生标题",

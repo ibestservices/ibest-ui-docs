@@ -235,7 +235,7 @@ struct DemoPage {
       text: this.count == 60 ? '发送验证码' : `重新发送(${this.count})`,
       type: 'primary',
       buttonSize: 'mini',
-      onClickBtn: () => {
+      onBtnClick: () => {
           this.sendCode()
       }
     })
