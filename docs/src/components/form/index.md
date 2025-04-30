@@ -63,7 +63,7 @@ struct DemoPage {
             text: "验证姓名",
             type: 'primary',
             buttonSize: 'large',
-            onClickBtn: () => {
+            onBtnClick: () => {
               this.controller.validateField("name").then(res => {
                 if(res.valid){
                   IBestToast.show("验证成功")
@@ -79,7 +79,7 @@ struct DemoPage {
             text: "提交",
             type: 'primary',
             buttonSize: 'large',
-            onClickBtn: () => {
+            onBtnClick: () => {
               this.controller.validate().then(res => {
                 if(res.valid){
                   IBestToast.show("验证成功")
@@ -193,7 +193,7 @@ struct DemoPage {
             text: "提交",
             type: 'primary',
             buttonSize: 'large',
-            onClickBtn: () => {
+            onBtnClick: () => {
               this.controller.validate((valid, fields) => {
                 if (valid) {
                   console.log("验证成功")
@@ -479,7 +479,7 @@ struct DemoPage {
             text: "提交",
             type: 'primary',
             buttonSize: 'large',
-            onClickBtn: () => {
+            onBtnClick: () => {
               this.controller.validate((valid, fields) => {
                 if (valid) {
                   IBestToast.show("验证成功")
@@ -642,7 +642,7 @@ struct DemoPage {
           text: "添加内容",
           type: "primary",
           buttonSize: 'large',
-          onClickBtn: () => {
+          onBtnClick: () => {
             this.list.push(new Subject())
           }
         })
@@ -650,7 +650,7 @@ struct DemoPage {
           text: "提交",
           type: 'primary',
           buttonSize: 'large',
-          onClickBtn: () => {
+          onBtnClick: () => {
             this.controller.validate((valid) => {
               if (valid) {
                 IBestToast.show("验证成功")

@@ -416,20 +416,20 @@ struct CheckboxPage {
         IBestButton({
           text: '全选',
           type: 'primary',
-          onClickBtn: ()=>{
+          onBtnClick: ()=>{
             this.controller.toggleAll(true)
           }
         })
         IBestButton({
           text: '反选',
           type: 'warning',
-          onClickBtn: ()=>{
+          onBtnClick: ()=>{
             this.controller.toggleAll()
           }
         })
         IBestButton({
           text: '取消选中',
-          onClickBtn: ()=>{
+          onBtnClick: ()=>{
             this.controller.toggleAll(false)
           }
         })
@@ -531,14 +531,14 @@ struct CheckboxPage {
           title: '复选框1',
           disabled: this.activeList.length >= this.cellCheckedMaxNum && !this.activeList.includes('1'),
           rightIconBuilder: (): void => this.CellCheckbox('1', this.group),
-          onClickCell: (): void => this.handleClickCell('1')
+          onCellClick: (): void => this.handleClickCell('1')
         })
         IBestCell({
           clickable: true,
           title: '复选框2',
           disabled: this.activeList.length >= this.cellCheckedMaxNum && !this.activeList.includes('2'),
           rightIconBuilder: (): void => this.CellCheckbox('2', this.group),
-          onClickCell: (): void => this.handleClickCell('2')
+          onCellClick: (): void => this.handleClickCell('2')
         })
         IBestCell({
           clickable: true,
@@ -546,7 +546,7 @@ struct CheckboxPage {
           disabled: this.activeList.length >= this.cellCheckedMaxNum && !this.activeList.includes('3'),
           hasBorder: false,
           rightIconBuilder: (): void => this.CellCheckbox('3', this.group),
-          onClickCell: (): void => this.handleClickCell('3')
+          onCellClick: (): void => this.handleClickCell('3')
         })
       }
     }
@@ -575,7 +575,7 @@ struct CheckboxPage {
 | labelFontSize | 文本字体大小                                                         | _number_ \| _string_ | `16`|
 | bgColor       | 默认背景色     | _ResourceColor_ | `''` |
 | bdColor       | 默认边框色     | _ResourceColor_ | `#ebedf0` |
-| beforeChange <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 改变前的回调     | _(value: boolean) => Promise\<boolean\> \| boolean_ | `-` |
+| beforeChange  | 改变前的回调     | _(value: boolean) => Promise\<boolean\> \| boolean_ | `-` |
 
 ### Checkbox Events
 
@@ -598,9 +598,10 @@ struct CheckboxPage {
 | max   | 最大可选数，`0` 为无限制                        | _number_ |  `0`   |
 | activeList | 激活的标识列表, 支持双向绑定                | _(string \| number)[]_  |  `[]`  |
 | placeDirection | 排列方向                              | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V13/ts-appendix-enums-V13#axis" target="__blank">Axis</a>_   | `Axis.Vertical` |
-| space | 间距                                           | _string_ \| _number_ | `12` |
+| space   | 间距                                           | _string_ \| _number_ | `12` |
 | controller | 组件实例                                   | _IBestCheckboxGroupController_ | `-` |
-| beforeChange <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 改变前的回调     | _(value: boolean) => Promise\<boolean\> \| boolean_ | `-` |
+| beforeChange| 改变前的回调     | _(value: boolean) => Promise\<boolean\> \| boolean_ | `-` |
+| disabled <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.0</span>| 是否禁用                           | _boolean_ | `false` |
 
 ### IBestCheckboxGroupController 方法
 

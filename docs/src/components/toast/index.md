@@ -26,7 +26,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '基础用法',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestToast.show("提示内容")
         }
       })
@@ -49,7 +49,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '成功提示',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestToast.show({
             type: "success",
             message: "提示内容"
@@ -75,7 +75,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '警告提示',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestToast.show({
             type: "warning",
             message: "提示内容"
@@ -101,7 +101,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '失败提示',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestToast.show({
             type: "fail",
             message: "提示内容"
@@ -127,7 +127,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '加载提示',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestToast.showLoading()
           setTimeout(() => {
             IBestToast.hide()
@@ -153,7 +153,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '自定义图标',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestToast.show({
             icon: $r("app.media.startIcon"),
             message: "提示内容"
@@ -179,7 +179,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '自定义图片',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestToast.show({
             icon: "https://ibestui.ibestservices.com/favicon.ico",
             message: "提示内容"
@@ -205,7 +205,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '自定义加载图标类型',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestToast.show({
             type: "loading",
             loadingType: "spinner",
@@ -243,7 +243,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '自定义位置',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestToast.show({
             position: "top",
             offsetY: "20%",
@@ -273,7 +273,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '文字换行方式',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestToast.show({
             wordBreak: "break-all",
             message: "This message will contain a incomprehensibilities long word."
@@ -299,7 +299,7 @@ struct DemoPage {
     Column(){
       IBestButton({
         text: '动态更新提示',
-        onClickBtn: () => {
+        onBtnClick: () => {
           let count = 3
           let toast = IBestToast.show({
             type: "loading",

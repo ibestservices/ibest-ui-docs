@@ -41,7 +41,7 @@ export default defineConfig({
         link: "/components/button/",
         activeMatch: "/components/",
       },
-      { text: "v2.0.9", link: "" },
+      { text: "v2.1.0", link: "" },
     ],
     sidebar: [
       {
@@ -111,6 +111,7 @@ export default defineConfig({
           { text: "CircleProgress 环形进度条", link: "/components/circleProgress/" },
           { text: "Collapse 折叠面板", link: "/components/collapse/" },
           { text: "CountDown 倒计时", link: "/components/countDown/" },
+          { text: `CountTo 数字滚动 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.0</span>`, link: "/components/countTo/" },
           { text: "Divider 分割线", link: "/components/divider/" },
           { text: "Empty 空状态", link: "/components/empty/" },
           { text: "Highlight 高亮文本", link: "/components/highlight/" },
@@ -118,6 +119,8 @@ export default defineConfig({
           { text: "NoticeBar 通知栏", link: "/components/noticeBar/" },
           { text: "Popover 气泡弹出框", link: "/components/popover/" },
           { text: "Progress 进度条", link: "/components/progress/" },
+          { text: `Skeleton 骨架屏 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.0</span>`, link: "/components/skeleton/" },
+          { text: `Steps 步骤条 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.0</span>`, link: "/components/steps/" },
           { text: "TextEllipsis 文本省略", link: "/components/textEllipsis/" },
           { text: "Table 表格", link: "/components/table/" },
           { text: "Tag 标签", link: "/components/tag/" },
@@ -128,7 +131,7 @@ export default defineConfig({
         text: "导航组件",
         items: [
           { text: "NavBar 导航栏", link: "/components/navBar/" },
-          { text: `Pagination 分页 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>`, link: "/components/pagination/" },
+          { text: "Pagination 分页", link: "/components/pagination/" },
           { text: "SideBar 侧边导航", link: "/components/sideBar/" },
           { text: "Tab 标签页", link: "/components/tab/" },
         ],

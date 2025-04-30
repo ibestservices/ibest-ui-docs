@@ -158,10 +158,10 @@ struct DemoPage {
 | indeterminate| 不确定进度                            | _boolean_ |  `false`  |
 | duration     | 不确定进度时动画时长 单位秒             | _number_ | `3` |
 | format       | 格式化文本函数                         | _(value: number) => string_ |  `-`  |
-| target <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 目标值                           | _number_ |  `100`  |
+| target       | 目标值                           | _number_ |  `100`  |
 
 ### Events
 
 | 事件名         | 说明                            | 回调参数                         |
 | --------------| --------------------------------| --------------------------------|
-| onReachTarget <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 到达目标值触发                   | `-` |
+| onReachTarget | 到达目标值触发                   | `-` |

@@ -308,7 +308,7 @@ struct DemoPage {
       IBestButton({
         text: "禁用标签3",
         buttonSize: "small",
-        onClickBtn: () => {
+        onBtnClick: () => {
           this.tabsList[2].isDisable = !this.tabsList[2].isDisable
         }
       })
@@ -357,7 +357,7 @@ struct DemoPage {
       IBestButton({
         text: "修改数字",
         buttonSize: "small",
-        onClickBtn: () => {
+        onBtnClick: () => {
           if(this.tabsList4[1].number != undefined){
             this.tabsList4[1].number += 1
           }

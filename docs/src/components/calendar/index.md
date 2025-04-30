@@ -33,7 +33,7 @@ struct DemoPage {
       IBestCell({
         title: '选择单个日期',
         value: this.selectDate,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -68,7 +68,7 @@ struct DemoPage {
       IBestCell({
         title: '选择多个日期',
         value: this.selectDate,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -106,7 +106,7 @@ struct DemoPage {
       IBestCell({
         title: '选择日期区间',
         value: this.selectDate,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -147,7 +147,7 @@ struct DemoPage {
       IBestCell({
         title: '选择日期',
         value: this.selectDate,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -188,7 +188,7 @@ struct DemoPage {
       IBestCell({
         title: '选择日期',
         value: this.selectDate,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -229,7 +229,7 @@ struct DemoPage {
       IBestCell({
         title: '选择日期',
         value: this.selectDate,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -274,7 +274,7 @@ struct DemoPage {
       IBestCell({
         title: '选择日期区间',
         value: this.selectDate,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -315,7 +315,7 @@ struct DemoPage {
       IBestCell({
         title: '选择日期',
         value: this.selectDate,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -354,7 +354,7 @@ struct DemoPage {
       IBestCell({
         title: '选择日期',
         value: this.selectDate,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -465,7 +465,7 @@ struct DemoPage {
       IBestButton({
         type: "primary",
         text: "打卡",
-        onClickBtn: () => {
+        onBtnClick: () => {
           this.clockDate.push(dayjs(this.clockDate[this.clockDate.length-1]).add(1, 'day').format("YYYY-MM-DD"))
         }
       })

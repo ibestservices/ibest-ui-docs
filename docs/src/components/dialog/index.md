@@ -29,7 +29,7 @@ struct DemoPage {
       IBestButton({
         text: '打开弹窗',
         type: 'primary',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestDialogUtil.open({
             title: "提示",
             message: "代码是写出来给人看的，附带能在机器上运行。",
@@ -59,7 +59,7 @@ struct DemoPage {
       IBestButton({
         text: '打开弹窗',
         type: 'primary',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestDialogUtil.open({
             message: "生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。"
           })
@@ -85,7 +85,7 @@ struct DemoPage {
       IBestButton({
         text: '打开弹窗',
         type: 'primary',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestDialogUtil.open({
             title: "提示",
             message: "生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。",
@@ -117,7 +117,7 @@ struct DemoPage {
       IBestButton({
         text: '圆角按钮样式',
         type: 'primary',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestDialogUtil.open({
             title: "提示",
             message: "生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。",
@@ -150,7 +150,7 @@ struct DemoPage {
         title: '背景图片',
         isLink: true,
         hasBorder: false,
-        onClickCell: () => {
+        onCellClick: () => {
           IBestDialogUtil.open({
             bgImage: "https://img0.baidu.com/it/u=3217812679,2585737758&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500",
             showConfirmButton: false,
@@ -182,7 +182,7 @@ struct DemoPage {
       IBestButton({
         text: '打开弹窗',
         type: 'primary',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestDialogUtil.open({
             title: textData.title,
             message: textData.life,
@@ -216,7 +216,7 @@ struct DemoPage {
 
 ### 内部跳转
 
-![内部跳转](./images/slot.png)
+![内部跳转](./images/inner-jump.png)
 
 ::: details 点我查看代码
 ```ts
@@ -256,7 +256,7 @@ struct DemoPage {
       IBestButton({
         text: '打开弹窗',
         type: 'primary',
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestDialogUtil.open({
             title: textData.title,
             message: textData.life,
@@ -292,7 +292,7 @@ struct DemoPage {
       IBestButton({
         type: 'primary',
         text: "切换宽度",
-        onClickBtn: () => {
+        onBtnClick: () => {
           this.dialogWidth = this.dialogWidth === "90%" ? "80%" : "90%"
         }
       })
@@ -329,7 +329,7 @@ struct DemoPage {
       IBestButton({
         text: '打开弹窗',
         type: 'primary',
-        onClickBtn: () => {
+        onBtnClick: () => {
           this.dialogVisible = true
         }
       })
@@ -341,13 +341,15 @@ struct DemoPage {
 
 ## API
 
-### IBestDialog @Props
+### @Props
 
 | 参数                   | 说明                          | 类型      | 默认值  |
 | --------------------- | -----------------------------| ----------| ------ |
 | visible               | 弹窗是否可见, 支持双向绑定       | _boolean_ | `false` |
 | dialogWidth           | 弹窗的宽度                     | _number_ \| _string_  | `320`|
 | dialogBorderRadius    | 弹窗的圆角                     | _number_ \| _string_  | `16` |
+| bgImage               | 弹框背景图片 | _ResourceStr_ | `''` |
+| bgColor               | 弹框背景颜色 | _ResourceColor_ | `#fff` |
 | title                 | 弹窗的标题                     | _ResourceStr_  |    ``   |
 | titleColor            | 弹窗的标题文字颜色              | _ResourceColor_ | `#323233` |
 | titleFontSize         | 标题的文字大小                  | _number_ \| _string_  | `16` |
@@ -385,13 +387,12 @@ struct DemoPage {
 | alignment             | 弹窗在竖直方向上的对齐方式, 可选值 `top` `center` `bottom` | _string_ | `center`|
 | offsetX               | 弹窗相对alignment所在位置的横向偏移量            | _number_ \| _string_ | `0` |
 | offsetY               | 弹窗相对alignment所在位置的纵向偏移量            | _number_ \| _string_ | `0` |
-| beforeClose           | 关闭前的回调函数，返回 `false` 可阻止关闭，支持返回 `Promise` | _(action: cancel \| confirm) => Promise\<boolean\> \| boolean_ | `-` |
-| bgImage               | 弹框背景图片 | _ResourceStr_ | `''` |
-| bgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 弹框背景颜色 | _ResourceColor_ | `#fff` |
-| keyboardAvoidDistance <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 弹窗避让键盘后，和键盘之间的距离 | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-graphics#lengthmetrics" target="_blank">LengthMetrics</a>_ | `16vp` |
-| levelMode <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 弹窗显示层级 | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-promptaction#levelmode15%E6%9E%9A%E4%B8%BE%E8%AF%B4%E6%98%8E" target="_blank">LevelMode</a>_ | `0` |
-| levelUniqueId <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 页面级弹窗需要显示的层级下的节点 uniqueId, 仅当levelMode属性设置为LevelMode.EMBEDDED时生效 | _number_ | `-` |
+| keyboardAvoidMode <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.0</span>| 设置弹窗是否在拉起软键盘时进行自动避让| _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-types#keyboardavoidmode12%E6%9E%9A%E4%B8%BE%E8%AF%B4%E6%98%8E" target="_blank">KeyboardAvoidMode</a>_ | `DEFAULT` |
+| keyboardAvoidDistance | 弹窗避让键盘后，和键盘之间的距离 | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-graphics#lengthmetrics" target="_blank">LengthMetrics</a>_ | `16vp` |
+| levelMode | 弹窗显示层级 | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-promptaction#levelmode15%E6%9E%9A%E4%B8%BE%E8%AF%B4%E6%98%8E" target="_blank">LevelMode</a>_ | `0` |
+| levelUniqueId | 页面级弹窗需要显示的层级下的节点 uniqueId, 仅当levelMode属性设置为LevelMode.EMBEDDED时生效 | _number_ | `-` |
 | confirmButtonFontWeight <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.9</span>| 确认按钮的文字字重| _FontWeight_ | `Normal` |
+| beforeClose           | 关闭前的回调函数，返回 `false` 可阻止关闭，支持返回 `Promise` | _(action: cancel \| confirm) => Promise\<boolean\> \| boolean_ | `-` |
 
 ### Events
 

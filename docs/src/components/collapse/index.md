@@ -232,7 +232,7 @@ struct DemoPage {
             type: "primary",
             text: "全部展开",
             buttonSize: "small",
-            onClickBtn: () => {
+            onBtnClick: () => {
               this.controller.toggleAll(true)
             }
           })
@@ -240,7 +240,7 @@ struct DemoPage {
             type: "primary",
             text: "全部收起",
             buttonSize: "small",
-            onClickBtn: () => {
+            onBtnClick: () => {
               this.controller.toggleAll(false)
             }
           })
@@ -248,7 +248,7 @@ struct DemoPage {
             type: "primary",
             text: "切换",
             buttonSize: "small",
-            onClickBtn: () => {
+            onBtnClick: () => {
               this.controller.toggleAll()
             }
           })
@@ -259,7 +259,7 @@ struct DemoPage {
             type: "primary",
             text: "跳过禁用展开",
             buttonSize: "small",
-            onClickBtn: () => {
+            onBtnClick: () => {
               this.controller.toggleAll({
                 expanded: true,
                 skipDisabled: true
@@ -270,7 +270,7 @@ struct DemoPage {
             type: "primary",
             text: "跳过禁用收起",
             buttonSize: "small",
-            onClickBtn: () => {
+            onBtnClick: () => {
               this.controller.toggleAll({
                 expanded: false,
                 skipDisabled: true
@@ -281,7 +281,7 @@ struct DemoPage {
             type: "primary",
             text: "跳过禁用切换",
             buttonSize: "small",
-            onClickBtn: () => {
+            onBtnClick: () => {
               this.controller.toggleAll({
                 skipDisabled: true
               })

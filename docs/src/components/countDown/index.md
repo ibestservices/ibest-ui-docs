@@ -101,21 +101,21 @@ struct DemoPage {
         IBestButton({
           type: 'primary',
           text: "开始",
-          onClickBtn: () => {
+          onBtnClick: () => {
             this.controller.start()
           }
         })
         IBestButton({
           type: 'primary',
           text: "暂停",
-          onClickBtn: () => {
+          onBtnClick: () => {
             this.controller.pause()
           }
         })
         IBestButton({
           type: 'primary',
           text: "重置",
-          onClickBtn: () => {
+          onBtnClick: () => {
             this.controller.reset()
           }
         })
@@ -140,7 +140,7 @@ struct DemoPage {
 | fontSize     | 文字大小                              | _number_ \| _string_ | `16` |
 | format       | 时间格式                              | _string_ |  `HH:mm:ss`  |
 | autoStart    | 是否自动开始倒计时                      | _boolean_ |  `true`  |
-| controller   | 组件库控制器                           | _IBestCountDownController_ |  `-`  |
+| controller   | 组件控制器                             | _IBestCountDownController_ |  `-`  |
 
 ### format 格式
 | 格式   | 说明  |

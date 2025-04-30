@@ -175,7 +175,7 @@ struct DemoPage {
       IBestButton({
         type: "primary",
         text: "切换日期列显示",
-        onClickBtn: () => {
+        onBtnClick: () => {
           this.showDate = !this.showDate
         }
       })
@@ -277,7 +277,7 @@ struct DemoPage {
       IBestButton({
         type: "primary",
         text: "操作",
-        onClickBtn: () => {
+        onBtnClick: () => {
           IBestToast.show(`当前点击的行数据为${row.date} ${row.name}`)
         }
       })

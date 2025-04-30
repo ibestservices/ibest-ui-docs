@@ -348,7 +348,7 @@ struct ButtonPage {
 | btnBorderColor | 按钮边框颜色    | _ResourceColor_ | `-` |
 | btnBorderRadius| 按钮圆角        | _string_ \| _number_ | `-` |
 | space        | 文字与图标间距     | _string_ \| _number_ | `4` |
-| fontWeight <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 文字字重 | _string_ \| _number_ \| _FontWeight_ | `Normal` |
+| fontWeight   | 文字字重 | _string_ \| _number_ \| _FontWeight_ | `Normal` |
 
 ### Events
 

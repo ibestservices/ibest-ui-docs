@@ -40,7 +40,7 @@ struct DemoPage {
         title: '展示弹出层',
         isLink: true,
         hasBorder: false,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -121,7 +121,7 @@ struct DemoPage {
             this.rightVisible = true
           })
         }
-        .width(CONTAINER_SIZE.FULL)
+        .width("100%")
         .backgroundColor("#fff")
       }
       IBestPopup({
@@ -176,7 +176,7 @@ struct DemoPage {
           IBestCell({
             title: '显示标题',
             isLink: true,
-            onClickCell: () => {
+            onCellClick: () => {
               this.visible1 = true
             }
           })
@@ -184,7 +184,7 @@ struct DemoPage {
             title: '自定义关闭图标',
             isLink: true,
             hasBorder: false,
-            onClickCell: () => {
+            onCellClick: () => {
               this.visible2 = true
             }
           })
@@ -242,7 +242,7 @@ struct DemoPage {
           IBestCell({
             title: '圆角弹窗(居中)',
             isLink: true,
-            onClickCell: () => {
+            onCellClick: () => {
               this.visible1 = true
             }
           })
@@ -250,7 +250,7 @@ struct DemoPage {
             title: '圆角弹窗(底部)',
             isLink: true,
             hasBorder: false,
-            onClickCell: () => {
+            onCellClick: () => {
               this.visible2 = true
             }
           })
@@ -298,7 +298,7 @@ struct DemoPage {
         title: '背景图片',
         isLink: true,
         hasBorder: false,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -332,7 +332,7 @@ struct DemoPage {
       IBestButton({
         text: "切换高度",
         type: "primary",
-        onClickBtn: () => {
+        onBtnClick: () => {
           this.popupHeight = this.popupHeight == 150 ? 300 : 150
         }
       })
@@ -346,7 +346,7 @@ struct DemoPage {
       IBestCell({
         title: '切换高度',
         isLink: true,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -357,6 +357,63 @@ struct DemoPage {
         contentBuilder: (): void => this.cusHeightBuilder()
       })
     }
+  }
+}
+```
+:::
+
+### 内部跳转
+
+![内部跳转](./images/inner-jump.png)
+
+::: details 点我查看代码
+```ts
+import { IBestCell } from "@ibestservices/ibest-ui"
+@Entry
+@Component
+struct DemoPage {
+  @State visible: boolean = false
+  @State uniId: number = 0
+  private uiContext = this.getUIContext()
+  @Builder innerBuilder(){
+    Column() {
+      IBestButton({
+        type: 'primary',
+        text: "跳转页面",
+        onBtnClick: () => {
+          RouterUtil.push("Button", "Button 按钮")
+        }
+      })
+    }
+    .width("100%")
+    .height("100%")
+    .justifyContent(FlexAlign.Center)
+  }
+  onDidBuild(): void {
+    setTimeout(() => {
+      let uniId = this.uiContext.getAttachedFrameNodeById("main")?.getUniqueId()
+      if(uniId){
+        this.uniId = uniId
+      }
+    }, 50)
+  }
+  build() {
+    Column(){
+      IBestCell({
+        title: '内部跳转',
+        isLink: true,
+        onCellClick: () => {
+          this.visible = true
+        }
+      })
+      IBestPopup({
+        visible: $visible,
+        popupAlign: "bottom",
+        levelMode: 1,
+        levelUniqueId: this.uniId,
+        contentBuilder: (): void => this.innerBuilder()
+      })
+    }.id("main")
   }
 }
 ```
@@ -385,7 +442,7 @@ struct DemoPage {
         title: '监听显示事件',
         isLink: true,
         hasBorder: false,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -434,7 +491,7 @@ struct DemoPage {
         title: '安全区域适配',
         isLink: true,
         hasBorder: false,
-        onClickCell: () => {
+        onCellClick: () => {
           this.visible = true
         }
       })
@@ -457,7 +514,7 @@ struct DemoPage {
 
 | 参数                 | 说明                                                     | 类型      | 默认值     |
 | --------------------| --------------------------------------------------------| --------- | ---------- |
-| visible             | 控制弹出层显示与隐藏                                        | _boolean_  | `false` |
+| visible             | 控制弹出层显示与隐藏, 支持双向绑定                           | _boolean_  | `false` |
 | popupAlign          | 弹出层位置,可选值为 `left` `right` `top` `bottom` `center` | _string_  | `center` |
 | popupWidth          | 弹出层宽度,默认值请参考弹出位置事例                           | _string \| number_  | `-`|
 | popupHeight         | 弹出层高度,默认值请参考弹出位置事例                           | _string \| number_  | `-`|
@@ -476,7 +533,12 @@ struct DemoPage {
 | safeAreaInsetTop    | 是否开启顶部安全区适配                                       | _boolean_ | `false` |
 | safeAreaInsetBottom | 是否开启底部安全区适配                                       | _boolean_ | `false` |
 | bgImage             | 弹框背景图片 | _ResourceStr_ | `''` |
-| bgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.0.8</span>| 弹框背景颜色 | _ResourceColor_ | `#fff` |
+| bgColor             | 弹框背景颜色 | _ResourceColor_ | `#fff` |
+| keyboardAvoidMode <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.0</span>| 设置弹窗是否在拉起软键盘时进行自动避让| _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-types#keyboardavoidmode12%E6%9E%9A%E4%B8%BE%E8%AF%B4%E6%98%8E" target="_blank">KeyboardAvoidMode</a>_ | `DEFAULT` |
+| keyboardAvoidDistance <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.0</span>| 弹窗避让键盘后，和键盘之间的距离 | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-arkui-graphics#lengthmetrics" target="_blank">LengthMetrics</a>_ | `16vp` |
+| levelMode <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.0</span>| 弹窗显示层级 | _<a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-promptaction#levelmode15%E6%9E%9A%E4%B8%BE%E8%AF%B4%E6%98%8E" target="_blank">LevelMode</a>_ | `0` |
+| levelUniqueId <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.0</span>| 页面级弹窗需要显示的层级下的节点 uniqueId, 仅当levelMode属性设置为LevelMode.EMBEDDED时生效 | _number_ | `-` |
+
 
 ### Events
 
