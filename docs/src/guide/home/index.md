@@ -56,14 +56,14 @@ title: "IBest-UI"
 - [Gitee](https://gitee.com/ibestservices/ibest-ui)
 - [更新日志](https://github.com/ibestservices/ibest-ui/releases)
 
-## 官方QQ 群
+## 官方QQ群
 
 群号： 953492584
 ![QQ群:953492584](./qq.jpg)
 
-## 微信群
-
-先进 QQ 群, 群里有微信群二维码
+## 官方微信群
+请添加IBest-UI助手, 备注 "鸿蒙开发"
+![微信群](./IBest-UI助手.jpg)
 
 ## 特别感谢
 
