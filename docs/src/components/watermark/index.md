@@ -156,7 +156,8 @@ struct DemoPage {
 
 ![自定义倾斜角度](./images/zindex.png)
 ::: tip
-通过 `waterMarkZIndex` 属性来控制水印的层级，以禁止内容的交互。
+• 通过 `waterMarkZIndex` 属性来控制水印的层级;   
+• 通过 `contentInteractive` 属性来控制内容是否可交互，默认值为 `false`。
 :::
 
 ::: details 点我查看代码
@@ -170,7 +171,8 @@ struct DemoPage {
         text: 'IBest-UI',
         gapX: 40,
         gapY: 40,
-        waterMarkZIndex: 1
+        waterMarkZIndex: 1,
+        contentInteractive: true
       }) {
         this.content()
       }
@@ -199,6 +201,7 @@ struct DemoPage {
 | fontColor        | 文字颜色                                   | _string \| number \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvasgradient-V5" target="__blank">CanvasGradient</a> \| <a href="https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-components-canvas-canvaspattern-V5#canvaspattern" target="__blank">CanvasPattern</a>_ | <div style="padding: 2px 4px; background: #000; color: #fff; border-radius: 4px">#000000</div> |
 | waterMarkZIndex  | 水印的 z-index                             | _number_ | `-1`      |
 | bgColor          | 背景色                                     | _ResourceColor_ | `#fff` |
+| contentInteractive <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.1</span>| 水印在上层时,内容是否可交互, 仅 `waterMarkZIndex` 大于0有效| _boolean_ | `false` |
 
 ### 插槽
 
