@@ -393,6 +393,7 @@ struct DemoPage {
 | inset  | 是否展示为圆角卡片风格   | _boolean_ | `false` |
 | border | 是否显示外边框          | _boolean_ | `true`  |
 | radius | 圆角大小, 仅inset为true时有效| _string_ \| _number_ | `8`   |
+| titlePadding <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.2</span>| 标题内边距       | _string_ \| _number_ \| _Padding_ | `16`  |
 
 ### Cell @Props
 
@@ -404,27 +405,28 @@ struct DemoPage {
 | valueColor     | 右侧内容文字颜色                       | _ResourceColor_       | `#969799` |
 | label          | 标题下方的描述信息                      | _ResourceStr_  |   `''`   |
 | labelColor     | 标题下方的描述信息文字颜色               | _ResourceColor_       | `#969799` |
-| cellSize       | 单元格大小，可选值为 `large` `normal`   | _string_              |          |
-| hasBorder      | 是否显示内边框                         | _boolean_             | `true`   |
-| clickable      | 是否开启点击反馈                       | _boolean_             | `false` |
+| cellSize       | 单元格大小，可选值为 `large` `normal`    | _string_              |          |
+| hasBorder      | 是否显示内边框                           | _boolean_             | `true`   |
+| clickable      | 是否开启点击反馈                         | _boolean_             | `false` |
 | isLink         | 是否展示右侧箭头并开启点击反馈            | _boolean_             | `false`  |
-| required       | 是否显示表单必填星号                    | _boolean_             | `false`  |
-| center         | 是否使内容垂直居中                      | _boolean_             | `false`|
-| arrowDirection | 箭头方向，可选值为 left up down         | _string_              | `right`  |
-| leftIcon| 左侧图标                          | _ResourceStr_         |          |
-| leftIconColor  | 左侧图标颜色                 | _ResourceStr_ |          |
-| leftIconSize   | 左侧图标大小                 | _number_ \| _string_ |   `16`  |
-| rightIcon      | 右侧图标                           | _ResourceStr_|          |
-| rightIconColor | 右侧图标颜色                 | _ResourceStr_ |          |
-| rightIconSize  | 右侧图标大小                 | _number_ \| _string_|   `16`  |
+| required       | 是否显示表单必填星号                     | _boolean_             | `false`  |
+| center         | 是否使内容垂直居中                       | _boolean_             | `false`|
+| arrowDirection | 箭头方向，可选值为 left up down          | _string_              | `right`  |
+| leftIcon       | 左侧图标                                | _ResourceStr_         |          |
+| leftIconColor  | 左侧图标颜色                             | _ResourceStr_ |          |
+| leftIconSize   | 左侧图标大小                             | _number_ \| _string_ |   `16`  |
+| rightIcon      | 右侧图标                                 | _ResourceStr_|          |
+| rightIconColor | 右侧图标颜色                             | _ResourceStr_ |          |
+| rightIconSize  | 右侧图标大小                             | _number_ \| _string_|   `16`  |
 | leftIconMarginRight| 左侧图标与title间距                  | _number_ \| _string_ |   `4`  |
 | rightIconMarginLeft| 右侧图标与内容间距                    | _number_ \| _string_ |   `4`  |
 | leftContentWidth| 左侧内容宽度                             | _number_ \| _string_ |   ``  |
 | leftRightPadding| 左右padding                             | _number_ \| _string_ |   `16`  |
 | borderSizeType  | 底部分割线尺寸类型, 可选值 `full` `center` `right` | _string_ | `center` |
 | borderLeft      | 底部分割线left值, `borderSizeType` 为 `right` 时有效| _Dimension_| `16` |
-| bdColor         | 底部分割线颜色               | _ResourceColor_| `#ebedf0` |
-
+| bdColor         | 底部分割线颜色                            | _ResourceColor_| `#ebedf0` |
+| titleFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.2</span>| 标题字体大小                 | _number_ \| _string_ |   `''`  |
+| labelFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.2</span>| 描述信息字体大小              | _number_ \| _string_ |   `''`  |
 
 ### Events
 

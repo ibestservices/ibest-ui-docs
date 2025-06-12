@@ -43,7 +43,7 @@ export default defineConfig({
         link: "/components/button/",
         activeMatch: "/components/",
       },
-      { text: "v2.1.1", link: "" },
+      { text: "v2.1.2", link: "" },
     ],
     sidebar: [
       {
@@ -102,7 +102,9 @@ export default defineConfig({
         items: [
           { text: "ActionSheet 动作面板", link: "/components/actionsheet/" },
           { text: "Dialog 弹出框", link: "/components/dialog/" },
+          { text: `DropdownMenu 下拉菜单 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.2</span>`, link: "/components/dropdownMenu/" },
           { text: `FloatBubble 浮动气泡 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.1</span>`, link: "/components/floatbubble/" },
+          { text: `Guide 引导 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.2</span>`, link: "/components/guide/" },
           { text: "Loading 加载", link: "/components/loading/" },
           { text: "Notify 消息通知", link: "/components/notify/" },
           { text: "PullRefresh 下拉刷新", link: "/components/pullrefresh/" },
@@ -116,7 +118,7 @@ export default defineConfig({
           { text: "CircleProgress 环形进度条", link: "/components/circleProgress/" },
           { text: "Collapse 折叠面板", link: "/components/collapse/" },
           { text: "CountDown 倒计时", link: "/components/countDown/" },
-          { text: `CountTo 数字滚动 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.0</span>`, link: "/components/countTo/" },
+          { text: "CountTo 数字滚动", link: "/components/countTo/" },
           { text: "Divider 分割线", link: "/components/divider/" },
           { text: "Empty 空状态", link: "/components/empty/" },
           { text: "Highlight 高亮文本", link: "/components/highlight/" },
@@ -124,8 +126,8 @@ export default defineConfig({
           { text: "NoticeBar 通知栏", link: "/components/noticeBar/" },
           { text: "Popover 气泡弹出框", link: "/components/popover/" },
           { text: "Progress 进度条", link: "/components/progress/" },
-          { text: `Skeleton 骨架屏 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.0</span>`, link: "/components/skeleton/" },
-          { text: `Steps 步骤条 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.0</span>`, link: "/components/steps/" },
+          { text: "Skeleton 骨架屏", link: "/components/skeleton/" },
+          { text: "Steps 步骤条", link: "/components/steps/" },
           { text: "TextEllipsis 文本省略", link: "/components/textEllipsis/" },
           { text: "Table 表格", link: "/components/table/" },
           { text: "Tag 标签", link: "/components/tag/" },
