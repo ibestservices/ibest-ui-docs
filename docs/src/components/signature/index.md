@@ -21,11 +21,11 @@ import { IBestSignature } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
-  @State imgUrl: string = ""
+  @State imgUrl: PixelMap | null = null
   build() {
     Column({ space: 20 }){
       IBestSignature({
-        onConfirm: (url: string) => {
+        onConfirm: (url: PixelMap) => {
           this.imgUrl = url
         }
       })
@@ -47,14 +47,14 @@ struct DemoPage {
 @Entry
 @Component
 struct DemoPage {
-  @State imgUrl: string = ""
+  @State imgUrl: PixelMap | null = null
   build() {
     Column({ space: 20 }){
       IBestSignature({
         penColor: "#ff0000",
         lineWidth: 5,
         bgColor: "#eee",
-        onConfirm: (url: string) => {
+        onConfirm: (url: PixelMap) => {
           this.imgUrl = url
         }
       })
@@ -76,13 +76,13 @@ struct DemoPage {
 @Entry
 @Component
 struct DemoPage {
-  @State imgUrl: string = ""
+  @State imgUrl: PixelMap | null = null
   build() {
     Column({ space: 20 }){
       IBestSignature({
         boardWidth: 300,
         boardHeight: 200,
-        onConfirm: (url: string) => {
+        onConfirm: (url: PixelMap) => {
           this.imgUrl = url
         }
       })
@@ -105,14 +105,14 @@ import { IBestSignatureController } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
-  @State imgUrl: string = ""
+  @State imgUrl: PixelMap | null = null
   private controller: IBestSignatureController = new IBestSignatureController()
   build() {
     Column({ space: 20 }){
       IBestSignature({
         controller: this.controller,
         isShowFooter: false,
-        onConfirm: (url: string) => {
+        onConfirm: (url: PixelMap) => {
           this.imgUrl = url
         }
       })
@@ -163,7 +163,7 @@ struct DemoPage {
 | 事件名     | 说明             | 回调参数  |
 | ----------| --------------  | -------- |
 | onDrawEnd | 手指离开屏幕触发   | `-` |
-| onConfirm | 点击确定按钮的回调 | `url: string` |
+| onConfirm | 点击确定按钮的回调 | `url: PixelMap` |
 | onClear   | 点击清空按钮的回调 | `-` |
 
 ### IBestSignatureController 控制器
