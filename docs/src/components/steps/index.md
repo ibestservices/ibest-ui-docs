@@ -159,6 +159,7 @@ struct DemoPage {
 | iconSize     | 图标大小, 仅type为 icon 时有效              | _string_ \| _number_ |  `14`  |
 | inactiveColor| 未激活颜色                                 | _ResourceColor_ |  `#969799`  |
 | activeColor  | 激活颜色                                   | _ResourceColor_ |  `#1989fa`  |
+| bgColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.3</span>| 背景颜色                           | _ResourceColor_ |  `#fff`  |
 
 ### IBestSteps 插槽
 
