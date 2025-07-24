@@ -499,11 +499,11 @@ struct DemoPage {
 | isShowActiveBg      | 是否显示激活背景, 仅type为`line`时有效        | _boolean_      |  `false` |
 | activeBgColor       | 激活背景色, 仅type为`line`时有效             | _ResourceColor_      |  `''` |
 | inactiveBgColor     | 非激活背景色, 仅type为`line`时有效           | _ResourceColor_      |  `''` |
-| radius              | 选项圆角, 仅type为`line`时有效               | _number_ \| _string_ |  `0` |
-| showActiveLine| 是否显示激活标记线, 仅type为`line`时有效      | _boolean_      |  `true` |
-| tabLineRadius | 标记线圆角, 仅type为`line`时有效             | _number_ \| _string_ | `0` |
-| activeFontWeight| 激活文字字重          | _FontWeight_ | `Normal` |
-| activeFontSize| 激活文字大小          | _number_ \| _string_ | `14` |
+| radius              | 选项圆角, 仅type为`line`时有效               | _Length_ \| _BorderRadiuses_ \| _LocalizedBorderRadiuses_ |  `0` |
+| showActiveLine      | 是否显示激活标记线, 仅type为`line`时有效      | _boolean_      |  `true` |
+| tabLineRadius       | 标记线圆角, 仅type为`line`时有效             | _number_ \| _string_ | `0` |
+| activeFontWeight    | 激活文字字重          | _FontWeight_ | `Normal` |
+| activeFontSize      | 激活文字大小          | _number_ \| _string_ | `14` |
 
 ### IBestTabItem IBestTabItemType  数据结构
 
