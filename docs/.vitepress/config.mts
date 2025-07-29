@@ -43,7 +43,7 @@ export default defineConfig({
         link: "/components/button/",
         activeMatch: "/components/",
       },
-      { text: "v2.1.3", link: "" },
+      { text: "v2.1.4", link: "" },
     ],
     sidebar: [
       {
