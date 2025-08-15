@@ -481,14 +481,14 @@ struct DemoPage {
 
 | 参数                 | 说明                                        | 类型             | 默认值       |
 | ------------------- | --------------------------------------------| --------------- | ------------ |
-| currentName         | 当前选中标签的标识符, 支持双向绑定                | _number_ \| _string_ |  `''`    |
+| currentName         | 当前选中标签的标识符, 支持双向绑定              | _number_ \| _string_ |  `''`    |
 | type                | 样式类型，可选值为 `line` `card`               | _string_        | `line`    |
 | tabHeight           | 默认高度                                      | _number_ \| _string_  | `35`   |
 | tabWidthType        | tab宽度类型，可选值为 `auto` `flex`             | _string_        | `flex`       |
 | tabsList            | 展示的tab列表                                  | _(IBestTabItemType \| IBestTabItem)[]_|`[]` |
 | tabPadding          | 单个tab内边距                                  | _number_ \| _string_ | `5`     |
-| isTabLineWidthFixed | 标记线宽度是否固定                               | _boolean_      |  `false` |
-| tabLineWidth        | 标记线宽度，默认为tab内容宽度                     | _number_ \| _string_ |  `0` |
+| isTabLineWidthFixed | 标记线宽度是否固定                              | _boolean_      |  `false` |
+| tabLineWidth        | 标记线宽度，默认为tab内容宽度                    | _number_ \| _string_ |  `0` |
 | tabLineHeight       | 标记线高度                                     | _number_ \| _string_ |    `2`   |
 | inactiveTextColor   | 未激活的tab文字颜色                             | _ResourceColor_ |  `#666`  |
 | activeTextColor     | 激活的tab文字颜色                               | _ResourceColor_ | `#333`      |
@@ -496,14 +496,15 @@ struct DemoPage {
 | lineOffsetY         | 标记线Y方向偏移量                               | _number_ \| _string_ | `0` |
 | tabBgColor          | tab区域背景颜色                                 | _ResourceColor_ | `#fff`       |
 | fontSize            | tab文字大小                                     | _number_ \| _string_ | `14` |
-| isShowActiveBg      | 是否显示激活背景, 仅type为`line`时有效        | _boolean_      |  `false` |
-| activeBgColor       | 激活背景色, 仅type为`line`时有效             | _ResourceColor_      |  `''` |
-| inactiveBgColor     | 非激活背景色, 仅type为`line`时有效           | _ResourceColor_      |  `''` |
-| radius              | 选项圆角, 仅type为`line`时有效               | _Length_ \| _BorderRadiuses_ \| _LocalizedBorderRadiuses_ |  `0` |
-| showActiveLine      | 是否显示激活标记线, 仅type为`line`时有效      | _boolean_      |  `true` |
-| tabLineRadius       | 标记线圆角, 仅type为`line`时有效             | _number_ \| _string_ | `0` |
-| activeFontWeight    | 激活文字字重          | _FontWeight_ | `Normal` |
-| activeFontSize      | 激活文字大小          | _number_ \| _string_ | `14` |
+| isShowActiveBg      | 是否显示激活背景, 仅type为`line`时有效            | _boolean_      |  `false` |
+| activeBgColor       | 激活背景色, 仅type为`line`时有效                  | _ResourceColor_      |  `''` |
+| inactiveBgColor     | 非激活背景色, 仅type为`line`时有效                | _ResourceColor_      |  `''` |
+| radius              | 选项圆角, 仅type为`line`时有效                    | _Length_ \| _BorderRadiuses_ \| _LocalizedBorderRadiuses_ |  `0` |
+| showActiveLine      | 是否显示激活标记线, 仅type为`line`时有效           | _boolean_      |  `true` |
+| tabLineRadius       | 标记线圆角, 仅type为`line`时有效                  | _number_ \| _string_ | `0` |
+| activeFontWeight    | 激活文字字重                                     | _FontWeight_ | `Normal` |
+| activeFontSize      | 激活文字大小                                     | _number_ \| _string_ | `14` |
+| outerRadius <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.5</span>| 外侧圆角 | _Length_ \| _BorderRadiuses_ \| _LocalizedBorderRadiuses_  | `0` |
 
 ### IBestTabItem IBestTabItemType  数据结构
 

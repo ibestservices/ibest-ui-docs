@@ -387,13 +387,14 @@ struct DemoPage {
 
 ### CellGroup @Props
 
-| 参数   | 说明                   | 类型      | 默认值  |
-| ------ | ---------------------- | --------- | ------- |
-| title  | 分组标题               | _string_  |         |
-| inset  | 是否展示为圆角卡片风格   | _boolean_ | `false` |
-| border | 是否显示外边框          | _boolean_ | `true`  |
-| radius | 圆角大小, 仅inset为true时有效| _string_ \| _number_ | `8`   |
-| titlePadding <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.2</span>| 标题内边距       | _string_ \| _number_ \| _Padding_ | `16`  |
+| 参数   | 说明                          | 类型      | 默认值  |
+| ------ | -----------------------------| --------- | ------- |
+| title  | 分组标题                      | _string_  |         |
+| inset  | 是否展示为圆角卡片风格         | _boolean_ | `false` |
+| border | 是否显示外边框                 | _boolean_ | `true`  |
+| radius | 圆角大小, 仅inset为true时有效  | _Length_ \| _BorderRadiuses_ \| _LocalizedBorderRadiuses_ | `8`   |
+| titlePadding | 标题内边距               | _Padding_ \| _Length_ \| _LocalizedPadding_ | `16`  |
+| outerMargin <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.5</span>| 外边距, 仅inset为true时有效     | _Padding_ \| _Length_ \| _LocalizedPadding_ | `{ left: 16, right: 16 }`  |
 
 ### Cell @Props
 
@@ -425,17 +426,17 @@ struct DemoPage {
 | borderSizeType  | 底部分割线尺寸类型, 可选值 `full` `center` `right` | _string_ | `center` |
 | borderLeft      | 底部分割线left值, `borderSizeType` 为 `right` 时有效| _Dimension_| `16` |
 | bdColor         | 底部分割线颜色                            | _ResourceColor_| `#ebedf0` |
-| titleFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.2</span>| 标题字体大小                 | _number_ \| _string_ |   `''`  |
-| labelFontSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.2</span>| 描述信息字体大小              | _number_ \| _string_ |   `''`  |
-| arrowSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.3</span>| 箭头大小                           | _number_ \| _string_ |   `14`  |
-| arrowColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.3</span>| 箭头颜色                           | _ResourceColor_ |   `#323233`  |
-| cellPadding <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.3</span>| 单元格内边距                        | _Length_ \| _Padding_ \| _LocalizedPadding_ |   `0`  |
+| titleFontSize   | 标题字体大小                          | _number_ \| _string_ |   `''`  |
+| labelFontSize   | 描述信息字体大小                      | _number_ \| _string_ |   `''`  |
+| arrowSize       | 箭头大小                              | _number_ \| _string_ |   `14`  |
+| arrowColor      | 箭头颜色                              | _ResourceColor_ |   `#323233`  |
+| cellPadding     | 单元格内边距                          | _Length_ \| _Padding_ \| _LocalizedPadding_ |   `0`  |
 
 ### Events
 
 | 事件名      | 说明                 | 事件类型                         |
 | ----------- | -------------------- | -------------------------------- |
-| onCellClick | 点击单元格的回调事件 | (event?: _ClickEvent_) => _void_ |
+| onCellClick | 点击单元格的回调事件 | `() => void` |
 
 ### 插槽
 
