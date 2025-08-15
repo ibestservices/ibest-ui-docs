@@ -331,7 +331,7 @@ struct ButtonPage {
 | buttonSize   | 尺寸，可选值为 `large` `small` `mini`                | _string_  | `normal`    |
 | btnWidth     | 按钮宽度，不写的话则使用 `buttonSize` 尺寸             | _string_ \| _number_ | `-` |
 | btnHeight    | 按钮高度，不写的话则使用 `buttonSize` 尺寸             | _string_ \| _number_ | `-` |
-| btnFontSize  | 按钮文字大小，不写的话则使用 `buttonSize` 尺寸          | _string_ \| _number_ | `-` |
+| btnFontSize  | 按钮文字大小，不写的话则使用 `buttonSize` 尺寸         | _string_ \| _number_ | `-` |
 | text         | 按钮文字                                            | _ResourceStr_   |   `''`   |
 | color        | 按钮颜色                                            | _ResourceColor_ |     |
 | iconPosition | 图标展示位置，可选值为 `left` `right` `top` `bottom`  | _string_  | `left`    |
@@ -343,12 +343,14 @@ struct ButtonPage {
 | loading      | 是否显示为加载状态                                    | _boolean_ | `false`  |
 | loadingText  | 加载状态提示文字                                      | _ResourceStr_ |  `''`  |
 | loadingSize  | 加载图标大小，如果为-1 默认跟随字体大小                  | _string_ \| _number_  | `-1` |
-| icon         | 按钮图标                   | _ResourceStr_ | `-` |
-| fontColor    | 按钮文字颜色                | _ResourceColor_ | `-` |
-| btnBorderColor | 按钮边框颜色    | _ResourceColor_ | `-` |
-| btnBorderRadius| 按钮圆角        | _Length_ \| _BorderRadiuses_ \| _LocalizedBorderRadiuses_ | `-` |
-| space        | 文字与图标间距     | _string_ \| _number_ | `4` |
-| fontWeight   | 文字字重 | _string_ \| _number_ \| _FontWeight_ | `Normal` |
+| icon         | 按钮图标                                             | _ResourceStr_ | `-` |
+| fontColor    | 按钮文字颜色                                         | _ResourceColor_ | `-` |
+| btnBorderColor | 按钮边框颜色                                       | _ResourceColor_ | `-` |
+| btnBorderRadius| 按钮圆角                                           | _Length_ \| _BorderRadiuses_ \| _LocalizedBorderRadiuses_ | `-` |
+| space        | 文字与图标间距                                        | _string_ \| _number_ | `4` |
+| fontWeight   | 文字字重                                              | _string_ \| _number_ \| _FontWeight_ | `Normal` |
+| btnPadding <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.5</span>| 按钮内边距                          | _Length_ \| _Padding_ \| _LocalizedPadding_ | `-` |
+| stateEffect <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.5</span>| 是否开启按压态                                                | _boolean_ | `true` |
 
 ### Events
 

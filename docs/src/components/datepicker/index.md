@@ -170,7 +170,8 @@ struct DemoPage {
 | itemWidth     | 单项宽度     | _number_ \| _string_ | `44`   |
 | contentHeight | 整体高度, 仅横向时生效 | _number_ \| _string_ | `44`   |
 | optionFontSize| 选项字体大小    | _number_ \| _string_ | `16`   |
-| lunar <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.3</span>| 是否显示农历    | _boolean_ | `false` |
+| lunar         | 是否显示农历    | _boolean_ | `false` |
+| radius <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.5</span>| 外部圆角                                       | _number_ \| _string_ | `0`   |
  
 ### Events
 

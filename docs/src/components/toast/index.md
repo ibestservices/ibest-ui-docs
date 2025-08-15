@@ -352,4 +352,4 @@ struct DemoPage {
 | offsetY      | 偏移量                                                    | _string_ \| _number_   | `0` |
 | iconWidth    | 自定义图标宽度                                             | _string_ \| _number_   | `36` |
 | onOpened     | 完全展示后的回调函数                                        | _() => void_ | `-` |
-| onClosed <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.2</span>| 完全关闭后的回调函数  | _() => void_ | `-` |
+| onClosed     | 完全关闭后的回调函数                                        | _() => void_ | `-` |

@@ -279,8 +279,8 @@ struct DemoPage {
 | isShowStatusBar | 是否显示状态栏                          | _boolean_ | `false` |
 | statusBarBgColor | 状态栏背景色, 默认与导航栏背景色一致       | _ResourceColor_ | `#fff` |
 | isKeepBgColorSame | 是否保持与导航栏背景色一致，默认为是，即状态栏背景色会跟随导航栏背景色变化 | _boolean_ | `true` |
-| titleTextAlign| 标题文字对齐方式, 可选值 `left` `center`   | _string_ | `center` |
-| expandSafeAreaType <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.3</span>| 导航栏扩展区域类型                   | _SafeAreaType[]_ | `[SafeAreaType.SYSTEM, SafeAreaType.CUTOUT]` |
+| titleTextAlign      | 标题文字对齐方式, 可选值 `left` `center`   | _string_ | `center` |
+| expandSafeAreaType  | 导航栏扩展区域类型                   | _SafeAreaType[]_ | `[SafeAreaType.SYSTEM, SafeAreaType.CUTOUT]` |
 
 
 ### Events
