@@ -110,7 +110,7 @@ export default defineConfig({
       {
         text: "展示组件",
         items: [
-          { text: `Avatar 头像 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.5</span>`, link: "/components/avatar/" },
+          { text: `Avatar 头像 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.6</span>`, link: "/components/avatar/" },
           { text: "Badge 徽标", link: "/components/badge/" },
           { text: "CircleProgress 环形进度条", link: "/components/circleProgress/" },
           { text: "Collapse 折叠面板", link: "/components/collapse/" },
@@ -123,7 +123,7 @@ export default defineConfig({
           { text: "NoticeBar 通知栏", link: "/components/noticeBar/" },
           { text: "Popover 气泡弹出框", link: "/components/popover/" },
           { text: "Progress 进度条", link: "/components/progress/" },
-          { text: `SectorProgress 扇形进度条 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.5</span>`, link: "/components/sectorProgress/" },
+          { text: `SectorProgress 扇形进度条 <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.6</span>`, link: "/components/sectorProgress/" },
           { text: "Skeleton 骨架屏", link: "/components/skeleton/" },
           { text: "Steps 步骤条", link: "/components/steps/" },
           { text: "TextEllipsis 文本省略", link: "/components/textEllipsis/" },
