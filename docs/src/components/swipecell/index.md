@@ -50,9 +50,9 @@ struct DemoPage {
   build() {
     Column(){
       IBestSwipeCell({
-        defaultContent: this.cellContent,
-        leftContent: this.leftContent,
-        rightContent: this.rightContent
+        defaultContent: (): void => this.cellContent(),
+        leftContent: (): void => this.leftContent(),
+        rightContent: (): void => this.rightContent()
       })
     }
   }
@@ -86,8 +86,8 @@ struct DemoPage {
   build() {
     Column(){
       IBestSwipeCell({
-        defaultContent: this.cellContent,
-        rightContent: this.rightContent,
+        defaultContent: (): void => this.cellContent(),
+        rightContent: (): void => this.rightContent(),
         beforeClose: (position) => {
           if(position == 'center'){
             return true
