@@ -237,10 +237,10 @@ struct DemoPage {
   @State value1: boolean = false
   @State value2: boolean = false
   @State value3: string[] = []
-  @State value4: string = ""
+  @State value4: boolean = false
   @State value5: number = 1
-  @State value6: string = ""
-  @State selectValue: string[] = []
+  @State value6: string[] = []
+  @State selectValue: string = ''
   @State value7: string = ''
   @State visible: boolean = false
   @State visible1: boolean = false
@@ -343,9 +343,8 @@ struct DemoPage {
     IBestCheckbox({
       value: this.value2,
       shape: "square",
-      name: "value2",
       onChange: value => {
-        this.value2 = value
+        this.value2 = value as boolean
       }
     })
   }
@@ -378,12 +377,12 @@ struct DemoPage {
       IBestRadio({
         group: "group1",
         label: "单选框1",
-        name: "1"
+        name: true
       })
       IBestRadio({
         group: "group1",
         label: "单选框2",
-        name: "2"
+        name: false
       })
     }
   }
@@ -412,14 +411,14 @@ struct DemoPage {
           IBestField({
             formId: this.formId,
             prop: 'value1',
-            value: this.value1,
+            value: $value1,
             label: "开关",
             customRightContent: (): void => this.switchContent()
           })
           IBestField({
             formId: this.formId,
             prop: 'value2',
-            value: this.value2,
+            value: $value2,
             label: "复选框",
             rules: this.value2 ? [{required: true, message: '请选择'}] : [],
             customRightContent: (): void => this.checkboxContent()
@@ -427,28 +426,29 @@ struct DemoPage {
           IBestField({
             formId: this.formId,
             prop: 'value3',
-            value: this.value3,
+            value: $value3,
             label: "复选框组",
             customRightContent: (): void => this.checkboxGroupContent()
           })
           IBestField({
             formId: this.formId,
             prop: 'value4',
-            value: this.value4,
+            value: $value4,
             label: "单选框",
             customRightContent: (): void => this.radioContent()
           })
           IBestField({
             formId: this.formId,
             prop: 'value5',
-            value: this.value5,
+            value: $value5,
             label: "步进器",
             customRightContent: (): void => this.stepperContent()
           })
           IBestField({
             formId: this.formId,
             prop: 'value6',
-            value: this.value6,
+            value: $value6,
+            showValue: this.selectValue,
             label: "选择城市",
             placeholder: "请选择城市",
             isLink: true,
@@ -459,7 +459,7 @@ struct DemoPage {
           IBestField({
             formId: this.formId,
             prop: 'value7',
-            value: this.value7,
+            value: $value7,
             label: "日历",
             placeholder: "请选择日期",
             isLink: true,
@@ -470,10 +470,27 @@ struct DemoPage {
           IBestField({
             formId: this.formId,
             prop: 'value8',
-            value: this.value8,
+            value: $value8,
             label: "上传图片",
             hasBorder: false,
             customRightContent: (): void => this.uploadImg()
+          })
+          IBestButton({
+            text: "设置值",
+            type: 'primary',
+            buttonSize: 'large',
+            onBtnClick: () => {
+              this.controller3.setFormValues({
+                "value1": true,
+                "value2": true,
+                "value3": ['1'],
+                "value4": true,
+                "value5": 3,
+                "value6": ["320000","320500","320583"],
+                "value7": '2025-08-25'
+              })
+              this.selectValue = "江苏省,苏州市,昆山市"
+            }
           })
           IBestButton({
             text: "提交",
@@ -486,17 +503,16 @@ struct DemoPage {
                 }
               })
             }
-          })
-            .margin({ top: 20 })
+          }).margin({ top: 20 })
         }
       }
       // 选择城市
       IBestCascader({
         visible: $visible,
         options: this.options,
-        value: $selectValue,
+        value: $value6,
         onConfirm: value => {
-          this.value6 = value.map(item => item.text).join(',')
+          this.selectValue = value.map(item => item.text).join(',')
         }
       })
       // 日历
@@ -551,7 +567,7 @@ class Subject {
 @Component
 struct DemoPage {
   private formId: string = 'form'
-  @State sex: string = ""
+  @State sex: string | number = ''
   @State info1: string = ""
   @State info2: string = ""
   @State list: Subject[] = []
@@ -582,12 +598,12 @@ struct DemoPage {
       IBestRadio({
         group: "group",
         label: "男",
-        name: "1"
+        name: 1
       })
       IBestRadio({
         group: "group",
         label: "女",
-        name: "2"
+        name: 2
       })
     }
   }
@@ -610,7 +626,7 @@ struct DemoPage {
             hasBorder: this.sex != '',
             customRightContent: (): void => this.radioContent()
           })
-          if(this.sex == '1'){
+          if(this.sex == 1){
             IBestField({
               formId: this.formId,
               prop: 'info1',
@@ -619,7 +635,7 @@ struct DemoPage {
               placeholder: "请输入男生信息",
               hasBorder: false
             })
-          }else if(this.sex == '2'){
+          }else if(this.sex == 2){
             IBestField({
               formId: this.formId,
               prop: 'info2',
@@ -765,8 +781,8 @@ struct subjectItem{
 | ------------ | ------------------------------------------------| --------- | ---------- |
 | formId       | 表单id, 必传, 需保证全局唯一性                    | _string_ \| _number_  | `''` |
 | rules        | 表单验证信息                                     | _Record<string, IBestFormRuleItem[]>_  | `{}` |
-| space        | 表单子项间距                                     | _number_ \| _string_  | `10`  |
-| labelWidth   | 表单项左侧文本区域宽度                            | _number_ \| _string_ | `80`  |
+| space        | 表单子项间距                                     | _string_ \| _number_  | `10`  |
+| labelWidth   | 表单项左侧文本区域宽度                            | _string_ \| _number_ | `80`  |
 | labelPosition | 左侧文本位置, 可选值 `left` `top`                | _string_ |`left`|
 | labelAlign  | 左侧文本对齐方式, 可选值 `left` `center` `right`   | _string_ |`left`|
 | colon       | 是否在label后加冒号                               | _boolean_ | `false` |
@@ -776,6 +792,7 @@ struct subjectItem{
 | controller  | 表单实例控制器                                    | _IBestFormController_ | `-` |
 
 ### 插槽
+
 | 插槽名         | 说明                        | 类型                      |
 |---------------| ----------------------------| ------------------------- |
 | defaultBuilder| 表单子项                     |  _CustomBuilder_  |
@@ -783,20 +800,21 @@ struct subjectItem{
 ### IBestFormController API
 
 | 方法名          |       说明            | 参数                   | 返回值   |
-| -------------- | ---------------------| ---------------------- |-------|
+| -------------- | ----------------------| ---------------------- |-------|
 | validate       | 验证整个表单           | `callback?: (valid: boolean, field: FieldValidateResult[]) => void` | `Promise<IBestFormValidateResult>` |
 | validateField  | 验证指定表单           | `prop: string, callBack?: (valid: boolean, field?: FieldValidateResult) => void` | `Promise<IBestFieldValidateResult>` |
 | resetValidation| 重置整个/指定表单验证信息| `prop?: string \| string[]` | `void` |
 | getFormValues  | 获取表单所有表单项的值   | `-` | `Record<string, IBestFieldValueType>` |
+| setFormValues <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.7</span>| 设置表单值 | `values: Record<string, IBestFieldValueType>` | `void` |
 
 ### IBestFormRuleItem  数据结构
 
 | 参数 | 说明 | 类型 |
 | ------------ | -------------------------------| --------- |
-| required   | 是否为必选字段，当值为空值时（空字符串、空数组、false、undefined、null ），校验不通过 | _boolean_ |
-| message    | 验证错误提示信息 | _string_ |
-| pattern  | 正则表达式 | _RegExp_ |
-| validator | 自定义校验函数 | _(value: string) => boolean \| string \| Promise<boolean \| string>_ |
-| trigger | 验证触发时机, 默认都会触发 | _'blur' \| 'change'_ |
-| min | 字符最小长度 | _number_ |
-| max | 字符最大长度 | _number_ |
+| required     | 是否为必选字段，当值为空值时（空字符串、空数组、undefined、null ），校验不通过 | _boolean_ |
+| message      | 验证错误提示信息                | _string_ |
+| pattern      | 正则表达式                     | _RegExp_ |
+| validator    | 自定义校验函数                  | _(value: string) => boolean \| string \| Promise<boolean \| string>_ |
+| trigger      | 验证触发时机, 默认都会触发      | _'blur' \| 'change'_ |
+| min          | 字符最小长度                   | _number_ |
+| max          | 字符最大长度                   | _number_ |
