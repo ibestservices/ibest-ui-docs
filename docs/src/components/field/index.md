@@ -141,7 +141,13 @@ struct DemoPage {
         value: $value,
         label: "网址",
         prefix: "https://",
-        suffix: ".com",
+        suffix: ".com"
+      })
+      IBestField({
+        value: $value,
+        label: "图标",
+        prefixIcon: "location-o",
+        suffixIcon: "setting-o",
         hasBorder: false
       })
     }
@@ -455,7 +461,7 @@ struct DemoPage {
 
 ![点击反馈](./images/field-click.png)
 :::tip
-通过 `isLink` 属性可以开启点击反馈。
+通过 `clickable` `isLink` 属性可以开启点击反馈。
 :::
 ::: details 点我查看代码
 ```ts
@@ -529,23 +535,68 @@ struct DemoPage {
 ```
 :::
 
+### 边框样式
+
+![边框样式](./images/border-style.png)
+:::tip
+通过 `borderSizeType` 属性可自定义底部边框线位置。
+:::
+
+::: details 点我查看代码
+```ts
+@Entry
+@Component
+struct DemoPage {
+  @State value: string = ''
+  build() {
+    Column(){
+      IBestField({
+        value: $value,
+        label: "full",
+        readOnly: true,
+        borderSizeType: 'full'
+      })
+      IBestField({
+        value: $value,
+        label: "center",
+        readOnly: true,
+        borderSizeType: 'center'
+      })
+      IBestField({
+        value: $value,
+        label: "right",
+        readOnly: true,
+        borderSizeType: 'right'
+      })
+      IBestField({
+        value: $value,
+        label: "文本",
+        readOnly: true,
+        hasBorder: false
+      })
+    }
+  }
+}
+```
+:::
+
 ## API
 
 ### @Props
 
 | 参数         | 说明                                                     | 类型      | 默认值     |
 | ------------| --------------------------------------------------------| --------- | ---------- |
+| type        | 输入框类型, `autosize` 为true时, 可选值 `normal` `password` `email` `number` `phone` `username` `number-password` `decimal` ; `autosize` 为false时, 可选值 `normal` `email` `number` `phone` `decimal`, 其他无效| _string_ |`'normal'`|
 | value       | 当前输入的值, 支持双向绑定   | _string \| number \| boolean \| (string \| number)[]_ | `''`  |
 | formId      | 唯一id, 当组件用于验证时必传                               | _string_ \| _number_  | `''` |
 | prop        | 绑定value的属性名, 当组件用于验证时必传                     | _string_  | `''` |
 | rules       | 验证规则列表, 可由form统一配置                             | _IBestFormRuleItem[]_ |`[]`|
 | label       | 输入框左侧文本	                                         | _ResourceStr_ | `''`|
 | colon       | 是否在label后加冒号, 可由form统一配置                      | _boolean_ | `false` |
-| labelWidth  | 左侧文本宽度，可由form统一配置                              | _number_ \| _string_ |`80`|
+| labelWidth  | 左侧文本宽度，可由form统一配置                              | _string_ \| _number_ |`80`|
 | labelPosition | 左侧文本位置, 可选值 `left` `top`, 可由form统一配置       | _string_ |`left`|
 | labelAlign  | 左侧文本对齐方式, 可选值 `left` `center` `right`, 可由form统一配置| _string_ |`left`|
 | placeholder | 输入框占位提示文字                                        | _ResourceStr_ |`''`|
-| type        | 输入框类型, `autosize` 为true时, 可选值 `normal` `password` `email` `number` `phone` `username` `number-password` `decimal` ; `autosize` 为false时, 可选值 `normal` `email` `number` `phone` `decimal`, 其他无效| _string_ |`'normal'`|
 | decimalLength| 小数点位数, 仅当type为`decimal`时生效, 默认不限制           | _number_ |`-1`|
 | showPasswordIcon| 是否显示密码框末尾图标                                 | _boolean_ | `true` |
 | autosize    | 输入框自适应高度                                          | _boolean_ | `false` |
@@ -570,39 +621,46 @@ struct DemoPage {
 | showMessage | 是否显示验证信息, 可由form统一配置                            | _boolean_ | `true` |
 | formatter   | 格式化函数                                                  | _(value: string) => string_ | `-` |
 | formatTrigger| 执行格式化函数触发时机, 可选值 `onchange` `onblur`        | _string_ | `onchange` |
-| labelFontSize| 左侧字体大小                                              | _number_ \| _string_ | `14` |
+| labelFontSize| 左侧字体大小                                              | _string_ \| _number_ | `14` |
 | labelColor   | 左侧字体颜色                                               | _ResourceStr_ | `#323233` |
-| leftIconSize | 左侧图标大小                                               | _number_ \| _string_ | `14` |
-| rightIconSize| 右侧图标大小                                             | _number_ \| _string_ | `14` |
+| leftIconSize | 左侧图标大小                                               | _string_ \| _number_ | `14` |
+| rightIconSize| 右侧图标大小                                             | _string_ \| _number_ | `14` |
 | showLabel    | 是否显示label                                             | _boolean_ | `true` |
 | placeholderColor | 占位文字颜色                                          | _ResourceColor_ | `#c8c9cc` |
 | bgColor      | 背景色                                                    | _ResourceColor_ | `#fff` |
-| inputFontSize| 输入框字体大小                                            | _number_ \| _string_ | `14` |
+| inputFontSize| 输入框字体大小                                            | _string_ \| _number_ | `14` |
 | caretColor   | 光标颜色                                                 | _ResourceColor_ | `''` |
 | min          | 最小值, type 为 `number` `decimal` 时有效                  | _number_ | `-1` |
 | max          | 最大值, type 为 `number` `decimal` 时有效                  | _number_ | `-1` |
-| verticalAlign | 垂直方向对齐方式, 仅 `labelPosition` 为left时有效, 可选值 `top` `center` | _string_ | `''` |
+| verticalAlign | 垂直方向对齐方式, 仅 `labelPosition` 为left时有效, 可选值 `top` `center` | _string_ | `'top'` |
 | radius        | 外部圆角 | _Length_ \| _BorderRadiuses_ \| _LocalizedBorderRadiuses_ | `0` |
 | prefix        | 前缀内容 | _ResourceStr_ | `''` |
 | prefixFontColor | 前缀内容颜色 | _ResourceColor_ | `#969799` |
 | suffix        | 后缀内容 | _ResourceStr_ | `''` |
 | suffixFontColor | 后缀内容颜色 | _ResourceColor_ | `#969799` |
 | messageTextAlign| 验证信息对齐方式, 可选值 `left` `center` `right`, 默认与输入框文字对齐方式一致 | _string_ | `left` |
-
-
+| inputFontColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.7</span>| 输入框文字颜色 | _ResourceColor_ | `#323233` |
+| prefixIcon <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.7</span>| 前缀图标, 优先级高于prefix | _ResourceStr_ | `''` |
+| prefixSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.7</span>| 前缀内容大小 | _string_ \| _number_ | `14` |
+| suffixIcon <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.7</span>| 后缀图标, 优先级高于suffix | _ResourceStr_ | `''` |
+| suffixSize <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.7</span>| 后缀内容大小 | _string_ \| _number_ | `14` |
+| borderSizeType <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.7</span>| 底部边框线尺寸类型, 可选值 `full` `center` `right` | _string_ | `center` |
+| borderLeft <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.7</span>| 底部边框线左侧left值 | _Dimension_ | `-` |
+| fieldPadding <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.7</span>| 输入框内边距 | _Length_ \| _Padding_ \| _LocalizedPadding_ | `{left: 16, right: 16, top: 10, bottom: 10}` |
+| bdColor <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.7</span>| 底部边框线颜色 | _ResourceColor_ | `#ebedf0` |
+| showValue <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.7</span>| 右侧要显示的内容，当右侧需要显示的内容与value不同时可使用该属性，仅autosize为false且disabled \| readOnly \| isLink为true时生效 | _ResourceStr_ | `''` |
 
 ### Events
 
-| 事件名     | 说明                        | 回调参数                         |
-| ---------- | ------------------------- | -------------------------------- |
-| onChange  | value变化时触发              | `value: string \| number \| boolean \| (string \| number)[]` |
-| onClear   | 点击清除按钮时触发            | `-` |
-| onFieldClick| 点击组件时触发             | `-` |
-| onFieldFocus| 输入框获得焦点时触发        | `-` |
-| onFieldBlur| 输入框失去焦点时触发         | `-` |
-| onLeftIconClick| 左侧图标点击时触发       | `-` |
-| onRightIconClick| 右侧图标点击时触发      | `-` |
-
+| 事件名            | 说明                         | 回调参数                         |
+| ------------------| ----------------------------| -------------------------------- |
+| onChange          | value变化时触发              | `value: string \| number \| boolean \| (string \| number \| IBestUploaderFile)[]` |
+| onClear           | 点击清除按钮时触发            | `-` |
+| onFieldClick      | 点击组件时触发                | `-` |
+| onFieldFocus      | 输入框获得焦点时触发          | `-` |
+| onFieldBlur       | 输入框失去焦点时触发          | `-` |
+| onLeftIconClick   | 左侧图标点击时触发            | `-` |
+| onRightIconClick  | 右侧图标点击时触发            | `-` |
 
 ### 插槽
 | 插槽名         | 说明                         | 类型                      |

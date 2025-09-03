@@ -39,7 +39,7 @@ export default defineConfig({
       { text: "首页", link: "/" },
       { text: "指南", link: "/guide/home/", activeMatch: "/guide/" },
       { text: "组件", link: "/components/button/", activeMatch: "/components/" },
-      { text: "v2.1.6", link: "" },
+      { text: "v2.1.7", link: "" },
     ],
     sidebar: [
       {
