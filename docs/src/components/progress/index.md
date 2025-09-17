@@ -158,13 +158,13 @@ struct DemoPage {
 | indeterminate| 不确定进度                            | _boolean_ |  `false`  |
 | duration     | 不确定进度时动画时长 单位秒             | _number_ | `3` |
 | format       | 格式化文本函数                         | _(value: number) => string_ |  `-`  |
-| target       | 目标值                           | _number_ |  `100`  |
+| target       | 目标值                                | _number_ |  `100`  |
 
 ### Events
 
-| 事件名         | 说明                            | 回调参数                         |
+| 事件名         | 说明                            | 事件类型                         |
 | --------------| --------------------------------| --------------------------------|
-| onReachTarget | 到达目标值触发                   | `-` |
+| onReachTarget | 到达目标值触发                   | `() => void` |
 
 ## 主题定制
 

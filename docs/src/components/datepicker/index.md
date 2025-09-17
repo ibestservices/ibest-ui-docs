@@ -153,7 +153,7 @@ struct DemoPage {
 
 | 参数         | 说明                                          | 类型      | 默认值     |
 | ------------ | ---------------------------------------------| --------- | ---------- |
-| value        | 当前选中的日期, 支持双向绑定                     | _string[]_  | `[]` | 
+| value        | 当前选中的日期, 支持双向绑定                    | _string[]_  | `[]` | 
 | minDate      | 最小可选日期                                   | _Date_  |    `十年前`     |
 | maxDate      | 最大可选日期                                   | _Date_ | `十年后`  |
 | isShowDay    | 是否显示日列                                   | _boolean_ | `true`|
@@ -164,22 +164,22 @@ struct DemoPage {
 | showToolBar   | 是否显示顶部栏                                 | _boolean_ | `true` |
 | confirmText   | 确认按钮文字                                   | _ResourceStr_ |  `确定`  |
 | cancelText    | 取消按钮文字                                   | _ResourceStr_ |  `取消`  |
-| filter        | 过滤器    | _(type: string, options: IBestPickerOption[]) => IBestPickerOption[]_ | `null` |
+| filter        | 过滤器                                        | _(type: string, options: IBestPickerOption[]) => IBestPickerOption[]_ | `null` |
 | groupId       | 分组id, 通常在配合PickerGroup组件使用时传入, 可实现多个DatePicker联动| _string_ \| _number_ | `''` |
-| horizontal    | 是否横向     | _boolean_ | `false` |
-| itemWidth     | 单项宽度     | _string_ \| _number_ | `44`   |
-| contentHeight | 整体高度, 仅横向时生效 | _string_ \| _number_ | `44`   |
-| optionFontSize| 选项字体大小    | _string_ \| _number_ | `16`   |
-| lunar         | 是否显示农历    | _boolean_ | `false` |
-| radius <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.6</span>| 外部圆角                                       | _string_ \| _number_ | `0`   |
+| horizontal    | 是否横向                                       | _boolean_ | `false` |
+| itemWidth     | 单项宽度                                       | _string_ \| _number_ | `44`   |
+| contentHeight | 整体高度, 仅横向时生效                          | _string_ \| _number_ | `44`   |
+| optionFontSize| 选项字体大小                                   | _string_ \| _number_ | `16`   |
+| lunar         | 是否显示农历                                    | _boolean_ | `false` |
+| radius        | 外部圆角                                       | _string_ \| _number_ | `0`   |
  
 ### Events
 
-| 事件名     | 说明         | 回调参数             |
-| ----------| ------------------------------ | -------------------------------- |
-| onChange | 某一列选项变更后触发 | `value: IBestDatePickerResult` |
-| onConfirm | 点击确定按钮时触发 | `value: IBestDatePickerResult` |
-| onCancel |  点击取消按钮时触发 | `-` |
+| 事件名     | 说明                | 事件类型                                  |
+| ----------| --------------------| -----------------------------------------|
+| onChange  | 某一列选项变更后触发  | `(value: IBestDatePickerResult) => void` |
+| onConfirm | 点击确定按钮时触发    | `(value: IBestDatePickerResult) => void` |
+| onCancel  |  点击取消按钮时触发   | `() => void` |
 
 ### IBestDatePickerResult 数据结构
 | 参数         | 说明                                          | 类型      |

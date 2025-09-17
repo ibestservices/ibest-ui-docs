@@ -23,23 +23,23 @@ import { IBestCalendar, IBestCalendarDialog, IBestCalendarConfirmResult } from "
 @Component
 struct DemoPage {
   @State visible: boolean = false
-  @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
-    console.log("onConfirm", JSON.stringify(value))
-    this.selectDate = value.map(item => item.dateStr).join(",")
-  }
+  @State selectDate: string = ""
   build() {
     Column(){
       IBestCell({
         title: '选择单个日期',
         value: this.selectDate,
+        isLink: true,
         onCellClick: () => {
           this.visible = true
         }
       })
       IBestCalendarDialog({
         visible: $visible,
-        onConfirm: (value): void => this.onDialogConfirm(value)
+        value: $selectDate,
+        onConfirm: (value: IBestCalendarConfirmResult[]) => {
+          IBestToast.show(value[0].dateStr)
+        }
       })
     }
   }
@@ -58,25 +58,21 @@ struct DemoPage {
 @Component
 struct DemoPage {
   @State visible: boolean = false
-  @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
-    console.log("onConfirm", JSON.stringify(value)) 
-    this.selectDate = value.map(item => item.dateStr).join(",")
-  }
+  @State selectDate: string[] = []
   build() {
     Column(){
       IBestCell({
         title: '选择多个日期',
-        value: this.selectDate,
+        value: this.selectDate.join(","),
+        isLink: true,
         onCellClick: () => {
           this.visible = true
         }
       })
       IBestCalendarDialog({
         visible: $visible,
-        type: "danger",
-        selectType: "multiple",
-        onConfirm: (value): void => this.onDialogConfirm(value)
+        value: $selectDate,
+        selectType: "multiple"
       })
     }
   }
@@ -96,24 +92,21 @@ struct DemoPage {
 @Component
 struct DemoPage {
   @State visible: boolean = false
-  @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
-    console.log("onConfirm", JSON.stringify(value)) 
-    this.selectDate = value.map(item => item.dateStr).join(",")
-  }
+  @State selectDate: string[] = []
   build() {
     Column(){
       IBestCell({
         title: '选择日期区间',
-        value: this.selectDate,
+        value: this.selectDate.length ? this.selectDate[0] + " - " + this.selectDate[this.selectDate.length-1] : "",,
+        isLink: true,
         onCellClick: () => {
           this.visible = true
         }
       })
       IBestCalendarDialog({
         visible: $visible,
-        selectType: "range",
-        onConfirm: (value): void => this.onDialogConfirm(value)
+        value: $selectDate,
+        selectType: "range"
       })
     }
   }
@@ -137,25 +130,22 @@ struct DemoPage {
 @Component
 struct DemoPage {
   @State visible: boolean = false
-  @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
-    console.log("onConfirm", JSON.stringify(value)) 
-    this.selectDate = value.map(item => item.dateStr).join(",")
-  }
+  @State selectDate: string = ""
   build() {
     Column(){
       IBestCell({
         title: '选择日期',
         value: this.selectDate,
+        isLink: true,
         onCellClick: () => {
           this.visible = true
         }
       })
       IBestCalendarDialog({
         visible: $visible,
+        value: $selectDate,
         type: "danger",
-        selectedColor: "#58db6b",
-        onConfirm: (value): void => this.onDialogConfirm(value)
+        selectedColor: "#58db6b"
       })
     }
   }
@@ -178,25 +168,22 @@ struct DemoPage {
 @Component
 struct DemoPage {
   @State visible: boolean = false
-  @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
-    console.log("onConfirm", JSON.stringify(value)) 
-    this.selectDate = value.map(item => item.dateStr).join(",")
-  }
+  @State selectDate: string = ""
   build() {
     Column(){
       IBestCell({
         title: '选择日期',
         value: this.selectDate,
+        isLink: true,
         onCellClick: () => {
           this.visible = true
         }
       })
       IBestCalendarDialog({
         visible: $visible,
+        value: $selectDate,
         isShowLunar: true,
-        cornerRadius: 20,
-        onConfirm: (value): void => this.onDialogConfirm(value)
+        cornerRadius: 20
       })
     }
   }
@@ -219,29 +206,26 @@ struct DemoPage {
 @Component
 struct DemoPage {
   @State visible: boolean = false
-  @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
-    console.log("onConfirm", JSON.stringify(value)) 
-    this.selectDate = value.map(item => item.dateStr).join(",")
-  }
+  @State selectDate: string[] = []
   build() {
     Column(){
       IBestCell({
         title: '选择日期',
-        value: this.selectDate,
+        value: this.selectDate.join(","),
+        isLink: true,
         onCellClick: () => {
           this.visible = true
         }
       })
       IBestCalendarDialog({
         visible: $visible,
+        value: $selectDate,
         selectType: "multiple",
         selectedStyleType: "circle",
-        minDate: new Date(),
-        maxDate: new Date("2025-01-01"),
+        minDate: new Date('1991-01-01'),
+        maxDate: new Date(),
         confirmBtnColor: "#ed4040",
-        confirmBtnText: "完成",
-        onConfirm: (value): void => this.onDialogConfirm(value)
+        confirmBtnText: "完成"
       })
     }
   }
@@ -264,26 +248,23 @@ struct DemoPage {
 @Component
 struct DemoPage {
   @State visible: boolean = false
-  @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
-    console.log("onConfirm", JSON.stringify(value)) 
-    this.selectDate = value.map(item => item.dateStr).join(",")
-  }
+  @State selectDate: string[] = []
   build() {
     Column(){
       IBestCell({
-        title: '选择日期区间',
-        value: this.selectDate,
+        title: '区间最大范围',
+        value: this.selectDate.length ? this.selectDate[0] + " - " + this.selectDate[this.selectDate.length-1] : "",
+        isLink: true,
         onCellClick: () => {
           this.visible = true
         }
       })
       IBestCalendarDialog({
         visible: $visible,
+        value: $selectDate,
         type: "danger",
         selectType: "range",
-        maxRange: 7,
-        onConfirm: (value): void => this.onDialogConfirm(value)
+        maxRange: 7
       })
     }
   }
@@ -305,24 +286,21 @@ struct DemoPage {
 @Component
 struct DemoPage {
   @State visible: boolean = false
-  @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
-    console.log("onConfirm", JSON.stringify(value)) 
-    this.selectDate = value.map(item => item.dateStr).join(",")
-  }
+  @State selectDate: string = ""
   build() {
     Column(){
       IBestCell({
         title: '选择日期',
         value: this.selectDate,
+        isLink: true,
         onCellClick: () => {
           this.visible = true
         }
       })
       IBestCalendarDialog({
         visible: $visible,
-        weekFirstDay: 0,
-        onConfirm: (value): void => this.onDialogConfirm(value)
+        value: $selectDate,
+        weekFirstDay: 0
       })
     }
   }
@@ -344,24 +322,21 @@ struct DemoPage {
 @Component
 struct DemoPage {
   @State visible: boolean = false
-  @State selectDate: string = "请选择日期"
-  onDialogConfirm(value: IBestCalendarConfirmResult[]): void {
-    console.log("onConfirm", JSON.stringify(value)) 
-    this.selectDate = value.map(item => item.dateStr).join(",")
-  }
+  @State selectDate: string = ""
   build() {
     Column(){
       IBestCell({
         title: '选择日期',
         value: this.selectDate,
+        isLink: true,
         onCellClick: () => {
           this.visible = true
         }
       })
       IBestCalendarDialog({
         visible: $visible,
-        weekFirstDay: "日",
-        onConfirm: (value): void => this.onDialogConfirm(value)
+        value: $selectDate,
+        weekFirstDay: 0
       })
     }
   }
@@ -378,22 +353,14 @@ struct DemoPage {
 @Entry
 @Component
 struct DemoPage {
+  @State selectDate: string[] = []
   build() {
     Column(){
       IBestCalendar({
+        value: $selectDate,
         isShowLunar: true,
-        weekFirstDay: "日",
-        selectedStyleType: "normal",
         selectType: "multiple",
-        selectedColor: "#ed4040",
-        isShowMark: true,
-        onConfirm: (value: IBestCalendarConfirmResult[]) => {
-          let text = value.map(item => item.dateStr).join(",")
-          promptAction.showDialog({
-            message: `当前日期为：${text}`,
-            alignment: DialogAlignment.Center
-          })
-        }
+        isShowMark: true
       })
     }
   }
@@ -411,6 +378,7 @@ import { IBestCalendarDayItem } from "@ibestservices/ibest-ui";
 @Entry
 @Component
 struct DemoPage {
+  @State selectDate: string[] = []
   @Builder itemBuilder($$: IBestCalendarDayItem){
     Column({space: 6}){
       Text($$.day)
@@ -430,15 +398,9 @@ struct DemoPage {
   build() {
     Column(){
       IBestCalendar({
+        value: $selectDate,
         selectType: "multiple",
-        dayItemBuilder: this.itemBuilder,   // 此处较为特殊, 只能这样传递, 否则UI不刷新
-        onConfirm: (value: IBestCalendarConfirmResult[]) => {
-          let text = value.map(item => item.dateStr).join(",")
-          promptAction.showDialog({
-            message: `当前日期为：${text}`,
-            alignment: DialogAlignment.Center
-          })
-        }
+        dayItemBuilder: this.itemBuilder   // 此处较为特殊, 只能这样传递, 否则UI不刷新
       })
     }
   }
@@ -471,7 +433,7 @@ struct DemoPage {
       })
       IBestCalendar({
         clock: true,
-        defaultSelectedDate: this.clockDate
+        value: $clockDate
       })
     }
   }
@@ -487,7 +449,7 @@ struct DemoPage {
 | 参数         | 说明                                                     | 类型      | 默认值     |
 | ------------ | --------------------------------------------------------| --------- | ---------- |
 | type         | 主题类型，可选值为 `primary` `success` `warning` `danger` | _string_  | `primary` |
-| defaultSelectedDate   | 默认选中日期                                    | _string[]_  | `[]` |
+| value <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.8</span>| 已选日期，支持双向绑定                                    | _string_ \| _string[]_  | `[]` |
 | itemWidth    | 每一项宽度                                               | _string_ \| _number_  | `50`|
 | weekFirstDay | 周起始日期, `周一到周六`分别对应`123456`, 周日为 `0`         | _number_  |    `1`     |
 | isShowLunar  | 是否显示农历                                             | _boolean_ | `false`  |
@@ -502,12 +464,12 @@ struct DemoPage {
 | isShowConfirmBtn | 是否显示底部确定按钮                                   | _boolean_ | `false` |
 | confirmBtnColor  | 确认按钮颜色                                          | _ResourceColor_  | `#3D8AF2` |
 | confirmBtnText   | 确认按钮文案                                          | _ResourceStr_  | `确认` |
-| cornerRadius | 弹框圆角                                                 | _Length_ \| _BorderRadiuses_ \| _LocalizedBorderRadiuses_ | `10`|
-| clock        | 开启打卡模式                                              | _boolean_ | `false`  |
+| cornerRadius     | 弹框圆角                                             | _Length_ \| _BorderRadiuses_ \| _LocalizedBorderRadiuses_ | `10`|
+| clock            | 开启打卡模式                                          | _boolean_ | `false`  |
 | clockSuccessText | 打卡成功文案                                          | _ResourceStr_  | `已成功` |
-| isShowUnClock | 是否显示未打卡`                                          | _boolean_ | `true`  |
-| unClockText  | 未打卡文案                                                | _ResourceStr_  | `未打卡` |
-| showOtherMonthDate | 是否显示其他月份的日期                        | _boolean_ | `true` |
+| isShowUnClock    | 是否显示未打卡`                                       | _boolean_ | `true`  |
+| unClockText      | 未打卡文案                                            | _ResourceStr_  | `未打卡` |
+| showOtherMonthDate | 是否显示其他月份的日期                               | _boolean_ | `true` |
 
 
 ### CalendarDialog @Props
@@ -529,9 +491,9 @@ CalendarDialog包含Calendar除 `isShowConfirmBtn` 以外所有属性，Calendar
 
 ### Events
 
-| 事件名     | 说明                                             | 回调参数                         |
+| 事件名     | 说明                                             | 事件类型                         |
 | ----------| ------------------------------------------------ | -------------------------------- |
-| onConfirm | 选择日期后的回调，`selectType` 为 `multiple` 时需点击按钮触发 | `value: IBestCalendarConfirmResult[]` |
+| onConfirm | 选择日期后的回调，`selectType` 为 `multiple` 时需点击按钮触发 | `(value: IBestCalendarConfirmResult[]) => void` |
 
 ### IBestCalendarDayItem 数据类型
 | 参数          | 说明                                       | 类型      |

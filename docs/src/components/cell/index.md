@@ -394,7 +394,7 @@ struct DemoPage {
 | border | 是否显示外边框                 | _boolean_ | `true`  |
 | radius | 圆角大小, 仅inset为true时有效  | _Length_ \| _BorderRadiuses_ \| _LocalizedBorderRadiuses_ | `8`   |
 | titlePadding | 标题内边距               | _Padding_ \| _Length_ \| _LocalizedPadding_ | `16`  |
-| outerMargin <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.6</span>| 外边距, 仅inset为true时有效     | _Padding_ \| _Length_ \| _LocalizedPadding_ | `{ left: 16, right: 16 }`  |
+| outerMargin  | 外边距, 仅inset为true时有效     | _Padding_ \| _Length_ \| _LocalizedPadding_ | `{ left: 16, right: 16 }`  |
 
 ### Cell @Props
 
@@ -434,8 +434,8 @@ struct DemoPage {
 
 ### Events
 
-| 事件名      | 说明                 | 事件类型                         |
-| ----------- | -------------------- | -------------------------------- |
+| 事件名      | 说明                | 事件类型                         |
+| ----------- | -------------------| -------------------------------- |
 | onCellClick | 点击单元格的回调事件 | `() => void` |
 
 ### 插槽
