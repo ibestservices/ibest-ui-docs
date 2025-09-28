@@ -127,8 +127,9 @@ struct DemoPage {
 | name        | 图标名称、unicode 编码、图片链接, 图标名称可参考上方图标合集| _ResourceStr_  | `''` |
 | color       | 图标颜色                              | _ResourceColor_ |  `''`  |
 | iconSize    | 图标大小                              | _string_ \| _number_ | `16` |
-| iconRadius | 图标圆角                               | _Length_ \| _BorderRadiuses_ \| _LocalizedBorderRadiuses_ | `0` |
+| iconRadius  | 图标圆角                              | _Length_ \| _BorderRadiuses_ \| _LocalizedBorderRadiuses_ | `0` |
 | fontName <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.8</span>| 自定义字体图标名称 | _ResourceStr_ | `''` |
+| iconAnimation <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.9</span>| 图标动画                            | _AnimateParam_ | `-` |
 
 ### Events
 

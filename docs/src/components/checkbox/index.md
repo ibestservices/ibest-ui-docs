@@ -661,8 +661,8 @@ struct CheckboxPage {
 | bgColor       | 默认背景色     | _ResourceColor_ | `''` |
 | bdColor       | 默认边框色     | _ResourceColor_ | `#ebedf0` |
 | beforeChange  | 改变前的回调     | _(value: boolean) => Promise\<boolean\> \| boolean_ | `-` |
-| trueValue <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.7</span>| 选中时的值，仅单独使用时生效         | _string_ \| _number_ | `'1'` |
-| falseValue <span style="font-size: 12px; padding:2px 4px;color:#3D8AF2;border-radius:4px;border: 1px solid #3D8AF2">2.1.7</span>| 未选中时的值，仅单独使用时生效     | _string_ \| _number_ | `'0'` |
+| trueValue     | 选中时的值，仅单独使用时生效         | _string_ \| _number_ | `'1'` |
+| falseValue    | 未选中时的值，仅单独使用时生效     | _string_ \| _number_ | `'0'` |
 
 ### Checkbox Events
 
